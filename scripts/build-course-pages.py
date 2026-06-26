@@ -587,7 +587,10 @@ def decorate_cell(rendered: str, raw: str) -> str:
         return f'<span class="status-dot status-dot--yellow"></span>{rendered}'
     if raw.startswith("🟢"):
         return f'<span class="status-dot status-dot--green"></span>{rendered}'
-    if raw in {"待补充", "待统计", "待收集", "待校对"} or "待补充" in raw:
+    # Pending states must read as "not yet final", never as a confirmed
+    # conclusion (contract: pending_confirmation/collection/validation ->
+    # 待确认/待收集/待校验). Cover the in-content variants 待校对/待核验/待统计 too.
+    if raw in {"待补充", "待统计", "待收集", "待校对", "待确认", "待校验", "待核验"} or "待补充" in raw:
         return f'<span class="placeholder">{rendered}</span>'
     return rendered
 
@@ -861,6 +864,7 @@ h1 { font-size:2rem; margin:0 0 16px; } h2 { margin-top:32px; padding-bottom:6px
 .status-banner--red { background:#fff3cd; border-left:4px solid #ffc107; }
 .status-banner--yellow { background:#fff8e1; border-left:4px solid #ff9800; }
 .jump-banner { background:#e3f2fd; border:1px solid #2196f3; font-size:1.05rem; }
+.jump-banner--archive { background:#fff3e0; border:1px solid #ff9800; border-left:4px solid #e65100; color:#7a3b00; font-weight:600; }
 .migration-note { background:#eceff1; border-left:4px solid #607d8b; }
 .contract-note { background:#e8f5e9; border-left:4px solid var(--green); }
 .manual-note { background:#e8eaf6; border-left:4px solid #3f51b5; }
