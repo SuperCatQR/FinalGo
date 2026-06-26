@@ -25,6 +25,7 @@ data_status:
     blocks:
       completed: 12
       total: 13
+      pending: ["适用专业清单"]
   human_review:
     status: not_started
     reviewed_blocks: 0
@@ -35,9 +36,9 @@ data_status:
     ready: false
     blockers:
       - code: human_review_pending
-        scope: review
+        scope: publish
         severity: blocker
-        note: 机器初稿已生成，13 区块尚未经人工校对；🟢 发布前须逐块校对并补全校对签名
+        note: 机器初稿已生成，13 区块尚未经人工校对；🟢 发布前须逐块校对并补全校对签名。门禁谓词 scope=publish+severity=blocker 命中，publish.ready 须为 false
       - code: past_paper_gap
         scope: content
         severity: warning
@@ -116,7 +117,7 @@ data_status:
 | 版本年份 | 2023 年 |
 | ISBN | 待补充（需从教材计划或实物核验） |
 | 辅导书 | 暂无官方辅导书信息 |
-| 本地归档路径 | `C:\WorkSpace\project\FinalGo_local_archive\e-books\jiangsu\15040 习近平新时代中国特色社会主义思想概论.pdf` |
+| 本地归档路径 | 本地电子教材库（仓库外归档，路径不公开）；考纲处理产物见「来源与引用」节 |
 
 ## 章节知识树
 
@@ -471,7 +472,7 @@ data_status:
 | 考纲（本地） | `docs/jiangsu/source/syllabus/15040-xi-thought-gaogang-2024.pdf` | 已归档 |
 | 考纲（处理后） | `docs/jiangsu/source/processed/syllabus/15040-xi-thought-gaogang-2024/document.extracted.md` | 已处理 |
 | 教材计划 | `docs/jiangsu/source/processed/textbooks/jiangsu-2026-10-2027-01-schedule-textbooks/document.extracted.md` 中 `150400/150401` | 已处理 |
-| 教材（本地） | `C:\WorkSpace\project\FinalGo_local_archive\e-books\jiangsu\15040 习近平新时代中国特色社会主义思想概论.pdf` | 已归档 |
+| 教材（本地） | 本地电子教材库（仓库外归档，路径不公开） | 已归档 |
 | 真题（在线） | [攀知自考 15040](https://www.zikaosw.cn/lnzt/subject-60719.html) | 等级 B，待核验 |
 | 真题（在线） | [自考365 2024-10 试题页](https://www.zikao365.com/ggk/zh20241210142335.shtml) | 等级 B，待核验 |
 
