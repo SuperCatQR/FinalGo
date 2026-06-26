@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pdf2xml SYSTEM "pdf2xml.dtd">
+
+<pdf2xml producer="poppler" version="25.07.0">
+<page number="1" position="absolute" top="0" left="0" height="1263" width="893">
+	<fontspec id="0" size="14" family="LNUHNF+SimSun" color="#000000"/>
+	<fontspec id="1" size="14" family="AUWCNV+TimesNewRomanPSMT" color="#000000"/>
+	<fontspec id="2" size="23" family="XEKKFX+SimHei" color="#000000"/>
+	<fontspec id="3" size="23" family="AUWCNV+TimesNewRomanPSMT" color="#000000"/>
+	<fontspec id="4" size="39" family="ESHXQI+TimesNewRomanPS" color="#000000"/>
+	<fontspec id="5" size="39" family="ZXRCOU+DengXian" color="#000000"/>
+<text top="1162" left="392" width="14" height="13" font="0">第</text>
+<text top="1159" left="413" width="7" height="18" font="1">1</text>
+<text top="1162" left="426" width="34" height="13" font="0">页 共</text>
+<text top="1159" left="467" width="14" height="18" font="1">16</text>
+<text top="1162" left="487" width="14" height="13" font="0">页</text>
+<text top="-18" left="111" width="45" height="23" font="2">高纲</text>
+<text top="-22" left="161" width="45" height="30" font="3">4068</text>
+<text top="-18" left="111" width="293" height="23" font="2">江苏省高等教育自学考试大纲</text>
+<text top="-40" left="291" width="98" height="54" font="4"><b>02333</b></text>
+<text top="-37" left="446" width="156" height="48" font="5"><b>软件工程</b></text>
+<text top="-18" left="462" width="225" height="23" font="2">南京航空航天大学编（</text>
+<text top="-22" left="687" width="45" height="30" font="3">2024</text>
+<text top="-18" left="737" width="45" height="23" font="2">年）</text>
+</page>
+<page number="2" position="absolute" top="0" left="0" height="1263" width="893">
+	<fontspec id="6" size="21" family="XEKKFX+SimHei" color="#000000"/>
+	<fontspec id="7" size="18" family="XEKKFX+SimHei" color="#000000"/>
+	<fontspec id="8" size="18" family="JDKKJW+KaiTi" color="#000000"/>
+<text top="1162" left="392" width="14" height="13" font="0">第</text>
+<text top="1159" left="413" width="7" height="18" font="1">2</text>
+<text top="1162" left="426" width="34" height="13" font="0">页 共</text>
+<text top="1159" left="467" width="14" height="18" font="1">16</text>
+<text top="1162" left="487" width="14" height="13" font="0">页</text>
+<text top="-17" left="330" width="232" height="21" font="6">Ⅰ 课程性质与课程目标</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、课程性质和特点</text>
+<text top="-14" left="142" width="640" height="19" font="8">《软件工程》是江苏省高等教育自学考试计算机科学与技术专业（专升本）考试计</text>
+<text top="-14" left="111" width="672" height="19" font="8">划中的一门选考课。这门课程是研究软件开发的一门课程。软件工程是研究和应用如</text>
+<text top="-14" left="111" width="672" height="19" font="8">何以系统性的、规范化的、可定量的过程化方法去开发和维护软件，以及如何把经过</text>
+<text top="-14" left="111" width="672" height="19" font="8">时间考验而证明正确的管理技术和当前能够得到的最好的技术方法结合起来。其中主</text>
+<text top="-14" left="111" width="672" height="19" font="8">要内容包括：软件开发所需要的过程、活动和任务，以及这些过程、活动和任务的组</text>
+<text top="-14" left="111" width="681" height="19" font="8">织、实施和管理。这门课程具有理论和实践相结合的特点。通过理论来指导软件开发，</text>
+<text top="-14" left="111" width="306" height="19" font="8">通过软件开发促进理论的发展和应用。</text>
+<text top="-14" left="147" width="636" height="19" font="8">本课程分为理论和实践两部分。本大纲仅针对理论部分，实践部分大纲和考核要</text>
+<text top="-14" left="111" width="108" height="19" font="8">求另作说明。</text>
+<text top="-14" left="147" width="108" height="18" font="7">二、课程目标</text>
+<text top="-14" left="147" width="636" height="19" font="8">通过本课程的学习，使考生对能掌握软件工程的基本概念、基本原理、开发软件</text>
+<text top="-14" left="111" width="672" height="19" font="8">项目的工程化方法和技术及在开发工程中应该遵循的流程、准则和规范等；考生应能</text>
+<text top="-14" left="111" width="672" height="19" font="8">掌握开发高质量软件的方法，以及有效地策划和管理软件开发活动，为考生参加大型</text>
+<text top="-14" left="111" width="288" height="19" font="8">软件开发项目打下坚实的理论基础。</text>
+<text top="-14" left="147" width="234" height="18" font="7">三、与相关课程的联系与区别</text>
+<text top="-14" left="142" width="640" height="19" font="8">本课程的目标是使考生能掌握开发高质量软件的方法，这涉及到操作系统、计算机</text>
+<text top="-14" left="111" width="681" height="19" font="8">体系机构、数据结构、数据库原理、计算机网络等计算机学科以及包括经济管理学等。</text>
+<text top="-14" left="111" width="672" height="19" font="8">建议在学习本课程之前，至少熟练掌握一门计算机语言，如 C、Java 或 Python 等。考</text>
+<text top="-14" left="111" width="681" height="19" font="8">生最好学过操作系统、计算机体系机构、数据结构、数据库原理、计算机网络等课程。</text>
+<text top="-14" left="147" width="180" height="18" font="7">四、课程的重点和难点</text>
+<text top="-14" left="142" width="640" height="19" font="8">本课程共分为十四章，分别是：概论、分析阶段、总体设计、详细设计、编码及测</text>
+<text top="-14" left="111" width="672" height="19" font="8">试、软件维护及软件再工程、面向对象方法学、面向对象分析、面向对象设计、面向</text>
+<text top="-14" left="111" width="672" height="19" font="8">对象实现、软件工程标准化和软件文档、软件工程质量、软件工程项目管理和简单的</text>
+<text top="-14" left="111" width="270" height="19" font="8">人事管理系统设计与开发。其中：</text>
+<text top="-14" left="142" width="640" height="19" font="8">重点和难点：掌握结构化和面向对象分析和设计的方法，以及如何应用这些方法开</text>
+<text top="-14" left="111" width="162" height="19" font="8">发出高质量的软件。</text>
+</page>
+<page number="3" position="absolute" top="0" left="0" height="1263" width="893">
+	<fontspec id="9" size="18" family="LNUHNF+SimSun" color="#000000"/>
+	<fontspec id="10" size="18" family="AUWCNV+TimesNewRomanPSMT" color="#000000"/>
+<text top="1162" left="392" width="14" height="13" font="0">第</text>
+<text top="1159" left="413" width="7" height="18" font="1">3</text>
+<text top="1162" left="426" width="34" height="13" font="0">页 共</text>
+<text top="1159" left="467" width="14" height="18" font="1">16</text>
+<text top="1162" left="487" width="14" height="13" font="0">页</text>
+<text top="-17" left="383" width="126" height="21" font="6">Ⅱ 考核目标</text>
+<text top="-14" left="147" width="636" height="19" font="8">本大纲在考核目标中，按照识记、领会、应用三个层次规定其应达到的能力层次</text>
+<text top="-14" left="111" width="672" height="19" font="8">要求。三个能力层次是递升的关系，后者必须建立在前者的基础上。各能力层次的含</text>
+<text top="-14" left="111" width="54" height="19" font="8">义是：</text>
+<text top="-14" left="147" width="636" height="19" font="8">识记：指考生能够标识并记忆本大纲所规定的软件工程知识点，主要包括软件工</text>
+<text top="-14" left="111" width="672" height="19" font="8">程中各种工具、方法、过程的名称、含义和用途，如结构化方法、面向对象方法，黑</text>
+<text top="-14" left="111" width="648" height="19" font="8">盒测试、白盒测试等；并能根据考题的不同要求，做出正确的选择、判断和回答。</text>
+<text top="-14" left="147" width="636" height="19" font="8">领会：是指考生理解本大纲知识点的内涵和外延，涉及的概念以及概念之间的关</text>
+<text top="-14" left="111" width="672" height="19" font="8">系，并且能概括概念之间关系发生的条件。具体在本课程中，考生应掌握和熟悉软件</text>
+<text top="-14" left="111" width="681" height="19" font="8">开发过程中方法、工具和技术的基本思想、关系、作用、目标、实施步骤和评判标准，</text>
+<text top="-14" left="111" width="342" height="19" font="8">对软件开发工作有一个总体的感受和理解。</text>
+<text top="-14" left="147" width="636" height="19" font="8">应用：是指考生能够运用本大纲规定的知识点，分析并解决相关的应用问题。具</text>
+<text top="-14" left="111" width="672" height="19" font="8">体到本课程中，考生能根据实际工作需要，将软件工程方法（如结构化方法和面向对</text>
+<text top="-14" left="111" width="672" height="19" font="8">象方法）运用到软件开发周期的各个阶段（如需求分析、系统设计、系统测试等），</text>
+<text top="-14" left="111" width="342" height="19" font="8">从而能进行问题的定义和软件功能的实现。</text>
+<text top="-17" left="330" width="232" height="21" font="6">Ⅲ 课程内容与考核要求</text>
+<text top="-14" left="329" width="234" height="18" font="7">第一篇 面向过程的软件工程</text>
+<text top="-14" left="392" width="108" height="18" font="7">第 1 章 概论</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="142" width="640" height="18" font="9">本章集中介绍软件、软件工程的概念以及开发的主要原则、软件开发过程的模型和</text>
+<text top="-14" left="111" width="630" height="18" font="9">软件工程的生存周期。要求掌握软件工程的产生的原因以及如何解决软件危机。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="636" height="18" font="9">识记：①软件工程的定义、特点、基本原理；②软件危机的定义和原因；③软件</text>
+<text top="-14" left="111" width="672" height="18" font="9">工程的生命周期；④软件开发过程模型；⑤软件开发方法，软件开发工具；⑥软件工</text>
+<text top="-14" left="111" width="162" height="18" font="9">程的最新发展动向。</text>
+<text top="-14" left="147" width="636" height="18" font="9">应用：①软件开发过程模型：瀑布模型、快速原型模型、螺旋模型、增量模型、</text>
+<text top="-14" left="111" width="90" height="18" font="9">喷泉模型、</text>
+<text top="-18" left="201" width="35" height="24" font="10">RUP</text>
+<text top="-14" left="240" width="162" height="18" font="9">过程、极限编程等。</text>
+</page>
+<page number="4" position="absolute" top="0" left="0" height="1263" width="893">
+<text top="1162" left="392" width="14" height="13" font="0">第</text>
+<text top="1159" left="413" width="7" height="18" font="1">4</text>
+<text top="1162" left="426" width="34" height="13" font="0">页 共</text>
+<text top="1159" left="467" width="14" height="18" font="1">16</text>
+<text top="1162" left="487" width="14" height="13" font="0">页</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="468" height="18" font="9">本章重点和难点是：①软件工程的定义、特点、基本原理。</text>
+<text top="-14" left="374" width="144" height="18" font="7">第 2 章 分析阶段</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="147" width="636" height="18" font="9">本章集中介绍可行性研究的任务和步骤、系统流程图的符号及其画法、软件计划</text>
+<text top="-14" left="111" width="558" height="18" font="9">的制定和复审和需求分析的任务及方法。要求掌握结构化分析的方法。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="558" height="18" font="9">识记：①可行性研究的任务、内容和步骤；②需求规格说明书的写法。</text>
+<text top="-14" left="147" width="636" height="18" font="9">领会：①问题定义；②系统流程图的画法；③软件计划的制定；④成本估算方法</text>
+<text top="-14" left="111" width="681" height="18" font="9">和效益分析方法；⑤需求分析的概念、目标和任务；⑥需求分析的原则、过程和方法；</text>
+<text top="-14" left="111" width="324" height="18" font="9">⑦需求评审规则；⑧传统软件建模方法。</text>
+<text top="-14" left="147" width="636" height="18" font="9">应用：①系统流程图的符号；②数据模型；③功能模型；④行为模型；⑤数据字</text>
+<text top="-14" left="111" width="54" height="18" font="9">典；⑥</text>
+<text top="-18" left="165" width="36" height="24" font="10">DFD</text>
+<text top="-14" left="205" width="36" height="18" font="9">图。</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="577" height="18" font="9">本章重点和难点是：①问题定义；②可行性研究的任务、内容和步骤；③</text>
+<text top="-18" left="724" width="36" height="24" font="10">DFD</text>
+<text top="-14" left="764" width="18" height="18" font="9">图</text>
+<text top="-14" left="111" width="72" height="18" font="9">的画法。</text>
+<text top="-14" left="147" width="128" height="18" font="9">（注：纠错：书</text>
+<text top="-18" left="279" width="18" height="24" font="10">54</text>
+<text top="-14" left="302" width="36" height="18" font="9">页图</text>
+<text top="-18" left="343" width="33" height="24" font="10">2-25</text>
+<text top="-14" left="381" width="402" height="18" font="9">数据流：“用户情况”应改为“用户信息”“音乐</text>
+<text top="-14" left="111" width="252" height="18" font="9">情况”应改为“音乐信息”。）</text>
+<text top="-14" left="374" width="144" height="18" font="7">第 3 章 总体设计</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="147" width="636" height="18" font="9">本章集中介绍总体设计的任务及过程、总体设计的准则、总体设计的常用方法及</text>
+<text top="-14" left="111" width="396" height="18" font="9">工具和软件体系结构。要求掌握结构化设计方法。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="636" height="18" font="9">识记：①总体设计工具、总体设计说明书的编写规范；②软件体系结构的概念、</text>
+<text top="-14" left="111" width="144" height="18" font="9">现状和描述方法。</text>
+<text top="-14" left="147" width="636" height="18" font="9">领会：①总体设计的任务、过程；②模块设计、结构设计原理；③设计准则；④</text>
+<text top="-14" left="111" width="572" height="18" font="9">面向数据流的设计方法；⑤模块结构设计方法；⑥数据存储设计方法；⑦</text>
+<text top="-18" left="683" width="41" height="24" font="10">MVC</text>
+<text top="-14" left="728" width="54" height="18" font="9">框架的</text>
+<text top="-14" left="111" width="324" height="18" font="9">模式和实现；⑧分层结构和微内核结构。</text>
+</page>
+<page number="5" position="absolute" top="0" left="0" height="1263" width="893">
+<text top="1162" left="392" width="14" height="13" font="0">第</text>
+<text top="1159" left="413" width="7" height="18" font="1">5</text>
+<text top="1162" left="426" width="34" height="13" font="0">页 共</text>
+<text top="1159" left="467" width="14" height="18" font="1">16</text>
+<text top="1162" left="487" width="14" height="13" font="0">页</text>
+<text top="-14" left="147" width="522" height="18" font="9">应用：①模块设计方法；②结构设计方法；③数据流设计方法；④</text>
+<text top="-18" left="669" width="41" height="24" font="10">MVC</text>
+<text top="-14" left="714" width="54" height="18" font="9">框架。</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="636" height="18" font="9">本章重点和难点是：①模块设计准则、设计方法；②结构设计方法；③数据流设</text>
+<text top="-14" left="111" width="90" height="18" font="9">计方法；④</text>
+<text top="-18" left="201" width="41" height="24" font="10">MVC</text>
+<text top="-14" left="246" width="54" height="18" font="9">框架。</text>
+<text top="-14" left="374" width="144" height="18" font="7">第 4 章 详细设计</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="147" width="636" height="18" font="9">本章集中介绍详细设计的任务及原则、详细设计的方法和工具、详细设计规格说</text>
+<text top="-14" left="111" width="672" height="18" font="9">明与复审、面向数据结构的结构化设计方法和界面设计。要求学会和掌握详细设计的</text>
+<text top="-14" left="111" width="108" height="18" font="9">方法和工具。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="378" height="18" font="9">识记：①详细设计的任务；②详细设计的原则。</text>
+<text top="-14" left="147" width="484" height="18" font="9">领会：①详细设计的方法、工具；②详细设计说明与复审；③</text>
+<text top="-18" left="631" width="57" height="24" font="10">Jackson</text>
+<text top="-14" left="692" width="90" height="18" font="9">程序设计方</text>
+<text top="-14" left="111" width="36" height="18" font="9">法、</text>
+<text top="-18" left="144" width="57" height="24" font="10">Warnier</text>
+<text top="-14" left="206" width="586" height="18" font="9">程序设计方法；④基于组件的设计方法；⑤用户界面设计、字符界面设计、</text>
+<text top="-14" left="111" width="342" height="18" font="9">菜单设计、对话框设计、多窗口界面设计。</text>
+<text top="-14" left="147" width="450" height="18" font="9">应用：①详细设计的方法和工具；②用户界面设计原则。</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="558" height="18" font="9">本章重点和难点是：①详细设计的方法和工具；②用户界面设计原则。</text>
+<text top="-14" left="365" width="162" height="18" font="7">第 5 章 编码及测试</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="147" width="636" height="18" font="9">本章集中介绍程序设计语言的发展、分类及选择的标准、程序设计风格、效率及</text>
+<text top="-14" left="111" width="681" height="18" font="9">安全、程序复杂度及其度量方法、软件测试的基本概念、软件测试方法、步骤及工具、</text>
+<text top="-14" left="111" width="468" height="18" font="9">测试设计和管理。要求掌握如何选择开发语言和测试方法。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="594" height="18" font="9">识记：①程序设计语言的发展、分类和选择标准；②软件测试的文档说明。</text>
+<text top="-14" left="147" width="636" height="18" font="9">领会：①程序文档化和数据说明；②程序表达式和语句结构，输入输出规范；③</text>
+<text top="-14" left="111" width="672" height="18" font="9">程序代码效率、存储器效率和输入、输出效率；④冗余程序设计和防错程序设计；⑤</text>
+<text top="-14" left="111" width="342" height="18" font="9">结构化程序设计方法；⑥代码行度量方法、</text>
+<text top="-18" left="452" width="61" height="24" font="10">McCabe</text>
+<text top="-14" left="518" width="72" height="18" font="9">度量法、</text>
+<text top="-18" left="589" width="63" height="24" font="10">Halstead</text>
+<text top="-14" left="657" width="126" height="18" font="9">度量法；⑦软件</text>
+<text top="-14" left="111" width="672" height="18" font="9">测试的意义、目的和原则；⑧软件静态测试和动态测试方法；⑨软件黑盒测试方法和</text>
+</page>
+<page number="6" position="absolute" top="0" left="0" height="1263" width="893">
+	<fontspec id="11" size="18" family="OFPWHO+MS-PGothic" color="#000000"/>
+<text top="1162" left="392" width="14" height="13" font="0">第</text>
+<text top="1159" left="413" width="7" height="18" font="1">6</text>
+<text top="1162" left="426" width="34" height="13" font="0">页 共</text>
+<text top="1159" left="467" width="14" height="18" font="1">16</text>
+<text top="1162" left="487" width="14" height="13" font="0">页</text>
+<text top="-14" left="111" width="599" height="18" font="9">白盒测试方法；⑩单元测试、集成测试、确认测试、系统测试和验收测试；</text>
+<text top="-14" left="710" width="18" height="18" font="11">⑪</text>
+<text top="-14" left="728" width="54" height="18" font="9">软件调</text>
+<text top="-14" left="111" width="163" height="18" font="9">试过程和调试途径；</text>
+<text top="-14" left="274" width="18" height="18" font="11">⑫</text>
+<text top="-14" left="292" width="291" height="18" font="9">软件测试用例设计方法和错误曲线；</text>
+<text top="-14" left="583" width="18" height="18" font="11">⑬</text>
+<text top="-14" left="601" width="181" height="18" font="9">软件测试工具和软件自</text>
+<text top="-14" left="111" width="72" height="18" font="9">动测试。</text>
+<text top="-14" left="147" width="636" height="18" font="9">应用：①程序设计风格；②代码行度量法；③黑盒测试、白盒测试；④测试用例</text>
+<text top="-14" left="111" width="162" height="18" font="9">设计；⑤自动测试。</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="645" height="18" font="9">本章重点和难点是：①程序设计风格；②代码行度量法；③黑盒测试、白盒测试；</text>
+<text top="-14" left="111" width="252" height="18" font="9">④测试用例设计；⑤自动测试。</text>
+<text top="-14" left="320" width="252" height="18" font="7">第 6 章 软件维护及软件再工程</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="147" width="636" height="18" font="9">本章集中介绍软件维护的定义及特点、软件维护的过程、软件的可维护性和软件</text>
+<text top="-14" left="111" width="630" height="18" font="9">逆向工程和再工程。要求理解软件维护和再工程的重要性和分类以及相关概念。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="636" height="18" font="9">识记：①软件维护的定义、分类和特点；②软件维护过程；③软件可维护性度量</text>
+<text top="-14" left="111" width="558" height="18" font="9">和提高软件的可维护性方法；④软件的逆向工程和再工程过程、方法。</text>
+<text top="-14" left="147" width="414" height="18" font="9">领会：①软件可维护度量方法；②软件再工程方法。</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="522" height="18" font="9">本章重点和难点是：①软件可维护度量方法；②软件再工程方法。</text>
+<text top="-14" left="329" width="234" height="18" font="7">第二篇 面向对象的软件工程</text>
+<text top="-14" left="347" width="198" height="18" font="7">第 7 章 面向对象方法学</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="147" width="636" height="18" font="9">本章集中介绍面向对象方法学、概念及面向对象建模和对象模型、动态模型及功</text>
+<text top="-14" left="111" width="360" height="18" font="9">能模型。要求掌握向对象方法学和三个模型。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="636" height="18" font="9">识记：①面向对象方法学的优点；②面向对象方法学的基本概念；③面向对象建</text>
+<text top="-14" left="111" width="612" height="18" font="9">模方法；④对象模型建立方法；⑤动态模型建立方法；⑥功能模型建立方法。</text>
+<text top="-14" left="147" width="378" height="18" font="9">领会：①对象模型；②动态模型；③功能模型。</text>
+</page>
+<page number="7" position="absolute" top="0" left="0" height="1263" width="893">
+<text top="1162" left="392" width="14" height="13" font="0">第</text>
+<text top="1159" left="413" width="7" height="18" font="1">7</text>
+<text top="1162" left="426" width="34" height="13" font="0">页 共</text>
+<text top="1159" left="467" width="14" height="18" font="1">16</text>
+<text top="1162" left="487" width="14" height="13" font="0">页</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="630" height="18" font="9">本章重点和难点是：①面向对象方法；②对象模型；③动态模型；④功能模型。</text>
+<text top="-14" left="356" width="180" height="18" font="7">第 8 章 面向对象分析</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="147" width="636" height="18" font="9">本章集中介绍面向对象分析的基本过程、对象模型的建立、动态模型的建立、功</text>
+<text top="-14" left="111" width="558" height="18" font="9">能模型的建立。要求掌握面向对象分析的基本过程和三种模型的建立。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="342" height="18" font="9">识记：①面向对象分析概述；②面向对象的</text>
+<text top="-18" left="493" width="9" height="24" font="10">3</text>
+<text top="-14" left="507" width="90" height="18" font="9">个子模型和</text>
+<text top="-18" left="601" width="9" height="24" font="10">5</text>
+<text top="-14" left="615" width="72" height="18" font="9">个层次。</text>
+<text top="-14" left="147" width="636" height="18" font="9">领会：①确定类与对象、确定关联、划分主题、确定属性、识别继承关系和反复</text>
+<text top="-14" left="111" width="672" height="18" font="9">修改；②编写脚本、设想用户界面、绘制事件跟踪图、绘制状态图、审查动态模型；</text>
+<text top="-14" left="111" width="630" height="18" font="9">③绘制基本系统模型图、绘制功能级数据流图、描述处理框功能；④定义服务。</text>
+<text top="-14" left="147" width="486" height="18" font="9">应用：①建立对象模型；②建立动态模型；③建立功能模型。</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="540" height="18" font="9">本章重点和难点是：①面向对象分析的基本过程和三种模型的建立。</text>
+<text top="-14" left="356" width="180" height="18" font="7">第 9 章 面向对象设计</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="147" width="636" height="18" font="9">本章集中介绍面向对象的准则和启发规则、软件重用的基本概念、系统的分解及</text>
+<text top="-14" left="111" width="681" height="18" font="9">各个子系统的设计、设计关联、设计优化。要求掌握对象的准则和启发规则并会应用。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="324" height="18" font="9">识记：①面向对象设计准则、启发规则。</text>
+<text top="-14" left="147" width="636" height="18" font="9">领会：①软件类构建和重用的效益；②软件子系统之间的交互方式、组织系统方</text>
+<text top="-14" left="111" width="672" height="18" font="9">案和拓扑结构；③设计问题域子系统、人机交互子系统、任务管理子系统和数据管理</text>
+<text top="-14" left="111" width="672" height="18" font="9">子系统；④确定类中应有的服务、设计实现服务的方法；⑤设计类的关联；⑥设计优</text>
+<text top="-14" left="111" width="324" height="18" font="9">化；⑦设计模式的概念和常用设计模式。</text>
+<text top="-14" left="147" width="558" height="18" font="9">应用：①设计子系统；②设计类中的服务；③设计关联；④设计模式。</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="636" height="18" font="9">本章重点和难点是：①面向对象的准则和启发规则；②设计子系统；③设计类中</text>
+<text top="-14" left="111" width="288" height="18" font="9">的服务；④设计关联；⑤设计模式。</text>
+</page>
+<page number="8" position="absolute" top="0" left="0" height="1263" width="893">
+<text top="1162" left="392" width="14" height="13" font="0">第</text>
+<text top="1159" left="413" width="7" height="18" font="1">8</text>
+<text top="1162" left="426" width="34" height="13" font="0">页 共</text>
+<text top="1159" left="467" width="14" height="18" font="1">16</text>
+<text top="1162" left="487" width="14" height="13" font="0">页</text>
+<text top="-14" left="352" width="189" height="18" font="7">第 10 章 面向对象实现</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="147" width="636" height="18" font="9">本章集中介绍面向对象实现的方法、面向对象设计的质量、面向对象测试。要求</text>
+<text top="-14" left="111" width="324" height="18" font="9">掌握面向对象语言如何选择及测试方法。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="342" height="18" font="9">识记：①面向对象语言的优点及选择原则。</text>
+<text top="-14" left="147" width="636" height="18" font="9">领会：①面向对象程序设计风格；②面向对象测试模型及面向对象各阶段的测试</text>
+<text top="-14" left="111" width="342" height="18" font="9">方法；③类内测试及类间测试用例的设计。</text>
+<text top="-14" left="147" width="198" height="18" font="9">应用：①设计测试用例。</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="486" height="18" font="9">本章重点和难点是：①面向对象设计风格；②设计测试用例。</text>
+<text top="-14" left="311" width="270" height="18" font="7">第三篇 软件工程管理及开发实例</text>
+<text top="-14" left="298" width="297" height="18" font="7">第 11 章 软件工程标准化和软件文档</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="147" width="636" height="18" font="9">本章集中介绍软件工程标准化的概念、软件工程标准化的意义、软件工程标准化</text>
+<text top="-14" left="111" width="396" height="18" font="9">的制定和推行、软件工程标准的层次和体系构架和</text>
+<text top="-18" left="511" width="69" height="24" font="10">ISO 9000</text>
+<text top="-14" left="585" width="198" height="18" font="9">国际标准简介。要求理解</text>
+<text top="-14" left="111" width="414" height="18" font="9">软件工程标准化的概念和意义以及相应的一些标准。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="636" height="18" font="9">识记：①软件工程标准化的概念、类型和意义；②软件工程标准的制定与推行；</text>
+<text top="-14" left="111" width="310" height="18" font="9">③软件工程标准的层次和体系框架；④</text>
+<text top="-18" left="421" width="65" height="24" font="10">ISO9000</text>
+<text top="-14" left="491" width="292" height="18" font="9">国际标准介绍；⑤软件文档的作用和</text>
+<text top="-14" left="111" width="504" height="18" font="9">分类；⑥软件文档编制的质量要求；⑦软件文档的管理和维护。</text>
+<text top="-14" left="147" width="270" height="18" font="9">领会：①软件文档的作用和分类。</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="636" height="18" font="9">本章重点和难点是：①软件工程标准化的概念、类型和意义；②软件文档的作用</text>
+<text top="-14" left="111" width="72" height="18" font="9">和分类。</text>
+<text top="-14" left="352" width="189" height="18" font="7">第 12 章 软件工程质量</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+</page>
+<page number="9" position="absolute" top="0" left="0" height="1263" width="893">
+<text top="1162" left="392" width="14" height="13" font="0">第</text>
+<text top="1159" left="413" width="7" height="18" font="1">9</text>
+<text top="1162" left="426" width="34" height="13" font="0">页 共</text>
+<text top="1159" left="467" width="14" height="18" font="1">16</text>
+<text top="1162" left="487" width="14" height="13" font="0">页</text>
+<text top="-14" left="147" width="636" height="18" font="9">本章集中介绍软件质量的定义及其特性、软件质量的度量，软件质量保证、软件</text>
+<text top="-14" left="111" width="255" height="18" font="9">技术评审、软件质量管理体系和</text>
+<text top="-18" left="370" width="44" height="24" font="10">CMM</text>
+<text top="-14" left="419" width="364" height="18" font="9">成熟度模型及其应用。要求掌握软件质量的定</text>
+<text top="-14" left="111" width="90" height="18" font="9">义、度量和</text>
+<text top="-18" left="205" width="44" height="24" font="10">CMM</text>
+<text top="-14" left="253" width="54" height="18" font="9">模型。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="636" height="18" font="9">识记：①软件质量的定义、特性；②软件度量和软件质量的度量；③软件质量的</text>
+<text top="-14" left="111" width="672" height="18" font="9">度量模型；④软件质量保证的概念、任务和策略；⑤软件技术评审；⑥软件产品质量</text>
+<text top="-14" left="111" width="288" height="18" font="9">管理的特点、指导思想和管理体系。</text>
+<text top="-14" left="147" width="234" height="18" font="9">领会：①软件质量度量模型。</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="540" height="18" font="9">本章重点和难点是：①软件质量的定义、度量和软件质量度量模型。</text>
+<text top="-14" left="334" width="225" height="18" font="7">第 13 章 软件工程项目管理</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="147" width="461" height="18" font="9">本章集中介绍软件工程项目管理的基本概念、进度计划中的</text>
+<text top="-18" left="612" width="40" height="24" font="10">Gantt</text>
+<text top="-14" left="656" width="126" height="18" font="9">图及工程网络技</text>
+<text top="-14" left="111" width="672" height="18" font="9">术和风险管理的分类、评估、管理和监控。要求掌握软件工程项目管理的基本概念、</text>
+<text top="-14" left="111" width="144" height="18" font="9">相关技术和方法。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="636" height="18" font="9">识记：①软件项目管理的特点、主要职能和主要内容；②软件项目管理活动；③</text>
+<text top="-14" left="111" width="36" height="18" font="9">基于</text>
+<text top="-18" left="151" width="46" height="24" font="10">CASE</text>
+<text top="-14" left="202" width="580" height="18" font="9">技术的开发工具；④软件成本估算；⑤软件项目计划的制定、人员组织和</text>
+<text top="-14" left="111" width="672" height="18" font="9">管理；⑥软件开发进度计划的制定；⑦甘特图与时间管理；⑧工程网络与关键路径；</text>
+<text top="-14" left="111" width="436" height="18" font="9">⑨项目进度跟踪与控制；⑩软件项目风险识别与分类；</text>
+<text top="-14" left="546" width="18" height="18" font="11">⑪</text>
+<text top="-14" left="565" width="218" height="18" font="9">软件项目风险评估与分析；</text>
+<text top="-14" left="111" width="18" height="18" font="11">⑫</text>
+<text top="-14" left="129" width="218" height="18" font="9">软件项目风险策划与管理；</text>
+<text top="-14" left="347" width="18" height="18" font="11">⑬</text>
+<text top="-14" left="365" width="218" height="18" font="9">软件项目风险规避与监控；</text>
+<text top="-14" left="583" width="18" height="18" font="11">⑭</text>
+<text top="-14" left="601" width="181" height="18" font="9">软件配置的概念、任务</text>
+<text top="-14" left="111" width="72" height="18" font="9">及过程；</text>
+<text top="-14" left="183" width="18" height="18" font="11">⑮</text>
+<text top="-14" left="201" width="162" height="18" font="9">项目管理认证体系。</text>
+<text top="-14" left="147" width="109" height="18" font="9">领会：①基于</text>
+<text top="-18" left="260" width="46" height="24" font="10">CASE</text>
+<text top="-14" left="311" width="472" height="18" font="9">技术的开发工具；②成本估算；③开发进度计划的制定；④</text>
+<text top="-14" left="111" width="540" height="18" font="9">甘特图；⑤工程网络与关键路径；⑥项目跟踪与控制；⑦软件配置。</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="636" height="18" font="9">本章重点和难点是：①软件工程项目管理的概念；②成本估算；③开发进度计划</text>
+<text top="-14" left="111" width="630" height="18" font="9">的制定；④甘特图；⑤工程网络与关键路径；⑥项目跟踪与控制；⑦软件配置。</text>
+<text top="-14" left="172" width="333" height="18" font="7">第 14 章 简单的人事管理系统设计与开发</text>
+<text top="-14" left="505" width="216" height="18" font="9">（本章内容不作考核要求）</text>
+</page>
+<page number="10" position="absolute" top="0" left="0" height="1263" width="893">
+<text top="1162" left="389" width="14" height="13" font="0">第</text>
+<text top="1159" left="409" width="14" height="18" font="1">10</text>
+<text top="1162" left="430" width="34" height="13" font="0">页 共</text>
+<text top="1159" left="470" width="14" height="18" font="1">16</text>
+<text top="1162" left="490" width="14" height="13" font="0">页</text>
+<text top="-14" left="347" width="198" height="18" font="7">附录一 可行性研究报告</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="147" width="432" height="18" font="9">本附录目的是了解可行性研究报告的内容和书写格式。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="360" height="18" font="9">识记：①可行性研究报告的内容和书写格式。</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="468" height="18" font="9">本章重点和难点是：①可行性研究报告的内容和书写格式。</text>
+<text top="-14" left="347" width="198" height="18" font="7">附录二 需求规格说明书</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="147" width="432" height="18" font="9">本附录目的是了解需求规格说明书的内容和书写格式。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="360" height="18" font="9">识记：①需求规格说明书的内容和书写格式。</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="468" height="18" font="9">本章重点和难点是：①需求规格说明书的内容和书写格式。</text>
+<text top="-14" left="347" width="198" height="18" font="7">附录三 总体设计说明书</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="147" width="432" height="18" font="9">本附录目的是了解总体设计说明书的内容和书写格式。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="360" height="18" font="9">识记：①总体设计说明书的内容和书写格式。</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="468" height="18" font="9">本章重点和难点是：①总体设计说明书的内容和书写格式。</text>
+<text top="-14" left="347" width="198" height="18" font="7">附录四 详细设计说明书</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="147" width="432" height="18" font="9">本附录目的是了解详细设计说明书的内容和书写格式。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="360" height="18" font="9">识记：①详细设计说明书的内容和书写格式。</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+</page>
+<page number="11" position="absolute" top="0" left="0" height="1263" width="893">
+<text top="1162" left="389" width="14" height="13" font="0">第</text>
+<text top="1159" left="410" width="13" height="18" font="1">11</text>
+<text top="1162" left="429" width="34" height="13" font="0">页 共</text>
+<text top="1159" left="470" width="14" height="18" font="1">16</text>
+<text top="1162" left="490" width="14" height="13" font="0">页</text>
+<text top="-14" left="147" width="468" height="18" font="9">本章重点和难点是：①详细设计说明书的内容和书写格式。</text>
+<text top="-14" left="302" width="288" height="18" font="7">附录五 软件测试的需求规格说明书</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="147" width="522" height="18" font="9">本附录目的是了解软件测试的需求规格说明书的内容和书写格式。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="450" height="18" font="9">识记：①软件测试的需求规格说明书的内容和书写格式。</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="558" height="18" font="9">本章重点和难点是：①软件测试的需求规格说明书的内容和书写格式。</text>
+<text top="-14" left="356" width="180" height="18" font="7">附录六 软件维护手册</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="147" width="414" height="18" font="9">本附录目的是了解软件维护手册的内容和书写格式。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="342" height="18" font="9">识记：①软件维护手册的内容和书写格式。</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="450" height="18" font="9">本章重点和难点是：①软件维护手册的内容和书写格式。</text>
+<text top="-14" left="323" width="248" height="18" font="7">附录七 UML 的模型及图示表示</text>
+<text top="-14" left="147" width="162" height="18" font="7">一、学习目的与要求</text>
+<text top="-14" left="147" width="144" height="18" font="9">本附录目的是理解</text>
+<text top="-18" left="295" width="40" height="24" font="10">UML</text>
+<text top="-14" left="339" width="270" height="18" font="9">的模型及其图示表示，并能应用。</text>
+<text top="-14" left="147" width="216" height="18" font="7">二、考核知识点与考核要求</text>
+<text top="-14" left="147" width="72" height="18" font="9">识记：①</text>
+<text top="-18" left="219" width="40" height="24" font="10">UML</text>
+<text top="-14" left="263" width="126" height="18" font="9">的五大模型；②</text>
+<text top="-18" left="389" width="9" height="24" font="10">9</text>
+<text top="-14" left="402" width="90" height="18" font="9">种图表示。</text>
+<text top="-14" left="147" width="612" height="18" font="9">应用：①会根据实际问题应用五大模型来描述，如用例图、类图、时序图等。</text>
+<text top="-14" left="147" width="162" height="18" font="7">三、本章重点、难点</text>
+<text top="-14" left="147" width="396" height="18" font="9">本章重点和难点是：①如何理解和应用五大模型。</text>
+<text top="-17" left="278" width="337" height="21" font="6">Ⅳ 关于大纲的说明与考核实施要求</text>
+<text top="-14" left="147" width="252" height="18" font="7">一、自学考试大纲的目的和作用</text>
+<text top="-14" left="147" width="636" height="18" font="9">课程自学考试大纲是根据专业考试计划的要求，结合自学考试的特点而确定。其</text>
+<text top="-14" left="111" width="504" height="18" font="9">目的是对个人自学、社会助学和课程考试命题进行指导和规定。</text>
+</page>
+<page number="12" position="absolute" top="0" left="0" height="1263" width="893">
+<text top="1162" left="389" width="14" height="13" font="0">第</text>
+<text top="1159" left="409" width="14" height="18" font="1">12</text>
+<text top="1162" left="430" width="34" height="13" font="0">页 共</text>
+<text top="1159" left="470" width="14" height="18" font="1">16</text>
+<text top="1162" left="490" width="14" height="13" font="0">页</text>
+<text top="-14" left="147" width="636" height="18" font="9">课程自学考试大纲明确了课程学习的内容以及深广度，规定了课程自学考试的范</text>
+<text top="-14" left="111" width="672" height="18" font="9">围和标准。因此，它是编写自学考试教材和辅导书的依据，是社会助学组织进行自学</text>
+<text top="-14" left="111" width="672" height="18" font="9">辅导的依据，是考生学习教材、掌握课程内容知识范围和程度的依据，也是进行自学</text>
+<text top="-14" left="111" width="144" height="18" font="9">考试命题的依据。</text>
+<text top="-14" left="147" width="288" height="18" font="7">二、课程自学考试大纲与教材的关系</text>
+<text top="-14" left="147" width="636" height="18" font="9">课程自学考试大纲是进行学习和考核的依据，教材是学习掌握课程知识的基本内</text>
+<text top="-14" left="111" width="672" height="18" font="9">容与范围，教材的内容是大纲所规定的课程知识和内容的扩展与发挥。课程内容在教</text>
+<text top="-14" left="111" width="576" height="18" font="9">材中可以体现一定的深度或难度，但在大纲中对考核的要求一定要适当。</text>
+<text top="-14" left="147" width="636" height="18" font="9">大纲与教材所体现的课程内容应基本一致；大纲里面的课程内容和考核知识点，</text>
+<text top="-14" left="111" width="540" height="18" font="9">教材里一般也要有。反过来教材里有的内容，大纲里就不一定体现。</text>
+<text top="-14" left="147" width="144" height="18" font="7">三、关于自学教材</text>
+<text top="-14" left="147" width="645" height="19" font="8">本课程使用的教材为：《软件工程》，瞿中、宋琦等主编，人民邮电出版社出版，</text>
+<text top="-14" left="111" width="77" height="19" font="8">2016 年。</text>
+<text top="-14" left="147" width="288" height="18" font="7">四、关于自学要求和自学方法的指导</text>
+<text top="-14" left="147" width="636" height="18" font="9">本大纲的课程基本要求是依据专业考试计划和专业培养目标而确定的。课程基本</text>
+<text top="-14" left="111" width="672" height="18" font="9">要求还明确了课程的基本内容，以及对基本内容掌握的程度。基本要求中的知识点构</text>
+<text top="-14" left="111" width="672" height="18" font="9">成了课程内容的主体部分。因此，课程基本内容掌握程度、课程考核知识点是高等教</text>
+<text top="-14" left="111" width="234" height="18" font="9">育自学考试考核的主要内容。</text>
+<text top="-14" left="147" width="636" height="18" font="9">为有效地指导个人自学和社会助学，本大纲已指明了课程的重点和难点，在章节</text>
+<text top="-14" left="111" width="414" height="18" font="9">的基本要求中一般也指明了章节内容的重点和难点。</text>
+<text top="-14" left="147" width="108" height="18" font="7">五、应考指导</text>
+<text top="-18" left="147" width="9" height="24" font="10">1</text>
+<text top="-14" left="156" width="627" height="18" font="9">．如何学习。本课程作为计算机科学与技术专业的一门重要课程，培养考生用软</text>
+<text top="-14" left="111" width="540" height="18" font="9">件工程思想开发出高质量的软件。建议学习本课程时注意以下几点：</text>
+<text top="-14" left="147" width="18" height="18" font="9">（</text>
+<text top="-18" left="165" width="9" height="24" font="10">1</text>
+<text top="-14" left="174" width="609" height="18" font="9">）在学习本课程教材之前应先仔细阅读本大纲，了解本课程的性质和特点，熟</text>
+<text top="-14" left="111" width="576" height="18" font="9">知本课程的基本要求，在学习本课程时，能紧紧围绕本课程的基本要求。</text>
+<text top="-14" left="147" width="18" height="18" font="9">（</text>
+<text top="-18" left="165" width="9" height="24" font="10">2</text>
+<text top="-14" left="174" width="609" height="18" font="9">）在自学教材的每一章之前，先阅读本大纲中对应章节的学习目的与要求、考</text>
+<text top="-14" left="111" width="396" height="18" font="9">核知识点与考核要求，以使自学时做到心中有数。</text>
+<text top="-14" left="147" width="18" height="18" font="9">（</text>
+<text top="-18" left="165" width="9" height="24" font="10">3</text>
+<text top="-14" left="174" width="609" height="18" font="9">）学习本课程的目的是用工程化方法和技术进行软件需求分析，设计和实现的</text>
+<text top="-14" left="111" width="681" height="18" font="9">能力培养。除学习课程书本知识之外，参与开发大型软件是学习软件工程的有效途径，</text>
+</page>
+<page number="13" position="absolute" top="0" left="0" height="1263" width="893">
+<text top="1162" left="389" width="14" height="13" font="0">第</text>
+<text top="1159" left="409" width="14" height="18" font="1">13</text>
+<text top="1162" left="430" width="34" height="13" font="0">页 共</text>
+<text top="1159" left="470" width="14" height="18" font="1">16</text>
+<text top="1162" left="490" width="14" height="13" font="0">页</text>
+<text top="-14" left="111" width="234" height="18" font="9">为此，要求考生能参与实践。</text>
+<text top="-18" left="147" width="9" height="24" font="10">2</text>
+<text top="-14" left="156" width="627" height="18" font="9">．如何考试。卷面整洁非常重要。书写工整，段落与间距合理，卷面赏心悦目有</text>
+<text top="-14" left="111" width="672" height="18" font="9">助于教师评分，教师只能为他能看懂的内容打分。回答所提出的问题。要回答所问的</text>
+<text top="-14" left="111" width="522" height="18" font="9">问题，而不是回答你自己乐意回答的问题！避免超过问题的范围。</text>
+<text top="-18" left="147" width="9" height="24" font="10">3</text>
+<text top="-14" left="156" width="627" height="18" font="9">．如何处理紧张情绪。正确处理对失败的惧怕，要正面思考。如果可能，请教已</text>
+<text top="-14" left="111" width="672" height="18" font="9">经通过该科目考试的人，问他们一些问题。做深呼吸放松，这有助于使头脑清醒，缓</text>
+<text top="-14" left="111" width="468" height="18" font="9">解紧张情绪。考试前合理膳食，保持旺盛精力，保持冷静。</text>
+<text top="-14" left="147" width="180" height="18" font="7">六、对社会助学的要求</text>
+<text top="-18" left="147" width="9" height="24" font="10">1</text>
+<text top="-14" left="156" width="627" height="18" font="9">．社会助学者应根据本大纲规定的考试内容和考核目标，认真钻研指定教材，明</text>
+<text top="-14" left="111" width="672" height="18" font="9">确本课程的特点和学习要求，对考生进行切实有效的辅导，避免考生在自学时可能出</text>
+<text top="-14" left="111" width="342" height="18" font="9">现的各种偏向，把握社会助学的正确方向。</text>
+<text top="-18" left="147" width="9" height="24" font="10">2</text>
+<text top="-14" left="156" width="627" height="18" font="9">．社会助学者应对考生进行学习方法的指导，向考生提倡“认真阅读教材，刻苦</text>
+<text top="-14" left="111" width="450" height="18" font="9">钻研教材，主动提出问题，依靠自己学懂”的学习方法。</text>
+<text top="-18" left="147" width="9" height="24" font="10">3</text>
+<text top="-14" left="156" width="627" height="18" font="9">．社会助学者应注意对考生自学能力的培养，使考生逐步学会独立学习，在自学</text>
+<text top="-14" left="111" width="672" height="18" font="9">过程中善于提出问题、分析问题、作出判断和解决问题。对考生提出的问题，社会助</text>
+<text top="-14" left="111" width="198" height="18" font="9">学者应以启发引导为主。</text>
+<text top="-18" left="147" width="9" height="24" font="10">4</text>
+<text top="-14" left="156" width="627" height="18" font="9">．社会助学者应指导考生正确处理重点和一般的关系。课程内容有重点与一般之</text>
+<text top="-14" left="111" width="672" height="18" font="9">分，但考试内容是全面的，而且重点与一般是相互影响的，不是截然分开的。社会助</text>
+<text top="-14" left="111" width="672" height="18" font="9">学者应指导考生全面系统地学习教材，掌握全部考试内容和考核知识点，在此基础上</text>
+<text top="-14" left="111" width="672" height="18" font="9">再突出重点。总之，要把重点学习同兼顾一般结合起来，切勿孤立地抓重点，把考生</text>
+<text top="-14" left="111" width="126" height="18" font="9">引向猜题押题。</text>
+<text top="-14" left="147" width="180" height="18" font="7">七、对考核内容的说明</text>
+<text top="-14" left="147" width="636" height="18" font="9">本课程要求考生学习和掌握的知识点内容都作为考核的内容。课程中各章的内容</text>
+<text top="-14" left="111" width="672" height="18" font="9">均由若干知识点组成，在自学考试中成为考核知识点。因此，课程自学考试大纲中所</text>
+<text top="-14" left="111" width="681" height="18" font="9">规定的考试内容是以分解为考核知识点的方式给出的。由于各知识点在课程中的地位、</text>
+<text top="-14" left="111" width="672" height="18" font="9">作用以及知识自身的特点不同，自学考试将对各知识点分别按三个层次确定其考核要</text>
+<text top="-14" left="111" width="36" height="18" font="9">求。</text>
+<text top="-14" left="147" width="234" height="18" font="7">八、关于考试命题的若干规定</text>
+<text top="-18" left="147" width="9" height="24" font="10">1</text>
+<text top="-14" left="156" width="296" height="18" font="9">．考试方式为闭卷、笔试，考试时间为</text>
+<text top="-18" left="456" width="27" height="24" font="10">150</text>
+<text top="-14" left="488" width="195" height="18" font="9">分钟。评分采用百分制，</text>
+<text top="-18" left="679" width="18" height="24" font="10">60</text>
+<text top="-14" left="701" width="90" height="18" font="9">分为及格。</text>
+</page>
+<page number="14" position="absolute" top="0" left="0" height="1263" width="893">
+<text top="1162" left="389" width="14" height="13" font="0">第</text>
+<text top="1159" left="409" width="14" height="18" font="1">14</text>
+<text top="1162" left="430" width="34" height="13" font="0">页 共</text>
+<text top="1159" left="470" width="14" height="18" font="1">16</text>
+<text top="1162" left="490" width="14" height="13" font="0">页</text>
+<text top="-14" left="111" width="108" height="18" font="9">考生只准携带</text>
+<text top="-18" left="223" width="23" height="24" font="10">0.5</text>
+<text top="-14" left="250" width="532" height="18" font="9">毫米黑色墨水的签字笔、铅笔、圆规、直尺、三角板、橡皮等必需的</text>
+<text top="-14" left="111" width="378" height="18" font="9">文具用品，可携带没有存储功能的普通计算器。</text>
+<text top="-18" left="147" width="9" height="24" font="10">2</text>
+<text top="-14" left="156" width="627" height="18" font="9">．本大纲各章所规定的基本要求、知识点及知识点下的知识细目，都属于考核的</text>
+<text top="-14" left="111" width="672" height="18" font="9">内容。考试命题既要覆盖到章，又要避免面面俱到。要注意突出课程的重点、章节重</text>
+<text top="-14" left="111" width="234" height="18" font="9">点，加大重点内容的覆盖度。</text>
+<text top="-18" left="147" width="9" height="24" font="10">3</text>
+<text top="-14" left="156" width="627" height="18" font="9">．命题不应有超出大纲中考核知识点范围的题目，考核目标不得高于大纲中所规</text>
+<text top="-14" left="111" width="672" height="18" font="9">定的相应的最高能力层次要求。命题应着重考核考生对基本概念、基本知识和基本理</text>
+<text top="-14" left="111" width="672" height="18" font="9">论是否了解或掌握，对基本方法是否会用或熟练。不应出与基本要求不符的偏题或怪</text>
+<text top="-14" left="111" width="36" height="18" font="9">题。</text>
+<text top="-18" left="147" width="9" height="24" font="10">4</text>
+<text top="-14" left="156" width="519" height="18" font="9">．本课程在试卷中对不同能力层次要求的分数比例大致为：识记占</text>
+<text top="-18" left="679" width="33" height="24" font="10">30%</text>
+<text top="-14" left="712" width="71" height="18" font="9">，领会占</text>
+<text top="-18" left="111" width="33" height="24" font="10">40%</text>
+<text top="-14" left="143" width="72" height="18" font="9">，应用占</text>
+<text top="-18" left="220" width="33" height="24" font="10">30%</text>
+<text top="-14" left="253" width="18" height="18" font="9">。</text>
+<text top="-18" left="147" width="9" height="24" font="10">5</text>
+<text top="-14" left="156" width="627" height="18" font="9">．要合理安排试题的难易程度，试题的难度可分为：易、较易、较难和难四个等</text>
+<text top="-14" left="111" width="402" height="18" font="9">级。每份试卷中不同难度试题的分数比例一般为：</text>
+<text top="-18" left="512" width="51" height="24" font="10">2:3:3:2</text>
+<text top="-14" left="564" width="219" height="18" font="9">。必须注意试题的难易程度</text>
+<text top="-14" left="111" width="672" height="18" font="9">与能力层次有一定的联系，但二者不是等同的概念。在各个能力层次中对于不同的考</text>
+<text top="-14" left="111" width="672" height="18" font="9">生都存在着不同的难度。本门课程注重考生工程思维、宏观思维的培养，使考生具有</text>
+<text top="-14" left="111" width="672" height="18" font="9">从系统、全局的角度看问题，以问题为导向去学习并应用相关理论与方法。考试测试</text>
+<text top="-14" left="111" width="594" height="18" font="9">的是考生掌握课程的基本原理和基本方法，以及逻辑思维与建模计算能力。</text>
+<text top="-18" left="147" width="9" height="24" font="10">6</text>
+<text top="-14" left="156" width="627" height="18" font="9">．本课程考试试卷中可能采用的题型有：单项选择题、名词解释题、简答题、综</text>
+<text top="-14" left="111" width="108" height="18" font="9">合应用题等。</text>
+</page>
+<page number="15" position="absolute" top="0" left="0" height="1263" width="893">
+	<fontspec id="12" size="21" family="LNUHNF+SimSun" color="#000000"/>
+	<fontspec id="13" size="16" family="LNUHNF+SimSun" color="#000000"/>
+	<fontspec id="14" size="16" family="AUWCNV+TimesNewRomanPSMT" color="#000000"/>
+<text top="1162" left="389" width="14" height="13" font="0">第</text>
+<text top="1159" left="409" width="14" height="18" font="1">15</text>
+<text top="1162" left="430" width="34" height="13" font="0">页 共</text>
+<text top="1159" left="470" width="14" height="18" font="1">16</text>
+<text top="1162" left="490" width="14" height="13" font="0">页</text>
+<text top="-17" left="373" width="42" height="21" font="12">附录</text>
+<text top="-17" left="436" width="84" height="21" font="12">题型示例</text>
+<text top="-12" left="142" width="111" height="16" font="13">一、单项选择题</text>
+<text top="-15" left="142" width="8" height="21" font="14">1</text>
+<text top="-12" left="150" width="632" height="16" font="13">．将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示，这种</text>
+<text top="-12" left="111" width="95" height="16" font="13">设计模式是（</text>
+<text top="-12" left="252" width="16" height="16" font="13">）</text>
+<text top="-15" left="142" width="11" height="21" font="14">A</text>
+<text top="-12" left="153" width="79" height="16" font="13">．抽象工厂</text>
+<text top="-15" left="300" width="10" height="21" font="14">B</text>
+<text top="-12" left="310" width="63" height="16" font="13">．适配器</text>
+<text top="-15" left="452" width="10" height="21" font="14">C</text>
+<text top="-12" left="462" width="47" height="16" font="13">．桥接</text>
+<text top="-15" left="583" width="11" height="21" font="14">D</text>
+<text top="-12" left="594" width="63" height="16" font="13">．生成器</text>
+<text top="-12" left="142" width="79" height="16" font="13">参考答案：</text>
+<text top="-15" left="221" width="11" height="21" font="14">D</text>
+<text top="-12" left="142" width="111" height="16" font="13">二、名词解释题</text>
+<text top="-15" left="142" width="8" height="21" font="14">1</text>
+<text top="-12" left="150" width="94" height="16" font="13">．模块的内聚</text>
+<text top="-12" left="142" width="640" height="16" font="13">参考答案：模块的内聚是标志一个模块内部各个元素彼此结合的紧密程度，处理动作的组合强</text>
+<text top="-12" left="111" width="315" height="16" font="13">度，它是信息隐蔽和局部化概念的自然扩展。</text>
+<text top="-12" left="142" width="79" height="16" font="13">三、简答题</text>
+<text top="-15" left="142" width="8" height="21" font="14">1</text>
+<text top="-12" left="150" width="315" height="16" font="13">．简述用户界面设计可使用性包含哪些方面。</text>
+<text top="-12" left="142" width="79" height="16" font="13">参考答案：</text>
+<text top="-12" left="142" width="16" height="16" font="13">（</text>
+<text top="-15" left="158" width="8" height="21" font="14">1</text>
+<text top="-12" left="166" width="94" height="16" font="13">）界面简单。</text>
+<text top="-12" left="142" width="16" height="16" font="13">（</text>
+<text top="-15" left="158" width="8" height="21" font="14">2</text>
+<text top="-12" left="166" width="173" height="16" font="13">）术语标准化和一致化。</text>
+<text top="-12" left="142" width="16" height="16" font="13">（</text>
+<text top="-15" left="158" width="8" height="21" font="14">3</text>
+<text top="-12" left="166" width="173" height="16" font="13">）拥有完善的帮助功能。</text>
+<text top="-12" left="142" width="16" height="16" font="13">（</text>
+<text top="-15" left="158" width="8" height="21" font="14">4</text>
+<text top="-12" left="166" width="205" height="16" font="13">）系统响应快和系统成本低。</text>
+<text top="-12" left="142" width="16" height="16" font="13">（</text>
+<text top="-15" left="158" width="8" height="21" font="14">5</text>
+<text top="-12" left="166" width="94" height="16" font="13">）容错能力。</text>
+<text top="-12" left="142" width="111" height="16" font="13">四、综合应用题</text>
+<text top="-15" left="142" width="8" height="21" font="14">1</text>
+<text top="-12" left="150" width="141" height="16" font="13">．设被测程序段为：</text>
+<text top="-18" left="183" width="56" height="24" font="10">if (x&gt;1)</text>
+<text top="-18" left="214" width="61" height="24" font="10">y = x+1;</text>
+<text top="-18" left="183" width="110" height="24" font="10">if (x==2 || y&lt;0)</text>
+<text top="-18" left="205" width="42" height="24" font="10">y = 3;</text>
+<text top="-18" left="183" width="92" height="24" font="10">else y = x+y;</text>
+<text top="-12" left="142" width="457" height="16" font="13">请画出该段程序的流程图。给出符合判定覆盖的最小测试用例集。</text>
+<text top="-12" left="142" width="640" height="16" font="13">（注意：最小测试用例集是指用数目最少的测试用例来达到要求；输入测试用例的格式为：输</text>
+<text top="-12" left="111" width="47" height="16" font="13">入数据</text>
+<text top="-15" left="158" width="30" height="21" font="14">[x,y]</text>
+<text top="-12" left="188" width="79" height="16" font="13">，预期结果</text>
+<text top="-15" left="267" width="30" height="21" font="14">[x,y]</text>
+<text top="-12" left="297" width="94" height="16" font="13">，覆盖路径）</text>
+</page>
+<page number="16" position="absolute" top="0" left="0" height="1263" width="893">
+<text top="1162" left="389" width="14" height="13" font="0">第</text>
+<text top="1159" left="409" width="14" height="18" font="1">16</text>
+<text top="1162" left="430" width="34" height="13" font="0">页 共</text>
+<text top="1159" left="470" width="14" height="18" font="1">16</text>
+<text top="1162" left="490" width="14" height="13" font="0">页</text>
+<text top="-12" left="142" width="79" height="16" font="13">参考答案：</text>
+<text top="-12" left="142" width="63" height="16" font="13">输入数据</text>
+<text top="-15" left="205" width="30" height="21" font="14">[3,0]</text>
+<text top="-12" left="235" width="79" height="16" font="13">，预期结果</text>
+<text top="-15" left="314" width="30" height="21" font="14">[3,7]</text>
+<text top="-12" left="344" width="79" height="16" font="13">，覆盖路径</text>
+<text top="-15" left="431" width="13" height="21" font="14">r1</text>
+<text top="-12" left="444" width="16" height="16" font="13">，</text>
+<text top="-15" left="460" width="13" height="21" font="14">r3</text>
+<text top="-12" left="473" width="16" height="16" font="13">，</text>
+<text top="-15" left="489" width="13" height="21" font="14">r5</text>
+<text top="-12" left="502" width="16" height="16" font="13">，</text>
+<text top="-15" left="517" width="13" height="21" font="14">r7</text>
+<text top="-12" left="530" width="16" height="16" font="13">；</text>
+<text top="-12" left="142" width="63" height="16" font="13">输入数据</text>
+<text top="-15" left="205" width="35" height="21" font="14">[0,-1]</text>
+<text top="-12" left="240" width="79" height="16" font="13">，预期结果</text>
+<text top="-15" left="319" width="30" height="21" font="14">[0,3]</text>
+<text top="-12" left="349" width="79" height="16" font="13">，覆盖路径</text>
+<text top="-15" left="436" width="13" height="21" font="14">r2</text>
+<text top="-12" left="449" width="16" height="16" font="13">，</text>
+<text top="-15" left="465" width="13" height="21" font="14">r4</text>
+<text top="-12" left="478" width="16" height="16" font="13">，</text>
+<text top="-15" left="494" width="13" height="21" font="14">r6</text>
+<text top="-12" left="515" width="16" height="16" font="13">。</text>
+<text top="-12" left="142" width="394" height="16" font="13">注意：对于测试用例，答案不唯一，满足测试要求即可。</text>
+</page>
+</pdf2xml>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pdf2xml SYSTEM "pdf2xml.dtd">
+
+<pdf2xml producer="poppler" version="25.07.0">
+<page number="1" position="absolute" top="0" left="0" height="1262" width="892">
+	<fontspec id="0" size="24" family="XEKKFX+SimHei" color="#000000"/>
+	<fontspec id="1" size="33" family="LNUHNF+SimSun" color="#000000"/>
+	<fontspec id="2" size="21" family="XEKKFX+SimHei" color="#000000"/>
+	<fontspec id="3" size="21" family="AUWCNV+TimesNewRomanPSMT" color="#000000"/>
+	<fontspec id="4" size="21" family="ABSEKN+FangSong" color="#000000"/>
+	<fontspec id="5" size="18" family="SimSun" color="#000000"/>
+<text top="1242" left="135" width="66" height="24" font="0">附件 3</text>
+<text top="1235" left="194" width="503" height="33" font="1">江苏省高等教育自学考试面向社会开考</text>
+<text top="1235" left="239" width="414" height="33" font="1">专科专业新旧代码和名称对照表</text>
+<text top="1245" left="91" width="21" height="21" font="2">序</text>
+<text top="1245" left="91" width="21" height="21" font="2">号</text>
+<text top="1245" left="141" width="63" height="21" font="2">原专业</text>
+<text top="1245" left="152" width="42" height="21" font="2">代码</text>
+<text top="1245" left="274" width="105" height="21" font="2">原专业名称</text>
+<text top="1245" left="445" width="63" height="21" font="2">新专业</text>
+<text top="1245" left="456" width="42" height="21" font="2">代码</text>
+<text top="1245" left="585" width="105" height="21" font="2">新专业名称</text>
+<text top="1245" left="760" width="42" height="21" font="2">备注</text>
+<text top="1241" left="97" width="11" height="28" font="3">1</text>
+<text top="1241" left="141" width="63" height="28" font="3">510118</text>
+<text top="1245" left="231" width="126" height="22" font="4">农业经济管理</text>
+<text top="1241" left="445" width="63" height="28" font="3">410119</text>
+<text top="1245" left="532" width="168" height="22" font="4">现代农业经济管理</text>
+<text top="1245" left="760" width="42" height="22" font="4">更名</text>
+<text top="1241" left="97" width="11" height="28" font="3">2</text>
+<text top="1241" left="141" width="63" height="28" font="3">560102</text>
+<text top="1245" left="231" width="168" height="22" font="4">机械制造与自动化</text>
+<text top="1241" left="445" width="63" height="28" font="3">460104</text>
+<text top="1245" left="532" width="168" height="22" font="4">机械制造及自动化</text>
+<text top="1245" left="760" width="42" height="22" font="4">更名</text>
+<text top="1241" left="97" width="11" height="28" font="3">3</text>
+<text top="1241" left="141" width="63" height="28" font="3">630302</text>
+<text top="1245" left="231" width="42" height="22" font="4">会计</text>
+<text top="1241" left="445" width="63" height="28" font="3">530302</text>
+<text top="1245" left="532" width="126" height="22" font="4">大数据与会计</text>
+<text top="1245" left="760" width="42" height="22" font="4">更名</text>
+<text top="1241" left="97" width="11" height="28" font="3">4</text>
+<text top="1241" left="141" width="63" height="28" font="3">560301</text>
+<text top="1245" left="231" width="147" height="22" font="4">机电一体化技术</text>
+<text top="1241" left="445" width="63" height="28" font="3">460301</text>
+<text top="1245" left="532" width="147" height="22" font="4">机电一体化技术</text>
+<text top="1241" left="97" width="11" height="28" font="3">5</text>
+<text top="1241" left="141" width="63" height="28" font="3">620302</text>
+<text top="1245" left="231" width="63" height="22" font="4">中药学</text>
+<text top="1241" left="445" width="63" height="28" font="3">520410</text>
+<text top="1245" left="532" width="63" height="22" font="4">中药学</text>
+<text top="1241" left="97" width="11" height="28" font="3">6</text>
+<text top="1241" left="141" width="63" height="28" font="3">630601</text>
+<text top="1245" left="231" width="126" height="22" font="4">工商企业管理</text>
+<text top="1241" left="445" width="63" height="28" font="3">530601</text>
+<text top="1245" left="532" width="126" height="22" font="4">工商企业管理</text>
+<text top="1241" left="97" width="11" height="28" font="3">7</text>
+<text top="1241" left="141" width="63" height="28" font="3">630701</text>
+<text top="1245" left="231" width="84" height="22" font="4">市场营销</text>
+<text top="1241" left="445" width="63" height="28" font="3">530605</text>
+<text top="1245" left="532" width="84" height="22" font="4">市场营销</text>
+<text top="1241" left="97" width="11" height="28" font="3">8</text>
+<text top="1241" left="141" width="63" height="28" font="3">630801</text>
+<text top="1245" left="231" width="84" height="22" font="4">电子商务</text>
+<text top="1241" left="445" width="63" height="28" font="3">530701</text>
+<text top="1245" left="532" width="84" height="22" font="4">电子商务</text>
+<text top="1241" left="97" width="115" height="28" font="3">9 670102K</text>
+<text top="1245" left="231" width="84" height="22" font="4">学前教育</text>
+<text top="1241" left="438" width="78" height="28" font="3">570102K</text>
+<text top="1245" left="532" width="84" height="22" font="4">学前教育</text>
+<text top="1241" left="91" width="120" height="28" font="3">10 670103K</text>
+<text top="1245" left="231" width="84" height="22" font="4">小学教育</text>
+<text top="1241" left="438" width="78" height="28" font="3">570103K</text>
+<text top="1245" left="532" width="84" height="22" font="4">小学教育</text>
+<text top="1241" left="92" width="120" height="28" font="3">11 670121K</text>
+<text top="1245" left="231" width="126" height="22" font="4">心理健康教育</text>
+<text top="1241" left="438" width="78" height="28" font="3">570116K</text>
+<text top="1245" left="532" width="126" height="22" font="4">心理健康教育</text>
+<text top="1241" left="91" width="113" height="28" font="3">12 690202</text>
+<text top="1245" left="231" width="126" height="22" font="4">人力资源管理</text>
+<text top="1241" left="445" width="63" height="28" font="3">590202</text>
+<text top="1245" left="532" width="126" height="22" font="4">人力资源管理</text>
+<text top="1241" left="91" width="113" height="28" font="3">13 690206</text>
+<text top="1245" left="231" width="84" height="22" font="4">行政管理</text>
+<text top="1241" left="445" width="63" height="28" font="3">590206</text>
+<text top="1245" left="532" width="84" height="22" font="4">行政管理</text>
+<text top="1241" left="91" width="113" height="28" font="3">14 620201</text>
+<text top="1245" left="231" width="42" height="22" font="4">护理</text>
+<text top="1245" left="760" width="42" height="22" font="4">停考</text>
+<text top="1241" left="91" width="113" height="28" font="3">15 970201</text>
+<text top="1245" left="231" width="105" height="22" font="4">汉语言文学</text>
+<text top="1245" left="760" width="42" height="22" font="4">停考</text>
+<text top="1241" left="91" width="113" height="28" font="3">16 970202</text>
+<text top="1245" left="231" width="42" height="22" font="4">英语</text>
+<text top="1245" left="760" width="42" height="22" font="4">停考</text>
+<text top="1216" left="433" width="27" height="18" font="5">-1-</text>
+</page>
+</pdf2xml>

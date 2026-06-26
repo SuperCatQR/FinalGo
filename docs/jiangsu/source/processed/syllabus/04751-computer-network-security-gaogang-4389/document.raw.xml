@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pdf2xml SYSTEM "pdf2xml.dtd">
+
+<pdf2xml producer="poppler" version="25.07.0">
+<page number="1" position="absolute" top="0" left="0" height="1262" width="892">
+	<fontspec id="0" size="14" family="JYVKAE+DengXian" color="#000000"/>
+	<fontspec id="1" size="14" family="AUWCNV+TimesNewRomanPSMT" color="#000000"/>
+	<fontspec id="2" size="23" family="XEKKFX+SimHei" color="#000000"/>
+	<fontspec id="3" size="23" family="AUWCNV+TimesNewRomanPSMT" color="#000000"/>
+	<fontspec id="4" size="39" family="XEKKFX+SimHei" color="#000000"/>
+<text top="1160" left="393" width="14" height="16" font="0">第</text>
+<text top="1159" left="413" width="7" height="18" font="1">1</text>
+<text top="1160" left="426" width="34" height="16" font="0">页 共</text>
+<text top="1159" left="467" width="13" height="18" font="1">11</text>
+<text top="1160" left="487" width="14" height="16" font="0">页</text>
+<text top="-18" left="136" width="44" height="23" font="2">高纲</text>
+<text top="-22" left="180" width="44" height="30" font="3">4389</text>
+<text top="-18" left="135" width="291" height="23" font="2">江苏省高等教育自学考试大纲</text>
+<text top="-33" left="232" width="97" height="40" font="4">04751</text>
+<text top="-33" left="387" width="274" height="40" font="4">计算机网络安全</text>
+<text top="-18" left="450" width="218" height="23" font="2">南京航空航天大学编（</text>
+<text top="-22" left="667" width="44" height="30" font="3">2025</text>
+<text top="-18" left="714" width="44" height="23" font="2">年）</text>
+</page>
+<page number="2" position="absolute" top="0" left="0" height="1262" width="892">
+	<fontspec id="5" size="21" family="XEKKFX+SimHei" color="#000000"/>
+	<fontspec id="6" size="18" family="LNUHNF+SimSun" color="#000000"/>
+	<fontspec id="7" size="18" family="JDKKJW+KaiTi" color="#000000"/>
+<text top="1160" left="393" width="14" height="16" font="0">第</text>
+<text top="1159" left="413" width="7" height="18" font="1">2</text>
+<text top="1160" left="426" width="34" height="16" font="0">页 共</text>
+<text top="1159" left="467" width="13" height="18" font="1">11</text>
+<text top="1160" left="487" width="14" height="16" font="0">页</text>
+<text top="-17" left="330" width="232" height="21" font="5">Ⅰ 课程性质与课程目标</text>
+<text top="-14" left="171" width="163" height="18" font="6">一、课程性质和特点</text>
+<text top="-14" left="172" width="586" height="19" font="7">《计算机网络安全》是江苏省高等教育自学考试网络工程专业（专升本）</text>
+<text top="-14" left="135" width="623" height="19" font="7">考试计划中的一门选设课。该课程是一门计算机领域的应用性和实践性较强的</text>
+<text top="-14" left="135" width="623" height="19" font="7">专业课程。主要涉及计算机网络安全基本理论和应用技能。本课程对于培养考</text>
+<text top="-14" left="135" width="623" height="19" font="7">生的逻辑思维、实践能力和创新能力都起到重要作用。通过本课程，考生可以</text>
+<text top="-14" left="135" width="623" height="19" font="7">获得计算机网络安全方面的基本理论知识和基本技能，了解计算机网络安全技</text>
+<text top="-14" left="135" width="623" height="19" font="7">术的应用现状和发展概况，为学习后继课程以及从事与本专业有关的计算机应</text>
+<text top="-14" left="135" width="197" height="19" font="7">用工作打下一定的基础。</text>
+<text top="-14" left="171" width="108" height="18" font="6">二、课程目标</text>
+<text top="-14" left="172" width="586" height="19" font="7">通过本课程的学习，考生应掌握计算机网络安全的基本概念，对计算机网</text>
+<text top="-14" left="135" width="623" height="19" font="7">络安全面临的威胁、应对的安全手段能有一个总体上的认知和把握。熟悉计算</text>
+<text top="-14" left="135" width="623" height="19" font="7">机网络安全涉及的各领域知识，在将来工作中对信息系统需要的安全措施、安</text>
+<text top="-14" left="135" width="412" height="19" font="7">全方案能够有系统性的认知和恰当的设置或者使用。</text>
+<text top="-14" left="171" width="235" height="18" font="6">三、与相关课程的联系与区别</text>
+<text top="-14" left="171" width="473" height="19" font="7">本课程的先修课程为《计算机网络原理》《C++程序设计》。</text>
+<text top="-14" left="172" width="586" height="19" font="7">本课程在学习内容及学习环节等方面与相关课程的联系与分工如下：对于</text>
+<text top="-14" left="135" width="623" height="19" font="7">《计算机网络原理》课程，需要一些网络的基础知识、基本运行原理和基本的</text>
+<text top="-14" left="135" width="623" height="19" font="7">网络方面的程序设计知识；对于《C++程序设计》课程，需要具有相当的程序设</text>
+<text top="-14" left="135" width="402" height="19" font="7">计能力，可以自主设计/编写一定的小型应用系统。</text>
+<text top="-14" left="171" width="181" height="18" font="6">四、课程的重点和难点</text>
+<text top="-14" left="172" width="586" height="19" font="7">本课程包含主要内容有：网络安全概述、网络安全技术基础、网络安全体</text>
+<text top="-14" left="135" width="623" height="19" font="7">系与管理、黑客攻防与检测防御、密码与加密技术、身份认证与访问控制、计</text>
+<text top="-14" left="135" width="623" height="19" font="7">算机及手机病毒防范、防火墙技术及应用、操作系统及站点安全和数据库及数</text>
+<text top="-14" left="135" width="109" height="19" font="7">据库安全等。</text>
+<text top="-14" left="172" width="586" height="19" font="7">重点和难点：网络安全涉及的相关理论及防御的相关技术和理论，如网络</text>
+<text top="-14" left="135" width="347" height="19" font="7">体系、协议、加密技术和身份认证技术等。</text>
+</page>
+<page number="3" position="absolute" top="0" left="0" height="1262" width="892">
+	<fontspec id="8" size="18" family="XEKKFX+SimHei" color="#000000"/>
+	<fontspec id="9" size="18" family="AUWCNV+TimesNewRomanPSMT" color="#000000"/>
+<text top="1160" left="393" width="14" height="16" font="0">第</text>
+<text top="1159" left="413" width="7" height="18" font="1">3</text>
+<text top="1160" left="426" width="34" height="16" font="0">页 共</text>
+<text top="1159" left="467" width="13" height="18" font="1">11</text>
+<text top="1160" left="487" width="14" height="16" font="0">页</text>
+<text top="-17" left="383" width="126" height="21" font="5">Ⅱ 考核目标</text>
+<text top="-14" left="172" width="586" height="19" font="7">本大纲在考核目标中，按照识记、领会、应用三个层次规定其应达到的能</text>
+<text top="-14" left="135" width="623" height="19" font="7">力层次要求。三个能力层次是递升的关系，后者必须建立在前者的基础上。各</text>
+<text top="-14" left="135" width="183" height="19" font="7">级能力层次的含义是：</text>
+<text top="-14" left="172" width="595" height="19" font="7">识记：要求考生能够识别和记忆本课程中有关信息系统的相关概念、定义、</text>
+<text top="-14" left="135" width="623" height="19" font="7">方法、技术、应用、理论等，并能够根据考核的不同要求，做正确的表述、选</text>
+<text top="-14" left="135" width="91" height="19" font="7">择和判断。</text>
+<text top="-14" left="172" width="586" height="19" font="7">领会：要求考生能够领悟和理解本课程中有关管理信息系统概念、理论方</text>
+<text top="-14" left="135" width="623" height="19" font="7">法的内涵及外延，理解信息系统中采用相关方法的理论支持及其符合条件及范</text>
+<text top="-14" left="135" width="632" height="19" font="7">围，能够鉴别关于概念和方法中不甚精准的说法；掌握相关知识的联系与差异，</text>
+<text top="-14" left="135" width="623" height="19" font="7">并能根据考核要求的不同层级对信息系统进行分析，做出正确的判断、解释和</text>
+<text top="-14" left="135" width="55" height="19" font="7">说明。</text>
+<text top="-14" left="172" width="586" height="19" font="7">应用：考生能够运用本大纲规定的知识点，分析并解决相关的应用问题。</text>
+<text top="-14" left="135" width="623" height="19" font="7">具体到本课程中，考生能根据实际工作需要，将计算机网络安全方法运用到实</text>
+<text top="-14" left="135" width="55" height="19" font="7">践中。</text>
+<text top="-17" left="330" width="232" height="21" font="5">Ⅲ 课程内容与考核要求</text>
+<text top="-14" left="352" width="18" height="18" font="8">第</text>
+<text top="-18" left="379" width="9" height="24" font="9">1</text>
+<text top="-14" left="397" width="144" height="18" font="8">章 网络安全概述</text>
+<text top="-14" left="171" width="163" height="18" font="6">一、学习目的与要求</text>
+<text top="-14" left="171" width="605" height="18" font="6">本章集中介绍网络安全的概念、网络安全技术和网络安全的威胁及发展态势。</text>
+<text top="-14" left="135" width="378" height="18" font="6">要求掌握网络安全和网络安全技术的基本概念。</text>
+<text top="-14" left="171" width="217" height="18" font="6">二、考核知识点与考核要求</text>
+<text top="-14" left="171" width="587" height="18" font="6">识记：①网络安全的相关概念、网络安全的目标和特征；②网络安全技术中</text>
+<text top="-14" left="135" width="18" height="18" font="6">的</text>
+<text top="-18" left="158" width="47" height="24" font="9">PDRR</text>
+<text top="-14" left="209" width="54" height="18" font="6">模型和</text>
+<text top="-18" left="267" width="65" height="24" font="9">IPDRRR</text>
+<text top="-14" left="337" width="324" height="18" font="6">模型；③网络安全面临主要威胁的种类。</text>
+<text top="-14" left="171" width="181" height="18" font="6">三、本章的重点和难点</text>
+<text top="-14" left="171" width="504" height="18" font="6">本章的重点和难点是：①网络安全和网络安全技术的基本概念。</text>
+<text top="-14" left="334" width="18" height="18" font="8">第</text>
+<text top="-18" left="361" width="9" height="24" font="9">2</text>
+<text top="-14" left="379" width="180" height="18" font="8">章 网络安全技术基础</text>
+<text top="-14" left="171" width="163" height="18" font="6">一、学习目的与要求</text>
+</page>
+<page number="4" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="1160" left="393" width="14" height="16" font="0">第</text>
+<text top="1159" left="413" width="7" height="18" font="1">4</text>
+<text top="1160" left="426" width="34" height="16" font="0">页 共</text>
+<text top="1159" left="467" width="13" height="18" font="1">11</text>
+<text top="1160" left="487" width="14" height="16" font="0">页</text>
+<text top="-14" left="171" width="346" height="18" font="6">本章介绍了常用的网络安全技术基础知识、</text>
+<text top="-18" left="517" width="54" height="24" font="9">TCP/IP</text>
+<text top="-14" left="576" width="182" height="18" font="6">层次安全及常用技术、</text>
+<text top="-18" left="135" width="34" height="24" font="9">IPv6</text>
+<text top="-14" left="169" width="123" height="18" font="6">、虚拟专用网（</text>
+<text top="-18" left="292" width="36" height="24" font="9">VPN</text>
+<text top="-14" left="328" width="303" height="18" font="6">）技术和无线网络安全技术。要求掌握</text>
+<text top="-18" left="635" width="34" height="24" font="9">IPv6</text>
+<text top="-14" left="669" width="89" height="18" font="6">、虚拟专用</text>
+<text top="-14" left="135" width="36" height="18" font="6">网（</text>
+<text top="-18" left="171" width="36" height="24" font="9">VPN</text>
+<text top="-14" left="207" width="234" height="18" font="6">）技术和无线网络安全技术。</text>
+<text top="-14" left="171" width="217" height="18" font="6">二、考核知识点与考核要求</text>
+<text top="-14" left="171" width="306" height="18" font="6">识记：①网络安全技术的基础知识；②</text>
+<text top="-18" left="477" width="54" height="24" font="9">TCP/IP</text>
+<text top="-14" left="536" width="180" height="18" font="6">层次安全及常用技术。</text>
+<text top="-14" left="171" width="71" height="18" font="6">领会：①</text>
+<text top="-18" left="242" width="34" height="24" font="9">IPv6</text>
+<text top="-14" left="280" width="126" height="18" font="6">的优势与特点、</text>
+<text top="-18" left="405" width="34" height="24" font="9">IPv6</text>
+<text top="-14" left="444" width="36" height="18" font="6">相比</text>
+<text top="-18" left="484" width="34" height="24" font="9">IPv4</text>
+<text top="-14" left="523" width="180" height="18" font="6">在网络安全上的变化、</text>
+<text top="-18" left="701" width="34" height="24" font="9">IPv6</text>
+<text top="-14" left="740" width="18" height="18" font="6">的</text>
+<text top="-14" left="135" width="127" height="18" font="6">安全机制和移动</text>
+<text top="-18" left="266" width="34" height="24" font="9">IPv6</text>
+<text top="-14" left="305" width="199" height="18" font="6">的特性；②虚拟专用网（</text>
+<text top="-18" left="504" width="36" height="24" font="9">VPN</text>
+<text top="-14" left="541" width="217" height="18" font="6">）的基本概念、技术特点、</text>
+<text top="-14" left="135" width="414" height="18" font="6">关键技术和实用解决方案；③无线网络接入点安全和</text>
+<text top="-18" left="554" width="88" height="24" font="9">IEEE802.1x</text>
+<text top="-14" left="646" width="90" height="18" font="6">认证过程。</text>
+<text top="-14" left="171" width="72" height="18" font="6">应用：①</text>
+<text top="-18" left="243" width="88" height="24" font="9">IEEE802.1x</text>
+<text top="-14" left="336" width="90" height="18" font="6">认证过程。</text>
+<text top="-14" left="171" width="181" height="18" font="6">三、本章的重点和难点</text>
+<text top="-14" left="171" width="197" height="18" font="6">本章的重点和难点是：①</text>
+<text top="-18" left="368" width="34" height="24" font="9">IPv6</text>
+<text top="-14" left="407" width="126" height="18" font="6">的优势与特点、</text>
+<text top="-18" left="532" width="34" height="24" font="9">IPv6</text>
+<text top="-14" left="571" width="36" height="18" font="6">相比</text>
+<text top="-18" left="611" width="34" height="24" font="9">IPv4</text>
+<text top="-14" left="650" width="108" height="18" font="6">在网络安全上</text>
+<text top="-14" left="135" width="72" height="18" font="6">的变化、</text>
+<text top="-18" left="207" width="34" height="24" font="9">IPv6</text>
+<text top="-14" left="246" width="144" height="18" font="6">的安全机制和移动</text>
+<text top="-18" left="395" width="34" height="24" font="9">IPv6</text>
+<text top="-14" left="433" width="198" height="18" font="6">的特性；②虚拟专用网（</text>
+<text top="-18" left="632" width="36" height="24" font="9">VPN</text>
+<text top="-14" left="668" width="90" height="18" font="6">）的关键技</text>
+<text top="-14" left="135" width="360" height="18" font="6">术和实用解决方案；③无线网络接入点安全和</text>
+<text top="-18" left="500" width="88" height="24" font="9">IEEE802.1x</text>
+<text top="-14" left="592" width="90" height="18" font="6">认证过程。</text>
+<text top="-14" left="327" width="18" height="18" font="8">第</text>
+<text top="-18" left="354" width="9" height="24" font="9">3</text>
+<text top="-14" left="368" width="198" height="18" font="8">章 网络安全体系与管理</text>
+<text top="-14" left="171" width="163" height="18" font="6">一、学习目的与要求</text>
+<text top="-14" left="171" width="587" height="18" font="6">本章集中介绍网络安全管理与保障体系和网络安全管理的基本过程、概述了</text>
+<text top="-14" left="135" width="623" height="18" font="6">国外在网络安全方面的法律法规和我国网络安全方面的法律法规。要求掌握网络</text>
+<text top="-14" left="135" width="216" height="18" font="6">安全体系和网络安全管理。</text>
+<text top="-14" left="171" width="217" height="18" font="6">二、考核知识点与考核要求</text>
+<text top="-14" left="171" width="72" height="18" font="6">识记：①</text>
+<text top="-18" left="244" width="29" height="24" font="9">ISO</text>
+<text top="-14" left="277" width="163" height="18" font="6">网络安全体系结构和</text>
+<text top="-18" left="445" width="54" height="24" font="9">TCP/IP</text>
+<text top="-14" left="504" width="254" height="18" font="6">网络安全体系结构；②网络安全</text>
+<text top="-14" left="135" width="360" height="18" font="6">相关法律法规；③网络安全评估准则和方法。</text>
+<text top="-14" left="171" width="70" height="18" font="6">领会：①</text>
+<text top="-18" left="241" width="29" height="24" font="9">ISO</text>
+<text top="-14" left="274" width="430" height="18" font="6">网络安全体系结构中网络安全机制和网络安全服务；②</text>
+<text top="-18" left="704" width="54" height="24" font="9">TCP/IP</text>
+<text top="-14" left="135" width="378" height="18" font="6">网络安全管理体系结构；③网络安全保障体系。</text>
+<text top="-14" left="171" width="181" height="18" font="6">三、本章的重点和难点</text>
+<text top="-14" left="171" width="194" height="18" font="6">本章的重点和难点是：①</text>
+<text top="-18" left="365" width="29" height="24" font="9">ISO</text>
+<text top="-14" left="398" width="360" height="18" font="6">网络安全体系结构中网络安全机制和网络安全</text>
+<text top="-14" left="135" width="72" height="18" font="6">服务；②</text>
+<text top="-18" left="207" width="54" height="24" font="9">TCP/IP</text>
+<text top="-14" left="266" width="198" height="18" font="6">网络安全管理体系结构。</text>
+<text top="-14" left="329" width="18" height="18" font="8">第</text>
+<text top="-18" left="352" width="9" height="24" font="9">4</text>
+<text top="-14" left="365" width="198" height="18" font="8">章 黑客攻防与检测防御</text>
+<text top="-14" left="171" width="163" height="18" font="6">一、学习目的与要求</text>
+</page>
+<page number="5" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="1160" left="393" width="14" height="16" font="0">第</text>
+<text top="1159" left="413" width="7" height="18" font="1">5</text>
+<text top="1160" left="426" width="34" height="16" font="0">页 共</text>
+<text top="1159" left="467" width="13" height="18" font="1">11</text>
+<text top="1160" left="487" width="14" height="16" font="0">页</text>
+<text top="-14" left="171" width="587" height="18" font="6">本章集中介绍黑客攻击的步骤、黑客攻防技术、入侵检测和防御系统。要求</text>
+<text top="-14" left="135" width="288" height="18" font="6">掌握黑客攻击技术和检测防御技术。</text>
+<text top="-14" left="171" width="217" height="18" font="6">二、考核知识点与考核要求</text>
+<text top="-14" left="171" width="596" height="18" font="6">识记：①黑客的相关概念、黑客攻击的目的和过程；②网络攻击的防范措施。</text>
+<text top="-14" left="171" width="587" height="18" font="6">领会：①端口扫描的攻防、网络监听的攻防、社会工程学的攻防、密码破解</text>
+<text top="-14" left="135" width="623" height="18" font="6">的攻防、缓冲区溢出的攻防、拒绝服务的攻防、特洛伊木马的攻防和网络欺骗的</text>
+<text top="-14" left="135" width="342" height="18" font="6">攻防；②入侵检测和防御系统的基本原理。</text>
+<text top="-14" left="171" width="288" height="18" font="6">应用：①入侵检测系统原理及功能。</text>
+<text top="-14" left="171" width="181" height="18" font="6">三、本章的重点和难点</text>
+<text top="-14" left="171" width="522" height="18" font="6">本章的重点和难点是：①黑客攻防技术；②入侵检测和防御系统。</text>
+<text top="-14" left="347" width="18" height="18" font="8">第</text>
+<text top="-18" left="370" width="9" height="24" font="9">5</text>
+<text top="-14" left="383" width="162" height="18" font="8">章 密码与加密技术</text>
+<text top="-14" left="171" width="163" height="18" font="6">一、学习目的与要求</text>
+<text top="-14" left="171" width="596" height="18" font="6">本章集中介绍密码技术相关概念、密码破译方法与密钥管理、实用加密技术。</text>
+<text top="-14" left="135" width="252" height="18" font="6">要求掌握密码与加密相关技术。</text>
+<text top="-14" left="171" width="217" height="18" font="6">二、考核知识点与考核要求</text>
+<text top="-14" left="171" width="587" height="18" font="6">识记：①密码学基本概念和基本术语；②密码体制及其分类；③数据及网络</text>
+<text top="-14" left="135" width="558" height="18" font="6">加密方式；④密码破译方法与密钥管理；⑤信息隐藏技术和量子密码。</text>
+<text top="-14" left="171" width="549" height="18" font="6">领会：①密码系统基本原理；②非对称密码体制；③单向加密体制；④</text>
+<text top="-18" left="720" width="38" height="24" font="9">WEP</text>
+<text top="-14" left="135" width="90" height="18" font="6">加密技术。</text>
+<text top="-14" left="171" width="432" height="18" font="6">应用：①古典密码体制中置换密码；②对称密码体制。</text>
+<text top="-14" left="171" width="181" height="18" font="6">三、本章的重点和难点</text>
+<text top="-14" left="171" width="324" height="18" font="6">本章的重点和难点是：①实用加密技术。</text>
+<text top="-14" left="329" width="18" height="18" font="8">第</text>
+<text top="-18" left="352" width="9" height="24" font="9">6</text>
+<text top="-14" left="365" width="198" height="18" font="8">章 身份认证与访问控制</text>
+<text top="-14" left="171" width="163" height="18" font="6">一、学习目的与要求</text>
+<text top="-14" left="171" width="596" height="18" font="6">本章集中介绍身份认证技术、数字签名技术、访问控制技术和网络安全审计。</text>
+<text top="-14" left="135" width="324" height="18" font="6">要求掌握身份认证和访问控制相关技术。</text>
+<text top="-14" left="171" width="217" height="18" font="6">二、考核知识点与考核要求</text>
+<text top="-14" left="171" width="594" height="18" font="6">识记：①身份认证的基本概念；②访问控制的基本概念；③网络安全审计。</text>
+</page>
+<page number="6" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="1160" left="393" width="14" height="16" font="0">第</text>
+<text top="1159" left="413" width="7" height="18" font="1">6</text>
+<text top="1160" left="426" width="34" height="16" font="0">页 共</text>
+<text top="1159" left="467" width="13" height="18" font="1">11</text>
+<text top="1160" left="487" width="14" height="16" font="0">页</text>
+<text top="-14" left="171" width="587" height="18" font="6">领会：①身份认证的常用方式；②访问控制实现方法、访问控制模型和认证</text>
+<text top="-14" left="135" width="378" height="18" font="6">服务与访问控制系统；③数字签名方法和功能。</text>
+<text top="-14" left="171" width="306" height="18" font="6">应用：①数字签名的签名和验证过程。</text>
+<text top="-14" left="171" width="181" height="18" font="6">三、本章的重点和难点</text>
+<text top="-14" left="171" width="378" height="18" font="6">本章的重点和难点是：①数字签名技术的原理。</text>
+<text top="-14" left="320" width="18" height="18" font="8">第</text>
+<text top="-18" left="343" width="9" height="24" font="9">7</text>
+<text top="-14" left="356" width="216" height="18" font="8">章 计算机及手机病毒防范</text>
+<text top="-14" left="171" width="163" height="18" font="6">一、学习目的与要求</text>
+<text top="-14" left="171" width="594" height="18" font="6">本章集中介绍病毒的概念、特点、种类、危害、构成和传播，病毒的检测、</text>
+<text top="-14" left="135" width="396" height="18" font="6">清除和防范。要求掌握病毒相关概念及防范措施。</text>
+<text top="-14" left="171" width="217" height="18" font="6">二、考核知识点与考核要求</text>
+<text top="-14" left="171" width="596" height="18" font="6">识记：①病毒的基本概念和发展阶段；②病毒的特点和种类；②病毒的检测、</text>
+<text top="-14" left="135" width="108" height="18" font="6">清除和防范。</text>
+<text top="-14" left="171" width="540" height="18" font="6">领会：①病毒的构成、传播、触发和生存；②木马病毒和蠕虫病毒。</text>
+<text top="-14" left="171" width="181" height="18" font="6">三、本章的重点和难点</text>
+<text top="-14" left="171" width="587" height="18" font="6">本章的重点和难点是：①病毒的构成、传播、触发和生存；②木马病毒和蠕</text>
+<text top="-14" left="135" width="72" height="18" font="6">虫病毒。</text>
+<text top="-14" left="338" width="18" height="18" font="8">第</text>
+<text top="-18" left="361" width="9" height="24" font="9">8</text>
+<text top="-14" left="374" width="180" height="18" font="8">章 防火墙技术及应用</text>
+<text top="-14" left="171" width="163" height="18" font="6">一、学习目的与要求</text>
+<text top="-14" left="171" width="587" height="18" font="6">本章集中介绍防火墙基本概念、防火墙技术类型、防火墙的应用。要求掌握</text>
+<text top="-14" left="135" width="144" height="18" font="6">防火墙基本原理。</text>
+<text top="-14" left="171" width="217" height="18" font="6">二、考核知识点与考核要求</text>
+<text top="-14" left="171" width="450" height="18" font="6">识记：①防火墙基本概念、特点、主要缺陷和常用类型。</text>
+<text top="-14" left="171" width="499" height="18" font="6">领会：①包过滤型防火墙和应用代理型防火墙；②防火墙阻止</text>
+<text top="-18" left="675" width="83" height="24" font="9">SYN Flood</text>
+<text top="-14" left="135" width="54" height="18" font="6">攻击。</text>
+<text top="-14" left="171" width="234" height="18" font="6">应用：①防火墙的主要应用。</text>
+<text top="-14" left="171" width="181" height="18" font="6">三、本章的重点和难点</text>
+<text top="-14" left="171" width="587" height="18" font="6">本章的重点和难点是：①包过滤型防火墙和应用代理型防火墙；②防火墙阻</text>
+<text top="-14" left="135" width="18" height="18" font="6">止</text>
+<text top="-18" left="158" width="82" height="24" font="9">SYN Flood</text>
+<text top="-14" left="244" width="234" height="18" font="6">攻击；③防火墙的主要应用。</text>
+</page>
+<page number="7" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="1160" left="393" width="14" height="16" font="0">第</text>
+<text top="1159" left="413" width="7" height="18" font="1">7</text>
+<text top="1160" left="426" width="34" height="16" font="0">页 共</text>
+<text top="1159" left="467" width="13" height="18" font="1">11</text>
+<text top="1160" left="487" width="14" height="16" font="0">页</text>
+<text top="-14" left="329" width="18" height="18" font="8">第</text>
+<text top="-18" left="352" width="9" height="24" font="9">9</text>
+<text top="-14" left="365" width="198" height="18" font="8">章 操作系统及站点安全</text>
+<text top="-14" left="171" width="163" height="18" font="6">一、学习目的与要求</text>
+<text top="-14" left="171" width="111" height="18" font="6">本章集中介绍</text>
+<text top="-18" left="288" width="68" height="24" font="9">Windows</text>
+<text top="-14" left="361" width="93" height="18" font="6">操作系统、</text>
+<text top="-18" left="455" width="45" height="24" font="9">UNIX</text>
+<text top="-14" left="505" width="93" height="18" font="6">操作系统、</text>
+<text top="-18" left="598" width="43" height="24" font="9">Linux</text>
+<text top="-14" left="647" width="111" height="18" font="6">系统的安全和</text>
+<text top="-18" left="135" width="33" height="24" font="9">Web</text>
+<text top="-14" left="172" width="360" height="18" font="6">站点的安全。要求掌握操作系统及站点安全。</text>
+<text top="-14" left="171" width="217" height="18" font="6">二、考核知识点与考核要求</text>
+<text top="-14" left="171" width="72" height="18" font="6">识记：①</text>
+<text top="-18" left="243" width="43" height="24" font="9">Linux</text>
+<text top="-14" left="291" width="144" height="18" font="6">操作系统安全；②</text>
+<text top="-18" left="435" width="45" height="24" font="9">UNIX</text>
+<text top="-14" left="484" width="126" height="18" font="6">操作系统安全。</text>
+<text top="-14" left="171" width="72" height="18" font="6">领会：①</text>
+<text top="-18" left="243" width="68" height="24" font="9">Windows</text>
+<text top="-14" left="316" width="144" height="18" font="6">操作系统安全；②</text>
+<text top="-18" left="460" width="33" height="24" font="9">Web</text>
+<text top="-14" left="497" width="108" height="18" font="6">站点的安全。</text>
+<text top="-14" left="171" width="181" height="18" font="6">三、本章的重点和难点</text>
+<text top="-14" left="171" width="198" height="18" font="6">本章的重点和难点是：①</text>
+<text top="-18" left="369" width="68" height="24" font="9">Windows</text>
+<text top="-14" left="442" width="144" height="18" font="6">操作系统安全；②</text>
+<text top="-18" left="586" width="33" height="24" font="9">Web</text>
+<text top="-14" left="623" width="108" height="18" font="6">站点的安全。</text>
+<text top="-14" left="325" width="18" height="18" font="8">第</text>
+<text top="-18" left="347" width="18" height="24" font="9">10</text>
+<text top="-14" left="370" width="198" height="18" font="8">章 数据库及数据库安全</text>
+<text top="-14" left="171" width="163" height="18" font="6">一、学习目的与要求</text>
+<text top="-14" left="171" width="587" height="18" font="6">本章集中介绍数据库安全体系与防护、数据库安全措施、数据库安全策略和</text>
+<text top="-14" left="135" width="324" height="18" font="6">机制。要求掌握数据库安全策略和机制。</text>
+<text top="-14" left="171" width="217" height="18" font="6">二、考核知识点与考核要求</text>
+<text top="-14" left="171" width="587" height="18" font="6">识记：①数据库及数据安全相关概念和数据库系统面临的安全问题；②可信</text>
+<text top="-18" left="135" width="51" height="24" font="9">DBMS</text>
+<text top="-14" left="190" width="450" height="18" font="6">体系结构；③数据库的安全防护；④数据库备份和恢复。</text>
+<text top="-14" left="171" width="587" height="18" font="6">领会：①数据库安全的层次体系结构；②数据库的安全性、数据库及数据的</text>
+<text top="-14" left="135" width="270" height="18" font="6">完整性；③数据库的并发控制；④</text>
+<text top="-18" left="405" width="85" height="24" font="9">SQL Server</text>
+<text top="-14" left="494" width="108" height="18" font="6">的安全机制。</text>
+<text top="-14" left="171" width="181" height="18" font="6">三、本章的重点和难点</text>
+<text top="-14" left="171" width="594" height="18" font="6">本章的重点和难点是：①数据库安全的层次体系结构；②数据库的安全性、</text>
+<text top="-14" left="135" width="378" height="18" font="6">数据库及数据的完整性；③数据库的并发控制。</text>
+<text top="-14" left="244" width="18" height="18" font="8">第</text>
+<text top="-18" left="267" width="18" height="24" font="9">11</text>
+<text top="-14" left="289" width="144" height="18" font="8">章 电子商务安全</text>
+<text top="-14" left="433" width="216" height="19" font="7">（本章内容不作考核要求）</text>
+<text top="-14" left="190" width="18" height="18" font="8">第</text>
+<text top="-18" left="212" width="18" height="24" font="9">12</text>
+<text top="-14" left="235" width="252" height="18" font="8">章 网络安全新技术及解决方案</text>
+<text top="-14" left="487" width="198" height="19" font="7">（本章内容不作考核要求</text>
+<text top="-14" left="685" width="18" height="18" font="8">）</text>
+<text top="-14" left="208" width="18" height="18" font="8">第</text>
+<text top="-18" left="230" width="18" height="24" font="9">13</text>
+<text top="-14" left="253" width="216" height="18" font="8">章 网络安全课程设计指导</text>
+<text top="-14" left="469" width="216" height="19" font="7">（本章内容不作考核要求）</text>
+</page>
+<page number="8" position="absolute" top="0" left="0" height="1262" width="892">
+	<fontspec id="10" size="19" family="LNUHNF+SimSun" color="#000000"/>
+<text top="1160" left="393" width="14" height="16" font="0">第</text>
+<text top="1159" left="413" width="7" height="18" font="1">8</text>
+<text top="1160" left="426" width="34" height="16" font="0">页 共</text>
+<text top="1159" left="467" width="13" height="18" font="1">11</text>
+<text top="1160" left="487" width="14" height="16" font="0">页</text>
+<text top="-17" left="278" width="337" height="21" font="5">Ⅳ 关于大纲的说明与考核实施要求</text>
+<text top="-14" left="171" width="253" height="18" font="6">一、自学考试大纲的目的和作用</text>
+<text top="-14" left="171" width="587" height="18" font="6">自学考试大纲是根据专业考试计划的要求，结合自学考试的特点而确定。其</text>
+<text top="-14" left="135" width="504" height="18" font="6">目的是对个人自学、社会助学和课程考试命题进行指导和规定。</text>
+<text top="-14" left="171" width="587" height="18" font="6">本课程自学考试大纲明确了本课程学习的内容以及深广度，规定了本课程自</text>
+<text top="-14" left="135" width="623" height="18" font="6">学考试的范围和标准。同时，大纲附有题型，使考试标准具体化。自学考试的大</text>
+<text top="-14" left="135" width="504" height="18" font="6">纲是自学考试命题的依据，也是对课程进行自学及助学的依据。</text>
+<text top="-14" left="171" width="289" height="18" font="6">二、课程自学考试大纲与教材的关系</text>
+<text top="-14" left="171" width="587" height="18" font="6">教材是学习掌握课程知识的基本内容与范围，课程自学考试大纲是进行学习</text>
+<text top="-14" left="135" width="594" height="18" font="6">和考核的依据，教材的内容是大纲所规定的课程知识和内容的扩展与发挥。</text>
+<text top="-14" left="171" width="587" height="18" font="6">本大纲与教材所体现的课程内容完全一致；大纲里面的课程内容和考核知识</text>
+<text top="-14" left="135" width="180" height="18" font="6">点，教材里都能找到。</text>
+<text top="-14" left="171" width="145" height="18" font="6">三、关于自学教材</text>
+<text top="-14" left="171" width="596" height="19" font="7">本课程使用教材为：《网络安全技术及应用实践教程》（第 4 版），贾铁军、</text>
+<text top="-14" left="135" width="329" height="19" font="7">何道敬主编，机械工业出版社，2022 年。</text>
+<text top="-14" left="171" width="289" height="18" font="6">四、关于自学要求和自学方法的指导</text>
+<text top="-14" left="171" width="587" height="18" font="6">本大纲的课程基本要求是依据专业考试计划和专业培养目标而确定的。课程</text>
+<text top="-14" left="135" width="623" height="18" font="6">基本要求还明确了课程的基本内容，以及对基本内容掌握的程度。基本要求中的</text>
+<text top="-14" left="135" width="623" height="18" font="6">知识点构成了课程内容的主体部分。因此，课程基本内容掌握程度、课程考核知</text>
+<text top="-14" left="135" width="342" height="18" font="6">识点是高等教育自学考试考核的主要内容。</text>
+<text top="-14" left="171" width="587" height="18" font="6">为有效地指导个人自学和社会助学，本大纲已指明了课程的重点和难点，在</text>
+<text top="-14" left="135" width="450" height="18" font="6">章节的基本要求中一般也指明了章节内容的重点和难点。</text>
+<text top="-14" left="171" width="108" height="18" font="6">五、应考指导</text>
+<text top="-18" left="171" width="9" height="24" font="9">1</text>
+<text top="-15" left="180" width="9" height="19" font="10">.</text>
+<text top="-14" left="189" width="569" height="18" font="6">如何学习。本课程作为网络工程专业的一门重要课程，培养考生具有计算</text>
+<text top="-14" left="135" width="630" height="18" font="6">机网络安全方面的基本理论知识和基本技能。建议学习本课程时注意以下几点：</text>
+<text top="-14" left="171" width="18" height="18" font="6">（</text>
+<text top="-18" left="189" width="9" height="24" font="9">1</text>
+<text top="-14" left="198" width="560" height="18" font="6">）在学习本课程教材之前应先仔细阅读本大纲，了解本课程的性质和特</text>
+<text top="-14" left="135" width="630" height="18" font="6">点，熟知本课程的基本要求，在学习本课程时，能紧紧围绕本课程的基本要求。</text>
+<text top="-14" left="171" width="18" height="18" font="6">（</text>
+<text top="-18" left="189" width="9" height="24" font="9">2</text>
+<text top="-14" left="198" width="560" height="18" font="6">）在自学教材的每一章之前，先阅读本大纲中对应章节的学习目的与要</text>
+<text top="-14" left="135" width="450" height="18" font="6">求、考核知识点与考核要求，以使自学时做到心中有数。</text>
+</page>
+<page number="9" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="1160" left="393" width="14" height="16" font="0">第</text>
+<text top="1159" left="413" width="7" height="18" font="1">9</text>
+<text top="1160" left="426" width="34" height="16" font="0">页 共</text>
+<text top="1159" left="467" width="13" height="18" font="1">11</text>
+<text top="1160" left="487" width="14" height="16" font="0">页</text>
+<text top="-14" left="171" width="18" height="18" font="6">（</text>
+<text top="-18" left="189" width="9" height="24" font="9">3</text>
+<text top="-14" left="198" width="560" height="18" font="6">）学习本课程的目的是掌握计算机网络安全的基本概念，对计算机网络</text>
+<text top="-14" left="135" width="623" height="18" font="6">安全面临的威胁，应对的安全手段有一个总体上的认知和把握。除要学习课程书</text>
+<text top="-14" left="135" width="623" height="18" font="6">本知识之外，应该多动手实践，从而熟练掌握网络病毒的预防、检测和清除等技</text>
+<text top="-14" left="135" width="126" height="18" font="6">术、方法和原理</text>
+<text top="-18" left="171" width="9" height="24" font="9">2</text>
+<text top="-15" left="180" width="9" height="19" font="10">.</text>
+<text top="-14" left="189" width="569" height="18" font="6">如何考试。卷面整洁非常重要。书写工整，段落与间距合理，卷面赏心悦</text>
+<text top="-14" left="135" width="632" height="18" font="6">目有助于教师评分，教师只能为他能看懂的内容打分。解答问题时，要审清题目，</text>
+<text top="-14" left="135" width="450" height="18" font="6">回答所提出的问题，避免超过问题的范围或者答非所问。</text>
+<text top="-18" left="171" width="9" height="24" font="9">3</text>
+<text top="-15" left="180" width="9" height="19" font="10">.</text>
+<text top="-14" left="189" width="569" height="18" font="6">如何处理紧张情绪。正确处理对失败的惧怕，要正面思考。如果可能，请</text>
+<text top="-14" left="135" width="623" height="18" font="6">教已经通过该科目考试的人，问他们一些问题。做深呼吸放松，这有助于使头脑</text>
+<text top="-14" left="135" width="540" height="18" font="6">清醒，缓解紧张情绪。考试前合理膳食，保持旺盛精力，保持冷静。</text>
+<text top="-14" left="171" width="181" height="18" font="6">六、对社会助学的要求</text>
+<text top="-18" left="171" width="9" height="24" font="9">1</text>
+<text top="-15" left="180" width="9" height="19" font="10">.</text>
+<text top="-14" left="189" width="587" height="18" font="6">社会助学者应根据本大纲规定的考试内容和考核目标，认真钻研指定教材，</text>
+<text top="-14" left="135" width="623" height="18" font="6">明确本课程的特点和学习要求，对考生进行切实有效的辅导，避免考生在自学时</text>
+<text top="-14" left="135" width="396" height="18" font="6">可能出现的各种偏向，把握社会助学的正确方向。</text>
+<text top="-18" left="171" width="9" height="24" font="9">2</text>
+<text top="-15" left="180" width="9" height="19" font="10">.</text>
+<text top="-14" left="189" width="576" height="18" font="6">社会助学者应对考生进行学习方法的指导，向考生提倡“认真阅读教材，</text>
+<text top="-14" left="135" width="486" height="18" font="6">刻苦钻研教材，主动提出问题，依靠自己学懂”的学习方法。</text>
+<text top="-18" left="171" width="9" height="24" font="9">3</text>
+<text top="-15" left="180" width="9" height="19" font="10">.</text>
+<text top="-14" left="189" width="569" height="18" font="6">社会助学者应注意对考生自学能力的培养，使考生逐步学会独立学习，在</text>
+<text top="-14" left="135" width="632" height="18" font="6">自学过程中善于提出问题、分析问题、做出判断和解决问题。对考生提出的问题，</text>
+<text top="-14" left="135" width="252" height="18" font="6">社会助学者应以启发引导为主。</text>
+<text top="-18" left="171" width="9" height="24" font="9">4</text>
+<text top="-15" left="180" width="9" height="19" font="10">.</text>
+<text top="-14" left="189" width="569" height="18" font="6">社会助学者应指导考生正确处理重点和一般的关系。课程内容有重点与一</text>
+<text top="-14" left="135" width="632" height="18" font="6">般之分，但考试内容是全面的，而且重点与一般是相互影响的，不是截然分开的。</text>
+<text top="-14" left="135" width="632" height="18" font="6">社会助 学者应指导考生全面系统地学习教材，掌握全部考试内容和考核知识点，</text>
+<text top="-14" left="135" width="623" height="18" font="6">在此基础上再突出重点。总之，要把重点学习同兼顾一般结合起来，切勿孤立地</text>
+<text top="-14" left="135" width="252" height="18" font="6">抓重点，把考生引向猜题押题。</text>
+<text top="-14" left="171" width="181" height="18" font="6">七、对考核内容的说明</text>
+<text top="-14" left="171" width="587" height="18" font="6">本课程要求考生学习和掌握的知识点内容都作为考核的内容。课程中各章的</text>
+<text top="-14" left="135" width="623" height="18" font="6">内容均由若干知识点组成，在自学考试中成为考核知识点。大纲中按照不同知识</text>
+<text top="-14" left="135" width="288" height="18" font="6">点的重要程度分别确定其考核要求。</text>
+<text top="-14" left="171" width="235" height="18" font="6">八、关于考试命题的若干规定</text>
+</page>
+<page number="10" position="absolute" top="0" left="0" height="1262" width="892">
+	<fontspec id="11" size="16" family="LNUHNF+SimSun" color="#000000"/>
+	<fontspec id="12" size="16" family="AUWCNV+TimesNewRomanPSMT" color="#000000"/>
+<text top="1160" left="389" width="14" height="16" font="0">第</text>
+<text top="1159" left="410" width="14" height="18" font="1">10</text>
+<text top="1160" left="430" width="34" height="16" font="0">页 共</text>
+<text top="1159" left="470" width="13" height="18" font="1">11</text>
+<text top="1160" left="490" width="14" height="16" font="0">页</text>
+<text top="-18" left="171" width="9" height="24" font="9">1</text>
+<text top="-15" left="180" width="9" height="19" font="10">.</text>
+<text top="-14" left="189" width="291" height="18" font="6">考试方式为闭卷、笔试，考试时间为</text>
+<text top="-18" left="485" width="27" height="24" font="9">150</text>
+<text top="-14" left="517" width="200" height="18" font="6">分钟。评分采用百分制，</text>
+<text top="-18" left="717" width="18" height="24" font="9">60</text>
+<text top="-14" left="740" width="18" height="18" font="6">分</text>
+<text top="-14" left="135" width="178" height="18" font="6">为及格。考生只准携带</text>
+<text top="-18" left="317" width="23" height="24" font="9">0.5</text>
+<text top="-14" left="344" width="423" height="18" font="6">毫米黑色墨水的签字笔、铅笔、圆规、直尺、三角板、</text>
+<text top="-14" left="135" width="486" height="18" font="6">橡皮等必需的文具用品，可携带没有存贮功能的普通计算器。</text>
+<text top="-18" left="171" width="9" height="24" font="9">2</text>
+<text top="-15" left="180" width="9" height="19" font="10">.</text>
+<text top="-14" left="189" width="569" height="18" font="6">本大纲各章所规定的基本要求、知识点及知识点下的知识细目，都属于考</text>
+<text top="-14" left="135" width="632" height="18" font="6">核的内容。考试命题既要覆盖到章，又要避免面面俱到。要注意突出课程的重点、</text>
+<text top="-14" left="135" width="288" height="18" font="6">章节重点，加大重点内容的覆盖度。</text>
+<text top="-18" left="171" width="9" height="24" font="9">3</text>
+<text top="-15" left="180" width="9" height="19" font="10">.</text>
+<text top="-14" left="189" width="569" height="18" font="6">命题不应有超出大纲中考核知识点的范围的题目，考核目标不得高于大纲</text>
+<text top="-14" left="135" width="623" height="18" font="6">中所规定的相应的最高能力层次要求。命题应着重考核考生对基本概念、基本知</text>
+<text top="-14" left="135" width="623" height="18" font="6">识和基本理论是否了解或掌握，对基本方法是否会用或熟练。不应出与基本要求</text>
+<text top="-14" left="135" width="162" height="18" font="6">不符的偏题或怪题。</text>
+<text top="-18" left="171" width="9" height="24" font="9">4</text>
+<text top="-15" left="180" width="9" height="19" font="10">.</text>
+<text top="-14" left="189" width="508" height="18" font="6">本课程在试卷中对不同能力层次要求的分数比例大致为：识记占</text>
+<text top="-18" left="707" width="33" height="24" font="9">30%</text>
+<text top="-14" left="740" width="18" height="18" font="6">，</text>
+<text top="-14" left="135" width="54" height="18" font="6">领会占</text>
+<text top="-18" left="194" width="33" height="24" font="9">40%</text>
+<text top="-14" left="235" width="72" height="18" font="6">，应用占</text>
+<text top="-18" left="312" width="33" height="24" font="9">30%</text>
+<text top="-14" left="345" width="18" height="18" font="6">。</text>
+<text top="-18" left="171" width="9" height="24" font="9">5</text>
+<text top="-15" left="180" width="9" height="19" font="10">.</text>
+<text top="-14" left="189" width="569" height="18" font="6">要合理安排试题的难易程度，试题的难度可分为：易、较易、较难和难四</text>
+<text top="-14" left="135" width="417" height="18" font="6">个等级。每份试卷中不同难度试题的分数比例一般为</text>
+<text top="-18" left="562" width="51" height="24" font="9">2:3:3:2</text>
+<text top="-14" left="613" width="145" height="18" font="6">。必须注意试题的</text>
+<text top="-14" left="135" width="623" height="18" font="6">难易程度与能力层次有一定的联系，但二者不是等同的概念。在各个能力层次中</text>
+<text top="-14" left="135" width="396" height="18" font="6">对于不同的考生都存在着不同的难度，切勿混淆。</text>
+<text top="-18" left="171" width="9" height="24" font="9">6</text>
+<text top="-15" left="180" width="9" height="19" font="10">.</text>
+<text top="-14" left="189" width="578" height="18" font="6">本课程考试试卷中可能采用的题型有：单项选择题、判断改错题、简答题、</text>
+<text top="-14" left="135" width="72" height="18" font="6">论述题。</text>
+<text top="-17" left="373" width="147" height="21" font="5">附录 题型示例</text>
+<text top="-12" left="167" width="111" height="16" font="11">一、单项选择题</text>
+<text top="-15" left="167" width="8" height="21" font="12">1</text>
+<text top="-12" left="174" width="268" height="16" font="11">．数据未经授权不能进行改变的特性是</text>
+<text top="-15" left="442" width="5" height="21" font="12">(</text>
+<text top="-15" left="487" width="5" height="21" font="12">)</text>
+<text top="-15" left="167" width="11" height="21" font="12">A</text>
+<text top="-12" left="178" width="63" height="16" font="11">．保密性</text>
+<text top="-15" left="461" width="10" height="21" font="12">B</text>
+<text top="-12" left="472" width="63" height="16" font="11">．完整性</text>
+<text top="-15" left="167" width="10" height="21" font="12">C</text>
+<text top="-12" left="177" width="63" height="16" font="11">．可用性</text>
+<text top="-15" left="460" width="11" height="21" font="12">D</text>
+<text top="-12" left="472" width="63" height="16" font="11">．可控性</text>
+<text top="-12" left="167" width="79" height="16" font="11">参考答案：</text>
+<text top="-15" left="245" width="10" height="21" font="12">B</text>
+<text top="-12" left="167" width="111" height="16" font="11">二、判断改错题</text>
+<text top="-15" left="167" width="8" height="21" font="12">1</text>
+<text top="-12" left="174" width="457" height="16" font="11">．防火墙技术只能通过硬件设备实现，无法通过软件配置完成。（</text>
+<text top="-12" left="655" width="16" height="16" font="11">）</text>
+<text top="-12" left="167" width="598" height="16" font="11">参考答案：×。“只能通过硬件实现，无法通过软件配置”改为“既能通过硬件实现，</text>
+<text top="-12" left="135" width="157" height="16" font="11">也能通过软件配置”。</text>
+<text top="-12" left="167" width="79" height="16" font="11">三、简答题</text>
+</page>
+<page number="11" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="1160" left="390" width="14" height="16" font="0">第</text>
+<text top="1159" left="410" width="13" height="18" font="1">11</text>
+<text top="1160" left="430" width="34" height="16" font="0">页 共</text>
+<text top="1159" left="470" width="13" height="18" font="1">11</text>
+<text top="1160" left="490" width="14" height="16" font="0">页</text>
+<text top="-15" left="167" width="8" height="21" font="12">1</text>
+<text top="-12" left="174" width="362" height="16" font="11">．简述“社会工程学攻击”的常见形式及防御措施。</text>
+<text top="-12" left="167" width="79" height="16" font="11">参考答案：</text>
+<text top="-12" left="167" width="598" height="16" font="11">常见形式：钓鱼邮件、假冒身份电话、伪装成合法机构的网站、尾随进入限制区域等。</text>
+<text top="-12" left="167" width="591" height="16" font="11">防御措施：加强员工安全意识培训；验证请求者身份（如多因素认证）；制定严格的数</text>
+<text top="-12" left="135" width="504" height="16" font="11">据访问权限管理制度；部署反钓鱼技术（如邮件过滤、网站证书检测）。</text>
+<text top="-12" left="167" width="79" height="16" font="11">四、论述题</text>
+<text top="-15" left="167" width="8" height="21" font="12">1</text>
+<text top="-12" left="174" width="142" height="16" font="11">．论述当前物联网（</text>
+<text top="-15" left="316" width="23" height="21" font="12">IoT</text>
+<text top="-12" left="339" width="252" height="16" font="11">）面临的主要安全威胁及应对策略。</text>
+<text top="-12" left="167" width="79" height="16" font="11">参考答案：</text>
+<text top="-12" left="167" width="79" height="16" font="11">主要威胁：</text>
+<text top="-12" left="167" width="16" height="16" font="11">（</text>
+<text top="-15" left="182" width="8" height="21" font="12">1</text>
+<text top="-12" left="190" width="331" height="16" font="11">）设备漏洞：硬件或固件缺陷导致未授权访问；</text>
+<text top="-12" left="167" width="16" height="16" font="11">（</text>
+<text top="-15" left="182" width="8" height="21" font="12">2</text>
+<text top="-12" left="190" width="283" height="16" font="11">）数据泄露：传输或存储中数据未加密；</text>
+<text top="-12" left="167" width="16" height="16" font="11">（</text>
+<text top="-15" left="182" width="8" height="21" font="12">3</text>
+<text top="-12" left="190" width="236" height="16" font="11">）僵尸网络攻击：设备被控制发起</text>
+<text top="-15" left="430" width="39" height="21" font="12">DDoS</text>
+<text top="-12" left="474" width="47" height="16" font="11">攻击；</text>
+<text top="-12" left="167" width="16" height="16" font="11">（</text>
+<text top="-15" left="182" width="8" height="21" font="12">4</text>
+<text top="-12" left="190" width="299" height="16" font="11">）身份伪造：弱认证机制引发的伪装风险。</text>
+<text top="-12" left="167" width="79" height="16" font="11">应对策略：</text>
+<text top="-12" left="167" width="16" height="16" font="11">（</text>
+<text top="-15" left="182" width="8" height="21" font="12">1</text>
+<text top="-12" left="190" width="568" height="16" font="11">）技术层面：强制设备端到端加密；定期更新固件修补漏洞；部署轻量级认证协议</text>
+<text top="-12" left="135" width="31" height="16" font="11">（如</text>
+<text top="-15" left="170" width="39" height="21" font="12">DTLS</text>
+<text top="-12" left="210" width="31" height="16" font="11">）。</text>
+<text top="-12" left="167" width="16" height="16" font="11">（</text>
+<text top="-15" left="182" width="8" height="21" font="12">2</text>
+<text top="-12" left="190" width="515" height="16" font="11">）管理层面：制定物联网安全标准与法规；厂商需遵循“安全设计”原则（</text>
+<text top="-15" left="705" width="52" height="21" font="12">Security</text>
+<text top="-15" left="135" width="64" height="21" font="12">by Design</text>
+<text top="-12" left="199" width="299" height="16" font="11">）；用户侧加强密码管理与网络分段隔离。</text>
+</page>
+<outline>
+<item page="1">04751   计算机网络安全</item>
+</outline>
+</pdf2xml>

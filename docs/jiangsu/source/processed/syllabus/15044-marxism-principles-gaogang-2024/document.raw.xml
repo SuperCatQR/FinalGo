@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pdf2xml SYSTEM "pdf2xml.dtd">
+
+<pdf2xml producer="poppler" version="25.07.0">
+<page number="1" position="absolute" top="0" left="0" height="1262" width="892">
+	<fontspec id="0" size="24" family="PRMMSH+SimHei" color="#000000"/>
+	<fontspec id="1" size="42" family="PRMMSH+SimHei" color="#000000"/>
+<text top="-20" left="326" width="241" height="24" font="0">全国高等教育自学考试</text>
+<text top="-35" left="257" width="379" height="43" font="1">马克思主义基本原理</text>
+<text top="-35" left="320" width="253" height="43" font="1">自学考试大纲</text>
+<text top="-20" left="230" width="361" height="24" font="0">全国高等教育自学考试指导委员会</text>
+<text top="-20" left="615" width="48" height="24" font="0">制定</text>
+</page>
+<page number="2" position="absolute" top="0" left="0" height="1262" width="892">
+	<fontspec id="2" size="14" family="MLJNAR+SimSun" color="#000000"/>
+	<fontspec id="3" size="33" family="PRMMSH+SimHei" color="#000000"/>
+	<fontspec id="4" size="18" family="MLJNAR+SimSun" color="#000000"/>
+	<fontspec id="5" size="18" family="DGFMOR+TimesNewRomanPSMT" color="#000000"/>
+<text top="-11" left="443" width="7" height="13" font="2">1</text>
+<text top="-27" left="381" width="132" height="33" font="3">大纲前言</text>
+<text top="-14" left="171" width="522" height="18" font="4">为了适应社会主义现代化建设事业的需要，鼓励自学成才，我国在</text>
+<text top="-18" left="698" width="18" height="24" font="5">20</text>
+<text top="-14" left="720" width="36" height="18" font="4">世纪</text>
+<text top="-18" left="135" width="18" height="24" font="5">80</text>
+<text top="-14" left="158" width="600" height="18" font="4">年代初建立了高等教育自学考试制度。高等教育自学考试是个人自学、社会</text>
+<text top="-14" left="135" width="623" height="18" font="4">助学和国家考试相结合的一种高等教育形式。应考者通过规定的专业考试课程并</text>
+<text top="-14" left="135" width="623" height="18" font="4">经思想品德鉴定达到毕业要求的，可获得毕业证书；国家承认学历并按照规定享</text>
+<text top="-14" left="135" width="379" height="18" font="4">有与普通高等学校毕业生同等的有关待遇。经过</text>
+<text top="-18" left="519" width="18" height="24" font="5">40</text>
+<text top="-14" left="541" width="217" height="18" font="4">多年的发展，高等教育自学</text>
+<text top="-14" left="135" width="306" height="18" font="4">考试为国家培养造就了大批专门人才。</text>
+<text top="-14" left="171" width="587" height="18" font="4">课程自学考试大纲是规范自学者学习范围、要求和考试标准的文件。它是按</text>
+<text top="-14" left="135" width="623" height="18" font="4">照专业考试计划的要求，具体指导个人自学、社会助学、国家考试及编写教材的</text>
+<text top="-14" left="135" width="54" height="18" font="4">依据。</text>
+<text top="-14" left="171" width="587" height="18" font="4">随着经济社会的快速发展，新的法律法规不断出台，科技成果不断涌现，原</text>
+<text top="-14" left="135" width="623" height="18" font="4">大纲中有些内容过时、知识陈旧。为更新教育观念，深化教学内容方式、考试制</text>
+<text top="-14" left="135" width="623" height="18" font="4">度、质量评价制度改革，使自学考试更好地提高人才培养的质量，各专业委员会</text>
+<text top="-14" left="135" width="558" height="18" font="4">按照专业考试计划的要求，对原课程自学考试大纲组织了修订或重编。</text>
+<text top="-14" left="171" width="587" height="18" font="4">修订后的大纲，在层次上，本科参照一般普通高校本科水平，专科参照一般</text>
+<text top="-14" left="135" width="623" height="18" font="4">普通高校专科或高职院校的水平；在内容上，及时反映学科的发展变化，增补了</text>
+<text top="-14" left="135" width="623" height="18" font="4">自然科学和社会科学近年来研究的成果，对明显陈旧的内容进行了删减，以更好</text>
+<text top="-14" left="135" width="198" height="18" font="4">地指导应考者学习使用。</text>
+<text top="-14" left="441" width="270" height="18" font="4">全国高等教育自学考试指导委员会</text>
+<text top="-18" left="495" width="36" height="24" font="5">2024</text>
+<text top="-14" left="536" width="18" height="18" font="4">年</text>
+<text top="-18" left="558" width="9" height="24" font="5">8</text>
+<text top="-14" left="572" width="18" height="18" font="4">月</text>
+</page>
+<page number="3" position="absolute" top="0" left="0" height="1262" width="892">
+	<fontspec id="6" size="21" family="PRMMSH+SimHei" color="#000000"/>
+	<fontspec id="7" size="21" family="MLJNAR+SimSun" color="#000000"/>
+<text top="-11" left="443" width="7" height="13" font="2">1</text>
+<text top="-27" left="381" width="132" height="33" font="3">大纲目录</text>
+<text top="-17" left="135" width="21" height="21" font="6">Ⅰ</text>
+<text top="-20" left="168" width="216" height="24" font="0">课程性质与课程目标</text>
+<text top="-20" left="135" width="132" height="24" font="0">Ⅱ 考核目标</text>
+<text top="-20" left="135" width="252" height="24" font="0">Ⅲ 课程内容与考核要求</text>
+<text top="324" left="170" width="63" height="21" font="7">绪 论</text>
+<text top="324" left="170" width="294" height="21" font="7">第一章 物质世界及其发展规律</text>
+<text top="417" left="170" width="252" height="21" font="7">第二章 认识的本质及规律</text>
+<text top="464" left="170" width="294" height="21" font="7">第三章 人类社会及其发展规律</text>
+<text top="511" left="170" width="336" height="21" font="7">第四章 资本主义制度的形成及本质</text>
+<text top="558" left="170" width="315" height="21" font="7">第五章 资本主义的发展及其趋势</text>
+<text top="605" left="170" width="315" height="21" font="7">第六章 社会主义的发展及其规律</text>
+<text top="651" left="170" width="441" height="21" font="7">第七章 共产主义社会是人类最崇高的社会理想</text>
+<text top="-20" left="135" width="372" height="24" font="0">Ⅳ 关于大纲的说明与考核实施要求</text>
+<text top="-20" left="135" width="168" height="24" font="0">附录：参考样卷</text>
+<text top="-20" left="135" width="96" height="24" font="0">大纲后记</text>
+</page>
+<page number="4" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="443" width="7" height="13" font="2">2</text>
+<text top="-20" left="338" width="264" height="24" font="0">Ⅰ 课程性质与课程目标</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、课程性质和特点</text>
+<text top="-14" left="171" width="594" height="18" font="4">“马克思主义基本原理”是全国高等教育自学考试各个专业的公共必考课，</text>
+<text top="-14" left="135" width="623" height="18" font="4">是为培养和检验自学应考者对马克思主义基本原理的掌握以及运用能力而设置</text>
+<text top="-14" left="135" width="623" height="18" font="4">的一门思想政治理论课。设置本课程的目的，是使具备高中以上文化程度的自学</text>
+<text top="-14" left="135" width="623" height="18" font="4">应考者掌握马克思主义的基本观点，树立正确的世界观、人生观、价值观，深化</text>
+<text top="-14" left="135" width="623" height="18" font="4">对共产党执政规律、社会主义建设规律和人类社会发展规律的认识，加深对中国</text>
+<text top="-14" left="135" width="630" height="18" font="4">化时代化的马克思主义重大理论成果的理解，提高分析和解决实际问题的能力，</text>
+<text top="-14" left="135" width="486" height="18" font="4">增强开拓创新意识，为学好其他各门课程提供方法论的指导。</text>
+<text top="-14" left="171" width="108" height="18" font="4">二、课程目标</text>
+<text top="-14" left="171" width="587" height="18" font="4">课程设置的目标是使学生能够：以什么是马克思主义、为什么要始终坚持马</text>
+<text top="-14" left="135" width="623" height="18" font="4">克思主义、怎样坚持和发展马克思主义为主题，以马克思主义世界观和方法论为</text>
+<text top="-14" left="135" width="623" height="18" font="4">重点，以人类社会的发展规律为主线，全面掌握马克思主义基本原理，着重学好</text>
+<text top="-14" left="135" width="623" height="18" font="4">唯物的观点，辩证的观点，实践的观点，实事求是的观点，生产力是最革命的因</text>
+<text top="-14" left="135" width="623" height="18" font="4">素的观点，生产关系一定要适合生产力的性质、上层建筑一定要适合经济基础的</text>
+<text top="-14" left="135" width="623" height="18" font="4">发展要求的观点，人民群众创造历史的观点，阶级的观点，资本主义一定要被社</text>
+<text top="-14" left="135" width="623" height="18" font="4">会主义所代替的观点，实现共产主义是人类最高理想的观点等。要把马克思主义</text>
+<text top="-14" left="135" width="623" height="18" font="4">哲学、政治经济学和科学社会主义当作一个整体来把握。要坚持理论联系实际的</text>
+<text top="-14" left="135" width="632" height="18" font="4">原则，学会用马克思主义的立场、观点、方法分析和解决实际生活中的各种问题，</text>
+<text top="-14" left="135" width="612" height="18" font="4">特别是能应用马克思主义基本原理分析和解决我国改革开放和社会主义现代化</text>
+<text top="-14" left="135" width="180" height="18" font="4">建设面临的各种问题。</text>
+<text top="-14" left="171" width="235" height="18" font="4">三、与相关课程的联系与区别</text>
+<text top="-14" left="171" width="594" height="18" font="4">自学考试思想政治理论课有：“习近平新时代中国特色社会主义思想概论”</text>
+<text top="-14" left="135" width="623" height="18" font="4">“马克思主义基本原理”“毛泽东思想和中国特色社会主义理论体系概论”“中</text>
+<text top="-14" left="135" width="623" height="18" font="4">国近现代史纲要”“思想道德与法治”。“马克思主义基本原理”课是其他四门</text>
+<text top="-14" left="135" width="623" height="18" font="4">课的理论基础，学好这门课为学好其他四门课提供世界观和方法论的指导，学好</text>
+<text top="-14" left="135" width="623" height="18" font="4">其他四门课为学好这门课奠定必要的实证知识的基础。学习这门课应具备中学各</text>
+<text top="-14" left="135" width="623" height="18" font="4">门思想政治理论课的知识，并对我国改革开放和社会主义现代化建设的实践有一</text>
+<text top="-14" left="135" width="72" height="18" font="4">定了解。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、课程重点</text>
+<text top="-14" left="171" width="587" height="18" font="4">马克思主义的产生和发展；马克思主义的基本特征；哲学的基本问题；马克</text>
+<text top="-14" left="135" width="623" height="18" font="4">思主义哲学的基本观点；唯物辩证法的总特征；马克思主义哲学的精髓；认识的</text>
+<text top="-14" left="135" width="623" height="18" font="4">本质和两次飞跃；实践是检验真理的唯一标准；社会主义核心价值观；一切从实</text>
+</page>
+<page number="5" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="443" width="7" height="13" font="2">3</text>
+<text top="-14" left="135" width="623" height="18" font="4">际出发；社会基本矛盾运动；社会形态的更替与发展；阶级斗争及其在阶级社会</text>
+<text top="-14" left="135" width="623" height="18" font="4">中的作用；革命和改革在社会发展中的作用；无产阶级政党的群众观点和群众路</text>
+<text top="-14" left="135" width="623" height="18" font="4">线；商品二因素；货币的产生和本质；价值规律的作用；货币转化为资本；资本</text>
+<text top="-14" left="135" width="623" height="18" font="4">主义生产过程是劳动过程和价值增殖过程的统一；剩余价值的两种生产方法；资</text>
+<text top="-14" left="135" width="623" height="18" font="4">本积累的本质；产业资本循环和资本周转；社会总资本再生产；平均利润的形成</text>
+<text top="-14" left="135" width="623" height="18" font="4">和剩余价值的分割；垄断和国家垄断资本主义的形成发展和实质；经济全球化在</text>
+<text top="-14" left="135" width="641" height="18" font="4">当代发展变化的原因和影响；资本主义为社会主义所代替的历史必然性和长期性；</text>
+<text top="-14" left="135" width="623" height="18" font="4">经济文化相对落后国家社会主义建设的艰巨性和长期性；马克思主义政党在社会</text>
+<text top="-14" left="135" width="623" height="18" font="4">主义事业中的地位和作用；人类社会历史必然发展到共产主义；实现共产主义是</text>
+<text top="-14" left="135" width="216" height="18" font="4">一个不断实践的长期过程。</text>
+</page>
+<page number="6" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="443" width="7" height="13" font="2">4</text>
+<text top="-20" left="399" width="144" height="24" font="0">Ⅱ 考核目标</text>
+<text top="-14" left="171" width="587" height="18" font="4">本大纲在考核目标中，按照识记、领会、简单应用和综合应用四个层次规定</text>
+<text top="-14" left="135" width="630" height="18" font="4">其应达到的能力层次要求。四个能力层次是递进关系，各能力层次的含义如下。</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记（Ⅰ）：要求了解马克思主义基本原理的基本概念、基本范畴、基本规</text>
+<text top="-14" left="135" width="126" height="18" font="4">律和基本论断。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会（Ⅱ）：要求在了解基本概念、基本范畴、基本规律和基本论断的基础</text>
+<text top="-14" left="135" width="324" height="18" font="4">上，掌握上述相关内容间的联系与区别。</text>
+<text top="-14" left="171" width="126" height="18" font="4">简单应用（Ⅲ）</text>
+<text top="-14" left="288" width="470" height="18" font="4">：要求能够运用马克思主义的立场、观点和方法，解释和论</text>
+<text top="-14" left="135" width="108" height="18" font="4">证某种观点。</text>
+<text top="-14" left="171" width="126" height="18" font="4">综合应用（IV）</text>
+<text top="-14" left="288" width="470" height="18" font="4">：要求运用马克思主义的立场、观点和方法，结合特定的历</text>
+<text top="-14" left="135" width="623" height="18" font="4">史条件或国际、国内政治经济背景，分析有关社会现象或现实问题，对这些理论</text>
+<text top="-14" left="135" width="252" height="18" font="4">问题或现实问题做出正确评价。</text>
+</page>
+<page number="7" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="443" width="7" height="13" font="2">5</text>
+<text top="-20" left="338" width="264" height="24" font="0">Ⅲ 课程内容与考核要求</text>
+<text top="-17" left="415" width="63" height="21" font="7">绪 论</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、学习目的与要求</text>
+<text top="-14" left="171" width="587" height="18" font="4">绪论的核心是阐明马克思主义的产生、发展及基本特征。在当代，马克思主</text>
+<text top="-14" left="135" width="623" height="18" font="4">义在世界范围内仍然发生着重大影响，焕发着青春活力。学习绪论，要了解马克</text>
+<text top="-14" left="135" width="623" height="18" font="4">思主义是时代的产物，是对人类文明成果的继承与创新，它随着时代的发展而发</text>
+<text top="-14" left="135" width="623" height="18" font="4">展；了解习近平新时代中国特色社会主义思想是马克思主义中国化时代化的最新</text>
+<text top="-14" left="135" width="623" height="18" font="4">成果；理解科学性、人民性、实践性、发展性是马克思主义的基本特征，与时俱</text>
+<text top="-14" left="135" width="623" height="18" font="4">进是它的理论品质，实现共产主义是它的最高社会理想；深刻理解马克思主义不</text>
+<text top="-14" left="135" width="632" height="18" font="4">是教条，而是行动的指南；要明确学习马克思主义的目的在于树立正确的世界观、</text>
+<text top="-14" left="135" width="623" height="18" font="4">人生观、价值观，理论联系实际是学习马克思主义的根本方法；要了解现今时代</text>
+<text top="-14" left="135" width="630" height="18" font="4">向马克思主义提出的新的研究课题，在新的历史条件下丰富和发展马克思主义。</text>
+<text top="-14" left="171" width="108" height="18" font="4">二、课程内容</text>
+<text top="-14" left="171" width="217" height="18" font="4">1.马克思主义的产生和发展</text>
+<text top="-14" left="171" width="199" height="18" font="4">2.马克思主义的基本特征</text>
+<text top="-14" left="171" width="199" height="18" font="4">3.学习和运用马克思主义</text>
+<text top="-14" left="171" width="217" height="18" font="4">三、考核知识点与考核要求</text>
+<text top="-14" left="171" width="217" height="18" font="4">1.马克思主义的产生和发展</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：马克思主义的科学内涵；德国古典哲学；英国古典政治经济学；英法</text>
+<text top="-14" left="135" width="396" height="18" font="4">两国的空想社会主义学说；自然科学的三大发现。</text>
+<text top="-14" left="171" width="594" height="18" font="4">领会：马克思主义的直接理论来源；习近平新时代中国特色社会主义思想。</text>
+<text top="-14" left="171" width="414" height="18" font="4">简单应用：结合实际说明马克思主义是时代的产物。</text>
+<text top="-14" left="171" width="450" height="18" font="4">综合应用：结合实际说明马克思主义在实践中不断发展。</text>
+<text top="-14" left="171" width="199" height="18" font="4">2.马克思主义的基本特征</text>
+<text top="-14" left="171" width="360" height="18" font="4">识记：马克思主义；马克思主义的基本特征。</text>
+<text top="-14" left="171" width="594" height="18" font="4">领会：马克思主义的科学性；马克思主义的人民性；马克思主义的实践性；</text>
+<text top="-14" left="135" width="180" height="18" font="4">马克思主义的发展性。</text>
+<text top="-14" left="171" width="396" height="18" font="4">简单应用：结合实际说明马克思主义的理论品质。</text>
+<text top="-14" left="171" width="486" height="18" font="4">综合应用：马克思主义的基本特征是革命性与科学性的统一。</text>
+<text top="-14" left="171" width="199" height="18" font="4">3.学习和运用马克思主义</text>
+<text top="-14" left="171" width="252" height="18" font="4">领会：学习马克思主义的目的。</text>
+<text top="-14" left="171" width="450" height="18" font="4">简单应用：理论联系实际是学习马克思主义的根本方法。</text>
+<text top="-14" left="171" width="414" height="18" font="4">综合应用：在新的历史条件下自觉运用马克思主义。</text>
+</page>
+<page number="8" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="443" width="7" height="13" font="2">6</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、本章重点</text>
+<text top="-14" left="171" width="594" height="18" font="4">马克思恩格斯创立马克思主义的历史条件、直接理论来源和自然科学前提；</text>
+<text top="-14" left="135" width="623" height="18" font="4">列宁在帝国主义和无产阶级革命时期对马克思主义的发展；马克思主义中国化的</text>
+<text top="-14" left="135" width="623" height="18" font="4">历史进程和理论成果；马克思主义的科学内涵；马克思主义的基本特征；马克思</text>
+<text top="-14" left="135" width="540" height="18" font="4">主义具有与时俱进的理论品质；学习马克思主义的目的和根本方法。</text>
+<text top="-17" left="320" width="295" height="21" font="7">第一章 物质世界及其发展规律</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、学习目的与要求</text>
+<text top="-14" left="171" width="587" height="18" font="4">这一章主要论述马克思主义哲学的唯物主义和辩证法的基本观点。学习这一</text>
+<text top="-14" left="135" width="623" height="18" font="4">章，要了解世界的本质是物质，世界的统一性在于它的物质性，实践是人与世界</text>
+<text top="-14" left="135" width="630" height="18" font="4">关系的基础，人生活于其中的世界是与人的实践活动相联系的统一的物质世界；</text>
+<text top="-14" left="135" width="623" height="18" font="4">要深刻理解唯物辩证法的总特征，以及联系和发展的基本规律和基本环节；要明</text>
+<text top="-14" left="135" width="641" height="18" font="4">确规律的特点以及自然规律与社会规律的区别；要掌握意识的本质及其能动作用；</text>
+<text top="-14" left="135" width="623" height="18" font="4">深刻理解发挥主观能动性和尊重客观规律的辩证关系、解放思想和实事求是的关</text>
+<text top="-14" left="135" width="144" height="18" font="4">系。二、课程内容</text>
+<text top="-14" left="171" width="144" height="18" font="4">1.物质世界和实践</text>
+<text top="-14" left="171" width="271" height="18" font="4">2.物质世界的普遍联系和永恒发展</text>
+<text top="-14" left="171" width="217" height="18" font="4">3.客观规律性与主观能动性</text>
+<text top="-14" left="171" width="181" height="18" font="4">4.解放思想，实事求是</text>
+<text top="-14" left="171" width="217" height="18" font="4">三、考核知识点与考核要求</text>
+<text top="-14" left="171" width="144" height="18" font="4">1.物质世界和实践</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：世界观；哲学；一元论；二元论；主观唯心主义；客观唯心主义；可</text>
+<text top="-14" left="135" width="623" height="18" font="4">知论和不可知论；运动和静止；时间和空间；实践的本质；唯物主义的三种基本</text>
+<text top="-14" left="135" width="54" height="18" font="4">形态。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：哲学基本问题；世界的物质统一性原理；运动是物质的根本属性；绝</text>
+<text top="-14" left="135" width="623" height="18" font="4">对运动和相对静止的关系；承认事物相对静止的意义；时间和空间是运动着的物</text>
+<text top="-14" left="135" width="623" height="18" font="4">质的存在方式；时间和空间的绝对性与相对性的关系；实践的基本特点；实践的</text>
+<text top="-14" left="135" width="540" height="18" font="4">基本形式；我们所把握的物质世界是与人的实践相联系的物质世界。</text>
+<text top="-14" left="171" width="342" height="18" font="4">简单应用：列宁的物质定义及其现实意义。</text>
+<text top="-14" left="171" width="271" height="18" font="4">2.物质世界的普遍联系和永恒发展</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：联系；新事物和旧事物；矛盾的同一性和斗争性；内因和外因；矛盾</text>
+<text top="-14" left="135" width="630" height="18" font="4">的普遍性和特殊性；主要矛盾和次要矛盾；矛盾的主要方面和矛盾的次要方面；</text>
+</page>
+<page number="9" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="443" width="7" height="13" font="2">7</text>
+<text top="-14" left="135" width="623" height="18" font="4">质、量、度；量变和质变；肯定和否定；原因和结果；必然性和偶然性；可能性</text>
+<text top="-14" left="135" width="306" height="18" font="4">和现实性；内容和形式；本质和现象。</text>
+<text top="-14" left="171" width="596" height="18" font="4">领会：联系的客观性；联系的普遍性；联系的多样性；世界是过程的集合体；</text>
+<text top="-14" left="135" width="623" height="18" font="4">新事物必然战胜旧事物；辩证法和形而上学是两种根本对立的发展观；对立统一</text>
+<text top="-14" left="135" width="623" height="18" font="4">规律是唯物辩证法的实质与核心；矛盾的同一性和斗争性的相互关系；肯定和否</text>
+<text top="-14" left="135" width="126" height="18" font="4">定的辩证统一。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：矛盾的特殊性原理及其方法论意义；掌握事物的度的意义；原因</text>
+<text top="-14" left="135" width="623" height="18" font="4">和结果关系的原理及其意义；必然性和偶然性关系的原理及其意义；可能性和现</text>
+<text top="-14" left="135" width="623" height="18" font="4">实性关系的原理及其意义；内容和形式关系的原理及其意义；本质和现象关系的</text>
+<text top="-14" left="135" width="126" height="18" font="4">原理及其意义。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：内因和外因辩证关系的原理及其现实意义；矛盾的普遍性和特殊</text>
+<text top="-14" left="135" width="641" height="18" font="4">性辩证关系的原理及其现实意义；主要矛盾和次要矛盾关系的原理及其现实意义；</text>
+<text top="-14" left="135" width="623" height="18" font="4">中国特色社会主义进入新时代，我国社会主要矛盾转化为人民日益增长的美好生</text>
+<text top="-14" left="135" width="623" height="18" font="4">活需要和不平衡不充分发展之间的矛盾；矛盾的主要方面和次要方面关系的原理</text>
+<text top="-14" left="135" width="623" height="18" font="4">及其现实意义；“两点论”和“重点论”统一的原理及其现实意义；量变和质变</text>
+<text top="-14" left="135" width="623" height="18" font="4">辩证关系的原理及其现实意义；辩证否定观的内容及坚持辩证否定观的意义；事</text>
+<text top="-14" left="135" width="432" height="18" font="4">物的发展是前进性和曲折性统一的原理及其现实意义。</text>
+<text top="-14" left="171" width="217" height="18" font="4">3.客观规律性与主观能动性</text>
+<text top="-14" left="171" width="288" height="18" font="4">识记：规律；意识；意识的能动性。</text>
+<text top="-14" left="171" width="540" height="18" font="4">领会：规律的特点；意识的起源；意识的本质；意识能动性的表现。</text>
+<text top="-14" left="171" width="360" height="18" font="4">简单应用：物质和意识关系的原理及其意义。</text>
+<text top="-14" left="171" width="594" height="18" font="4">综合应用：尊重客观规律和发挥主观能动性辩证统一的原理及其现实意义。</text>
+<text top="-14" left="171" width="181" height="18" font="4">4.解放思想，实事求是</text>
+<text top="-14" left="171" width="234" height="18" font="4">识记：解放思想；实事求是。</text>
+<text top="-14" left="171" width="180" height="18" font="4">领会：党的思想路线。</text>
+<text top="-14" left="171" width="486" height="18" font="4">简单应用：结合实际说明实事求是是马克思主义哲学的精髓。</text>
+<text top="-14" left="171" width="605" height="18" font="4">综合应用：结合我国改革开放的实际说明解放思想与实事求是是辩证的统一。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、本章重点</text>
+<text top="-14" left="171" width="587" height="18" font="4">哲学的基本问题；世界物质统一性原理；物质的根本属性和物质运动的存在</text>
+<text top="-14" left="135" width="623" height="18" font="4">方式；马克思主义哲学的基本观点；社会生活在本质上是实践的；唯物辩证法的</text>
+<text top="-14" left="135" width="623" height="18" font="4">总特征；两种根本对立的发展观；唯物辩证法的实质与核心；对立统一规律；质</text>
+<text top="-14" left="135" width="623" height="18" font="4">量互变规律；否定之否定规律；世界联系与发展的基本环节；规律、自然规律和</text>
+<text top="-14" left="135" width="623" height="18" font="4">社会规律；意识的起源、本质及能动作用；发挥主观能动性和尊重客观规律的辩</text>
+<text top="-14" left="135" width="630" height="18" font="4">证关系；实事求是是马克思主义哲学的精髓；解放思想和实事求是的辩证统一。</text>
+</page>
+<page number="10" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="443" width="7" height="13" font="2">8</text>
+<text top="-17" left="341" width="253" height="21" font="7">第二章 认识的本质及规律</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、学习目的与要求</text>
+<text top="-14" left="171" width="587" height="18" font="4">本章主要阐述认识的本质和发展规律。学习这一章，要掌握实践在认识中的</text>
+<text top="-14" left="135" width="623" height="18" font="4">决定性作用；理解认识的主体和客体及其相互关系，明确认识的本质；深刻理解</text>
+<text top="-14" left="135" width="623" height="18" font="4">认识的辩证过程以及主观和客观、认识和实践具体的历史的统一；弄清真理和谬</text>
+<text top="-14" left="135" width="623" height="18" font="4">误的含义及二者的关系，真理的绝对性和相对性的关系；深入理解实践是检验真</text>
+<text top="-14" left="135" width="630" height="18" font="4">理的唯一标准以及真理标准的绝对性和相对性；弄清真理与价值的区别和联系；</text>
+<text top="-14" left="135" width="623" height="18" font="4">明确认识的目的全在于运用；全面理解马克思主义认识论与党的思想路线和群众</text>
+<text top="-14" left="135" width="54" height="18" font="4">路线。</text>
+<text top="-14" left="171" width="108" height="18" font="4">二、课程内容</text>
+<text top="-14" left="171" width="108" height="18" font="4">1.认识的本质</text>
+<text top="-14" left="171" width="144" height="18" font="4">2.认识的辩证运动</text>
+<text top="-14" left="171" width="108" height="18" font="4">3.真理和价值</text>
+<text top="-14" left="171" width="235" height="18" font="4">4.认识世界与改造世界的统一</text>
+<text top="-14" left="171" width="217" height="18" font="4">三、考核知识点与考核要求</text>
+<text top="-14" left="171" width="108" height="18" font="4">1.认识的本质</text>
+<text top="-14" left="171" width="342" height="18" font="4">识记：认识主体的含义；认识客体的含义。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：实践对认识具有决定性的作用；实践是认识的来源；实践是认识发展</text>
+<text top="-14" left="135" width="623" height="18" font="4">的动力；实践是检验认识真理性的唯一标准；实践是认识的目的；认识主体的特</text>
+<text top="-14" left="135" width="623" height="18" font="4">点；认识主体的结构；认识客体的特点；认识客体的性质；认识主体和认识客体</text>
+<text top="-14" left="135" width="623" height="18" font="4">的关系；认识的本质；唯物论的反映论和唯心论的认识论的对立；可知论和不可</text>
+<text top="-14" left="135" width="630" height="18" font="4">知论的对立；辩证唯物主义的能动的反映论和旧唯物论的机械的反映论的对立。</text>
+<text top="-14" left="171" width="306" height="18" font="4">综合应用：认识的本质及其理论意义。</text>
+<text top="-14" left="171" width="144" height="18" font="4">2.认识的辩证运动</text>
+<text top="-14" left="171" width="450" height="18" font="4">识记：感性认识的含义和形式；理性认识的含义和形式。</text>
+<text top="-14" left="171" width="596" height="18" font="4">领会：感性认识的特点；理性认识的特点；感性认识和理性认识的辩证关系；</text>
+<text top="-14" left="135" width="623" height="18" font="4">反对经验主义和教条主义；由感性认识到理性认识的飞跃；从理性认识到实践的</text>
+<text top="-14" left="135" width="360" height="18" font="4">飞跃；整个人类的认识是有限与无限的统一。</text>
+<text top="-14" left="171" width="450" height="18" font="4">简单应用：一个正确的认识需要经过多次反复才能完成。</text>
+<text top="-14" left="171" width="108" height="18" font="4">3.真理和价值</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：真理；谬误；真理的绝对性；真理的相对性；价值的含义；社会主义</text>
+<text top="-14" left="135" width="108" height="18" font="4">核心价值观。</text>
+</page>
+<page number="11" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="443" width="7" height="13" font="2">9</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：真理和谬误的关系；真理的客观性；逻辑证明在认识和探索真理中的</text>
+<text top="-14" left="135" width="623" height="18" font="4">作用；实践标准的确定性和不确定性及其相互关系；真理与价值的对立统一；真</text>
+<text top="-14" left="135" width="522" height="18" font="4">理的价值表现在它的功能上；社会主义核心价值观的含义和内容。</text>
+<text top="-14" left="171" width="486" height="18" font="4">简单应用：实践是检验真理的唯一标准的观点及其现实意义。</text>
+<text top="-14" left="171" width="522" height="18" font="4">综合应用：真理的绝对性和相对性辩证关系的原理及其现实意义。</text>
+<text top="-14" left="171" width="235" height="18" font="4">4.认识世界与改造世界的统一</text>
+<text top="-14" left="171" width="144" height="18" font="4">识记：思想路线。</text>
+<text top="-14" left="171" width="414" height="18" font="4">领会：党的思想路线的内容；党的群众路线的内容。</text>
+<text top="-14" left="171" width="450" height="18" font="4">简单应用：马克思主义认识论与党的群众路线的一致性。</text>
+<text top="-14" left="171" width="468" height="18" font="4">综合应用：马克思主义认识论是党的思想路线的理论基础。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、本章重点</text>
+<text top="-14" left="171" width="596" height="18" font="4">实践是认识的基础；认识主体和认识客体的含义及其相互关系；认识的本质；</text>
+<text top="-14" left="135" width="623" height="18" font="4">认识的两次飞跃及其意义；感性认识和理性认识的辩证关系；真理及其属性；实</text>
+<text top="-14" left="135" width="623" height="18" font="4">践是检验真理的唯一标准；真理与价值的辩证统一；社会主义核心价值观；一切</text>
+<text top="-14" left="135" width="198" height="18" font="4">从实际出发，实事求是。</text>
+<text top="-17" left="362" width="63" height="21" font="7">第三章</text>
+<text top="-17" left="446" width="211" height="21" font="7">人类社会及其发展规律</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、学习目的与要求</text>
+<text top="-14" left="171" width="594" height="18" font="4">本章论述历史唯物主义的基本原理。学习这一章，要掌握社会的基本结构，</text>
+<text top="-14" left="135" width="623" height="18" font="4">理解社会存在与社会意识的关系，社会基本矛盾及其运动规律；了解社会形态划</text>
+<text top="-14" left="135" width="623" height="18" font="4">分法和社会形态更替的规律，弄清社会形态的发展是一种自然历史过程；深刻理</text>
+<text top="-14" left="135" width="623" height="18" font="4">解社会发展的各种动力及它们之间的相互关系；正确理解人的本质及人与社会的</text>
+<text top="-14" left="135" width="623" height="18" font="4">关系，人民群众和个人在历史上的作用，无产阶级政党的群众观点和群众路线的</text>
+<text top="-14" left="135" width="378" height="18" font="4">工作方法；正确评价杰出人物在历史上的作用。</text>
+<text top="-14" left="171" width="108" height="18" font="4">二、课程内容</text>
+<text top="-14" left="171" width="235" height="18" font="4">1.社会基本矛盾及其运动规律</text>
+<text top="-14" left="171" width="181" height="18" font="4">2.社会历史发展的动力</text>
+<text top="-14" left="171" width="253" height="18" font="4">3.人民群众在历史发展中的作用</text>
+<text top="-14" left="171" width="217" height="18" font="4">三、考核知识点与考核要求</text>
+<text top="-14" left="171" width="235" height="18" font="4">1.社会基本矛盾及其运动规律</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：社会基本矛盾；社会存在；地理环境；人口因素；生产方式；社会意</text>
+<text top="-14" left="135" width="630" height="18" font="4">识；社会心理；社会意识形式；意识形态；非意识形态；个体意识；群体意识；</text>
+<text top="-14" left="135" width="594" height="18" font="4">生产力；生产关系；经济基础；上层建筑；经济社会形态；技术社会形态。</text>
+</page>
+<page number="12" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">10</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：地理环境在社会发展中的作用；人口因素在社会发展中的作用；生产</text>
+<text top="-14" left="135" width="623" height="18" font="4">方式在社会发展中的作用；社会意识的相对独立性；社会存在和社会意识的关系</text>
+<text top="-14" left="135" width="623" height="18" font="4">问题是历史观的基本问题；生产力系统的要素；生产关系体系；三种社会形态划</text>
+<text top="-14" left="135" width="288" height="18" font="4">分法和五种社会形态划分法的关系。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：社会存在和社会意识的关系的原理及其现实意义；生产资料所有</text>
+<text top="-14" left="135" width="623" height="18" font="4">制形式是整个生产关系的基础的观点及其现实意义；生产力和生产关系之间的辩</text>
+<text top="-14" left="135" width="623" height="18" font="4">证关系的原理及其现实意义；政治上层建筑与观念上层建筑的关系的原理及其现</text>
+<text top="-14" left="135" width="623" height="18" font="4">实意义；经济基础与上层建筑之间的辩证关系的原理及其现实意义；党的十九大</text>
+<text top="-14" left="135" width="306" height="18" font="4">以来进行的党和国家机构改革的特点。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：科学技术是第一生产力；生产关系必须适合生产力性质的规律及</text>
+<text top="-14" left="135" width="623" height="18" font="4">其现实意义；上层建筑必须适合经济基础发展要求的规律及其现实意义；社会历</text>
+<text top="-14" left="135" width="623" height="18" font="4">史发展的决定性与选择性关系的原理及其历史和现实意义；社会形态发展的统一</text>
+<text top="-14" left="135" width="270" height="18" font="4">性和多样性关系的原理及其意义。</text>
+<text top="-14" left="171" width="181" height="18" font="4">2.社会历史发展的动力</text>
+<text top="-14" left="171" width="576" height="18" font="4">识记：阶级的实质；社会革命；社会改革；我国全面深化改革的总目标。</text>
+<text top="-14" left="171" width="596" height="18" font="4">领会：两对社会基本矛盾之间的关系；阶级斗争是阶级社会发展的直接动力；</text>
+<text top="-14" left="135" width="623" height="18" font="4">社会革命的根源；社会革命的类型；社会革命的形式；社会革命在社会发展中的</text>
+<text top="-14" left="135" width="623" height="18" font="4">作用；社会革命与社会改革的区别；社会改革在社会发展中的作用；当前中国改</text>
+<text top="-14" left="135" width="108" height="18" font="4">革的全面性。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：结合我国实际说明社会主义社会改革的特点；结合我国改革的实</text>
+<text top="-14" left="135" width="623" height="18" font="4">际说明改革是社会主义制度的自我完善；结合我国当前改革的实际说明改革、发</text>
+<text top="-14" left="135" width="144" height="18" font="4">展、稳定的关系。</text>
+<text top="-14" left="171" width="253" height="18" font="4">3.人民群众在历史发展中的作用</text>
+<text top="-14" left="171" width="522" height="18" font="4">识记：人民群众的含义和构成；普通个人；历史人物；杰出人物。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：在历史创造者问题上两种根本对立的观点；历史唯心主义的两个主要</text>
+<text top="-14" left="135" width="54" height="18" font="4">缺点。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：结合实际说明人民群众推动历史发展的作用；结合实际说明无产</text>
+<text top="-14" left="135" width="623" height="18" font="4">阶级领袖的历史作用；无产阶级政党的群众观点及其现实意义；坚持无产阶级政</text>
+<text top="-14" left="135" width="630" height="18" font="4">党的群众路线及其工作方法的现实意义；正确认识和评价无产阶级领袖的作用。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：正确评价杰出人物在历史上的作用；在改革开放的新形势下坚持</text>
+<text top="-14" left="135" width="216" height="18" font="4">党的群众路线的现实意义。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、本章重点</text>
+<text top="-14" left="171" width="587" height="18" font="4">社会存在与社会意识的含义及其相互关系；社会基本矛盾运动；社会形态的</text>
+<text top="-14" left="135" width="623" height="18" font="4">划分；社会形态的更替与发展；阶级斗争及其在阶级社会中的作用；革命和改革</text>
+</page>
+<page number="13" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">11</text>
+<text top="-14" left="135" width="632" height="18" font="4">在社会发展中的作用；历史观上两种根本对立的观点；人民群众在历史上的作用；</text>
+<text top="-14" left="135" width="522" height="18" font="4">无产阶级政党的群众观点和群众路线；杰出人物在历史上的作用。</text>
+<text top="-17" left="299" width="337" height="21" font="7">第四章 资本主义制度的形成及本质</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、学习目的与要求</text>
+<text top="-14" left="171" width="596" height="18" font="4">本章分析资本主义制度的形成及其经济、政治和意识形态的本质。学习本章，</text>
+<text top="-14" left="135" width="623" height="18" font="4">要把握资本主义生产关系产生和资本主义经济制度形成的历史过程；了解商品是</text>
+<text top="-14" left="135" width="623" height="18" font="4">资本主义经济的细胞，通过对商品经济的分析，掌握劳动价值理论，从而为分析</text>
+<text top="-14" left="135" width="623" height="18" font="4">剩余价值理论打下理论基础；要认识资本是带来剩余价值的价值，资本主义生产</text>
+<text top="-14" left="135" width="623" height="18" font="4">的实质是剩余价值的生产，资本家通过雇佣劳动制度，实现了价值的增殖；要明</text>
+<text top="-14" left="135" width="623" height="18" font="4">确资本主义经济制度是以社会化的大工业生产为物质技术基础的，了解社会化生</text>
+<text top="-14" left="135" width="623" height="18" font="4">产的形成以及在当代科学技术革命推动下生产社会化的发展；要把握资本的流通</text>
+<text top="-14" left="135" width="623" height="18" font="4">理论，资本只有在流通运动过程中，才能源源不断、顺利地生产出剩余价值；要</text>
+<text top="-14" left="135" width="630" height="18" font="4">了解资本和剩余价值的各种具体形式，资本主义社会生产出来的全部剩余价值，</text>
+<text top="-14" left="135" width="623" height="18" font="4">要在资产阶级各个集团之间进行分配；要了解与资本主义经济制度相适应的资本</text>
+<text top="-14" left="135" width="450" height="18" font="4">主义政治制度和意识形态，把握其基本内容和阶级本质。</text>
+<text top="-14" left="171" width="108" height="18" font="4">二、课程内容</text>
+<text top="-14" left="171" width="181" height="18" font="4">1.资本主义制度的形成</text>
+<text top="-14" left="171" width="253" height="18" font="4">2.资本主义经济制度的本质特征</text>
+<text top="-14" left="171" width="289" height="18" font="4">3.资本的流通过程和剩余价值的分配</text>
+<text top="-14" left="171" width="271" height="18" font="4">4.资本主义的政治制度和意识形态</text>
+<text top="-14" left="171" width="217" height="18" font="4">三、考核知识点与考核要求</text>
+<text top="-14" left="171" width="181" height="18" font="4">1.资本主义制度的形成</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：使用价值；价值；具体劳动；抽象劳动；货币；价值规律；资本原始</text>
+<text top="-14" left="135" width="144" height="18" font="4">积累；产业革命。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：商品经济产生的条件；商品二因素；劳动二重性；货币的产生；货币</text>
+<text top="-14" left="135" width="630" height="18" font="4">的本质；货币的职能；私人劳动与社会劳动的矛盾是简单商品经济的基本矛盾；</text>
+<text top="-14" left="135" width="216" height="18" font="4">资本主义经济制度的产生。</text>
+<text top="-14" left="171" width="596" height="18" font="4">简单应用：商品二因素与劳动二重性的关系；货币的本质和职能的发展变化；</text>
+<text top="-14" left="135" width="198" height="18" font="4">价值规律的内容和要求。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：商品价值量的决定及其与劳动生产率的关系；在私有制商品经济</text>
+<text top="-14" left="135" width="162" height="18" font="4">中价值规律的作用。</text>
+<text top="-14" left="171" width="253" height="18" font="4">2.资本主义经济制度的本质特征</text>
+</page>
+<page number="14" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">12</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：劳动力商品；资本主义劳动过程；价值形成过程；价值增殖过程；绝</text>
+<text top="-14" left="135" width="632" height="18" font="4">对剩余价值；相对剩余价值；超额剩余价值；不变资本；可变资本；剩余价值率；</text>
+<text top="-14" left="135" width="342" height="18" font="4">资本有机构成；资本积累；相对过剩人口。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：劳动力商品的价值和使用价值；资本主义生产过程是劳动过程和价值</text>
+<text top="-14" left="135" width="623" height="18" font="4">增殖过程的统一；资本的本质；资本积累的必然性；资本积累的历史作用和历史</text>
+<text top="-14" left="135" width="54" height="18" font="4">趋势。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：劳动力商品的特点；划分不变资本和可变资本的意义；剩余价值</text>
+<text top="-14" left="135" width="432" height="18" font="4">两种生产方法的联系与区别；资本积累的实质与后果。</text>
+<text top="-14" left="171" width="522" height="18" font="4">综合应用：相对剩余价值生产与超额剩余价值生产及其相互关系。</text>
+<text top="-14" left="171" width="289" height="18" font="4">3.资本的流通过程和剩余价值的分配</text>
+<text top="-14" left="171" width="594" height="18" font="4">识记：货币资本；生产资本；商品资本；资本周转；周转时间；周转速度；</text>
+<text top="-14" left="135" width="623" height="18" font="4">固定资本；流动资本；单个资本；社会资本；社会总产品；利润；平均利润；商</text>
+<text top="-14" left="135" width="540" height="18" font="4">业资本；商业利润；借贷资本；利息；银行资本；银行利润；地租。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：产业资本循环的三个阶段；产业资本的三种职能形式；生产时间和流</text>
+<text top="-14" left="135" width="623" height="18" font="4">通时间；生产资本的构成；社会总产品及其分类；社会总产品的构成；资本主义</text>
+<text top="-14" left="135" width="623" height="18" font="4">再生产的比例关系；剩余价值转化为利润；商业资本的本质和职能；借贷资本的</text>
+<text top="-14" left="135" width="623" height="18" font="4">形成；借贷资本的本质；利息的本质和来源；资本主义农业中剩余价值分配的特</text>
+<text top="-14" left="135" width="342" height="18" font="4">点；资本主义经济危机与再生产的周期性。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：资本循环与价值增殖；影响资本周转速度的因素；社会资本再生</text>
+<text top="-14" left="135" width="623" height="18" font="4">产的实现问题；部门之间的竞争形成平均利润；平均利润率水平的决定；资本主</text>
+<text top="-14" left="135" width="414" height="18" font="4">义银行及其职能；资本主义经济危机的实质和根源。</text>
+<text top="-14" left="171" width="594" height="18" font="4">综合应用：资本周转速度对剩余价值生产的影响；平均利润的形成与本质；</text>
+<text top="-14" left="135" width="144" height="18" font="4">商业利润的来源。</text>
+<text top="-14" left="171" width="271" height="18" font="4">4.资本主义的政治制度和意识形态</text>
+<text top="-14" left="171" width="596" height="18" font="4">识记：君主立宪制；民主共和制；资本主义政党制度；资本主义的普选制度；</text>
+<text top="-14" left="135" width="216" height="18" font="4">立法权；司法权；行政权。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：资本主义的政治制度的内容；资本主义的国家制度；资本主义的民主</text>
+<text top="-14" left="135" width="306" height="18" font="4">制度；资本主义的意识形态及其本质。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：资本主义的“三权分立”制度；资产阶级的人生观、价值观和道</text>
+<text top="-14" left="135" width="360" height="18" font="4">德观；利己主义是资本主义意识形态的核心。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：资本主义的政治制度及其本质；资本主义意识形态的历史进步性</text>
+<text top="-14" left="135" width="126" height="18" font="4">和阶级局限性。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、本章重点</text>
+<text top="-14" left="171" width="587" height="18" font="4">商品经济产生的条件；商品二因素与劳动二重性的关系；商品价值量的决定</text>
+</page>
+<page number="15" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">13</text>
+<text top="-14" left="135" width="623" height="18" font="4">及其与劳动生产率的关系；货币的产生、本质和职能；私人劳动与社会劳动的矛</text>
+<text top="-14" left="135" width="623" height="18" font="4">盾是简单商品经济的基本矛盾；资本主义经济制度的形成；价值规律的内容、表</text>
+<text top="-14" left="135" width="623" height="18" font="4">现形式及其作用；货币转化为资本；劳动力商品的价值和使用价值；资本主义生</text>
+<text top="-14" left="135" width="623" height="18" font="4">产过程是劳动过程和价值增殖过程的统一；资本的本质；不变资本和可变资本的</text>
+<text top="-14" left="135" width="623" height="18" font="4">划分及其意义；剩余价值的两种生产方法及其联系与区别；相对剩余价值生产与</text>
+<text top="-14" left="135" width="623" height="18" font="4">超额剩余价值生产的关系；资本积累的实质、后果、历史作用和历史趋势；产业</text>
+<text top="-14" left="135" width="623" height="18" font="4">资本循环的三个阶段和三种职能形式；资本周转速度对剩余价值生产的影响；社</text>
+<text top="-14" left="135" width="623" height="18" font="4">会总资本再生产的实现和比例关系；剩余价值转化为利润；平均利润的形成与本</text>
+<text top="-14" left="135" width="623" height="18" font="4">质；剩余价值分割的具体形式；资本主义经济危机的实质和根源；资本主义的政</text>
+<text top="-14" left="135" width="522" height="18" font="4">治制度及其本质；资本主义意识形态的历史进步性和阶级局限性。</text>
+<text top="-17" left="309" width="316" height="21" font="7">第五章 资本主义的发展及其趋势</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、学习目的与要求</text>
+<text top="-14" left="171" width="587" height="18" font="4">资本主义社会的发展大体可分为自由竞争资本主义和垄断资本主义两个阶</text>
+<text top="-14" left="135" width="623" height="18" font="4">段。自由竞争阶段资本主义社会的经济关系、政治制度和经济运行基本规律的原</text>
+<text top="-14" left="135" width="623" height="18" font="4">理对垄断资本主义阶段也是适用的，但垄断资本主义阶段又有其不同于自由竞争</text>
+<text top="-14" left="135" width="623" height="18" font="4">阶段的社会经济特征。学习本章主要应掌握的内容包括资本主义发展阶段、垄断</text>
+<text top="-14" left="135" width="623" height="18" font="4">资本主义阶段的社会经济特征及其发展变化、垄断资本主义的实质，以及资本主</text>
+<text top="-14" left="135" width="623" height="18" font="4">义的历史趋势和历史地位。通过本章的学习，要理解和把握马克思主义关于资本</text>
+<text top="-14" left="135" width="641" height="18" font="4">主义发展进程的基本原理，正确理解和认识垄断资本主义的社会经济特征和实质。</text>
+<text top="-14" left="171" width="108" height="18" font="4">二、课程内容</text>
+<text top="-14" left="171" width="235" height="18" font="4">1.垄断资本主义的形成与发展</text>
+<text top="-14" left="171" width="307" height="18" font="4">2.经济全球化与当代资本主义的新变化</text>
+<text top="-14" left="171" width="271" height="18" font="4">3.资本主义的历史地位和发展趋势</text>
+<text top="-14" left="171" width="217" height="18" font="4">三、考核知识点与考核要求</text>
+<text top="-14" left="171" width="235" height="18" font="4">1.垄断资本主义的形成与发展</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：垄断的形成；金融资本；金融寡头；资本输出；国际垄断组织；国家</text>
+<text top="-14" left="135" width="126" height="18" font="4">垄断资本主义。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：垄断和竞争；垄断利润及其来源；垄断组织的形成与发展；国家垄断</text>
+<text top="-14" left="135" width="144" height="18" font="4">资本主义的实质。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：私人垄断资本主义的基本特征；二战后国家垄断资本主义大发展</text>
+<text top="-14" left="135" width="324" height="18" font="4">的原因；国家垄断资本主义的基本形式。</text>
+</page>
+<page number="16" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">14</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：垄断资本主义基本经济特征的发展变化；国家垄断资本主义条件</text>
+<text top="-14" left="135" width="432" height="18" font="4">下的宏观经济调控；垄断资本主义在世界范围的扩展。</text>
+<text top="-14" left="171" width="307" height="18" font="4">2.经济全球化与当代资本主义的新变化</text>
+<text top="-14" left="171" width="486" height="18" font="4">识记：经济全球化；生产全球化；贸易全球化；金融全球化。</text>
+<text top="-14" left="171" width="414" height="18" font="4">领会：经济全球化的原因；经济全球化的主要内容。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：经济全球化在当代的发展变化及其原因；当代资本主义的新变化</text>
+<text top="-14" left="135" width="396" height="18" font="4">在生产力、生产关系和上层建筑方面的主要表现。</text>
+<text top="-14" left="171" width="342" height="18" font="4">综合应用：资本主义新变化的原因和实质。</text>
+<text top="-14" left="171" width="271" height="18" font="4">3.资本主义的历史地位和发展趋势</text>
+<text top="-14" left="171" width="558" height="18" font="4">识记：人类社会经济形态的发展和更替的规律；资本主义的基本矛盾。</text>
+<text top="-14" left="171" width="522" height="18" font="4">领会：资本主义的历史地位；资本主义生产方式的历史过渡性质。</text>
+<text top="-14" left="171" width="432" height="18" font="4">简单应用：资本主义为社会主义所代替的历史必然性。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：资本主义向社会主义的过渡是一个复杂的、曲折的、长期的历史</text>
+<text top="-14" left="135" width="54" height="18" font="4">过程。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、本章重点</text>
+<text top="-14" left="171" width="587" height="18" font="4">垄断的形成；垄断和竞争；垄断组织的形成与发展；垄断利润及其来源；垄</text>
+<text top="-14" left="135" width="623" height="18" font="4">断资本主义的基本经济特征；国家垄断资本主义的形成和发展；国家垄断资本主</text>
+<text top="-14" left="135" width="623" height="18" font="4">义的基本形式；国家垄断资本主义条件下的宏观经济调控；国家垄断资本主义的</text>
+<text top="-14" left="135" width="623" height="18" font="4">实质；垄断资本主义在世界范围的扩展；经济全球化的主要内容；经济全球化在</text>
+<text top="-14" left="135" width="623" height="18" font="4">当代的发展变化及其原因；经济全球化的影响；当代资本主义的新变化的主要表</text>
+<text top="-14" left="135" width="623" height="18" font="4">现、原因和实质；资本主义为社会主义所代替的历史必然性；资本主义向社会主</text>
+<text top="-14" left="135" width="414" height="18" font="4">义的过渡是一个复杂的、曲折的、长期的历史过程。</text>
+<text top="-17" left="309" width="316" height="21" font="7">第六章 社会主义的发展及其规律</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、学习目的与要求</text>
+<text top="-14" left="171" width="587" height="18" font="4">学习本章，要了解社会主义从空想到科学、从理论到现实、从一国到多国的</text>
+<text top="-14" left="135" width="623" height="18" font="4">发展，社会主义在一国首先胜利的理论，社会主义在 20 世纪的实践；要认识科</text>
+<text top="-14" left="135" width="623" height="18" font="4">学社会主义的一般原则，包括经典作家的论述和当代人的探索；要了解在经济文</text>
+<text top="-14" left="135" width="630" height="18" font="4">化相对落后国家建设社会主义的艰巨性和长期性，以及社会主义道路的多样性；</text>
+<text top="-14" left="135" width="468" height="18" font="4">还要了解马克思主义政党在社会主义事业中的地位和作用。</text>
+<text top="-14" left="171" width="108" height="18" font="4">二、课程内容</text>
+<text top="-14" left="171" width="235" height="18" font="4">1.社会主义五百年的历史进程</text>
+<text top="-14" left="171" width="199" height="18" font="4">2.科学社会主义一般原则</text>
+</page>
+<page number="17" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">15</text>
+<text top="-14" left="171" width="325" height="18" font="4">3.在实践中探索现实社会主义的发展规律</text>
+<text top="-14" left="171" width="397" height="18" font="4">4.马克思主义政党在社会主义事业中的地位和作用</text>
+<text top="-14" left="171" width="217" height="18" font="4">三、考核知识点与考核要求</text>
+<text top="-14" left="171" width="235" height="18" font="4">1.社会主义五百年的历史进程</text>
+<text top="-14" left="171" width="306" height="18" font="4">识记：空想社会主义；科学社会主义。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：社会主义从空想到科学的发展；社会主义从理论到实践的发展；社会</text>
+<text top="-14" left="135" width="623" height="18" font="4">主义制度从理想到现实，列宁领导下的苏维埃俄国对社会主义的探索；斯大林领</text>
+<text top="-14" left="135" width="252" height="18" font="4">导下的苏联对社会主义的探索。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：无产阶级革命是人类历史上最广泛、最彻底、最深刻的革命；社</text>
+<text top="-14" left="135" width="234" height="18" font="4">会主义从一国到多国的发展。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：社会主义从一国到数国发展的历史贡献与经验教训；习近平新时</text>
+<text top="-14" left="135" width="216" height="18" font="4">代中国特色社会主义思想。</text>
+<text top="-14" left="171" width="199" height="18" font="4">2.科学社会主义一般原则</text>
+<text top="-14" left="171" width="486" height="18" font="4">识记：科学社会主义一般原则；社会主义公有制；按劳分配。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：无产阶级的历史使命；社会主义生产目的；社会主义的计划调节；社</text>
+<text top="-14" left="135" width="342" height="18" font="4">会主义要合乎自然规律地改造和利用自然。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：社会主义必然胜利的根本依据；社会主义经济制度的基础和基本</text>
+<text top="-14" left="135" width="396" height="18" font="4">特征；社会主义社会实行按劳分配的原因和实质。</text>
+<text top="-14" left="171" width="360" height="18" font="4">综合应用：正确把握科学社会主义一般原则。</text>
+<text top="-14" left="171" width="325" height="18" font="4">3.在实践中探索现实社会主义的发展规律</text>
+<text top="-14" left="171" width="450" height="18" font="4">识记：社会主义发展规律；社会主义的自我完善和改革。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：社会主义在经济文化相对落后的国家取得胜利的原因；社会主义发展</text>
+<text top="-14" left="135" width="162" height="18" font="4">道路多样性的原因。</text>
+<text top="-14" left="171" width="558" height="18" font="4">简单应用：经济文化相对落后的国家社会主义建设的艰巨性和长期性。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：社会主义在实践探索中开拓前进；社会主义在实践中自我发展和</text>
+<text top="-14" left="135" width="54" height="18" font="4">完善。</text>
+<text top="-14" left="171" width="397" height="18" font="4">4.马克思主义政党在社会主义事业中的地位和作用</text>
+<text top="-14" left="171" width="198" height="18" font="4">识记：马克思主义政党。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：马克思主义政党是社会主义革命的领导核心；马克思主义政党是社会</text>
+<text top="-14" left="135" width="180" height="18" font="4">主义建设的领导核心。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：马克思主义政党是新型的革命政党；坚持和改善马克思主义政党</text>
+<text top="-14" left="135" width="72" height="18" font="4">的领导。</text>
+<text top="-14" left="171" width="486" height="18" font="4">综合应用：马克思主义政党在社会主义事业中的地位和作用。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、本章重点</text>
+</page>
+<page number="18" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">16</text>
+<text top="-14" left="171" width="596" height="18" font="4">社会主义从空想到科学的发展；无产阶级革命是人类历史上最广泛、最彻底、</text>
+<text top="-14" left="135" width="623" height="18" font="4">最深刻的革命；社会主义从理论到实践的发展；列宁领导下的苏维埃俄国对社会</text>
+<text top="-14" left="135" width="623" height="18" font="4">主义的探索；社会主义从一国到数国发展的历史贡献与经验教训；新时代中国特</text>
+<text top="-14" left="135" width="623" height="18" font="4">色社会主义；科学社会主义一般原则的主要内容；正确把握科学社会主义的一般</text>
+<text top="-14" left="135" width="623" height="18" font="4">原则；社会主义在经济文化相对落后的国家取得胜利的原因；社会主义发展道路</text>
+<text top="-14" left="135" width="623" height="18" font="4">多样性的原因；经济文化相对落后的国家社会主义建设的艰巨性和长期性；马克</text>
+<text top="-14" left="135" width="641" height="18" font="4">思主义政党是新型的革命政党；马克思主义政党在社会主义事业中的地位和作用。</text>
+<text top="-17" left="246" width="443" height="21" font="7">第七章 共产主义社会是人类最崇高的社会理想</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、学习目的与要求</text>
+<text top="-14" left="171" width="587" height="18" font="4">本章对共产主义社会进行全面的考察和分析。学习本章首先应通过马克思主</text>
+<text top="-14" left="135" width="623" height="18" font="4">义经典作家对共产主义社会的展望，了解马克思主义经典作家所科学预见的共产</text>
+<text top="-14" left="135" width="623" height="18" font="4">主义社会的基本特征。其次应通过对共产主义社会两个发展阶段的分析，认识共</text>
+<text top="-14" left="135" width="623" height="18" font="4">产主义社会是人类社会历史发展的必然趋势，了解实现共产主义伟大事业，要经</text>
+<text top="-14" left="135" width="630" height="18" font="4">历一个不断实践的长期过程。再次要认识社会主义是走向共产主义的必经阶段，</text>
+<text top="-14" left="135" width="623" height="18" font="4">只有通过社会主义历史阶段的长期发展过程，才能在将来进入共产主义社会。最</text>
+<text top="-14" left="135" width="623" height="18" font="4">后必须树立共产主义远大理想，并将共产主义远大理想与中国特色社会主义共同</text>
+<text top="-14" left="135" width="623" height="18" font="4">理想相结合，积极投身于中国特色社会主义伟大事业，在建设中国特色社会主义</text>
+<text top="-14" left="135" width="252" height="18" font="4">事业中为实现共产主义而奋斗。</text>
+<text top="-14" left="171" width="108" height="18" font="4">二、课程内容</text>
+<text top="-14" left="171" width="289" height="18" font="4">1.马克思主义对共产主义社会的展望</text>
+<text top="-14" left="171" width="307" height="18" font="4">2.共产主义是社会历史发展的必然趋势</text>
+<text top="-14" left="171" width="470" height="18" font="4">3.在建设中国特色社会主义的进程中为实现共产主义而奋斗</text>
+<text top="-14" left="171" width="217" height="18" font="4">三、考核知识点与考核要求</text>
+<text top="-14" left="171" width="289" height="18" font="4">1.马克思主义对共产主义社会的展望</text>
+<text top="-14" left="171" width="306" height="18" font="4">识记：社会主义社会；共产主义社会。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：社会生产力高度发展和物质财富极大丰富；经济的计划调节管理和商</text>
+<text top="-14" left="135" width="522" height="18" font="4">品经济的消失；阶级的消灭和国家自行消亡；精神境界极大提高。</text>
+<text top="-14" left="171" width="504" height="18" font="4">简单应用：实行社会公有制和按需分配；人的自由而全面发展。</text>
+<text top="-14" left="171" width="596" height="18" font="4">综合应用：马克思主义经典作家对共产主义社会的展望；全人类的彻底解放。</text>
+<text top="-14" left="171" width="307" height="18" font="4">2.共产主义是社会历史发展的必然趋势</text>
+<text top="-14" left="171" width="270" height="18" font="4">识记：共产主义社会的两个阶段。</text>
+<text top="-14" left="171" width="468" height="18" font="4">领会：经济落后国家实现共产主义须经历更长的实践过程。</text>
+</page>
+<page number="19" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">17</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：从社会主义过渡到共产主义的特点；实现共产主义是一个不断实</text>
+<text top="-14" left="135" width="612" height="18" font="4">践的长期过程；共产主义在世界范围的实现是长期、曲折、复杂的历史过程。</text>
+<text top="-14" left="171" width="378" height="18" font="4">综合应用：人类社会历史必然发展到共产主义。</text>
+<text top="-14" left="171" width="470" height="18" font="4">3.在建设中国特色社会主义的进程中为实现共产主义而奋斗</text>
+<text top="-14" left="171" width="216" height="18" font="4">识记：中国特色社会主义。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：为实现共产主义创造条件；共产主义远大理想和中国特色社会主义共</text>
+<text top="-14" left="135" width="72" height="18" font="4">同理想。</text>
+<text top="-14" left="171" width="396" height="18" font="4">简单应用：社会主义是走向共产主义的必由之路。</text>
+<text top="-14" left="171" width="558" height="18" font="4">综合应用：树立共产主义远大理想；积极投身中国特色社会主义事业。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、本章重点</text>
+<text top="-14" left="171" width="587" height="18" font="4">马克思主义经典作家对共产主义社会的展望；共产主义社会的两个阶段；人</text>
+<text top="-14" left="135" width="623" height="18" font="4">类社会历史必然发展到共产主义；实现共产主义是一个不断实践的长期过程；共</text>
+<text top="-14" left="135" width="623" height="18" font="4">产主义在世界范围的实现是长期、曲折、复杂的历史过程；社会主义是走向共产</text>
+<text top="-14" left="135" width="623" height="18" font="4">主义的必由之路；共产主义远大理想和中国特色社会主义共同理想；积极投身中</text>
+<text top="-14" left="135" width="180" height="18" font="4">国特色社会主义事业。</text>
+</page>
+<page number="20" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">18</text>
+<text top="-20" left="278" width="384" height="24" font="0">Ⅳ 关于大纲的说明与考核实施要求</text>
+<text top="-14" left="171" width="289" height="18" font="4">一、课程自学考试大纲的目的和作用</text>
+<text top="-14" left="171" width="587" height="18" font="4">课程自学考试大纲是根据专业自学考试计划的要求，结合自学考试的特点而</text>
+<text top="-14" left="135" width="576" height="18" font="4">确定。其目的是对个人自学、社会助学和课程考试命题进行指导和规定。</text>
+<text top="-14" left="171" width="587" height="18" font="4">本课程自学考试大纲明确了课程学习的内容以及深度和广度，规定了课程自</text>
+<text top="-14" left="135" width="623" height="18" font="4">学考试的范围和标准。因此，它是自学者学习教材、掌握课程内容知识范围和程</text>
+<text top="-14" left="135" width="342" height="18" font="4">度的依据，也是进行自学考试命题的依据。</text>
+<text top="-14" left="171" width="181" height="18" font="4">二、本课程的自学教材</text>
+<text top="-14" left="171" width="587" height="18" font="4">马克思主义理论研究和建设工程重点教材《马克思主义基本原理》，高等教</text>
+<text top="-14" left="135" width="90" height="18" font="4">育出版社，</text>
+<text top="-18" left="225" width="36" height="24" font="5">2023</text>
+<text top="-14" left="266" width="54" height="18" font="4">年版。</text>
+<text top="-14" left="171" width="289" height="18" font="4">三、关于自学要求和自学方法的指导</text>
+<text top="-14" left="171" width="72" height="18" font="4">本课程共</text>
+<text top="-18" left="248" width="9" height="24" font="5">3</text>
+<text top="-14" left="261" width="342" height="18" font="4">学分，学生在学习中须遵循以下学习方法：</text>
+<text top="-14" left="174" width="584" height="18" font="4">第一，在全面学习课程内容的基础上增强对知识点和重点内容的记忆。自</text>
+<text top="-14" left="135" width="623" height="18" font="4">学应考者首先应全面系统地学习教材的内容，并以此为基础，加强对重点章节的</text>
+<text top="-14" left="135" width="504" height="18" font="4">学习，理解并掌握马克思主义基本原理中的知识点和重要理论。</text>
+<text top="-14" left="171" width="596" height="18" font="4">第二，在学习中注重理论联系实际。马克思主义基本原理作为一门理论科学，</text>
+<text top="-14" left="135" width="630" height="18" font="4">它的理论原理既是对社会实践的总结和概括，同时又会用于对社会实践的分析，</text>
+<text top="-14" left="135" width="623" height="18" font="4">指导社会实践的发展并在社会实践的发展中不断发展创新。因此，在学习中，把</text>
+<text top="-14" left="135" width="623" height="18" font="4">马克思主义基本原理与当代资本主义、中国特色社会主义的发展实践，以及人类</text>
+<text top="-14" left="135" width="623" height="18" font="4">社会发展的实践结合起来进行学习，不仅可以领会马克思主义基本原理，而且也</text>
+<text top="-14" left="135" width="342" height="18" font="4">可以提高自己分析和解决现实问题的能力。</text>
+<text top="-14" left="171" width="587" height="18" font="4">第三，紧扣教材和考试大纲进行学习。考试大纲有规定的课程内容和考核目</text>
+<text top="-14" left="135" width="623" height="18" font="4">标，是自学应考者学习教材、掌握课程内容知识范围和程度的依据，教材的内容</text>
+<text top="-14" left="135" width="623" height="18" font="4">则是考试大纲所规定的课程知识和内容的扩展与发挥。自学应考者在学习中紧扣</text>
+<text top="-14" left="135" width="623" height="18" font="4">教材和大纲进行学习，既可以全面地掌握马克思主义基本原理，同时也可以抓住</text>
+<text top="-14" left="135" width="216" height="18" font="4">该课程的重点内容和考点。</text>
+<text top="-14" left="171" width="587" height="18" font="4">第四，自学应考者必须保证有必要的自学时间。自学应考者应根据该课程的</text>
+<text top="-14" left="135" width="623" height="18" font="4">特点和自身的实际情况，合理安排自学时间。建议初学该课程的自学应考者，每</text>
+<text top="-14" left="135" width="126" height="18" font="4">个学分至少安排</text>
+<text top="-18" left="266" width="18" height="24" font="5">50</text>
+<text top="-14" left="288" width="162" height="18" font="4">个小时的自学时间。</text>
+<text top="-14" left="171" width="181" height="18" font="4">四、对考核内容的说明</text>
+<text top="-18" left="171" width="13" height="24" font="5">1.</text>
+<text top="-14" left="194" width="564" height="18" font="4">本课程要求考生学习和掌握的知识点内容都作为考核的内容。课程中各</text>
+<text top="-14" left="135" width="623" height="18" font="4">章的内容均由若干知识点组成，在自学考试中成为考核知识点。因此，课程自学</text>
+<text top="-14" left="135" width="623" height="18" font="4">考试大纲中所规定的考试内容是以分解为考核知识点的方式给出的。由于各知识</text>
+</page>
+<page number="21" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">19</text>
+<text top="-14" left="135" width="623" height="18" font="4">点在课程中的地位、作用以及知识自身的特点不同，自学考试对各知识点按四个</text>
+<text top="-14" left="135" width="216" height="18" font="4">认知层次确定其考核要求。</text>
+<text top="-18" left="171" width="13" height="24" font="5">2.</text>
+<text top="-14" left="194" width="109" height="18" font="4">在考试之日起</text>
+<text top="-18" left="307" width="9" height="24" font="5">6</text>
+<text top="-14" left="321" width="437" height="18" font="4">个月前，由全国人民代表大会及其常务委员会和国务院</text>
+<text top="-14" left="135" width="360" height="18" font="4">制定或修订的法律、法规都将列入考试范围。</text>
+<text top="-14" left="171" width="289" height="18" font="4">五、关于考试方式和试卷结构的说明</text>
+<text top="-18" left="171" width="13" height="24" font="5">1.</text>
+<text top="-14" left="194" width="306" height="18" font="4">本课程的考试方式为闭卷，笔试，满分</text>
+<text top="-18" left="504" width="27" height="24" font="5">100</text>
+<text top="-14" left="536" width="36" height="18" font="4">分，</text>
+<text top="-18" left="572" width="18" height="24" font="5">60</text>
+<text top="-14" left="594" width="162" height="18" font="4">分及格。考试时间为</text>
+<text top="-18" left="135" width="27" height="24" font="5">150</text>
+<text top="-14" left="167" width="54" height="18" font="4">分钟。</text>
+<text top="-18" left="171" width="13" height="24" font="5">2.</text>
+<text top="-14" left="194" width="508" height="18" font="4">本课程在试卷中对不同能力层次要求的分数比例大致为：识记占</text>
+<text top="-18" left="707" width="33" height="24" font="5">20%</text>
+<text top="-14" left="740" width="18" height="18" font="4">，</text>
+<text top="-14" left="135" width="54" height="18" font="4">领会占</text>
+<text top="-18" left="194" width="33" height="24" font="5">40%</text>
+<text top="-14" left="226" width="108" height="18" font="4">，简单应用占</text>
+<text top="-18" left="339" width="33" height="24" font="5">20%</text>
+<text top="-14" left="372" width="108" height="18" font="4">，综合应用占</text>
+<text top="-18" left="484" width="33" height="24" font="5">20%</text>
+<text top="-14" left="518" width="18" height="18" font="4">。</text>
+<text top="-18" left="171" width="13" height="24" font="5">3.</text>
+<text top="-14" left="194" width="564" height="18" font="4">要合理安排试题的难易程度，试题的难度可分为：易、较易、较难和难</text>
+<text top="-14" left="135" width="90" height="18" font="4">四个等级。</text>
+<text top="-18" left="171" width="13" height="24" font="5">4.</text>
+<text top="-14" left="194" width="564" height="18" font="4">本课程考试命题的主要题型一般有单项选择题、简答题、论述题等。各</text>
+<text top="-14" left="135" width="324" height="18" font="4">题型的具体形式可参见本大纲参考样卷。</text>
+</page>
+<page number="22" position="absolute" top="0" left="0" height="1262" width="892">
+	<fontspec id="8" size="16" family="PRMMSH+SimHei" color="#000000"/>
+	<fontspec id="9" size="17" family="DGFMOR+TimesNewRomanPSMT" color="#000000"/>
+	<fontspec id="10" size="17" family="MLJNAR+SimSun" color="#000000"/>
+	<fontspec id="11" size="16" family="MLJNAR+SimSun" color="#000000"/>
+<text top="-11" left="440" width="13" height="13" font="2">20</text>
+<text top="-17" left="135" width="42" height="21" font="6">附录</text>
+<text top="-20" left="399" width="96" height="24" font="0">参考样卷</text>
+<text top="-12" left="135" width="614" height="16" font="8">一、单项选择题：在每小题列出的备选项中只有一项是最符合题目要求的，请将其选出。</text>
+<text top="-16" left="143" width="12" height="22" font="9">1.</text>
+<text top="-13" left="163" width="594" height="17" font="10">马克思主义是时代的产物。马克思、恩格斯所处的历史时代及其提出的各项任务，</text>
+<text top="-13" left="168" width="198" height="17" font="10">为马克思主义的产生提供了</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="66" height="17" font="10">主观条件</text>
+<text top="-16" left="308" width="15" height="22" font="9">B.</text>
+<text top="-13" left="332" width="66" height="17" font="10">客观条件</text>
+<text top="-16" left="450" width="15" height="22" font="9">C.</text>
+<text top="-13" left="473" width="66" height="17" font="10">理论基础</text>
+<text top="-16" left="592" width="16" height="22" font="9">D.</text>
+<text top="-13" left="616" width="66" height="17" font="10">理论前提</text>
+<text top="-16" left="143" width="12" height="22" font="9">2.</text>
+<text top="-12" left="163" width="236" height="16" font="11">马克思主义首要的和基本的观点是</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="66" height="17" font="10">政治观点</text>
+<text top="-16" left="450" width="15" height="22" font="9">B.</text>
+<text top="-13" left="473" width="66" height="17" font="10">认识观点</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="66" height="17" font="10">实践观点</text>
+<text top="-16" left="450" width="16" height="22" font="9">D.</text>
+<text top="-13" left="474" width="66" height="17" font="10">发展观点</text>
+<text top="-16" left="143" width="12" height="22" font="9">3.</text>
+<text top="-13" left="163" width="297" height="17" font="10">唯物主义与唯心主义的区别在于如何回答</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="182" height="17" font="10">世界的本质是什么的问题</text>
+<text top="-16" left="450" width="15" height="22" font="9">B.</text>
+<text top="-13" left="473" width="165" height="17" font="10">世界可否被认识的问题</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="182" height="17" font="10">世界的存在是怎样的问题</text>
+<text top="-16" left="450" width="16" height="22" font="9">D.</text>
+<text top="-13" left="474" width="165" height="17" font="10">世界有否统一性的问题</text>
+<text top="-16" left="143" width="12" height="22" font="9">4.</text>
+<text top="-13" left="163" width="272" height="17" font="10">实践作为一种感性物质活动,强调的是</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="116" height="17" font="10">实践具有客观性</text>
+<text top="-16" left="450" width="15" height="22" font="9">B.</text>
+<text top="-13" left="473" width="116" height="17" font="10">实践具有主观性</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="116" height="17" font="10">实践具有能动性</text>
+<text top="-16" left="450" width="16" height="22" font="9">D.</text>
+<text top="-13" left="474" width="116" height="17" font="10">实践具有历史性</text>
+<text top="-16" left="143" width="12" height="22" font="9">5.</text>
+<text top="-13" left="163" width="347" height="17" font="10">在唯物辩证法的基本范畴中，本质和现象反映了</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="215" height="17" font="10">事物之间引起和被引起的关系</text>
+<text top="-16" left="168" width="15" height="22" font="9">B.</text>
+<text top="-13" left="191" width="264" height="17" font="10">事物的内在要素和结构方式间的关系</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="215" height="17" font="10">事物过去、现在和将来的关系</text>
+<text top="-16" left="168" width="16" height="22" font="9">D.</text>
+<text top="-13" left="192" width="264" height="17" font="10">事物的根本性质和表面特征间的关系</text>
+<text top="-16" left="143" width="12" height="22" font="9">6.</text>
+<text top="-13" left="163" width="297" height="17" font="10">意识的能动性最突出的表现是，意识活动</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="149" height="17" font="10">具有目的性和计划性</text>
+<text top="-16" left="450" width="15" height="22" font="9">B.</text>
+<text top="-13" left="473" width="182" height="17" font="10">能通过指导实践改造世界</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="149" height="17" font="10">具有主动性和创造性</text>
+<text top="-16" left="450" width="16" height="22" font="9">D.</text>
+<text top="-13" left="474" width="149" height="17" font="10">能影响人的生理活动</text>
+<text top="-16" left="143" width="12" height="22" font="9">7.</text>
+<text top="-13" left="163" width="446" height="17" font="10">作为认识和实践活动的承担者，认识主体所具有的突出特点是</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="50" height="17" font="10">能动性</text>
+<text top="-16" left="308" width="15" height="22" font="9">B.</text>
+<text top="-13" left="332" width="50" height="17" font="10">社会性</text>
+<text top="-16" left="450" width="15" height="22" font="9">C.</text>
+<text top="-13" left="473" width="50" height="17" font="10">历史性</text>
+<text top="-16" left="592" width="16" height="22" font="9">D.</text>
+<text top="-13" left="616" width="50" height="17" font="10">客观性</text>
+<text top="-16" left="143" width="12" height="22" font="9">8.</text>
+<text top="-13" left="163" width="578" height="17" font="10">脱离实践的理论是空洞的理论，没有理论指导的实践是盲目的实践。这句话强调的是</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="215" height="17" font="10">认识过程中摹写与创造的统一</text>
+<text top="-16" left="450" width="15" height="22" font="9">B.</text>
+<text top="-13" left="473" width="215" height="17" font="10">认识过程中感性与理性的统一</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="215" height="17" font="10">认识过程中真理与价值的统一</text>
+<text top="-16" left="450" width="16" height="22" font="9">D.</text>
+<text top="-13" left="474" width="215" height="17" font="10">认识过程中理论与实践的统一</text>
+<text top="-16" left="143" width="12" height="22" font="9">9.</text>
+<text top="-13" left="163" width="396" height="17" font="10">坚持马克思主义哲学的认识路线，就必须在工作中坚持</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="116" height="17" font="10">一切从实际出发</text>
+<text top="-16" left="450" width="15" height="22" font="9">B.</text>
+<text top="-13" left="473" width="165" height="17" font="10">一切从主观的愿望出发</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="116" height="17" font="10">一切从理论出发</text>
+<text top="-16" left="450" width="16" height="22" font="9">D.</text>
+<text top="-13" left="474" width="165" height="17" font="10">一切从臆造的规律出发</text>
+<text top="-16" left="143" width="21" height="22" font="9">10.</text>
+<text top="-13" left="172" width="396" height="17" font="10">除了生产力与生产关系的矛盾，另一对社会基本矛盾是</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="198" height="17" font="10">社会存在与社会意识的矛盾</text>
+<text top="-16" left="450" width="15" height="22" font="9">B.</text>
+<text top="-13" left="473" width="198" height="17" font="10">社会生产和社会消费的矛盾</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="198" height="17" font="10">经济基础与上层建筑的矛盾</text>
+<text top="-16" left="450" width="16" height="22" font="9">D.</text>
+<text top="-13" left="474" width="198" height="17" font="10">先进意识和落后意识的矛盾</text>
+</page>
+<page number="23" position="absolute" top="0" left="0" height="1262" width="892">
+	<fontspec id="12" size="17" family="FRCCQR+FZSSK--GBK1-0" color="#000000"/>
+<text top="-11" left="440" width="13" height="13" font="2">21</text>
+<text top="-16" left="143" width="21" height="22" font="9">11.</text>
+<text top="-13" left="172" width="429" height="17" font="10">既承认历史发展的决定性又承认历史发展的选择性，这属于</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="116" height="17" font="10">历史唯物论观点</text>
+<text top="-16" left="450" width="15" height="22" font="9">B.</text>
+<text top="-13" left="473" width="99" height="17" font="10">相对主义观点</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="116" height="17" font="10">历史循环论观点</text>
+<text top="-16" left="450" width="16" height="22" font="9">D.</text>
+<text top="-13" left="474" width="99" height="17" font="10">折中主义观点</text>
+<text top="-16" left="143" width="21" height="22" font="9">12.</text>
+<text top="-13" left="172" width="165" height="17" font="10">阶级产生的物质前提是</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="149" height="17" font="10">用暴力掠夺他人财产</text>
+<text top="-16" left="450" width="15" height="22" font="9">B.</text>
+<text top="-13" left="473" width="248" height="17" font="10">由于生产力的发展，出现剩余产品</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="149" height="17" font="10">用特权侵吞共有财产</text>
+<text top="-16" left="450" width="16" height="22" font="9">D.</text>
+<text top="-13" left="474" width="248" height="17" font="10">由于产品分配不公，出现两极分化</text>
+<text top="-16" left="143" width="21" height="22" font="9">13.</text>
+<text top="-13" left="172" width="215" height="17" font="10">马克思主义政党的根本观点是</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="66" height="17" font="10">群众观点</text>
+<text top="-16" left="450" width="15" height="22" font="9">B.</text>
+<text top="-13" left="473" width="66" height="17" font="10">实事求是</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="66" height="17" font="10">英雄观点</text>
+<text top="-16" left="450" width="16" height="22" font="9">D.</text>
+<text top="-12" left="474" width="63" height="16" font="11">唯物史观</text>
+<text top="-16" left="143" width="21" height="22" font="9">14.</text>
+<text top="-13" left="172" width="380" height="17" font="10">两种商品可以按一定比例相互交换的原因在于，它们</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="132" height="17" font="10">有不同的使用价值</text>
+<text top="-16" left="450" width="15" height="22" font="9">B.</text>
+<text top="-13" left="473" width="149" height="17" font="10">都是具体劳动的产物</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="149" height="17" font="10">对人们有共同的效应</text>
+<text top="-16" left="450" width="16" height="22" font="9">D.</text>
+<text top="-13" left="474" width="248" height="17" font="10">在生产中都耗费了一般的人类劳动</text>
+<text top="-16" left="143" width="21" height="22" font="9">15.</text>
+<text top="-13" left="172" width="297" height="17" font="10">由于提高劳动强度而生产的剩余价值属于</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="99" height="17" font="10">绝对剩余价值</text>
+<text top="-16" left="450" width="15" height="22" font="9">B.</text>
+<text top="-13" left="473" width="99" height="17" font="10">超额剩余价值</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="99" height="17" font="10">相对剩余价值</text>
+<text top="-16" left="450" width="16" height="22" font="9">D.</text>
+<text top="-13" left="474" width="66" height="17" font="10">超额利润</text>
+<text top="-16" left="143" width="21" height="22" font="9">16.</text>
+<text top="-13" left="172" width="149" height="17" font="10">产业资本的循环运动</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="248" height="17" font="10">只包括流通阶段而不包括生产阶段</text>
+<text top="-16" left="168" width="15" height="22" font="9">B.</text>
+<text top="-13" left="191" width="248" height="17" font="10">只包括生产阶段而不包括流通阶段</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="264" height="17" font="10">是购买、生产、销售三个阶段的统一</text>
+<text top="-16" left="168" width="16" height="22" font="9">D.</text>
+<text top="-13" left="192" width="281" height="17" font="10">是购买商品和销售商品两个阶段的统一</text>
+<text top="-16" left="143" width="21" height="22" font="9">17.</text>
+<text top="-13" left="172" width="198" height="17" font="10">资本主义政治制度的核心是</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="66" height="17" font="10">政党制度</text>
+<text top="-16" left="308" width="15" height="22" font="9">B.</text>
+<text top="-13" left="332" width="66" height="17" font="10">国家制度</text>
+<text top="-16" left="450" width="15" height="22" font="9">C.</text>
+<text top="-13" left="473" width="66" height="17" font="10">选举制度</text>
+<text top="-16" left="592" width="16" height="22" font="9">D.</text>
+<text top="-13" left="616" width="66" height="17" font="10">文官制度</text>
+<text top="-16" left="143" width="21" height="22" font="9">18.</text>
+<text top="-13" left="172" width="528" height="17" font="10">从第二次世界大战结束后到冷战结束前，西方主要发达资本主义国家处于</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="165" height="17" font="10">自由竞争资本主义阶段</text>
+<text top="-16" left="450" width="15" height="22" font="9">B.</text>
+<text top="-13" left="473" width="165" height="17" font="10">私人垄断资本主义阶段</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="165" height="17" font="10">国家垄断资本主义阶段</text>
+<text top="-16" left="450" width="16" height="22" font="9">D.</text>
+<text top="-13" left="474" width="165" height="17" font="10">国际垄断资本主义阶段</text>
+<text top="-16" left="143" width="21" height="22" font="9">19.</text>
+<text top="-13" left="172" width="264" height="17" font="10">垄断资本实现其经济上统治的方式是</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="50" height="17" font="10">股份制</text>
+<text top="-16" left="308" width="15" height="22" font="9">B.</text>
+<text top="-13" left="332" width="50" height="17" font="10">合作制</text>
+<text top="-16" left="450" width="15" height="22" font="9">C.</text>
+<text top="-13" left="473" width="50" height="17" font="10">垄断制</text>
+<text top="-16" left="592" width="16" height="22" font="9">D.</text>
+<text top="-13" left="616" width="50" height="17" font="10">参与制</text>
+<text top="-16" left="143" width="21" height="22" font="9">20.</text>
+<text top="-13" left="172" width="264" height="17" font="10">垄断组织实行垄断价格的根本目的是</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="99" height="17" font="10">扩大市场份额</text>
+<text top="-16" left="450" width="15" height="22" font="9">B.</text>
+<text top="-13" left="473" width="99" height="17" font="10">降低生产成本</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="132" height="17" font="10">获取高额垄断利润</text>
+<text top="-16" left="450" width="16" height="22" font="9">D.</text>
+<text top="-13" left="474" width="99" height="17" font="10">获取平均利润</text>
+<text top="-16" left="143" width="21" height="22" font="9">21.</text>
+<text top="-13" left="172" width="99" height="17" font="10">下列选项中不</text>
+<text top="-14" left="260" width="17" height="18" font="12">．</text>
+<text top="-13" left="271" width="314" height="17" font="10">属于当代资本主义生产关系方面新变化的是</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="545" height="17" font="10">在生产管理方面，出现了一系列运用电子计算机等新技术的管理手段和工具</text>
+<text top="-16" left="168" width="15" height="22" font="9">B.</text>
+<text top="-13" left="191" width="512" height="17" font="10">在所有制方面，出现了资本社会化、股权分散化趋势，法人所有制崛起</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="545" height="17" font="10">在劳资关系方面，建立了劳资共决、职工参与管理和持股、终身雇佣等制度</text>
+<text top="-16" left="168" width="16" height="22" font="9">D.</text>
+<text top="-13" left="192" width="495" height="17" font="10">在收入分配方面，推行社会福利政策，通过再分配手段缓和社会矛盾</text>
+<text top="-16" left="143" width="41" height="22" font="9">22. 19</text>
+<text top="-13" left="188" width="248" height="17" font="10">世纪初期欧洲的空想社会主义者不</text>
+<text top="-14" left="425" width="17" height="18" font="12">．</text>
+<text top="-13" left="436" width="33" height="17" font="10">包括</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="99" height="17" font="10">法国的圣西门</text>
+<text top="-16" left="450" width="15" height="22" font="9">B.</text>
+<text top="-13" left="473" width="99" height="17" font="10">法国的傅立叶</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="83" height="17" font="10">英国的欧文</text>
+<text top="-16" left="450" width="16" height="22" font="9">D.</text>
+<text top="-13" left="474" width="83" height="17" font="10">英国的莫尔</text>
+</page>
+<page number="24" position="absolute" top="0" left="0" height="1262" width="892">
+	<fontspec id="13" size="16" family="DGFMOR+TimesNewRomanPSMT" color="#000000"/>
+<text top="-11" left="440" width="13" height="13" font="2">22</text>
+<text top="-16" left="143" width="21" height="22" font="9">23.</text>
+<text top="-13" left="172" width="248" height="17" font="10">社会主义的根本的和首要的任务是</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="132" height="17" font="10">解放和发展生产力</text>
+<text top="-16" left="450" width="15" height="22" font="9">B.</text>
+<text top="-13" left="473" width="198" height="17" font="10">建立和完善社会主义公有制</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="182" height="17" font="10">建设社会主义的政治文明</text>
+<text top="-16" left="450" width="16" height="22" font="9">D.</text>
+<text top="-13" left="474" width="182" height="17" font="10">建设社会主义的精神文明</text>
+<text top="-16" left="143" width="21" height="22" font="9">24.</text>
+<text top="-13" left="172" width="512" height="17" font="10">马克思主义政党产生的条件有两个，一个是工人运动的发展，另一个是</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="116" height="17" font="10">农民运动的发展</text>
+<text top="-16" left="450" width="15" height="22" font="9">B.</text>
+<text top="-13" left="473" width="182" height="17" font="10">科学社会主义理论的传播</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="116" height="17" font="10">阶级矛盾的激化</text>
+<text top="-16" left="450" width="16" height="22" font="9">D.</text>
+<text top="-13" left="474" width="116" height="17" font="10">杰出人物的出现</text>
+<text top="-16" left="143" width="21" height="22" font="9">25.</text>
+<text top="-13" left="172" width="429" height="17" font="10">集中体现着共产主义社会主要特征和本质要求的原则标志是</text>
+<text top="-16" left="168" width="16" height="22" font="9">A.</text>
+<text top="-13" left="192" width="149" height="17" font="10">各尽所能，按需分配</text>
+<text top="-16" left="450" width="15" height="22" font="9">B.</text>
+<text top="-13" left="473" width="165" height="17" font="10">各尽所能，按才能分配</text>
+<text top="-16" left="168" width="15" height="22" font="9">C.</text>
+<text top="-13" left="191" width="149" height="17" font="10">各尽所能，按劳分配</text>
+<text top="-16" left="450" width="16" height="22" font="9">D.</text>
+<text top="-13" left="474" width="165" height="17" font="10">各尽所能，按地位分配</text>
+<text top="-12" left="135" width="79" height="16" font="8">二、简答题</text>
+<text top="-15" left="143" width="20" height="21" font="13">26.</text>
+<text top="-12" left="170" width="204" height="16" font="11">简述马克思主义的科学内涵。</text>
+<text top="-15" left="143" width="20" height="21" font="13">27.</text>
+<text top="-12" left="170" width="205" height="16" font="11">简述真理与价值的对立统一。</text>
+<text top="-15" left="143" width="20" height="21" font="13">28.</text>
+<text top="-12" left="170" width="189" height="16" font="11">简述货币的本质及其职能。</text>
+<text top="-15" left="143" width="20" height="21" font="13">29.</text>
+<text top="-12" left="170" width="583" height="16" font="11">列宁指出：“设想世界历史会一帆风顺、按部就班地向前发展，不会有时出现大幅度</text>
+<text top="-12" left="167" width="591" height="16" font="11">的跃退，那是不辩证的，不科学的，在理论上是不正确的。”社会主义也同样是在探索</text>
+<text top="-12" left="167" width="236" height="16" font="11">中曲折前进的。你对此如何理解？</text>
+<text top="-15" left="143" width="20" height="21" font="13">30.</text>
+<text top="-12" left="170" width="362" height="16" font="11">为什么说实现共产主义是一个不断实践的长期过程？</text>
+<text top="-12" left="135" width="154" height="16" font="8">三、论述题：本大题共</text>
+<text top="-15" left="294" width="8" height="21" font="13">3</text>
+<text top="-12" left="305" width="140" height="16" font="8">小题，考生任选其中</text>
+<text top="-15" left="450" width="8" height="21" font="13">2</text>
+<text top="-12" left="462" width="235" height="16" font="8">题作答。如果考生回答的题目超过</text>
+<text top="-15" left="700" width="8" height="21" font="13">2</text>
+<text top="-12" left="712" width="46" height="16" font="8">题，只</text>
+<text top="-12" left="167" width="142" height="16" font="8">按考生回答题目的前</text>
+<text top="-15" left="312" width="8" height="21" font="13">2</text>
+<text top="-12" left="324" width="63" height="16" font="8">题计分。</text>
+<text top="-15" left="143" width="20" height="21" font="13">31.</text>
+<text top="-12" left="170" width="457" height="16" font="11">试述主要矛盾和次要矛盾关系的原理及其对实际工作的指导意义。</text>
+<text top="-15" left="143" width="20" height="21" font="13">32.</text>
+<text top="-12" left="170" width="362" height="16" font="11">试述如何正确分析和评价杰出人物在历史上的作用。</text>
+<text top="-15" left="143" width="20" height="21" font="13">33.</text>
+<text top="-12" left="170" width="394" height="16" font="11">试述第二次世界大战后国家垄断资本主义大发展的原因。</text>
+</page>
+<page number="25" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">23</text>
+<text top="-20" left="399" width="96" height="24" font="0">大纲后记</text>
+<text top="-14" left="171" width="587" height="18" font="4">《马克思主义基本原理》课程自学考试大纲由全国高等教育自学考试指导委</text>
+<text top="-14" left="135" width="623" height="18" font="4">员会公共课课程指导委员会组织制定，中国人民大学张雷声教授、北京大学刘军</text>
+<text top="-14" left="135" width="623" height="18" font="4">教授负责修订工作，北京大学杨河教授、北京大学白雪秋教授、北京大学张守民</text>
+<text top="-14" left="135" width="162" height="18" font="4">教授负责审稿工作。</text>
+<text top="-14" left="171" width="378" height="18" font="4">对参与本大纲修订和审稿的各位专家表示感谢。</text>
+<text top="-14" left="477" width="270" height="18" font="4">全国高等教育自学考试指导委员会</text>
+<text top="-14" left="522" width="180" height="18" font="4">公共课课程指导委员会</text>
+<text top="-18" left="567" width="36" height="24" font="5">2024</text>
+<text top="-14" left="608" width="18" height="18" font="4">年</text>
+<text top="-18" left="630" width="9" height="24" font="5">8</text>
+<text top="-14" left="644" width="18" height="18" font="4">月</text>
+</page>
+<outline>
+<item page="4">一、课程性质和特点</item>
+<item page="4">二、课程目标</item>
+<item page="7">绪　论　</item>
+<outline>
+<item page="7">一、学习目的与要求</item>
+<item page="7">二、课程内容</item>
+<item page="7">三、考核知识点与考核要求</item>
+<outline>
+<item page="7">1.马克思主义的产生和发展</item>
+<item page="7">2.马克思主义的基本特征</item>
+<item page="7">3.学习和运用马克思主义</item>
+</outline>
+</outline>
+<item page="8">第一章　物质世界及其发展规律</item>
+<outline>
+<item page="8">一、学习目的与要求</item>
+<item page="8">二、课程内容</item>
+<item page="8">三、考核知识点与考核要求</item>
+<outline>
+<item page="8">1.物质世界和实践</item>
+<item page="8">2.物质世界的普遍联系和永恒发展</item>
+<item page="9">3.客观规律性与主观能动性</item>
+<item page="9">4.解放思想，实事求是</item>
+</outline>
+</outline>
+<item page="10">第二章　认识的本质及规律</item>
+<outline>
+<item page="10">一、学习目的与要求</item>
+<item page="10">二、课程内容</item>
+<item page="10">三、考核知识点与考核要求</item>
+<outline>
+<item page="10">1.认识的本质</item>
+<item page="10">2.认识的辩证运动</item>
+<item page="10">3.真理和价值</item>
+<item page="11">4.认识世界与改造世界的统一</item>
+</outline>
+<item page="11">一、学习目的与要求</item>
+<item page="11">二、课程内容</item>
+<item page="11">三、考核知识点与考核要求</item>
+<outline>
+<item page="11">1.社会基本矛盾及其运动规律</item>
+<item page="12">2.社会历史发展的动力</item>
+<item page="12">3.人民群众在历史发展中的作用</item>
+</outline>
+</outline>
+<item page="13">第四章　资本主义制度的形成及本质</item>
+<outline>
+<item page="13">一、学习目的与要求</item>
+<item page="13">二、课程内容</item>
+<item page="13">三、考核知识点与考核要求</item>
+<outline>
+<item page="13">1.资本主义制度的形成</item>
+<item page="13">2.资本主义经济制度的本质特征</item>
+<item page="14">3.资本的流通过程和剩余价值的分配</item>
+<item page="14">4.资本主义的政治制度和意识形态</item>
+</outline>
+</outline>
+<item page="15">第五章　资本主义的发展及其趋势</item>
+<outline>
+<item page="15">一、学习目的与要求</item>
+<item page="15">二、课程内容</item>
+<item page="15">三、考核知识点与考核要求</item>
+<outline>
+<item page="15">1.垄断资本主义的形成与发展</item>
+<item page="16">2.经济全球化与当代资本主义的新变化</item>
+<item page="16">3.资本主义的历史地位和发展趋势</item>
+</outline>
+</outline>
+<item page="16">第六章　社会主义的发展及其规律</item>
+<outline>
+<item page="16">一、学习目的与要求</item>
+<item page="16">二、课程内容</item>
+<item page="17">三、考核知识点与考核要求</item>
+<outline>
+<item page="17">1.社会主义五百年的历史进程</item>
+<item page="17">2.科学社会主义一般原则</item>
+<item page="17">3.在实践中探索现实社会主义的发展规律</item>
+<item page="17">4.马克思主义政党在社会主义事业中的地位和作用</item>
+</outline>
+</outline>
+<item page="18">第七章　共产主义社会是人类最崇高的社会理想</item>
+<outline>
+<item page="18">一、学习目的与要求</item>
+<item page="18">二、课程内容</item>
+<item page="18">三、考核知识点与考核要求</item>
+<outline>
+<item page="18">1.马克思主义对共产主义社会的展望</item>
+<item page="18">2.共产主义是社会历史发展的必然趋势</item>
+<item page="19">3.在建设中国特色社会主义的进程中为实现共产主义而奋斗</item>
+</outline>
+<item page="20">三、关于自学要求和自学方法的指导</item>
+</outline>
+</outline>
+</pdf2xml>

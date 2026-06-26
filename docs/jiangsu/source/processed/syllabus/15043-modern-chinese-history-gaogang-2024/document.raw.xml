@@ -1,0 +1,1228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pdf2xml SYSTEM "pdf2xml.dtd">
+
+<pdf2xml producer="poppler" version="25.07.0">
+<page number="1" position="absolute" top="0" left="0" height="1262" width="892">
+	<fontspec id="0" size="24" family="PRMMSH+SimHei" color="#000000"/>
+	<fontspec id="1" size="42" family="PRMMSH+SimHei" color="#000000"/>
+<text top="-20" left="326" width="241" height="24" font="0">全国高等教育自学考试</text>
+<text top="-35" left="151" width="590" height="43" font="1">中国近现代史纲要自学考试大纲</text>
+<text top="-20" left="230" width="361" height="24" font="0">全国高等教育自学考试指导委员会</text>
+<text top="-20" left="615" width="48" height="24" font="0">制定</text>
+</page>
+<page number="2" position="absolute" top="0" left="0" height="1262" width="892">
+	<fontspec id="2" size="14" family="MLJNAR+SimSun" color="#000000"/>
+	<fontspec id="3" size="33" family="PRMMSH+SimHei" color="#000000"/>
+	<fontspec id="4" size="18" family="MLJNAR+SimSun" color="#000000"/>
+	<fontspec id="5" size="18" family="DGFMOR+TimesNewRomanPSMT" color="#000000"/>
+<text top="-11" left="443" width="7" height="13" font="2">1</text>
+<text top="-27" left="381" width="132" height="33" font="3">大纲前言</text>
+<text top="-14" left="171" width="522" height="18" font="4">为了适应社会主义现代化建设事业的需要，鼓励自学成才，我国在</text>
+<text top="-18" left="698" width="18" height="24" font="5">20</text>
+<text top="-14" left="720" width="36" height="18" font="4">世纪</text>
+<text top="-18" left="135" width="18" height="24" font="5">80</text>
+<text top="-14" left="158" width="600" height="18" font="4">年代初建立了高等教育自学考试制度。高等教育自学考试是个人自学、社会</text>
+<text top="-14" left="135" width="623" height="18" font="4">助学和国家考试相结合的一种高等教育形式。应考者通过规定的专业考试课程并</text>
+<text top="-14" left="135" width="623" height="18" font="4">经思想品德鉴定达到毕业要求的，可获得毕业证书；国家承认学历并按照规定享</text>
+<text top="-14" left="135" width="379" height="18" font="4">有与普通高等学校毕业生同等的有关待遇。经过</text>
+<text top="-18" left="519" width="18" height="24" font="5">40</text>
+<text top="-14" left="541" width="217" height="18" font="4">多年的发展，高等教育自学</text>
+<text top="-14" left="135" width="306" height="18" font="4">考试为国家培养造就了大批专门人才。</text>
+<text top="-14" left="171" width="587" height="18" font="4">课程自学考试大纲是规范自学者学习范围、要求和考试标准的文件。它是按</text>
+<text top="-14" left="135" width="623" height="18" font="4">照专业考试计划的要求，具体指导个人自学、社会助学、国家考试及编写教材的</text>
+<text top="-14" left="135" width="54" height="18" font="4">依据。</text>
+<text top="-14" left="171" width="587" height="18" font="4">随着经济社会的快速发展，新的法律法规不断出台，科技成果不断涌现，原</text>
+<text top="-14" left="135" width="623" height="18" font="4">大纲中有些内容过时、知识陈旧。为更新教育观念，深化教学内容方式、考试制</text>
+<text top="-14" left="135" width="623" height="18" font="4">度、质量评价制度改革，使自学考试更好地提高人才培养的质量，各专业委员会</text>
+<text top="-14" left="135" width="558" height="18" font="4">按照专业考试计划的要求，对原课程自学考试大纲组织了修订或重编。</text>
+<text top="-14" left="171" width="587" height="18" font="4">修订后的大纲，在层次上，本科参照一般普通高校本科水平，专科参照一般</text>
+<text top="-14" left="135" width="623" height="18" font="4">普通高校专科或高职院校的水平；在内容上，及时反映学科的发展变化，增补了</text>
+<text top="-14" left="135" width="623" height="18" font="4">自然科学和社会科学近年来研究的成果，对明显陈旧的内容进行了删减，以更好</text>
+<text top="-14" left="135" width="198" height="18" font="4">地指导应考者学习使用。</text>
+<text top="-14" left="441" width="270" height="18" font="4">全国高等教育自学考试指导委员会</text>
+<text top="-18" left="531" width="36" height="24" font="5">2024</text>
+<text top="-14" left="572" width="18" height="18" font="4">年</text>
+<text top="-18" left="594" width="9" height="24" font="5">8</text>
+<text top="-14" left="608" width="18" height="18" font="4">月</text>
+</page>
+<page number="3" position="absolute" top="0" left="0" height="1262" width="892">
+	<fontspec id="6" size="21" family="MLJNAR+SimSun" color="#000000"/>
+<text top="-11" left="443" width="7" height="13" font="2">1</text>
+<text top="-27" left="381" width="132" height="33" font="3">大纲目录</text>
+<text top="-20" left="135" width="252" height="24" font="0">Ⅰ 课程性质与课程目标</text>
+<text top="-20" left="135" width="132" height="24" font="0">Ⅱ 考核目标</text>
+<text top="-20" left="135" width="252" height="24" font="0">Ⅲ 课程内容与考核要求</text>
+<text top="324" left="170" width="273" height="21" font="6">第一章 反对外国侵略的斗争</text>
+<text top="371" left="170" width="294" height="21" font="6">第二章 对国家出路的早期探索</text>
+<text top="417" left="170" width="168" height="21" font="6">第三章 辛亥革命</text>
+<text top="464" left="170" width="252" height="21" font="6">第四章 开天辟地的大事变</text>
+<text top="511" left="170" width="252" height="21" font="6">第五章 中国革命的新道路</text>
+<text top="558" left="170" width="273" height="21" font="6">第六章 中华民族的抗日战争</text>
+<text top="605" left="170" width="273" height="21" font="6">第七章 为创建新中国而奋斗</text>
+<text top="651" left="170" width="441" height="21" font="6">第八章 完成社会主义革命和推进社会主义建设</text>
+<text top="698" left="170" width="420" height="21" font="6">第九章 中国特色社会主义的开创与接续发展</text>
+<text top="745" left="170" width="357" height="21" font="6">第十章 中国特色社会主义进入新时代</text>
+<text top="-20" left="135" width="372" height="24" font="0">Ⅳ 关于大纲的说明与考核实施要求</text>
+<text top="-20" left="135" width="168" height="24" font="0">附录：参考样卷</text>
+<text top="-20" left="135" width="96" height="24" font="0">大纲后记</text>
+</page>
+<page number="4" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="443" width="7" height="13" font="2">1</text>
+<text top="-20" left="314" width="264" height="24" font="0">Ⅰ 课程性质与课程目标</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、课程性质和特点</text>
+<text top="-14" left="171" width="594" height="18" font="4">“中国近现代史纲要”是高等教育自学考试的一门必修的思想政治理论课，</text>
+<text top="-14" left="135" width="630" height="18" font="4">在各专业的本科阶段实施考试。这门课程兼备思想政治理论课和历史课的特点，</text>
+<text top="-14" left="135" width="623" height="18" font="4">主要讲授中国近代以来抵御外来侵略、争取民族独立、推翻反动统治、实现人民</text>
+<text top="-14" left="135" width="623" height="18" font="4">解放以及将中国由落后的农业国改变为先进的工业国，实现国家繁荣富强和人民</text>
+<text top="-14" left="135" width="623" height="18" font="4">共同富裕的历史，帮助学生了解国史、国情，深刻领会历史和人民怎样选择了马</text>
+<text top="-14" left="135" width="623" height="18" font="4">克思主义，选择了中国共产党，选择了社会主义，选择了改革开放，树立在中国</text>
+<text top="-14" left="135" width="414" height="18" font="4">共产党领导下走中国特色社会主义道路的坚定信念。</text>
+<text top="-14" left="171" width="108" height="18" font="4">二、课程目标</text>
+<text top="-14" left="171" width="587" height="18" font="4">1.引导学生牢牢把握中国近现代史的主题、主线。近代以来，中华民族面对</text>
+<text top="-14" left="135" width="623" height="18" font="4">两大历史任务：一个是求得民族独立和人民解放；一个是实现国家的繁荣富强和</text>
+<text top="-14" left="135" width="576" height="18" font="4">人民的共同富裕。前一个任务为后一个任务扫清障碍，创造必要的前提。</text>
+<text top="-14" left="171" width="587" height="18" font="4">2.引导学生科学把握中国近现代历史发展的基本走向和基本规律，做到两个</text>
+<text top="-14" left="135" width="623" height="18" font="4">“了解”(了解国史、国情)和四个“深刻领会”(领会历史和人民怎样选择了马</text>
+<text top="-14" left="135" width="623" height="18" font="4">克思主义、选择了中国共产党、选择了社会主义、选择了改革开放)，懂得没有</text>
+<text top="-14" left="135" width="558" height="18" font="4">中国共产党，就没有新中国，只有中国特色社会主义，才能发展中国。</text>
+<text top="-14" left="171" width="587" height="18" font="4">3.引导学生树立正确的历史观、方法论，熟悉中国近现代历史上的重大事件</text>
+<text top="-14" left="135" width="623" height="18" font="4">和重要人物，科学评价历史事件和历史人物，弄清楚重大事件发生发展的社会历</text>
+<text top="-14" left="135" width="342" height="18" font="4">史条件以及深远影响，从中汲取历史经验。</text>
+<text top="-14" left="171" width="235" height="18" font="4">三、与相关课程的联系与区别</text>
+<text top="-14" left="171" width="587" height="18" font="4">本课程与自学考试规定的其他几门思想政治理论课程属于同一课程体系，在</text>
+<text top="-14" left="135" width="623" height="18" font="4">教学目标上彼此相互支撑、在相关内容上有一定交叉；但本课程所围绕的是中国</text>
+<text top="-14" left="135" width="623" height="18" font="4">近现代史的主题、主线，所论述的是中国近现代社会变化发展的脉络、走向和马</text>
+<text top="-14" left="135" width="632" height="18" font="4">克思主义中国化时代化的历史进程以及中国人民作出“四个选择”的历史必然性。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、课程重点</text>
+<text top="-14" left="171" width="587" height="18" font="4">西方列强对中国的侵略和中国人民的反侵略斗争；近代中国的社会性质和主</text>
+<text top="-14" left="135" width="623" height="18" font="4">要矛盾、中华民族面对的两大历史任务及其相互关系；旧民主主义革命时期中国</text>
+<text top="-14" left="135" width="623" height="18" font="4">先进分子和人民群众对国家出路的探索；辛亥革命及其历史意义；中国共产党的</text>
+<text top="-14" left="135" width="623" height="18" font="4">成立及其伟大意义；中国共产党团结带领人民群众在新民主主义革命时期、社会</text>
+<text top="-14" left="135" width="623" height="18" font="4">主义革命和建设时期、改革开放和社会主义现代化建设新时期、中国特色社会主</text>
+<text top="-14" left="135" width="623" height="18" font="4">义新时代，为实现中华民族伟大复兴中国梦而进行的伟大斗争的历史进程、重大</text>
+<text top="-14" left="135" width="144" height="18" font="4">成就和基本经验。</text>
+</page>
+<page number="5" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="443" width="7" height="13" font="2">2</text>
+<text top="-20" left="374" width="144" height="24" font="0">Ⅱ 考核目标</text>
+<text top="-14" left="171" width="587" height="18" font="4">本课程在考核目标中，按照识记、领会、简单应用和综合应用四个层次规定</text>
+<text top="-14" left="135" width="630" height="18" font="4">其应达到的能力层次要求。四个能力层次是递进关系，各能力层次的含义如下。</text>
+<text top="-14" left="171" width="90" height="18" font="4">识记（Ⅰ）</text>
+<text top="-14" left="252" width="513" height="18" font="4">：要求了解中国近现代史的基本常识(例如重大事件、重要人物、</text>
+<text top="-14" left="135" width="207" height="18" font="4">重要会议等的核心内容)。</text>
+<text top="-14" left="171" width="90" height="18" font="4">领会（Ⅱ）</text>
+<text top="-14" left="252" width="504" height="18" font="4">：要求在了解基本常识的基础上把握其中的基本理论以及相关内</text>
+<text top="-14" left="135" width="162" height="18" font="4">容间的联系与区别。</text>
+<text top="-14" left="171" width="124" height="18" font="4">简单应用（Ⅲ）</text>
+<text top="-14" left="286" width="481" height="18" font="4">：要求能够运用中国近现代史的基本概念、基本理论和方法，</text>
+<text top="-14" left="135" width="216" height="18" font="4">对历史问题作简要的分析。</text>
+<text top="-14" left="171" width="126" height="18" font="4">综合应用（Ⅳ）</text>
+<text top="-14" left="288" width="468" height="18" font="4">：要求运用马克思主义的立场、观点和方法，运用中国近现</text>
+<text top="-14" left="135" width="623" height="18" font="4">代史中的多个知识点，对重大历史问题作综合的分析论证；结合特定的历史条件</text>
+<text top="-14" left="135" width="450" height="18" font="4">或国际、国内政治经济背景，认识和评价有关理论问题。</text>
+</page>
+<page number="6" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="443" width="7" height="13" font="2">3</text>
+<text top="-20" left="351" width="264" height="24" font="0">Ⅲ 课程内容与考核要求</text>
+<text top="-17" left="330" width="274" height="21" font="6">第一章 反对外国侵略的斗争</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、学习目的与要求</text>
+<text top="-14" left="171" width="587" height="18" font="4">1.了解鸦片战争前的中国和世界，懂得西方列强侵略中国及其与中国封建势</text>
+<text top="-14" left="135" width="630" height="18" font="4">力相结合给中华民族带来的深重灾难，认识造成近代中国落后贫困的根本原因。</text>
+<text top="-14" left="171" width="594" height="18" font="4">2.领会近代中国社会的半殖民地半封建社会性质以及主要矛盾和基本特征，</text>
+<text top="-14" left="135" width="623" height="18" font="4">认清近代以来中华民族面对的两大历史任务及其关系，深刻领会实现中华民族伟</text>
+<text top="-14" left="135" width="360" height="18" font="4">大复兴，是中华民族近代以来最伟大的梦想。</text>
+<text top="-14" left="171" width="587" height="18" font="4">3.了解近代中国人民反对外国侵略斗争的历史，掌握反侵略斗争的意义以及</text>
+<text top="-14" left="135" width="144" height="18" font="4">失败的根本原因。</text>
+<text top="-14" left="171" width="108" height="18" font="4">二、课程内容</text>
+<text top="-14" left="171" width="217" height="18" font="4">1.鸦片战争前的中国和世界</text>
+<text top="-14" left="171" width="379" height="18" font="4">2.西方列强对中国的侵略及近代中国社会的演变</text>
+<text top="-14" left="171" width="307" height="18" font="4">3.抵御外来侵略、争取民族独立的斗争</text>
+<text top="-14" left="171" width="217" height="18" font="4">三、考核知识点与考核要求</text>
+<text top="-14" left="171" width="217" height="18" font="4">1.鸦片战争前的中国和世界</text>
+<text top="-14" left="171" width="270" height="18" font="4">识记：中国封建社会的主要矛盾。</text>
+<text top="-14" left="171" width="270" height="18" font="4">领会：中国封建社会的基本特点。</text>
+<text top="-14" left="171" width="378" height="18" font="4">简单应用：中国封建社会由盛转衰的主要表现。</text>
+<text top="-14" left="171" width="605" height="18" font="4">综合应用：资本主义制度在欧美主要国家的确立以及殖民扩张对中国的威胁。</text>
+<text top="-14" left="171" width="379" height="18" font="4">2.西方列强对中国的侵略及近代中国社会的演变</text>
+<text top="-14" left="171" width="594" height="18" font="4">识记：西方列强发动的侵华战争以及迫使清政府签订的一系列不平等条约；</text>
+<text top="-14" left="135" width="396" height="18" font="4">西方列强制造的屠杀中国人民的惨案；通商口岸。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：西方列强对中国的政治控制；西方列强对中国的经济掠夺；西方列强</text>
+<text top="-14" left="135" width="198" height="18" font="4">制造的侵略中国的舆论。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：近代中国半殖民地半封建社会的特点；近代中国的农民阶级及其</text>
+<text top="-14" left="135" width="623" height="18" font="4">历史地位；近代中国资产阶级的产生及其两部分；近代中国工人阶级的形成及其</text>
+<text top="-14" left="135" width="54" height="18" font="4">特点。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：半殖民地半封建社会的两对主要矛盾及其相互关系；实现中华民</text>
+<text top="-14" left="135" width="414" height="18" font="4">族伟大复兴必须完成的两大历史任务及其相互关系。</text>
+<text top="-14" left="171" width="307" height="18" font="4">3.抵御外来侵略、争取民族独立的斗争</text>
+</page>
+<page number="7" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="443" width="7" height="13" font="2">4</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：三元里人民的抗英斗争；台湾人民的反侵略斗争；为国捐躯的清政府</text>
+<text top="-14" left="135" width="623" height="18" font="4">爱国将领；义和团抗击八国联军的斗争；“边疆危机”与列强在中国划分势力范</text>
+<text top="-14" left="135" width="630" height="18" font="4">围；林则徐、魏源与睁眼看世界；严复与“救亡”口号；孙中山与“振兴中华”</text>
+<text top="-14" left="135" width="54" height="18" font="4">口号。</text>
+<text top="-14" left="171" width="54" height="18" font="4">领会：</text>
+<text top="-18" left="225" width="18" height="24" font="5">19</text>
+<text top="-14" left="248" width="432" height="18" font="4">世纪末帝国主义列强瓜分中国的图谋及其失败的原因。</text>
+<text top="-14" left="171" width="450" height="18" font="4">简单应用：近代中国人民的反侵略斗争及其失败的原因。</text>
+<text top="-14" left="171" width="594" height="18" font="4">综合应用：第一次鸦片战争至辛亥革命前夕，先进中国人民族意识的觉醒。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、本章重点</text>
+<text top="-14" left="171" width="587" height="18" font="4">西方列强的侵略是近代中国一切灾难的总根源；近代中国半殖民地半封建社</text>
+<text top="-14" left="135" width="337" height="18" font="4">会的特点、主要矛盾和面临的主要任务；从</text>
+<text top="-18" left="477" width="36" height="24" font="5">1840</text>
+<text top="-14" left="517" width="36" height="18" font="4">年至</text>
+<text top="-18" left="558" width="18" height="24" font="5">20</text>
+<text top="-14" left="580" width="178" height="18" font="4">世纪初，中国人民反对</text>
+<text top="-14" left="135" width="486" height="18" font="4">外来侵略的斗争；反侵略斗争失败的原因和民族意识的觉醒。</text>
+<text top="-17" left="320" width="295" height="21" font="6">第二章 对国家出路的早期探索</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、学习目的与要求</text>
+<text top="-14" left="171" width="594" height="18" font="4">1.了解太平天国农民战争的历程，认识其历史意义以及失败的原因和教训。</text>
+<text top="-14" left="171" width="540" height="18" font="4">2.了解洋务新政的兴办，把握洋务运动的历史作用以及失败的原因。</text>
+<text top="-14" left="171" width="587" height="18" font="4">3.了解戊戌维新运动的兴起，领会维新运动的历史意义以及失败的原因和教</text>
+<text top="-14" left="135" width="144" height="18" font="4">训。二、课程内容</text>
+<text top="-14" left="171" width="217" height="18" font="4">1.农民群众斗争风暴的起落</text>
+<text top="-14" left="171" width="325" height="18" font="4">2.地主阶级统治集团“自救”活动的兴衰</text>
+<text top="-14" left="171" width="199" height="18" font="4">3.维新运动的兴起和夭折</text>
+<text top="-14" left="171" width="217" height="18" font="4">三、考核知识点与考核要求</text>
+<text top="-14" left="171" width="217" height="18" font="4">1.农民群众斗争风暴的起落</text>
+<text top="-14" left="171" width="306" height="18" font="4">识记：洪秀全与金田起义；天京事变。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：《天朝田亩制度》的性质和主要内容；《资政新篇》的性质和主要内</text>
+<text top="-14" left="135" width="306" height="18" font="4">容。简单应用：太平天国失败的原因。</text>
+<text top="-14" left="171" width="270" height="18" font="4">综合应用：太平天国的历史意义。</text>
+<text top="-14" left="171" width="325" height="18" font="4">2.地主阶级统治集团“自救”活动的兴衰</text>
+<text top="-14" left="171" width="342" height="18" font="4">识记：奕䜣与洋务派；总理各国事务衙门。</text>
+<text top="-14" left="171" width="252" height="18" font="4">领会：洋务派举办的洋务事业。</text>
+<text top="-14" left="171" width="270" height="18" font="4">简单应用：洋务运动失败的原因。</text>
+</page>
+<page number="8" position="absolute" top="0" left="0" height="1262" width="892">
+	<fontspec id="7" size="17" family="MLJNAR+SimSun" color="#000000"/>
+<text top="-11" left="443" width="7" height="13" font="2">5</text>
+<text top="-14" left="171" width="270" height="18" font="4">综合应用：洋务运动的历史作用。</text>
+<text top="-14" left="171" width="199" height="18" font="4">3.维新运动的兴起和夭折</text>
+<text top="-14" left="171" width="393" height="18" font="4">识记：早期维新思想家代表人物；康有为、梁启超</text>
+<text top="-13" left="564" width="17" height="17" font="7">、</text>
+<text top="-14" left="580" width="178" height="18" font="4">谭嗣同与维新派；“百</text>
+<text top="-14" left="135" width="234" height="18" font="4">日维新”；“戊戌六君子”。</text>
+<text top="-14" left="171" width="522" height="18" font="4">领会：维新派宣传变法维新主张的活动；维新派与守旧派的论战。</text>
+<text top="-14" left="171" width="360" height="18" font="4">简单应用：戊戌维新运动失败的原因和教训。</text>
+<text top="-14" left="171" width="360" height="18" font="4">综合应用：戊戌维新运动的历史意义和影响。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、本章重点</text>
+<text top="-14" left="171" width="587" height="18" font="4">太平天国农民战争、洋务运动、戊戌维新运动的历史背景和历史意义，失败</text>
+<text top="-14" left="135" width="144" height="18" font="4">原因和经验教训。</text>
+<text top="-17" left="383" width="63" height="21" font="6">第三章</text>
+<text top="-17" left="467" width="84" height="21" font="6">辛亥革命</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、学习目的与要求</text>
+<text top="-14" left="171" width="587" height="18" font="4">1.了解辛亥革命爆发的社会历史条件，领会三民主义学说，分析革命派与改</text>
+<text top="-14" left="135" width="198" height="18" font="4">良派论战的内容与结局。</text>
+<text top="-14" left="171" width="587" height="18" font="4">2.把握中华民国南京临时政府的性质，认识辛亥革命胜利的历史意义，分析</text>
+<text top="-14" left="135" width="180" height="18" font="4">辛亥革命失败的原因。</text>
+<text top="-14" left="171" width="587" height="18" font="4">3.了解北洋军阀的统治，领会以孙中山为代表的资产阶级革命派反对北洋军</text>
+<text top="-14" left="135" width="623" height="18" font="4">阀的斗争，认识旧民主主义革命的终结，懂得资产阶级共和国的方案在中国行不</text>
+<text top="-14" left="135" width="144" height="18" font="4">通。二、课程内容</text>
+<text top="-14" left="171" width="253" height="18" font="4">1.举起近代民族民主革命的旗帜</text>
+<text top="-14" left="171" width="199" height="18" font="4">2.辛亥革命的胜利与失败</text>
+<text top="-14" left="171" width="217" height="18" font="4">三、考核知识点与考核要求</text>
+<text top="-14" left="171" width="253" height="18" font="4">1.举起近代民族民主革命的旗帜</text>
+<text top="-14" left="171" width="594" height="18" font="4">识记：孙中山与兴中会的建立；宣传民主革命思想的代表性人物及其著作；</text>
+<text top="-14" left="135" width="198" height="18" font="4">日俄战争；中国同盟会。</text>
+<text top="-14" left="171" width="576" height="18" font="4">领会：清末“新政”及其破产；资产阶级革命派的阶级基础和骨干力量。</text>
+<text top="-14" left="171" width="522" height="18" font="4">简单应用：辛亥革命爆发的历史条件；三民主义学说的基本内容。</text>
+<text top="-14" left="171" width="360" height="18" font="4">综合应用：革命派与改良派的论战及其意义。</text>
+<text top="-14" left="171" width="199" height="18" font="4">2.辛亥革命的胜利与失败</text>
+<text top="-14" left="171" width="594" height="18" font="4">识记：保路风潮；黄花岗起义；武昌起义；中华民国南京临时政府的成立；</text>
+<text top="-14" left="135" width="576" height="18" font="4">《中华民国临时约法》；袁世凯与复辟帝制；“二次革命”；护法运动。</text>
+</page>
+<page number="9" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="443" width="7" height="13" font="2">6</text>
+<text top="-14" left="171" width="396" height="18" font="4">领会：中华民国南京临时政府的性质及其局限性。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：北洋军阀的统治以及以孙中山为代表的资产阶级革命派反对北洋</text>
+<text top="-14" left="135" width="108" height="18" font="4">军阀的斗争。</text>
+<text top="-14" left="171" width="360" height="18" font="4">综合应用：辛亥革命的历史意义及其局限性。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、本章重点</text>
+<text top="-14" left="171" width="587" height="18" font="4">资产阶级革命派的活动，中国同盟会的成立及其纲领，革命派同改良派的论</text>
+<text top="-14" left="135" width="469" height="18" font="4">战；武昌起义，中华民国的建立以及《中华民国临时约法》</text>
+<text top="-14" left="595" width="162" height="18" font="4">；辛亥革命的历史意</text>
+<text top="-14" left="135" width="623" height="18" font="4">义及其失败的原因和教训；革命派反对北洋军阀统治的努力；旧民主主义革命的</text>
+<text top="-14" left="135" width="54" height="18" font="4">终结。</text>
+<text top="-17" left="341" width="253" height="21" font="6">第四章 开天辟地的大事变</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、学习目的与要求</text>
+<text top="-14" left="171" width="605" height="18" font="4">1.了解俄国十月革命对中国的影响，认识新文化运动和五四运动的历史意义，</text>
+<text top="-14" left="135" width="360" height="18" font="4">懂得五四运动是中国新民主主义革命的开端。</text>
+<text top="-14" left="171" width="587" height="18" font="4">2.了解五四时期马克思主义在中国的传播，把握中国先进分子为什么和怎样</text>
+<text top="-14" left="135" width="162" height="18" font="4">选择了马克思主义。</text>
+<text top="-14" left="171" width="587" height="18" font="4">3.认识中国共产党成立的社会历史条件和历史特点，掌握中国共产党成立的</text>
+<text top="-14" left="135" width="180" height="18" font="4">意义和伟大建党精神。</text>
+<text top="-14" left="171" width="587" height="18" font="4">4.了解第一次国共合作以及国民革命的兴起与高潮，认识中国共产党的成立</text>
+<text top="-14" left="135" width="234" height="18" font="4">使中国革命的面貌焕然一新。</text>
+<text top="-14" left="171" width="234" height="18" font="4">5.了解国民革命失败的原因。</text>
+<text top="-14" left="171" width="108" height="18" font="4">二、课程内容</text>
+<text top="-14" left="171" width="199" height="18" font="4">1.新文化运动与五四运动</text>
+<text top="-14" left="171" width="289" height="18" font="4">2.马克思主义传播与中国共产党诞生</text>
+<text top="-14" left="171" width="181" height="18" font="4">3.国共合作与国民革命</text>
+<text top="-14" left="171" width="217" height="18" font="4">三、考核知识点与考核要求</text>
+<text top="-14" left="171" width="199" height="18" font="4">1.新文化运动与五四运动</text>
+<text top="-14" left="171" width="378" height="18" font="4">识记：陈独秀与新文化运动的兴起；五四运动。</text>
+<text top="-14" left="171" width="576" height="18" font="4">领会：俄国十月革命对中国革命的影响；五四运动爆发的社会历史条件。</text>
+<text top="-14" left="171" width="596" height="18" font="4">简单应用：五四以前新文化运动的局限；五四运动的直接导火线与斗争目标。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：新文化运动的主要内容和历史意义；新民主主义革命的开端；五</text>
+<text top="-14" left="135" width="162" height="18" font="4">四运动的历史意义。</text>
+<text top="-14" left="171" width="289" height="18" font="4">2.马克思主义传播与中国共产党诞生</text>
+</page>
+<page number="10" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="443" width="7" height="13" font="2">7</text>
+<text top="-14" left="171" width="596" height="18" font="4">识记：李大钊与马克思主义在中国的传播；中国共产党早期组织；中共一大；</text>
+<text top="-14" left="135" width="623" height="18" font="4">中共二大；中国劳动组合书记部；中国第一次工人运动高潮；浙江省萧山县衙前</text>
+<text top="-14" left="135" width="108" height="18" font="4">村农民协会。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：早期马克思主义思想运动的历史特点；中国共产党成立初期领导发动</text>
+<text top="-14" left="135" width="108" height="18" font="4">的工农运动。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：中国共产党的早期组织及其活动；中国共产党人的初心使命和伟</text>
+<text top="-14" left="135" width="450" height="18" font="4">大建党精神；中国共产党制定的民主革命纲领及其意义。</text>
+<text top="-14" left="171" width="558" height="18" font="4">综合应用：中国共产党的成立是中华民族发展史上开天辟地的大事变。</text>
+<text top="-14" left="171" width="181" height="18" font="4">3.国共合作与国民革命</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：中共三大；国民党一大；北伐战争；中共四大；五卅运动与省港大罢</text>
+<text top="-14" left="135" width="270" height="18" font="4">工；国民党右派发动的反共政变。</text>
+<text top="-14" left="171" width="522" height="18" font="4">领会：第一次国共合作的政治基础及组织形式；国民革命的兴起。</text>
+<text top="-14" left="171" width="342" height="18" font="4">简单应用：北伐战争的胜利进军及其原因。</text>
+<text top="-14" left="171" width="360" height="18" font="4">综合应用：国民革命的意义以及失败的原因。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、本章重点</text>
+<text top="-14" left="171" width="587" height="18" font="4">五四运动的发生、发展及其历史意义；五四运动后，马克思主义在中国的传</text>
+<text top="-14" left="135" width="623" height="18" font="4">播，中国的先进知识分子为什么选择和怎样选择了马克思主义；中国共产党成立</text>
+<text top="-14" left="135" width="623" height="18" font="4">的历史条件、历史特点以及历史意义；第一次国共合作的形成，北伐战争的胜利</text>
+<text top="-14" left="135" width="234" height="18" font="4">进展以及大革命失败的原因。</text>
+<text top="-17" left="324" width="253" height="21" font="6">第五章 中国革命的新道路</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、学习目的与要求</text>
+<text top="-14" left="171" width="587" height="18" font="4">1.了解国民党全国政权的建立及其独裁统治，懂得中国共产党为什么要进行</text>
+<text top="-14" left="135" width="450" height="18" font="4">反抗国民党反动统治的斗争；认识中间党派的政治主张。</text>
+<text top="-14" left="171" width="587" height="18" font="4">2.把握中国共产党对革命新道路的艰辛探索；掌握中国革命为什么必须走以</text>
+<text top="-14" left="135" width="252" height="18" font="4">及怎样走农村包围城市的道路。</text>
+<text top="-14" left="171" width="587" height="18" font="4">3.认识土地革命战争的发展及挫折，懂得“左”倾教条主义的严重危害，掌</text>
+<text top="-14" left="135" width="198" height="18" font="4">握遵义会议的历史意义。</text>
+<text top="-14" left="171" width="450" height="18" font="4">4.了解红军长征的历史过程，认识红军长征胜利的意义。</text>
+<text top="-14" left="171" width="108" height="18" font="4">二、课程内容</text>
+<text top="-14" left="171" width="361" height="18" font="4">1.国民党在全国的统治和中间党派的政治主张</text>
+<text top="-14" left="171" width="307" height="18" font="4">2.中国共产党对革命新道路的艰苦探索</text>
+</page>
+<page number="11" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="443" width="7" height="13" font="2">8</text>
+<text top="-14" left="171" width="235" height="18" font="4">3.中国革命在探索中曲折前进</text>
+<text top="-14" left="171" width="217" height="18" font="4">三、考核知识点与考核要求</text>
+<text top="-14" left="171" width="361" height="18" font="4">1.国民党在全国的统治和中间党派的政治主张</text>
+<text top="-14" left="171" width="234" height="18" font="4">识记：东北易帜；官僚资本。</text>
+<text top="-14" left="171" width="504" height="18" font="4">领会：中间党派及其社会基础；中国民族资本主义经济的特点。</text>
+<text top="-14" left="171" width="486" height="18" font="4">简单应用：国民党的独裁统治；中国国民党临时行动委员会。</text>
+<text top="-14" left="171" width="342" height="18" font="4">综合应用：国民党统治下的中国社会经济。</text>
+<text top="-14" left="171" width="307" height="18" font="4">2.中国共产党对革命新道路的艰苦探索</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：革命危机时刻加入中国共产党的代表人物；八七会议；毛泽东与湘赣</text>
+<text top="-14" left="135" width="623" height="18" font="4">边界秋收起义；广州起义；《星星之火，可以燎原》与《反对本本主义》；古田</text>
+<text top="-14" left="135" width="558" height="18" font="4">会议；毛泽东在井冈山主持制定的土地法和在兴国主持制定的土地法。</text>
+<text top="-14" left="171" width="596" height="18" font="4">领会：南昌起义的意义；“三湾改编”；井冈山农村革命根据地创建的意义；</text>
+<text top="-14" left="135" width="623" height="18" font="4">红军反“围剿”作战的胜利；中央革命根据地；土地革命中的阶级路线和土地分</text>
+<text top="-14" left="135" width="198" height="18" font="4">配方法；左翼文化运动。</text>
+<text top="-14" left="171" width="576" height="18" font="4">简单应用：中国红色政权存在和发展的原因及条件；“工农武装割据”。</text>
+<text top="-14" left="171" width="558" height="18" font="4">综合应用：以毛泽东为代表的中国共产党人对革命新道路的艰辛探索。</text>
+<text top="-14" left="171" width="235" height="18" font="4">3.中国革命在探索中曲折前进</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：中华苏维埃第一次全国代表大会；赣南会议；红军的战略大转移和三</text>
+<text top="-14" left="135" width="180" height="18" font="4">大主力红军胜利会师。</text>
+<text top="-14" left="171" width="596" height="18" font="4">领会：革命根据地的建设；20 世纪二三十年代中国共产党内连续出现“左”</text>
+<text top="-14" left="135" width="126" height="18" font="4">倾错误的原因。</text>
+<text top="-14" left="171" width="540" height="18" font="4">简单应用：王明“左”倾教条主义的主要错误及其危害；长征精神。</text>
+<text top="-14" left="171" width="522" height="18" font="4">综合应用：遵义会议的召开及其意义；红军长征的胜利及其意义。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、本章重点</text>
+<text top="-14" left="171" width="587" height="18" font="4">国民党政权的性质；国民党统治下的中国社会经济状况；中间派别的政治主</text>
+<text top="-14" left="135" width="623" height="18" font="4">张；中国共产党人对中国革命新道路的艰辛探索；农村包围城市、武装夺取政权</text>
+<text top="-14" left="135" width="623" height="18" font="4">理论的主要内容；三次“左”倾错误原因及其危害，特别是王明“左”倾教条主</text>
+<text top="-14" left="135" width="414" height="18" font="4">义的危害；遵义会议以及红军长征胜利的历史意义。</text>
+<text top="-17" left="330" width="274" height="21" font="6">第六章 中华民族的抗日战争</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、学习目的与要求</text>
+<text top="-14" left="171" width="587" height="18" font="4">1.认清日本军国主义的侵华战争给中华民族造成的深重灾难，懂得抗日战争</text>
+<text top="-14" left="135" width="468" height="18" font="4">是近代以来中国人民第一次赢得完全胜利的民族解放战争。</text>
+</page>
+<page number="12" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="443" width="7" height="13" font="2">9</text>
+<text top="-14" left="171" width="587" height="18" font="4">2.把握以国共两党第二次合作为基础的抗日民族统一战线的意义，了解国民</text>
+<text top="-14" left="135" width="360" height="18" font="4">党以及正面战场在抗日战争中的地位和作用。</text>
+<text top="-14" left="171" width="587" height="18" font="4">3.掌握中国共产党的全面抗战路线、纲领与方针、政策以及敌后游击战争的</text>
+<text top="-14" left="135" width="623" height="18" font="4">地位和作用，懂得中国共产党及其领导的人民抗日力量是中华民族抗战的中流砥</text>
+<text top="-14" left="135" width="623" height="18" font="4">柱。4.认识中国人民抗日战争胜利的意义和原因，把握中国人民抗日战争在世界</text>
+<text top="-14" left="135" width="198" height="18" font="4">反法西斯战争中的地位。</text>
+<text top="-14" left="171" width="108" height="18" font="4">二、课程内容</text>
+<text top="-14" left="171" width="253" height="18" font="4">1.日本发动灭亡中国的侵略战争</text>
+<text top="-14" left="171" width="253" height="18" font="4">2.中国人民奋起抗击日本侵略者</text>
+<text top="-14" left="171" width="361" height="18" font="4">3.国民党的正面战场与大后方的抗日民主运动</text>
+<text top="-14" left="171" width="307" height="18" font="4">4.中国共产党成为抗日战争的中流砥柱</text>
+<text top="-14" left="171" width="217" height="18" font="4">5.抗日战争的胜利及其意义</text>
+<text top="-14" left="171" width="217" height="18" font="4">三、考核知识点与考核要求</text>
+<text top="-14" left="171" width="253" height="18" font="4">1.日本发动灭亡中国的侵略战争</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：九一八事变；华北事变；七七卢沟桥事变；伪“满洲国”和伪“中华</text>
+<text top="-14" left="135" width="288" height="18" font="4">民国国民政府”；“南京大屠杀”。</text>
+<text top="-14" left="171" width="306" height="18" font="4">领会：日本灭亡中国的计划及其实施。</text>
+<text top="-14" left="171" width="342" height="18" font="4">简单应用：日本在中国占领区的殖民统治。</text>
+<text top="-14" left="171" width="414" height="18" font="4">综合应用：日本侵略者给中华民族造成的深重灾难。</text>
+<text top="-14" left="171" width="253" height="18" font="4">2.中国人民奋起抗击日本侵略者</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：察哈尔抗日同盟军；国民党第十九路军抗日反蒋事变；宋庆龄；《中</text>
+<text top="-14" left="135" width="623" height="18" font="4">国人民对日作战的基本纲领》；保卫中国同盟；全国各界救国联合会；“逼蒋抗</text>
+<text top="-14" left="135" width="594" height="18" font="4">日”和国共两党第二次合作；八路军、新四军；邓玉芬、马本斋、陈嘉庚。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：《为抗日救国告全国同胞书》；瓦窑堡会议；中共中央致国民党五届</text>
+<text top="-14" left="135" width="108" height="18" font="4">三中全会电。</text>
+<text top="-14" left="171" width="540" height="18" font="4">简单应用：一二·九运动及其意义；西安事变的和平解决及其意义。</text>
+<text top="-14" left="171" width="486" height="18" font="4">综合应用：中国共产党关于建立抗日民族统一战线的新政策。</text>
+<text top="-14" left="171" width="361" height="18" font="4">3.国民党的正面战场与大后方的抗日民主运动</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：台儿庄战役；“八百壮士”和为国捐躯的国民党将领；国民党五届五</text>
+<text top="-14" left="135" width="288" height="18" font="4">中全会；豫湘桂战役；国民参政会。</text>
+<text top="-14" left="171" width="576" height="18" font="4">领会：相持阶段到来后国民党的对内对外政策；中国战区与中国远征军。</text>
+<text top="-14" left="171" width="324" height="18" font="4">简单应用：国民党正面战场溃退的原因。</text>
+<text top="-14" left="171" width="594" height="18" font="4">综合应用：中国共产党领导和开展的大后方抗日民主运动和抗日文化工作。</text>
+</page>
+<page number="13" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">10</text>
+<text top="-14" left="171" width="307" height="18" font="4">4.中国共产党成为抗日战争的中流砥柱</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：洛川会议和《抗日救国十大纲领》；敌后抗日根据地；敌后战场涌现</text>
+<text top="-14" left="135" width="623" height="18" font="4">的民族英雄和英雄群体；国民党顽固派制造的反共摩擦；“三三制”政权；精兵</text>
+<text top="-14" left="135" width="594" height="18" font="4">简政；教条主义；延安精神；平型关战役；百团大战；中共六届六中全会。</text>
+<text top="-14" left="171" width="594" height="18" font="4">领会：中国共产党的全面抗战路线；抗日民族统一战线中的独立自主原则；</text>
+<text top="-14" left="135" width="450" height="18" font="4">大生产运动；《关于若干历史问题的决议》；中共七大。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：中国抗日战争的两个战场及其关系；抗日游击战争的战略地位和</text>
+<text top="-14" left="135" width="54" height="18" font="4">作用。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：中国共产党及其领导的人民抗日力量是抗日战争的中流砥柱；毛</text>
+<text top="-14" left="135" width="623" height="18" font="4">泽东《论持久战》的主要内容及其意义；中国共产党关于巩固和扩大抗日民族统</text>
+<text top="-14" left="135" width="623" height="18" font="4">一战线的策略总方针；新民主主义理论的系统阐述及其意义；延安整风运动及其</text>
+<text top="-14" left="135" width="54" height="18" font="4">意义。</text>
+<text top="-14" left="171" width="217" height="18" font="4">5.抗日战争的胜利及其意义</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：《对日寇的最后一战》；联合国制宪会议；中国人民抗日战争胜利纪</text>
+<text top="-14" left="135" width="54" height="18" font="4">念日。</text>
+<text top="-14" left="171" width="234" height="18" font="4">领会：抗日战争的完全胜利。</text>
+<text top="-14" left="171" width="306" height="18" font="4">简单应用：抗日战争胜利的主要原因。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：抗日战争的胜利为中华民族走向伟大复兴确立了历史转折点；中</text>
+<text top="-14" left="135" width="378" height="18" font="4">国人民抗日战争在世界反法西斯战争中的地位。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、本章重点</text>
+<text top="-14" left="171" width="594" height="18" font="4">日本灭亡中国的计划及其侵华罪行；西安事变；抗日民族统一战线的形成；</text>
+<text top="-14" left="135" width="623" height="18" font="4">抗日战争防御阶段和相持阶段国民党正面战场；中国共产党的人民战争路线和持</text>
+<text top="-14" left="135" width="623" height="18" font="4">久战的方针；抗日游击战争的战略地位；抗日民族统一战线的策略总方针；新民</text>
+<text top="-14" left="135" width="623" height="18" font="4">主主义理论的系统阐明；延安整风运动和毛泽东思想指导地位的确立；中国共产</text>
+<text top="-14" left="135" width="623" height="18" font="4">党在抗日战争中的中流砥柱作用；中国人民抗日战争在世界反法西斯战争中的地</text>
+<text top="-14" left="135" width="270" height="18" font="4">位；抗日战争胜利的原因和意义。</text>
+<text top="-17" left="330" width="274" height="21" font="6">第七章 为创建新中国而奋斗</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、学习目的与要求</text>
+<text top="-14" left="171" width="587" height="18" font="4">1.了解抗日战争胜利后的时局及其对中国近现代历史发展的影响，认识中国</text>
+<text top="-14" left="135" width="396" height="18" font="4">共产党争取和平民主以及进行自卫战争的必要性。</text>
+<text top="-14" left="171" width="587" height="18" font="4">2.了解国民党政权所面临的全面危机，认识它陷于全国人民包围之中、最终</text>
+<text top="-14" left="135" width="180" height="18" font="4">走向崩溃的根本原因。</text>
+</page>
+<page number="14" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">11</text>
+<text top="-14" left="171" width="587" height="18" font="4">3.了解各民主党派的历史发展，认识“中间路线”的破灭及其原因，懂得中</text>
+<text top="-14" left="135" width="450" height="18" font="4">国共产党领导的多党合作政治格局的形成是历史的必然。</text>
+<text top="-14" left="171" width="587" height="18" font="4">4.认识人民共和国是中国人民的历史性选择，掌握新民主主义革命胜利的原</text>
+<text top="-14" left="135" width="144" height="18" font="4">因以及基本经验。</text>
+<text top="-14" left="171" width="108" height="18" font="4">二、课程内容</text>
+<text top="-14" left="171" width="271" height="18" font="4">1.从争取和平民主到进行自卫战争</text>
+<text top="-14" left="171" width="253" height="18" font="4">2.国民党政府处在全民的包围中</text>
+<text top="-14" left="171" width="199" height="18" font="4">3.新民主主义革命的胜利</text>
+<text top="-14" left="171" width="217" height="18" font="4">三、考核知识点与考核要求</text>
+<text top="-14" left="171" width="271" height="18" font="4">1.从争取和平民主到进行自卫战争</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：《对目前时局的宣言》；重庆谈判与双十协定；“向北发展，向南防</text>
+<text top="-14" left="135" width="623" height="18" font="4">御”的战略方针；1946 年 1 月召开的政治协商会议；校场口惨案；下关惨案；</text>
+<text top="-14" left="135" width="216" height="18" font="4">国民党军挑起全国性内战。</text>
+<text top="-14" left="171" width="378" height="18" font="4">领会：抗日战争胜利后的国际格局和国内形势。</text>
+<text top="-14" left="171" width="288" height="18" font="4">简单应用：必须和能够打败蒋介石。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：抗日战争胜利后中国国内的三种建国方案和两个中国之命运的较</text>
+<text top="-14" left="135" width="289" height="18" font="4">量。2.国民党政府处于全民的包围中</text>
+<text top="-14" left="171" width="596" height="18" font="4">识记：“打倒蒋介石，解放全中国”的行动口号；新民主主义三大经济纲领；</text>
+<text top="-14" left="135" width="623" height="18" font="4">新民主主义革命总路线；国统区的学生运动；《五四指示》；《中国土地法大纲》</text>
+<text top="-14" left="749" width="18" height="18" font="4">；</text>
+<text top="-14" left="135" width="623" height="18" font="4">土地改革的总路线；“五二〇”惨案；台湾人民二二八起义；“三区革命”；内</text>
+<text top="-14" left="135" width="216" height="18" font="4">蒙古自治政府；民主党派。</text>
+<text top="-14" left="171" width="486" height="18" font="4">领会：人民解放军的战略进攻；国民党统治的政治经济危机。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：中国共产党与各民主党派的团结合作；解放区经过土地改革运动</text>
+<text top="-14" left="135" width="126" height="18" font="4">出现的新面貌。</text>
+<text top="-14" left="171" width="504" height="18" font="4">综合应用：中国共产党领导的多党合作、政治协商格局的形成。</text>
+<text top="-14" left="171" width="199" height="18" font="4">3.新民主主义革命的胜利</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：战略决战；《将革命进行到底》；国共北平谈判；人民解放军占领南</text>
+<text top="-14" left="135" width="162" height="18" font="4">京及其向全国进军。</text>
+<text top="-14" left="171" width="596" height="18" font="4">领会：中共七届二中全会的主要内容；中国革命统一战线中存在的两个联盟。</text>
+<text top="-14" left="171" width="450" height="18" font="4">简单应用：《论人民民主专政》与中国共产党建国主张。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：中国人民政治协商会议及其《共同纲领》的主要内容；中国革命</text>
+<text top="-14" left="135" width="234" height="18" font="4">胜利的主要原因和基本经验。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、本章重点</text>
+</page>
+<page number="15" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">12</text>
+<text top="-14" left="171" width="587" height="18" font="4">抗日战争胜利后的国际格局；抗日战争胜利后出现的三种建国方案和两个中</text>
+<text top="-14" left="135" width="623" height="18" font="4">国之命运；中国共产党争取和平民主的斗争；解放战争的胜利进行；解放区的土</text>
+<text top="-14" left="135" width="623" height="18" font="4">地改革运动；国民党政府处在全民的包围中；国统区第二条反蒋战线的形成与作</text>
+<text top="-14" left="135" width="623" height="18" font="4">用；中国共产党在新民主主义革命阶段的总路线和总政策；中共领导的多党合作</text>
+<text top="-14" left="135" width="571" height="18" font="4">和政治协商格局的形成；中共七届二中全会和毛泽东《论人民民主专政》</text>
+<text top="-14" left="697" width="18" height="18" font="4">；</text>
+<text top="-14" left="704" width="54" height="18" font="4">《中国</text>
+<text top="-14" left="135" width="234" height="18" font="4">人民政治协商会议共同纲领》</text>
+<text top="-14" left="360" width="396" height="18" font="4">；“第三条道路”幻想的破灭及其原因；新民主主</text>
+<text top="-14" left="135" width="594" height="18" font="4">义革命胜利的主要原因和基本经验；人民共和国是中国人民的历史性选择。</text>
+<text top="-17" left="246" width="443" height="21" font="6">第八章 完成社会主义革命和推进社会主义建设</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、学习目的与要求</text>
+<text top="-14" left="171" width="587" height="18" font="4">1.了解《共同纲领》的全面实施以及新民主主义革命任务的胜利完成，认识</text>
+<text top="-14" left="135" width="396" height="18" font="4">中华人民共和国的成立开辟了中国历史的新纪元。</text>
+<text top="-14" left="171" width="587" height="18" font="4">2.了解新民主主义社会的建立及其特点和性质，把握过渡时期总路线的提出</text>
+<text top="-14" left="135" width="162" height="18" font="4">反映了历史的必然。</text>
+<text top="-14" left="171" width="605" height="18" font="4">3.了解对个体农业、个体手工业和资本主义工商业社会主义改造的基本完成，</text>
+<text top="-14" left="135" width="342" height="18" font="4">懂得社会主义制度在中国建立的伟大意义。</text>
+<text top="-14" left="171" width="587" height="18" font="4">4.了解中国共产党人探索中国社会主义建设道路的良好开局，把握早期探索</text>
+<text top="-14" left="135" width="108" height="18" font="4">取得的成果。</text>
+<text top="-14" left="171" width="522" height="18" font="4">5.了解探索社会主义建设道路的曲折历程，认识其中的经验教训。</text>
+<text top="-14" left="171" width="162" height="18" font="4">6.了解新中国成立后</text>
+<text top="-18" left="338" width="18" height="24" font="5">20</text>
+<text top="-14" left="361" width="397" height="18" font="4">多年间的建设成就，把握毛泽东等老一代革命家探</text>
+<text top="-14" left="135" width="306" height="18" font="4">索中国社会主义建设道路的理论贡献。</text>
+<text top="-14" left="171" width="108" height="18" font="4">二、课程内容</text>
+<text top="-14" left="171" width="488" height="18" font="4">1.《共同纲领》的全面实施与新民主主义革命任务的胜利完成</text>
+<text top="-14" left="171" width="379" height="18" font="4">2.过渡时期总路线的实施和社会主义制度的确立</text>
+<text top="-14" left="171" width="325" height="18" font="4">3.探索中国社会主义建设道路的良好开局</text>
+<text top="-14" left="171" width="163" height="18" font="4">4.探索中的严重曲折</text>
+<text top="-14" left="171" width="208" height="18" font="4">5.建设的成就 探索的成果</text>
+<text top="-14" left="171" width="217" height="18" font="4">三、考核知识点与考核要求</text>
+<text top="-14" left="171" width="488" height="18" font="4">1.《共同纲领》的全面实施与新民主主义革命任务的胜利完成</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：《中华人民共和国土地改革法》；《中华人民共和国婚姻法》；中共</text>
+<text top="-14" left="135" width="378" height="18" font="4">七届三中全会；“三反”运动；“五反”运动。</text>
+<text top="-14" left="171" width="558" height="18" font="4">领会：西藏和平解放；没收官僚资本；独立自主和平外交的初步开展。</text>
+</page>
+<page number="16" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">13</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：新中国成立初期的各项民主改革；争取国家财政经济状况基本好</text>
+<text top="-14" left="135" width="522" height="18" font="4">转的条件；国民经济的迅速恢复及其原因；抗美援朝，保家卫国。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：中华人民共和国的成立开辟了中国历史的新纪元；中国共产党在</text>
+<text top="-14" left="135" width="198" height="18" font="4">全国执政面临的新考验。</text>
+<text top="-14" left="171" width="379" height="18" font="4">2.过渡时期总路线的实施和社会主义制度的确立</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：新民主主义社会的建立；过渡时期总路线的内容；《关于农业合作化</text>
+<text top="-14" left="135" width="623" height="18" font="4">问题》；手工业合作化的组织形式；“四马分肥”；一届全国人大一次会议与《中</text>
+<text top="-14" left="135" width="360" height="18" font="4">华人民共和国宪法》；民族自治区相继成立。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：资本主义工业化与社会主义工业化；对农业社会主义改造采取的过渡</text>
+<text top="-14" left="135" width="623" height="18" font="4">性经济组织形式；对资本主义工商业进行社会主义改造的形式；第一个五年计划</text>
+<text top="-14" left="135" width="180" height="18" font="4">以及工业建设的成就。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：新民主主义社会的特点与性质；新中国成立初期开始向社会主义</text>
+<text top="-14" left="135" width="450" height="18" font="4">过渡采取的实际步骤；完成对农业社会主义改造的意义。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：过渡时期总路线反映了历史的必然；对农业进行社会主义改造的</text>
+<text top="-14" left="135" width="623" height="18" font="4">基本原则和方针；对资本主义工商业采取和平赎买政策的特点及意义；新民主主</text>
+<text top="-14" left="135" width="623" height="18" font="4">义革命的胜利，社会主义基本制度的建立，为当代中国一切发展进步奠定了根本</text>
+<text top="-14" left="135" width="180" height="18" font="4">政治前提和制度基础。</text>
+<text top="-14" left="171" width="325" height="18" font="4">3.探索中国社会主义建设道路的良好开局</text>
+<text top="-14" left="171" width="596" height="18" font="4">识记：社会主义制度确立后中国国内的主要矛盾；“三个主体、三个补充”；</text>
+<text top="-14" left="135" width="522" height="18" font="4">《关于正确处理人民内部矛盾的问题》；整风运动与反右派斗争。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：“我们要进行第二次结合，找出在中国进行社会主义革命和建设的正</text>
+<text top="-14" left="135" width="522" height="18" font="4">确道路”；《论十大关系》及其提出的建设社会主义的基本方针。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：中共八大制定的路线和指导方针及其意义；毛泽东关于社会主义</text>
+<text top="-14" left="135" width="180" height="18" font="4">社会基本矛盾的分析。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：毛泽东关于正确区分两类社会矛盾以及正确处理人民内部矛盾的</text>
+<text top="-14" left="135" width="126" height="18" font="4">思想及其意义。</text>
+<text top="-14" left="171" width="163" height="18" font="4">4.探索中的严重曲折</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：“大跃进”运动；人民公社化运动；庐山会议；“四个现代化”的奋</text>
+<text top="-14" left="135" width="612" height="18" font="4">斗目标；社会主义教育运动；“二月逆流”；林彪反革命集团；“四人帮”。</text>
+<text top="-14" left="171" width="54" height="18" font="4">领会：</text>
+<text top="-18" left="224" width="18" height="24" font="5">20</text>
+<text top="-14" left="247" width="36" height="18" font="4">世纪</text>
+<text top="-18" left="287" width="18" height="24" font="5">60</text>
+<text top="-14" left="310" width="448" height="18" font="4">年代前期的国民经济调整；“文化大革命”的发动；“文</text>
+<text top="-14" left="135" width="162" height="18" font="4">化大革命”的结束。</text>
+<text top="-14" left="171" width="91" height="18" font="4">简单应用：</text>
+<text top="-18" left="262" width="36" height="24" font="5">1958</text>
+<text top="-14" left="303" width="455" height="18" font="4">年秋冬至庐山会议前期的纠“左”努力；“七千人大会”</text>
+<text top="-14" left="135" width="144" height="18" font="4">的召开及其意义。</text>
+</page>
+<page number="17" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">14</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：探索中国社会主义建设道路的曲折历程；“文化大革命”发生的</text>
+<text top="-14" left="135" width="623" height="18" font="4">社会历史原因；科学分析中国共产党在探索中国自己的社会主义建设道路过程中</text>
+<text top="-14" left="135" width="108" height="18" font="4">所犯的错误。</text>
+<text top="-14" left="171" width="208" height="18" font="4">5.建设的成就 探索的成果</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：“两弹一星”；中国恢复在联合国的合法席位；中美关系正常化和中</text>
+<text top="-14" left="135" width="632" height="18" font="4">日建交；“长期共存、互相监督”方针；“百花齐放、百家争鸣”和“古为今用、</text>
+<text top="-14" left="135" width="324" height="18" font="4">洋为中用、百花齐放、推陈出新”方针。</text>
+<text top="-14" left="171" width="360" height="18" font="4">领会：毛泽东关于社会主义发展阶段的思考。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：实现社会主义现代化的“两步走”战略；独立的、比较完整的工</text>
+<text top="-14" left="135" width="324" height="18" font="4">业体系和国民经济体系的建立及其意义。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：社会主义建设的成就；毛泽东等老一代革命家探索中国社会主义</text>
+<text top="-14" left="135" width="252" height="18" font="4">建设道路的理论贡献及其意义。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、本章重点</text>
+<text top="-14" left="171" width="587" height="18" font="4">中华人民共和国成立的历史意义；新民主主义革命任务的彻底完成；过渡时</text>
+<text top="-14" left="135" width="632" height="18" font="4">期总路线反映了历史的必然；对农业、手工业和资本主义工商业的社会主义改造；</text>
+<text top="-14" left="135" width="623" height="18" font="4">第一个五年计划；社会主义经济制度、政治制度的确立；探索中国社会主义建设</text>
+<text top="-14" left="135" width="623" height="18" font="4">道路的良好开局；探索中的严重错误，错误的性质和产生错误的原因；社会主义</text>
+<text top="-14" left="135" width="288" height="18" font="4">建设的成就和探索取得的理论成果。</text>
+<text top="-17" left="257" width="422" height="21" font="6">第九章 中国特色社会主义的开创与接续发展</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、学习目的与要求</text>
+<text top="-14" left="171" width="587" height="18" font="4">1.认识十一届三中全会是新中国成立以来党和国家历史上具有深远意义的</text>
+<text top="-14" left="135" width="108" height="18" font="4">历史性转折。</text>
+<text top="-14" left="171" width="587" height="18" font="4">2.了解中国特色社会主义道路开辟和接续发展的历史进程，掌握中国共产党</text>
+<text top="-14" left="135" width="540" height="18" font="4">在社会主义初级阶段的基本理论、基本纲领、基本路线和基本经验。</text>
+<text top="-14" left="171" width="587" height="18" font="4">3.认识中国共产党在新时期不断推进马克思主义中国化事业及其取得的理</text>
+<text top="-14" left="135" width="72" height="18" font="4">论成果。</text>
+<text top="-14" left="171" width="108" height="18" font="4">二、课程内容</text>
+<text top="-14" left="171" width="307" height="18" font="4">1.历史性的伟大转折和改革开放的起步</text>
+<text top="-14" left="171" width="199" height="18" font="4">2.开创中国特色社会主义</text>
+<text top="-14" left="171" width="307" height="18" font="4">3.把中国特色社会主义推向二十一世纪</text>
+<text top="-14" left="171" width="343" height="18" font="4">4.在新形势下坚持和发展中国特色社会主义</text>
+<text top="-14" left="171" width="217" height="18" font="4">三、考核知识点与考核要求</text>
+</page>
+<page number="18" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">15</text>
+<text top="-14" left="171" width="307" height="18" font="4">1.历史性的伟大转折和改革开放的起步</text>
+<text top="-14" left="171" width="182" height="18" font="4">识记：四项基本原则；</text>
+<text top="-18" left="353" width="18" height="24" font="5">20</text>
+<text top="-14" left="376" width="36" height="18" font="4">世纪</text>
+<text top="-18" left="417" width="18" height="24" font="5">70</text>
+<text top="-14" left="440" width="54" height="18" font="4">年代末</text>
+<text top="-18" left="499" width="18" height="24" font="5">80</text>
+<text top="-14" left="521" width="237" height="18" font="4">年代初的国民经济调整；经济</text>
+<text top="-14" left="135" width="623" height="18" font="4">特区；全国人大常委会《告台湾同胞书》；关于台湾回归祖国、实现和平统一的</text>
+<text top="-14" left="135" width="126" height="18" font="4">九项方针政策。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：“两个凡是”的影响；平反冤假错案；“统分结合”的农村家庭联产</text>
+<text top="-14" left="135" width="108" height="18" font="4">承包责任制。</text>
+<text top="-14" left="171" width="306" height="18" font="4">简单应用：关于真理标准问题大讨论。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：中共十一届三中全会的历史贡献；第二个历史决议关于毛泽东和</text>
+<text top="-14" left="135" width="270" height="18" font="4">毛泽东思想历史地位的科学评价。</text>
+<text top="-14" left="171" width="199" height="18" font="4">2.开创中国特色社会主义</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：中共十二大；中共十二届六中全会；中共十三大；“一个中心，两个</text>
+<text top="-14" left="135" width="306" height="18" font="4">基本点”；开发、开放上海浦东新区。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：中共十二届三中全会《关于经济体制改革的决定》；多层次对外开放</text>
+<text top="-14" left="135" width="252" height="18" font="4">格局；社会主义精神文明建设。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：“三步走”发展战略；邓小平《党和国家领导制度的改革》；邓</text>
+<text top="-14" left="135" width="414" height="18" font="4">小平关于中国农业改革和发展“两个飞跃”的思想。</text>
+<text top="-14" left="171" width="486" height="18" font="4">综合应用：社会主义初级阶段理论和中国共产党的基本路线。</text>
+<text top="-14" left="171" width="307" height="18" font="4">3.把中国特色社会主义推向二十一世纪</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：中共十四大；中共十四届三中全会《关于建立社会主义市场经济体制</text>
+<text top="-14" left="135" width="630" height="18" font="4">若干问题的决定》；中共十五大；中国正式加入世界贸易组织；“汪辜会谈”；</text>
+<text top="-14" left="135" width="360" height="18" font="4">《为促进祖国统一大业的完成而继续奋斗》。</text>
+<text top="-14" left="171" width="54" height="18" font="4">领会：</text>
+<text top="-18" left="225" width="18" height="24" font="5">20</text>
+<text top="-14" left="248" width="36" height="18" font="4">世纪</text>
+<text top="-18" left="288" width="18" height="24" font="5">90</text>
+<text top="-14" left="311" width="396" height="18" font="4">年代后期改革开放和现代化建设经受的风险考验。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：邓小平提出的“一个国家、两种制度”的构想；香港、澳门的回</text>
+<text top="-14" left="135" width="623" height="18" font="4">归。综合应用：邓小平南方谈话的主要内容及其意义；“三个代表”重要思想的</text>
+<text top="-14" left="135" width="126" height="18" font="4">提出及其意义。</text>
+<text top="-14" left="171" width="343" height="18" font="4">4.在新形势下坚持和发展中国特色社会主义</text>
+<text top="-14" left="171" width="450" height="18" font="4">识记：中共十六大；中共十七大；中共十七届六中全会。</text>
+<text top="-14" left="171" width="594" height="18" font="4">领会：建设社会主义新农村；加强党的执政能力建设；应对国际金融危机。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：全面建设小康社会；构建社会主义和谐社会；坚持走和平发展的</text>
+<text top="-14" left="135" width="54" height="18" font="4">道路。</text>
+<text top="-14" left="171" width="324" height="18" font="4">综合应用：科学发展观的提出及其意义。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、本章重点</text>
+<text top="-14" left="171" width="587" height="18" font="4">中共十一届三中全会的历史意义；中国特色社会主义的开创；中国特色社会</text>
+</page>
+<page number="19" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">16</text>
+<text top="-14" left="135" width="144" height="18" font="4">主义的接续发展。</text>
+<text top="-17" left="288" width="63" height="21" font="6">第十章</text>
+<text top="-17" left="373" width="274" height="21" font="6">中国特色社会主义进入新时代</text>
+<text top="-14" left="171" width="163" height="18" font="4">一、学习目的与要求</text>
+<text top="-14" left="171" width="587" height="18" font="4">1.了解中共十八大开启中国特色社会主义新时代，认识新时代我国社会主要</text>
+<text top="-14" left="135" width="162" height="18" font="4">矛盾发生的新变化。</text>
+<text top="-14" left="171" width="587" height="18" font="4">2.了解新时代的不平凡历程，认识新时代取得的历史性成就和历史性变革及</text>
+<text top="-14" left="135" width="72" height="18" font="4">其原因。</text>
+<text top="-14" left="171" width="587" height="18" font="4">3.了解党的第三个历史决议，掌握中国共产党百年奋斗的历史进程、重大成</text>
+<text top="-14" left="135" width="216" height="18" font="4">就、历史意义和历史经验。</text>
+<text top="-14" left="171" width="596" height="18" font="4">4.了解中共二十大以来中国特色社会主义事业的发展，掌握“中国式现代化”</text>
+<text top="-14" left="135" width="108" height="18" font="4">的主要内容。</text>
+<text top="-14" left="171" width="594" height="18" font="4">5.认识新时代十年的伟大成就和伟大变革在党史、新中国史、改革开放史、</text>
+<text top="-14" left="135" width="450" height="18" font="4">社会主义发展史、中华民族发展史上具有的里程碑意义。</text>
+<text top="-14" left="171" width="108" height="18" font="4">二、课程内容</text>
+<text top="-14" left="171" width="181" height="18" font="4">1.新时代的不平凡历程</text>
+<text top="-14" left="171" width="163" height="18" font="4">2.新时代的三件大事</text>
+<text top="-14" left="171" width="253" height="18" font="4">3.新时代的伟大成就和伟大变革</text>
+<text top="-14" left="171" width="217" height="18" font="4">三、考核知识点与考核要求</text>
+<text top="-14" left="171" width="181" height="18" font="4">1.新时代的不平凡历程</text>
+<text top="-14" left="171" width="594" height="18" font="4">识记：中共十八大；中共十九大；十三届全国人大一次会议；中共二十大。</text>
+<text top="-14" left="171" width="587" height="18" font="4">领会：中共十八大后党和国家面临的主要任务；中国特色社会主义进入新时</text>
+<text top="-14" left="135" width="623" height="18" font="4">代后我国社会的主要矛盾；国家宪法日；全面深化改革总目标；全面推进依法治</text>
+<text top="-14" left="135" width="623" height="18" font="4">国总目标；全面建成小康社会新的目标要求；习近平同志党中央的核心、全党的</text>
+<text top="-14" left="135" width="414" height="18" font="4">核心地位的确立；党的二十大提出的“三个务必”。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：实现中华民族伟大复兴的中国梦；中共十九届三中全会提出的深</text>
+<text top="-14" left="135" width="623" height="18" font="4">化党和国家机构改革的目标；坚持和完善中国特色社会主义制度、推进国家治理</text>
+<text top="-14" left="135" width="623" height="18" font="4">体系和治理能力现代化的总体目标；习近平新时代中国特色社会主义思想的历史</text>
+<text top="-14" left="135" width="623" height="18" font="4">地位；开展学习贯彻习近平新时代中国特色社会主义思想主题教育的总要求和根</text>
+<text top="-14" left="135" width="72" height="18" font="4">本任务。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：统筹推进“五位一体”总体布局；协调推进“四个全面”战略布</text>
+<text top="-14" left="135" width="623" height="18" font="4">局；习近平新时代中国特色社会主义思想的主要内容；中国共产党百年奋斗的重</text>
+<text top="-14" left="135" width="576" height="18" font="4">大成就、历史意义和历史经验；习近平对中国式现代化理论的系统阐述。</text>
+</page>
+<page number="20" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">17</text>
+<text top="-14" left="171" width="163" height="18" font="4">2.新时代的三件大事</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：新时代十年的三件大事；“七一勋章”颁授；庆祝中国共产党成立</text>
+<text top="-18" left="135" width="27" height="24" font="5">100</text>
+<text top="-14" left="167" width="90" height="18" font="4">周年大会。</text>
+<text top="-14" left="171" width="251" height="18" font="4">领会：全党开展党史学习教育；</text>
+<text top="-18" left="421" width="36" height="24" font="5">2020</text>
+<text top="-14" left="462" width="18" height="18" font="4">年</text>
+<text top="-18" left="484" width="18" height="24" font="5">11</text>
+<text top="-14" left="507" width="251" height="18" font="4">月，我国区域性整体贫困得到解</text>
+<text top="-14" left="135" width="623" height="18" font="4">决。简单应用：《关于推动党史学习教育常态化长效化的意见》；坚持和发展中</text>
+<text top="-14" left="135" width="504" height="18" font="4">国特色社会主义提供有力宪法保障；脱贫攻坚战取得全面胜利。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：中华民族伟大复兴进入不可逆转的历史进程；新时代十年我国高</text>
+<text top="-14" left="135" width="576" height="18" font="4">质量发展取得辉煌成就；全面建成小康社会目标的实现及其取得的成就。</text>
+<text top="-14" left="171" width="253" height="18" font="4">3.新时代的伟大成就和伟大变革</text>
+<text top="-14" left="171" width="587" height="18" font="4">识记：建设社会主义文化强国；全面准确推进“一国两制”实践；全面推进</text>
+<text top="-14" left="135" width="162" height="18" font="4">中国特色大国外交。</text>
+<text top="-14" left="171" width="558" height="18" font="4">领会：党对经济工作的战略谋划和统一领导；新时代党的建设总要求。</text>
+<text top="-14" left="171" width="587" height="18" font="4">简单应用：应对我国经济发展面临的“三期叠加”的复杂局面；全面发展全</text>
+<text top="-14" left="135" width="522" height="18" font="4">过程人民民主；建设更高水平的平安中国；新时代强军兴军目标。</text>
+<text top="-14" left="171" width="587" height="18" font="4">综合应用：以党的自我革命全面推动社会革命；开创新时代中国特色社会主</text>
+<text top="-14" left="135" width="360" height="18" font="4">义新局面；新时代十年伟大变革的深远意义。</text>
+<text top="-14" left="171" width="108" height="18" font="4">四、本章重点</text>
+<text top="-14" left="171" width="587" height="18" font="4">中共十八大开启中国特色社会主义新时代；中国梦的提出与阐释：统筹推进</text>
+<text top="-14" left="135" width="623" height="18" font="4">“五位一体”总体布局、协调推进“四个全面”战略布局；新时代十年伟大变革</text>
+<text top="-14" left="135" width="486" height="18" font="4">的里程碑意义；以中国式现代化全面推进中华民族伟大复兴。</text>
+</page>
+<page number="21" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">18</text>
+<text top="-20" left="255" width="384" height="24" font="0">Ⅳ 关于大纲的说明与考核实施要求</text>
+<text top="-14" left="171" width="289" height="18" font="4">一、课程自学考试大纲的目的和作用</text>
+<text top="-14" left="171" width="587" height="18" font="4">课程自学考试大纲是根据专业自学考试计划的要求，结合自学考试的特点而</text>
+<text top="-14" left="135" width="576" height="18" font="4">确定。其目的是对个人自学、社会助学和课程考试命题进行指导和规定。</text>
+<text top="-14" left="171" width="587" height="18" font="4">本课程自学考试大纲明确了课程学习的内容以及深度和广度，规定了课程自</text>
+<text top="-14" left="135" width="623" height="18" font="4">学考试的范围和标准。因此，它是自学者学习教材、掌握课程内容知识范围和程</text>
+<text top="-14" left="135" width="342" height="18" font="4">度的依据，也是进行自学考试命题的依据。</text>
+<text top="-14" left="171" width="181" height="18" font="4">二、本课程的自学教材</text>
+<text top="-14" left="171" width="506" height="18" font="4">马克思主义理论研究和建设工程重点教材《中国近现代史纲要》</text>
+<text top="-14" left="668" width="90" height="18" font="4">，高等教育</text>
+<text top="-14" left="135" width="72" height="18" font="4">出版社，</text>
+<text top="-18" left="207" width="36" height="24" font="5">2023</text>
+<text top="-14" left="248" width="54" height="18" font="4">年版。</text>
+<text top="-14" left="171" width="289" height="18" font="4">三、关于自学要求和自学方法的指导</text>
+<text top="-14" left="171" width="72" height="18" font="4">本课程共</text>
+<text top="-18" left="248" width="9" height="24" font="5">3</text>
+<text top="-14" left="261" width="342" height="18" font="4">学分，学生在学习中须坚持以下学习方法：</text>
+<text top="-14" left="171" width="594" height="18" font="4">第一，自学者须根据考试大纲规定的考试内容和考核目标，牢固把握重点。</text>
+<text top="-14" left="171" width="587" height="18" font="4">第二，记忆与理解相结合，切忌死记硬背，对重要的历史问题要努力做到融</text>
+<text top="-14" left="135" width="72" height="18" font="4">会贯通。</text>
+<text top="-14" left="171" width="587" height="18" font="4">第三，历史与理论相结合，既要了解基本历史知识，弄清历史发展脉络，更</text>
+<text top="-14" left="135" width="414" height="18" font="4">要把握历史规律、历史意义、历史经验等理论问题。</text>
+<text top="-14" left="171" width="181" height="18" font="4">四、对考核内容的说明</text>
+<text top="-18" left="171" width="13" height="24" font="5">1.</text>
+<text top="-14" left="194" width="558" height="18" font="4">本课程要求考生学习和掌握的知识点内容都作为考核的内容。课程中各</text>
+<text top="-14" left="135" width="623" height="18" font="4">章的内容均由若干知识点组成，在自学考试中成为考核知识点。因此，课程自学</text>
+<text top="-14" left="135" width="623" height="18" font="4">考试大纲中所规定的考试内容是以分解为考核知识点的方式给出的。由于各知识</text>
+<text top="-14" left="135" width="623" height="18" font="4">点在课程中的地位、作用以及知识自身的特点不同，自学考试对各知识点按四个</text>
+<text top="-14" left="135" width="216" height="18" font="4">认知层次确定其考核要求。</text>
+<text top="-18" left="171" width="13" height="24" font="5">2.</text>
+<text top="-14" left="194" width="108" height="18" font="4">在考试之日起</text>
+<text top="-18" left="306" width="9" height="24" font="5">6</text>
+<text top="-14" left="320" width="432" height="18" font="4">个月前，由全国人民代表大会及其常务委员会和国务院</text>
+<text top="-14" left="135" width="360" height="18" font="4">制定或修订的法律、法规都将列入考试范围。</text>
+<text top="-14" left="171" width="289" height="18" font="4">五、关于考试方式和试卷结构的说明</text>
+<text top="-18" left="171" width="13" height="24" font="5">1.</text>
+<text top="-14" left="194" width="306" height="18" font="4">本课程的考试方式为闭卷，笔试，满分</text>
+<text top="-18" left="504" width="27" height="24" font="5">100</text>
+<text top="-14" left="536" width="36" height="18" font="4">分，</text>
+<text top="-18" left="572" width="18" height="24" font="5">60</text>
+<text top="-14" left="594" width="162" height="18" font="4">分及格。考试时间为</text>
+<text top="-18" left="135" width="27" height="24" font="5">150</text>
+<text top="-14" left="167" width="54" height="18" font="4">分钟。</text>
+<text top="-18" left="171" width="13" height="24" font="5">2.</text>
+<text top="-14" left="194" width="486" height="18" font="4">本课程在试卷中对不同能力层次要求的分数比例大致为：识记</text>
+<text top="-18" left="684" width="33" height="24" font="5">20%</text>
+<text top="-14" left="717" width="36" height="18" font="4">，领</text>
+<text top="-14" left="135" width="18" height="18" font="4">会</text>
+<text top="-18" left="158" width="33" height="24" font="5">40%</text>
+<text top="-14" left="190" width="90" height="18" font="4">，简单应用</text>
+<text top="-18" left="285" width="33" height="24" font="5">20%</text>
+<text top="-14" left="318" width="90" height="18" font="4">，综合应用</text>
+<text top="-18" left="412" width="33" height="24" font="5">20%</text>
+<text top="-14" left="446" width="18" height="18" font="4">。</text>
+<text top="-18" left="171" width="13" height="24" font="5">3.</text>
+<text top="-14" left="194" width="558" height="18" font="4">要合理安排试题的难易程度，试题的难度可分为：易、较易、较难和难</text>
+<text top="-14" left="135" width="90" height="18" font="4">四个等级。</text>
+</page>
+<page number="22" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">19</text>
+<text top="-18" left="171" width="13" height="24" font="5">4.</text>
+<text top="-14" left="194" width="558" height="18" font="4">本课程考试命题的主要题型一般有单项选择题、简答题、论述题等。各</text>
+<text top="-14" left="135" width="342" height="18" font="4">种题型的具体形式可参见本大纲参考样卷。</text>
+</page>
+<page number="23" position="absolute" top="0" left="0" height="1262" width="892">
+	<fontspec id="8" size="21" family="PRMMSH+SimHei" color="#000000"/>
+	<fontspec id="9" size="16" family="PRMMSH+SimHei" color="#000000"/>
+	<fontspec id="10" size="16" family="DGFMOR+TimesNewRomanPSMT" color="#000000"/>
+	<fontspec id="11" size="16" family="MLJNAR+SimSun" color="#000000"/>
+<text top="-11" left="440" width="13" height="13" font="2">20</text>
+<text top="-17" left="135" width="41" height="21" font="8">附录</text>
+<text top="-20" left="400" width="94" height="24" font="0">参考样卷</text>
+<text top="-12" left="135" width="614" height="16" font="9">一、单项选择题：在每小题列出的备选项中只有一项是最符合题目要求的，请将其选出。</text>
+<text top="-15" left="143" width="12" height="21" font="10">1.</text>
+<text top="-12" left="155" width="286" height="16" font="11">鸦片战争前，中国封建社会的主要矛盾是</text>
+<text top="-15" left="168" width="15" height="21" font="10">A.</text>
+<text top="-12" left="191" width="189" height="16" font="11">工人阶级和资产阶级的矛盾</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="189" height="16" font="11">地主阶级和农民阶级的矛盾</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="189" width="189" height="16" font="11">资产阶级和农民阶级的矛盾</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="189" height="16" font="11">地主阶级和资产阶级的矛盾</text>
+<text top="-15" left="143" width="12" height="21" font="10">2.</text>
+<text top="-12" left="155" width="409" height="16" font="11">中国近代史上，人民群众第一次大规模反侵略的武装斗争是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="182" width="157" height="16" font="11">三元里人民的抗英斗争</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="189" height="16" font="11">太平天国抗击洋枪队的斗争</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="181" width="142" height="16" font="11">台湾人民的抗日斗争</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="189" height="16" font="11">义和团抗击八国联军的斗争</text>
+<text top="-15" left="143" width="43" height="21" font="10">3.1894</text>
+<text top="-12" left="190" width="378" height="16" font="11">年，孙中山在檀香山组建的第一个资产阶级革命团体是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="190" width="47" height="16" font="11">兴中会</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="47" height="16" font="11">华兴会</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="189" width="47" height="16" font="11">光复会</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="79" height="16" font="11">科学补习所</text>
+<text top="-15" left="143" width="43" height="21" font="10">4.1905</text>
+<text top="-12" left="190" width="268" height="16" font="11">年，中国同盟会成立后确立的机关报是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="182" width="79" height="16" font="11">《国闻报》</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="479" width="94" height="16" font="11">《万国公报》</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="181" width="63" height="16" font="11">《民报》</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="480" width="94" height="16" font="11">《新民丛报》</text>
+<text top="-15" left="143" width="12" height="21" font="10">5.</text>
+<text top="-12" left="155" width="457" height="16" font="11">武昌起义前夕爆发的保路运动中，规模最大、斗争最激烈的省份是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="190" width="31" height="16" font="11">广东</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="31" height="16" font="11">湖南</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="189" width="31" height="16" font="11">湖北</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="31" height="16" font="11">四川</text>
+<text top="-15" left="143" width="43" height="21" font="10">6.1925</text>
+<text top="-12" left="190" width="268" height="16" font="11">年，掀起全国范围大革命高潮的起点是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="190" width="142" height="16" font="11">中华全国总工会成立</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="126" height="16" font="11">安源路矿工人罢工</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="189" width="63" height="16" font="11">五卅运动</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="79" height="16" font="11">省港大罢工</text>
+<text top="-15" left="143" width="43" height="21" font="10">7.1927</text>
+<text top="-12" left="190" width="236" height="16" font="11">年，中共八七会议确定的总方针是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="190" width="173" height="16" font="11">开展土地革命和武装斗争</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="126" height="16" font="11">广泛开展工人运动</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="189" width="157" height="16" font="11">建立工农民主统一战线</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="142" height="16" font="11">推翻北洋军阀的统治</text>
+<text top="-15" left="143" width="43" height="21" font="10">8.1930</text>
+<text top="-12" left="190" width="16" height="16" font="11">年</text>
+<text top="-15" left="210" width="8" height="21" font="10">1</text>
+<text top="-12" left="222" width="394" height="16" font="11">月，毛泽东提出中国革命以乡村为中心思想的重要著作是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="182" width="236" height="16" font="11">《中国的红色政权为什么能够存在</text>
+<text top="-15" left="418" width="7" height="21" font="10">?</text>
+<text top="-12" left="425" width="16" height="16" font="11">》</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="479" width="126" height="16" font="11">《井冈山的斗争》</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="181" width="173" height="16" font="11">《星星之火，可以燎原》</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="480" width="126" height="16" font="11">《反对本本主义》</text>
+<text top="-15" left="143" width="43" height="21" font="10">9.1930</text>
+<text top="-12" left="190" width="378" height="16" font="11">年，中国国民党临时行动委员会成立，其主要领导人是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="190" width="31" height="16" font="11">李璜</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="47" height="16" font="11">黄炎培</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="189" width="47" height="16" font="11">梁漱溟</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="47" height="16" font="11">邓演达</text>
+</page>
+<page number="24" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">21</text>
+<text top="-15" left="143" width="51" height="21" font="10">10.1935</text>
+<text top="-12" left="198" width="16" height="16" font="11">年</text>
+<text top="-15" left="218" width="8" height="21" font="10">1</text>
+<text top="-12" left="230" width="346" height="16" font="11">月，中共中央在长征途中召开的政治局扩大会议是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="190" width="63" height="16" font="11">宁都会议</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="63" height="16" font="11">遵义会议</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="189" width="79" height="16" font="11">瓦窑堡会议</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="63" height="16" font="11">洛川会议</text>
+<text top="-15" left="143" width="51" height="21" font="10">11.1935</text>
+<text top="-12" left="198" width="283" height="16" font="11">年，在北平爆发的大规模抗日救亡运动是</text>
+<text top="-15" left="167" width="11" height="21" font="10">A</text>
+<text top="-12" left="178" width="110" height="16" font="11">. 一二·九运动</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="95" height="16" font="11">一二·一运动</text>
+<text top="-15" left="167" width="10" height="21" font="10">C</text>
+<text top="-12" left="177" width="126" height="16" font="11">. 一二·三〇运动</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="79" height="16" font="11">五二〇运动</text>
+<text top="-15" left="143" width="16" height="21" font="10">12</text>
+<text top="-12" left="159" width="8" height="16" font="11">.</text>
+<text top="-15" left="167" width="31" height="21" font="10">1936</text>
+<text top="-12" left="202" width="16" height="16" font="11">年</text>
+<text top="-15" left="222" width="16" height="21" font="10">10</text>
+<text top="-12" left="242" width="315" height="16" font="11">月，中国工农红军三大主力胜利会师的地点是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="190" width="94" height="16" font="11">西康甘孜地区</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="157" height="16" font="11">甘肃会宁、静宁将台堡</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="189" width="94" height="16" font="11">陕北保安地区</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="94" height="16" font="11">四川懋功地区</text>
+<text top="-15" left="143" width="51" height="21" font="10">13.1938</text>
+<text top="-12" left="198" width="16" height="16" font="11">年</text>
+<text top="-15" left="218" width="8" height="21" font="10">3</text>
+<text top="-12" left="230" width="378" height="16" font="11">月，国民党军队在抗日战争正面战场取得胜利的战役是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="190" width="63" height="16" font="11">淞沪战役</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="63" height="16" font="11">忻口战役</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="189" width="79" height="16" font="11">台儿庄战役</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="63" height="16" font="11">枣宜战役</text>
+<text top="-15" left="143" width="51" height="21" font="10">14.1945</text>
+<text top="-12" left="198" width="268" height="16" font="11">年国共两党在重庆谈判中签署的文件是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="182" width="126" height="16" font="11">《国内和平协定》</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="479" width="126" height="16" font="11">《和平建国纲领》</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="181" width="126" height="16" font="11">《对时局的意见》</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="480" width="205" height="16" font="11">《政府与中共代表会谈纪要》</text>
+<text top="-15" left="143" width="51" height="21" font="10">15.1946</text>
+<text top="-12" left="198" width="16" height="16" font="11">年</text>
+<text top="-15" left="218" width="8" height="21" font="10">6</text>
+<text top="-12" left="230" width="441" height="16" font="11">月，国民党当局制造的镇压上海人民团体联合会请愿团的惨案是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="190" width="63" height="16" font="11">济南惨案</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="79" height="16" font="11">校场口惨案</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="189" width="63" height="16" font="11">下关惨案</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="79" height="16" font="11">五二〇惨案</text>
+<text top="-15" left="143" width="51" height="21" font="10">16.1947</text>
+<text top="-12" left="198" width="16" height="16" font="11">年</text>
+<text top="-15" left="218" width="16" height="21" font="10">10</text>
+<text top="-12" left="238" width="16" height="16" font="11">月</text>
+<text top="-15" left="257" width="16" height="21" font="10">10</text>
+<text top="-12" left="277" width="331" height="16" font="11">日，《中国人民解放军宣言》正式提出的口号是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="190" width="173" height="16" font="11">反投降、反分裂、反倒退</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="126" height="16" font="11">和平、民主、团结</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="189" width="173" height="16" font="11">打倒蒋介石，解放全中国</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="173" height="16" font="11">打过长江去，解放全中国</text>
+<text top="-15" left="143" width="51" height="21" font="10">17.1947</text>
+<text top="-12" left="198" width="473" height="16" font="11">年，被国民党当局宣布为“非法团体”而被迫解散的中国民主党派是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="190" width="157" height="16" font="11">中国国民党革命委员会</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="94" height="16" font="11">中国民主同盟</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="189" width="79" height="16" font="11">中国致公党</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="126" height="16" font="11">台湾民主自治同盟</text>
+<text top="-15" left="143" width="55" height="21" font="10">18. 1949</text>
+<text top="-12" left="202" width="16" height="16" font="11">年</text>
+<text top="-15" left="222" width="8" height="21" font="10">4</text>
+<text top="-12" left="234" width="268" height="16" font="11">月，中国人民解放军发起的重大战役是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="190" width="63" height="16" font="11">辽沈战役</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="63" height="16" font="11">平津战役</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="189" width="63" height="16" font="11">淮海战役</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="63" height="16" font="11">渡江战役</text>
+<text top="-15" left="143" width="20" height="21" font="10">19.</text>
+<text top="-12" left="163" width="378" height="16" font="11">我国对资本主义工商业进行社会主义改造的高级形式是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="190" width="63" height="16" font="11">公私合营</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="63" height="16" font="11">经销代销</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="189" width="63" height="16" font="11">加工订货</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="63" height="16" font="11">统购包销</text>
+<text top="-15" left="143" width="16" height="21" font="10">20</text>
+<text top="-12" left="159" width="8" height="16" font="11">.</text>
+<text top="-15" left="167" width="31" height="21" font="10">1956</text>
+<text top="-12" left="202" width="378" height="16" font="11">年，毛泽东发表的《论十大关系》所围绕的基本方针是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="190" width="173" height="16" font="11">调整、巩固、充实、提高</text>
+<text top="-15" left="167" width="14" height="21" font="10">B.</text>
+<text top="-12" left="189" width="157" height="16" font="11">正确处理人民内部矛盾</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="189" width="205" height="16" font="11">自力更生为主，争取外援为辅</text>
+<text top="-15" left="167" width="15" height="21" font="10">D.</text>
+<text top="-12" left="190" width="283" height="16" font="11">调动一切积极因素，为社会主义事业服务</text>
+</page>
+<page number="25" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">22</text>
+<text top="-15" left="143" width="16" height="21" font="10">21</text>
+<text top="-12" left="159" width="8" height="16" font="11">.</text>
+<text top="-15" left="167" width="31" height="21" font="10">1970</text>
+<text top="-12" left="202" width="315" height="16" font="11">年，新中国在科学技术领域取得的重大成就是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="190" width="157" height="16" font="11">第一颗原子弹试验成功</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="142" height="16" font="11">第一颗氢弹试验成功</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="189" width="173" height="16" font="11">第一颗人造卫星发射成功</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="220" height="16" font="11">第一颗中近程地地导弹发射成功</text>
+<text top="-15" left="143" width="16" height="21" font="10">22</text>
+<text top="-12" left="159" width="8" height="16" font="11">.</text>
+<text top="-15" left="167" width="31" height="21" font="10">1979</text>
+<text top="-12" left="202" width="16" height="16" font="11">年</text>
+<text top="-15" left="222" width="8" height="21" font="10">1</text>
+<text top="-12" left="234" width="16" height="16" font="11">月</text>
+<text top="-15" left="253" width="8" height="21" font="10">1</text>
+<text top="-12" left="265" width="268" height="16" font="11">日，全国人大常委会发表的重要文献是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="182" width="126" height="16" font="11">《告台湾同胞书》</text>
+<text top="-15" left="167" width="14" height="21" font="10">B.</text>
+<text top="-12" left="181" width="331" height="16" font="11">《关于台湾回归祖国实现和平统一的方针政策》</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="181" width="299" height="16" font="11">《为促进祖国统一大业的完成而继续奋斗》</text>
+<text top="-15" left="167" width="15" height="21" font="10">D.</text>
+<text top="-12" left="182" width="126" height="16" font="11">《反国家分裂法》</text>
+<text top="-15" left="143" width="16" height="21" font="10">23</text>
+<text top="-12" left="159" width="8" height="16" font="11">.</text>
+<text top="-15" left="167" width="31" height="21" font="10">1990</text>
+<text top="-12" left="202" width="362" height="16" font="11">年，邓小平提出的关于中国农业改革与发展的思想是</text>
+<text top="-15" left="168" width="15" height="21" font="10">A.</text>
+<text top="-12" left="184" width="179" height="16" font="11">“三个主体，三个补充”</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="479" width="79" height="16" font="11">“三步走”</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="181" width="94" height="16" font="11">“两个大局”</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="480" width="95" height="16" font="11">“两个飞跃”</text>
+<text top="-15" left="143" width="16" height="21" font="10">24</text>
+<text top="-12" left="159" width="135" height="16" font="11">.中共十六大提出，</text>
+<text top="-15" left="294" width="16" height="21" font="10">21</text>
+<text top="-12" left="314" width="222" height="16" font="11">世纪头二十年我国的奋斗目标是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="190" width="110" height="16" font="11">基本实现现代化</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="126" height="16" font="11">全面建设小康社会</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="189" width="142" height="16" font="11">实现“四个现代化”</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="126" height="16" font="11">全面建成小康社会</text>
+<text top="-15" left="143" width="16" height="21" font="10">25</text>
+<text top="-12" left="159" width="437" height="16" font="11">.中共十九大报告明确指出，中国特色社会主义最本质的特征是</text>
+<text top="-15" left="167" width="15" height="21" font="10">A.</text>
+<text top="-12" left="190" width="94" height="16" font="11">人民当家作主</text>
+<text top="-15" left="465" width="15" height="21" font="10">B.</text>
+<text top="-12" left="487" width="110" height="16" font="11">中国共产党领导</text>
+<text top="-15" left="167" width="14" height="21" font="10">C.</text>
+<text top="-12" left="189" width="94" height="16" font="11">坚持共同富裕</text>
+<text top="-15" left="465" width="15" height="21" font="10">D.</text>
+<text top="-12" left="488" width="94" height="16" font="11">全面依法治国</text>
+<text top="-12" left="135" width="79" height="16" font="9">二、简答题</text>
+<text top="-15" left="135" width="16" height="21" font="10">26</text>
+<text top="-12" left="151" width="276" height="16" font="11">.简述近代中国民族资产阶级的两面性。</text>
+<text top="-15" left="135" width="16" height="21" font="10">27</text>
+<text top="-12" left="151" width="260" height="16" font="11">.简述中华民国南京临时政府的性质。</text>
+<text top="-15" left="135" width="16" height="21" font="10">28</text>
+<text top="-12" left="151" width="291" height="16" font="11">.简述延安整风运动的主要内容及其意义。</text>
+<text top="-15" left="135" width="16" height="21" font="10">29</text>
+<text top="-12" left="151" width="228" height="16" font="11">.简述抗美援朝战争胜利的意义。</text>
+<text top="-15" left="135" width="16" height="21" font="10">30</text>
+<text top="-12" left="151" width="370" height="16" font="11">.简述邓小平提出的“一个国家、两种制度”的构想。</text>
+<text top="-12" left="135" width="154" height="16" font="9">三、论述题：本大题共</text>
+<text top="-15" left="294" width="8" height="21" font="10">3</text>
+<text top="-12" left="305" width="140" height="16" font="9">小题，考生任选其中</text>
+<text top="-15" left="450" width="8" height="21" font="10">2</text>
+<text top="-12" left="462" width="235" height="16" font="9">题作答。如果考生回答的题目超过</text>
+<text top="-15" left="700" width="8" height="21" font="10">2</text>
+<text top="-12" left="712" width="46" height="16" font="9">题，只</text>
+<text top="-12" left="167" width="142" height="16" font="9">按考生回答题目的前</text>
+<text top="-15" left="312" width="8" height="21" font="10">2</text>
+<text top="-12" left="324" width="63" height="16" font="9">题计分。</text>
+<text top="-15" left="135" width="20" height="21" font="10">31.</text>
+<text top="-12" left="155" width="205" height="16" font="11">怎样认识洋务运动失败的原因</text>
+<text top="-15" left="359" width="7" height="21" font="10">?</text>
+<text top="-15" left="135" width="20" height="21" font="10">32.</text>
+<text top="-12" left="155" width="299" height="16" font="11">怎样认识新文化运动的主要内容和历史意义</text>
+<text top="-15" left="454" width="7" height="21" font="10">?</text>
+<text top="-15" left="135" width="20" height="21" font="10">33.</text>
+<text top="-12" left="155" width="315" height="16" font="11">怎样认识推进中国式现代化是一个系统工程？</text>
+</page>
+<page number="26" position="absolute" top="0" left="0" height="1262" width="892">
+<text top="-11" left="440" width="13" height="13" font="2">23</text>
+<text top="-20" left="400" width="94" height="24" font="0">大纲后记</text>
+<text top="-14" left="171" width="587" height="18" font="4">《中国近现代史纲要》课程自学考试大纲由全国高等教育自学考试指导委员</text>
+<text top="-14" left="135" width="289" height="18" font="4">会公共课课程指导委员会组织制定，</text>
+<text top="-14" left="415" width="343" height="18" font="4">《求是》杂志社李捷研究员、中国人民大学</text>
+<text top="-14" left="135" width="623" height="18" font="4">王顺生教授、北京大学仝华教授负责修订工作，北京师范大学王炳林教授、南开</text>
+<text top="-14" left="135" width="450" height="18" font="4">大学纪亚光教授、中国人民大学刘辉教授负责审稿工作。</text>
+<text top="-14" left="171" width="378" height="18" font="4">对参与本大纲编写和审稿的各位专家表示感谢。</text>
+<text top="-14" left="477" width="270" height="18" font="4">全国高等教育自学考试指导委员会</text>
+<text top="-14" left="522" width="180" height="18" font="4">公共课课程指导委员会</text>
+<text top="-18" left="576" width="36" height="24" font="5">2024</text>
+<text top="-14" left="617" width="18" height="18" font="4">年</text>
+<text top="-18" left="639" width="9" height="24" font="5">8</text>
+<text top="-14" left="653" width="18" height="18" font="4">月</text>
+</page>
+<outline>
+<item page="4">一、课程性质和特点　</item>
+<item page="4">二、课程目标　</item>
+<item page="6">第一章　反对外国侵略的斗争</item>
+<outline>
+<item page="6">一、学习目的与要求　</item>
+<item page="6">二、课程内容　</item>
+<outline>
+<item page="6">1.鸦片战争前的中国和世界</item>
+<item page="6">2.西方列强对中国的侵略及近代中国社会的演变</item>
+<item page="6">3.抵御外来侵略、争取民族独立的斗争</item>
+</outline>
+<item page="6">三、考核知识点与考核要求　</item>
+<outline>
+<item page="6">1.鸦片战争前的中国和世界</item>
+</outline>
+</outline>
+<item page="7">第二章　对国家出路的早期探索</item>
+<outline>
+<item page="7">一、学习目的与要求　</item>
+<item page="7">二、课程内容　</item>
+<outline>
+<item page="7">1.农民群众斗争风暴的起落</item>
+<item page="7">2.地主阶级统治集团“自救”活动的兴衰</item>
+<item page="7">3.维新运动的兴起和夭折</item>
+</outline>
+<item page="7">三、考核知识点与考核要求　</item>
+<outline>
+<item page="7">1.农民群众斗争风暴的起落</item>
+</outline>
+</outline>
+<item page="8">第三章　辛亥革命</item>
+<outline>
+<item page="8">一、学习目的与要求　</item>
+<item page="8">二、课程内容　</item>
+<outline>
+<item page="8">1.举起近代民族民主革命的旗帜</item>
+<item page="8">2.辛亥革命的胜利与失败</item>
+</outline>
+<item page="8">三、考核知识点与考核要求　</item>
+<outline>
+<item page="8">1.举起近代民族民主革命的旗帜</item>
+</outline>
+</outline>
+<item page="9">第四章　开天辟地的大事变</item>
+<outline>
+<item page="9">一、学习目的与要求　</item>
+<item page="9">二、课程内容　</item>
+<outline>
+<item page="9">1.新文化运动与五四运动</item>
+<item page="9">2.马克思主义传播与中国共产党诞生</item>
+<item page="9">3.国共合作与国民革命</item>
+</outline>
+<item page="9">三、考核知识点与考核要求　</item>
+<outline>
+<item page="9">1.新文化运动与五四运动</item>
+</outline>
+</outline>
+<item page="10">第五章　中国革命的新道路</item>
+<outline>
+<item page="10">一、学习目的与要求　</item>
+<item page="10">二、课程内容　</item>
+<outline>
+<item page="10">1.国民党在全国的统治和中间党派的政治主张</item>
+<item page="10">2.中国共产党对革命新道路的艰苦探索</item>
+<item page="11">3.中国革命在探索中曲折前进</item>
+</outline>
+<item page="11">三、考核知识点与考核要求　</item>
+<outline>
+<item page="11">1.国民党在全国的统治和中间党派的政治主张</item>
+</outline>
+</outline>
+<item page="11">第六章　中华民族的抗日战争</item>
+<outline>
+<item page="11">一、学习目的与要求　</item>
+<item page="12">二、课程内容　</item>
+<outline>
+<item page="12">1.日本发动灭亡中国的侵略战争</item>
+<item page="12">2.中国人民奋起抗击日本侵略者</item>
+<item page="12">3.国民党的正面战场与大后方的抗日民主运动</item>
+<item page="12">4.中国共产党成为抗日战争的中流砥柱</item>
+<item page="12">5.抗日战争的胜利及其意义</item>
+</outline>
+<item page="12">三、考核知识点与考核要求　</item>
+<outline>
+<item page="12">1.日本发动灭亡中国的侵略战争</item>
+</outline>
+</outline>
+<item page="13">第七章　为创建新中国而奋斗</item>
+<outline>
+<item page="13">一、学习目的与要求　</item>
+<item page="14">二、课程内容　</item>
+<outline>
+<item page="14">1.从争取和平民主到进行自卫战争</item>
+<item page="14">2.国民党政府处在全民的包围中</item>
+<item page="14">3.新民主主义革命的胜利</item>
+</outline>
+<item page="14">三、考核知识点与考核要求　</item>
+<outline>
+<item page="14">1.从争取和平民主到进行自卫战争</item>
+</outline>
+</outline>
+<item page="15">第八章　完成社会主义革命和推进社会主义建设</item>
+<outline>
+<item page="15">一、学习目的与要求　</item>
+<item page="15">二、课程内容　</item>
+<outline>
+<item page="15">1.《共同纲领》的全面实施与新民主主义革命任务的胜利完成</item>
+<item page="15">2.过渡时期总路线的实施和社会主义制度的确立</item>
+<item page="15">3.探索中国社会主义建设道路的良好开局</item>
+</outline>
+<item page="15">三、考核知识点与考核要求</item>
+<outline>
+<item page="15">1.《共同纲领》的全面实施与新民主主义革命任务的胜利完成</item>
+</outline>
+<item page="17">一、学习目的与要求　</item>
+<item page="17">二、课程内容　</item>
+<outline>
+<item page="17">1.历史性的伟大转折和改革开放的起步</item>
+<item page="17">2.开创中国特色社会主义</item>
+<item page="17">3.把中国特色社会主义推向二十一世纪</item>
+<item page="17">4.在新形势下坚持和发展中国特色社会主义</item>
+</outline>
+<item page="17">三、考核知识点与考核要求　</item>
+<outline>
+<item page="18">1.历史性的伟大转折和改革开放的起步</item>
+</outline>
+</outline>
+<item page="19">第十章　中国特色社会主义进入新时代</item>
+<outline>
+<item page="19">一、学习目的与要求　</item>
+<item page="19">二、课程内容　</item>
+<outline>
+<item page="19">1.新时代的不平凡历程</item>
+<item page="19">2.新时代的三件大事</item>
+<item page="19">3.新时代的伟大成就和伟大变革</item>
+<item page="19">三、考核知识点与考核要求　</item>
+<item page="19">1.新时代的不平凡历程</item>
+</outline>
+<item page="21">三、关于自学要求和自学方法的指导</item>
+<item page="21">本课程共3学分，学生在学习中须坚持以下学习方法：</item>
+</outline>
+</outline>
+</pdf2xml>
