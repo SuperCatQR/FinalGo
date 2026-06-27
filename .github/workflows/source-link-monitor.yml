@@ -1,0 +1,131 @@
+name: source-link-monitor
+
+# 考纲/来源链接变更主动检测 (CHO-14)
+# 定期检查「来源与引用」/「考纲与教材」/「真题索引」节中所有外部 URL 的可访问性，
+# 并对权威考纲页 (jseea.cn) 做内容哈希漂移检测。检测到需降级的变更时，
+# 自动开一个 GitHub 跟踪 issue（仅作技术告警），由维护者按 PRD §4.2 应用降级。
+#
+# 注意：本 workflow 只做「检测 + 告警」，不修改任何课程 Markdown，不部署。
+#
+# Jobs are split by permission scope:
+#   check-links         — read-only detection + issue alert  (contents: read,  issues: write)
+#   refresh-baseline    — write baseline + open PR           (contents: write, pull-requests: write)
+#                          ONLY runs on workflow_dispatch with update_baseline=true
+
+on:
+  schedule:
+    # 每周一 03:17 UTC（北京时间 11:17）。错峰避开整点。
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+    inputs:
+      update_baseline:
+        description: "把本次探测结果写回基线并提交 PR（人工确认变更后用）"
+        type: boolean
+        default: false
+
+concurrency:
+  group: source-link-monitor
+  cancel-in-progress: false
+
+jobs:
+  # ── primary detection + alert ──────────────────────────────────────────
+  check-links:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run link check
+        id: check
+        run: |
+          python scripts/check-source-links.py \
+            --timeout 20 --retries 2 \
+            --report site/source-link-report.md \
+            --summary site/source-link-report.json
+          {
+            echo "actionable=$(python -c "import json;print(json.load(open('site/source-link-report.json'))['actionable_count'])")"
+            echo "bulk=$(python -c "import json;print(json.load(open('site/source-link-report.json'))['bulk_rot_count'])")"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Job summary
+        if: always()
+        run: cat site/source-link-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-link-report
+          path: |
+            site/source-link-report.md
+            site/source-link-report.json
+          retention-days: 30
+
+      - name: Open / update tracking issue on actionable change
+        if: steps.check.outputs.actionable != '0' || steps.check.outputs.bulk != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Ensure the label exists (idempotent); ignore "already exists".
+          gh label create "source-link-rot" --color "b60205" \
+            --description "考纲/来源链接失效或变更，待降级处理 (CHO-14)" 2>/dev/null || true
+          title="[link-monitor] 检测到考纲/来源链接变更，待降级处理"
+          body_file="$(mktemp)"
+          {
+            echo "> 自动检测告警（CHO-14）。本 issue 仅作技术跟踪，**派活与降级执行在 Multica issue 进行**。"
+            echo ""
+            cat site/source-link-report.md
+            echo ""
+            echo "---"
+            echo "处理路径：维护者据报告按 PRD §4.2 在对应课程页应用 🟢→🟡 / 🟡→🔴 降级；"
+            echo "批量腐烂的主机优先人工重新定位新入口，确认后用 \`workflow_dispatch (update_baseline=true)\` 刷新基线。"
+          } > "$body_file"
+
+          existing="$(gh issue list --state open --search "in:title [link-monitor]" --json number --jq '.[0].number')"
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file "$body_file"
+          else
+            gh issue create --title "$title" --body-file "$body_file" --label "source-link-rot"
+          fi
+
+  # ── manual baseline refresh (dispatch-only) ────────────────────────────
+  refresh-baseline:
+    if: github.event_name == 'workflow_dispatch' && inputs.update_baseline
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh baseline
+        run: |
+          python scripts/check-source-links.py --timeout 20 --retries 2 --update-baseline \
+            --report site/source-link-report.md --summary site/source-link-report.json
+          if git diff --quiet -- docs/jiangsu/source-links.baseline.json; then
+            echo "Baseline unchanged; nothing to commit."
+            exit 0
+          fi
+          branch="chore/refresh-source-link-baseline-${GITHUB_RUN_ID}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add docs/jiangsu/source-links.baseline.json
+          git commit -m "chore: 刷新考纲链接检测基线"
+          git push -u origin "$branch"
+          gh pr create --base main --head "$branch" --title "chore: 刷新考纲链接检测基线" \
+            --body "由 source-link-monitor 手动 dispatch 刷新基线。请确认变更已人工核实后再合并。"
