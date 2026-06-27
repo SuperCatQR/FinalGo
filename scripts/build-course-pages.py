@@ -3,6 +3,9 @@
 
 This is intentionally dependency-free so the Phase 1 frontend contract can be
 validated in the current repository without introducing a site generator yet.
+
+Phase 2 (CHO-10 B-1/B-2/B-3): publish-gate with blocking errors, exam-index
+structured separation, and content_revision snapshot binding.
 """
 
 from __future__ import annotations
@@ -11,7 +14,8 @@ import argparse
 import html
 import re
 import shutil
-from dataclasses import dataclass
+import subprocess
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Iterable
 
@@ -55,6 +59,68 @@ PUBLIC_AUTO_GEN_CODES = {"15040", "15043", "15044", "13000"}
 AUTO_GEN_START_MARKERS = ("<!-- AUTO-GEN-COVERAGE-START", "<!-- AUTO_GEN_START:public-course-coverage")
 AUTO_GEN_END_MARKERS = ("<!-- AUTO-GEN-COVERAGE-END", "<!-- AUTO_GEN_END:public-course-coverage")
 
+# ── content_revision snapshot (B-3) ──────────────────────────────────────────
+
+
+def git_head_commit(repo_root: Path) -> str:
+    """Return the HEAD commit hash, or empty string if unavailable."""
+    try:
+        result = subprocess.run(
+            ["git", "-C", str(repo_root), "rev-parse", "HEAD"],
+            capture_output=True, text=True, check=True,
+        )
+        return result.stdout.strip()
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return ""
+
+
+# ── exam-index structured fields (B-2) ───────────────────────────────────────
+
+
+def parse_exam_index_from_frontmatter(fm: dict[str, str]) -> tuple[list[str], list[str]]:
+    """Parse current_exam_periods / legacy_comparison_periods from frontmatter.
+
+    Frontmatter format (whitespace-indented continuation lines):
+        exam_index:
+          current_exam_periods: [2024-10, 2025-04, 2025-10]
+          legacy_comparison_periods: []
+    """
+    current: list[str] = []
+    legacy: list[str] = []
+
+    # The nested frontmatter is collapsed into single-line strings by
+    # split_frontmatter; re-parse the YAML-like blocks.
+    # Strategy: look for the raw keys in the combined frontmatter text.
+    def _extract_list(raw: str, key: str) -> list[str]:
+        # Match a JSON array or multi-line indented list.
+        m = re.search(rf"{key}\s*:\s*\[([^\]]*)\]", raw)
+        if m:
+            items = [s.strip().strip("'\"") for s in m.group(1).split(",") if s.strip()]
+            return [item for item in items if item]
+        # Try multi-line with indented list items.
+        m = re.search(rf"{key}\s*:\s*\n((?:\s+-\s+[^\n]+\n?)*)", raw)
+        if m:
+            items = re.findall(r"-\s+([^\n]+)", m.group(1))
+            return [item.strip().strip("'\"") for item in items if item.strip()]
+        return []
+
+    current = _extract_list(raw_text_for_frontmatter(fm), "current_exam_periods")
+    legacy = _extract_list(raw_text_for_frontmatter(fm), "legacy_comparison_periods")
+    return current, legacy
+
+
+def raw_text_for_frontmatter(fm: dict[str, str]) -> str:
+    """Reconstruct a rough key-value text from the frontmatter dict for regex scanning."""
+    return "\n".join(f"{k}: {v}" for k, v in fm.items())
+
+
+# ── publish-gate target (B-1/B-3) ────────────────────────────────────────────
+
+# Pages that are actively published (🟢 human_review_publishable) and must
+# pass blocking validation.  During Phase 2 build, pages still at 🔴/🟡 only
+# emit warnings; the gate blocks ONLY when a page claims publishable status.
+PUBLISHABLE_STATUS_MARKER = "🟢"
+
 
 @dataclass
 class CoursePage:
@@ -71,14 +137,9 @@ class CoursePage:
 @dataclass
 class BuildResult:
     pages: int = 0
-    warnings: list[str] | None = None
-    errors: list[str] | None = None
-
-    def __post_init__(self) -> None:
-        if self.warnings is None:
-            self.warnings = []
-        if self.errors is None:
-            self.errors = []
+    warnings: list[str] = field(default_factory=list)
+    errors: list[str] = field(default_factory=list)
+    content_revision: str = ""  # HEAD commit hash at build time (B-3)
 
 
 def read_text(path: Path) -> str:
@@ -235,7 +296,29 @@ def parse_auto_gen_count(text: str) -> dict[str, int]:
 
 
 def validate_page(page: CoursePage, result: BuildResult) -> None:
+    """Validate a course page against the publish-gate contract (B-1).
+
+    Advisory warnings (always emitted):
+      - E-R01: missing meta fields
+      - E-R02: MIGRATION_STATUS != v2
+      - E-R08: unparseable status
+      - E-R16: missing AUTO_GEN markers on public courses
+
+    Blocking errors (emitted when page claims 🟢 publishable status):
+      - REPLACEMENT_FREE_TEXT_BYPASS: free-text replacement in body bypasses
+        the structured 4-field table
+      - PUBLISH_PENDING_REQUIRED_DATA: required fields still in pending state
+      - HUMAN_REVIEW_REQUIRED: publishable but no human review signature
+      - EXAM_INDEX_SCOPE_MIXED: old/new code exam periods mixed in one row
+      - EXAM_INDEX_DUPLICATED_SCOPE: same exam_period+course_code in both
+        current and legacy lists
+      - CONTENT_REVISION_MISMATCH: page content_revision differs from build
+        HEAD commit
+    """
     required = ["省份", "课程代码", "课程名称", "学分", "状态", "版本号", "发布日期", "数据状态", "MIGRATION_STATUS"]
+    publishable = page.meta.get("状态", "").startswith(PUBLISHABLE_STATUS_MARKER)
+
+    # ── advisory warnings (always checked) ───────────────────────────────
     if page.code in V2_CODES:
         for field in required:
             if not page.meta.get(field):
@@ -250,6 +333,184 @@ def validate_page(page: CoursePage, result: BuildResult) -> None:
     if page.code == "00023" and not any(marker in page.body for marker in AUTO_GEN_START_MARKERS):
         # Contract: 00023 has no AUTO_GEN and must not warn/error.
         pass
+
+    # ── blocking errors (only when page claims publishable) ──────────────
+    if not publishable:
+        return
+
+    # B-1: REPLACEMENT_FREE_TEXT_BYPASS — blockquote replacement text
+    # bypassing the structured 4-field table.
+    if page.code in V2_CODES:
+        _check_replacement_free_text_bypass(page, result)
+
+    # B-1: PUBLISH_PENDING_REQUIRED_DATA — any required field still pending.
+    _check_publish_pending(page, result)
+
+    # B-1: HUMAN_REVIEW_REQUIRED — publishable without review signature.
+    _check_human_review(page, result)
+
+    # B-2: EXAM_INDEX_SCOPE_MIXED / EXAM_INDEX_DUPLICATED_SCOPE
+    _check_exam_index_scope(page, result)
+
+    # B-3: CONTENT_REVISION_MISMATCH
+    _check_content_revision(page, result)
+
+
+# ── B-1 sub-checks ───────────────────────────────────────────────────────────
+
+
+def _check_replacement_free_text_bypass(page: CoursePage, result: BuildResult) -> None:
+    """Block if replacement-relation section has free-text blockquote alongside the 4-field table."""
+    in_replacement_section = False
+    has_4field_table = False
+    has_free_text = False
+    lines = page.body.splitlines()
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        if stripped.startswith("## 新旧课程顶替"):
+            in_replacement_section = True
+            continue
+        if in_replacement_section and stripped.startswith("## ") and "新旧课程顶替" not in stripped:
+            break
+        if not in_replacement_section:
+            continue
+        # Detect the 4-field structured table (header row "| 字段 | 内容 |")
+        if stripped == "| 字段 | 内容 |":
+            has_4field_table = True
+            continue
+        # Detect free-text blockquote in replacement section
+        if stripped.startswith("> ") and "替代" in stripped:
+            has_free_text = True
+            continue
+    if has_free_text and has_4field_table:
+        result.errors.append(
+            f"REPLACEMENT_FREE_TEXT_BYPASS: {page.source}: "
+            "新旧课程顶替区块同时存在 4 字段结构化表和自由文本 blockquote，"
+            "自由文本可能形成与结构化字段不一致的旁路。"
+            "请移除 blockquote 中的顶替关系自由文本，仅保留 4 字段表。"
+        )
+
+
+def _check_publish_pending(page: CoursePage, result: BuildResult) -> None:
+    """Block if required data is still in pending state."""
+    pending_values = {"待补充", "待统计", "待收集", "待校对", "待确认", "待核验"}
+    # Check meta table fields
+    for key in ("数据状态", "发布日期"):
+        val = page.meta.get(key, "")
+        if any(pv in val for pv in pending_values):
+            result.errors.append(
+                f"PUBLISH_PENDING_REQUIRED_DATA: {page.source}: "
+                f"元信息字段「{key}」仍处于待定状态（值：{val}），"
+                f"不得标记为 🟢 可发布。"
+            )
+    # Check replacement relation confirmation status via frontmatter
+    replacement_confirmed = page.frontmatter.get("replacement_confirmed", "")
+    if replacement_confirmed and replacement_confirmed.lower() not in ("true", "yes", "confirmed"):
+        result.errors.append(
+            f"PUBLISH_PENDING_REQUIRED_DATA: {page.source}: "
+            "顶替关系确认状态仍为 pending，不得标记为 🟢 可发布。"
+        )
+    # Check exam-index source_status / analysis_status in frontmatter
+    for key in ("exam_source_status", "exam_analysis_status"):
+        val = page.frontmatter.get(key, "")
+        if any(pv in val for pv in pending_values):
+            result.errors.append(
+                f"PUBLISH_PENDING_REQUIRED_DATA: {page.source}: "
+                f"真题数据字段「{key}」仍处于待定状态（值：{val}），"
+                f"不得标记为 🟢 可发布。"
+            )
+
+
+def _check_human_review(page: CoursePage, result: BuildResult) -> None:
+    """Block if page claims publishable but lacks human review signature."""
+    reviewed = page.frontmatter.get("reviewed", "")
+    reviewer = page.frontmatter.get("reviewer", "")
+    if reviewed.lower() not in ("true", "yes"):
+        result.errors.append(
+            f"HUMAN_REVIEW_REQUIRED: {page.source}: "
+            "页面标记为 🟢 可发布但缺少人工校对签名。"
+            "请在 frontmatter 中设置 reviewed: true 和 reviewer: <姓名>。"
+        )
+    elif not reviewer:
+        result.errors.append(
+            f"HUMAN_REVIEW_REQUIRED: {page.source}: "
+            "reviewed=true 但 reviewer 字段为空，"
+            "人工校对签名不可追溯。请填写 reviewer。"
+        )
+
+
+# ── B-2 sub-checks ───────────────────────────────────────────────────────────
+
+
+def _check_exam_index_scope(page: CoursePage, result: BuildResult) -> None:
+    """Validate exam-index structured separation (B-2).
+
+    Checks:
+      - EXAM_INDEX_SCOPE_MIXED: a single exam-period table row references both
+        15043 and 03708 (old/new mixed).
+      - EXAM_INDEX_DUPLICATED_SCOPE: same exam_period appears in both
+        current_exam_periods and legacy_comparison_periods frontmatter lists.
+    """
+    # 1. Scan the markdown exam-period table for mixed rows.
+    in_exam_index = False
+    lines = page.body.splitlines()
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        if stripped.startswith("## 考期索引"):
+            in_exam_index = True
+            continue
+        if in_exam_index and stripped.startswith("## ") and "考期索引" not in stripped:
+            break
+        if not in_exam_index:
+            continue
+        if stripped.startswith("|") and not stripped.startswith("|---") and not stripped.startswith("| 考期"):
+            cells = [c.strip() for c in stripped.strip("|").split("|")]
+            row_text = " ".join(cells)
+            # Check if row mentions both old and new codes
+            has_new = any(code in row_text for code in ("15043", "15044"))
+            has_old = any(code in row_text for code in ("03708", "03709"))
+            if has_new and has_old:
+                result.errors.append(
+                    f"EXAM_INDEX_SCOPE_MIXED: {page.source}: "
+                    f"考期索引行混排新旧代码（{row_text[:60]}...），"
+                    f"请拆分为 current_exam_periods 和 legacy_comparison_periods。"
+                )
+
+    # 2. Check frontmatter structured lists for dedup.
+    current, legacy = parse_exam_index_from_frontmatter(page.frontmatter)
+    if current and legacy:
+        overlap = set(current) & set(legacy)
+        if overlap:
+            result.errors.append(
+                f"EXAM_INDEX_DUPLICATED_SCOPE: {page.source}: "
+                f"考期 {sorted(overlap)} 同时出现在 current_exam_periods 和 "
+                f"legacy_comparison_periods 中，请移除重复项。"
+            )
+
+
+# ── B-3 sub-checks ───────────────────────────────────────────────────────────
+
+
+def _check_content_revision(page: CoursePage, result: BuildResult) -> None:
+    """Validate content_revision snapshot consistency (B-3).
+
+    When the page frontmatter carries a content_revision field, it must match
+    the build-time HEAD commit.  Mismatch means the page was validated against
+    a different snapshot than what is being built.
+    """
+    page_rev = page.frontmatter.get("content_revision", "")
+    if not page_rev:
+        # No revision pinned yet — advisory only (not blocking).
+        return
+    build_rev = result.content_revision
+    if not build_rev:
+        return  # Can't compare without a build revision.
+    if page_rev != build_rev:
+        result.errors.append(
+            f"CONTENT_REVISION_MISMATCH: {page.source}: "
+            f"页面 content_revision={page_rev[:8]} 与构建 HEAD={build_rev[:8]} 不一致，"
+            f"请重新校验后发布。"
+        )
 
 
 def render_inline(text: str) -> str:
@@ -448,13 +709,18 @@ def render_markdown(body: str, page: CoursePage | None = None) -> str:
 def render_old_code_page(page: CoursePage) -> str:
     target_code, target_name = OLD_CODE_TARGETS[page.code]
     if page.code == "03708":
-        message = "📢 本课程已被替代：自 2024 年 10 月考期起，『中国近现代史纲要』使用新代码 15043。"
+        message = "📢 此页面为历史参考：自 2024 年 10 月考期起，『中国近现代史纲要』使用新代码 15043。现行有效页面为 15043。"
     else:
-        message = "📢 本课程已被替代：自 2024 年 10 月考期起，『马克思主义基本原理』使用新代码 15044。"
+        message = "📢 此页面为历史参考：自 2024 年 10 月考期起，『马克思主义基本原理』使用新代码 15044。现行有效页面为 15044。"
     body = render_markdown(page.body, page)
     target_href = prefix_path(f"/courses/{target_code}/")
-    banner = f'<div class="jump-banner">{html.escape(message)}<a class="button-link" href="{escape_attr(target_href)}">查看 {target_code} {html.escape(target_name)}</a></div>'
-    return html_shell(page.title, banner + body, canonical=f"/courses/{target_code}/", noindex="noindex, follow")
+    banner = (
+        f'<div class="jump-banner jump-banner--archive" role="alert">'
+        f'{html.escape(message)}'
+        f'<a class="button-link" href="{escape_attr(target_href)}">查看 {target_code} {html.escape(target_name)}</a>'
+        f'</div>'
+    )
+    return html_shell(page.title, banner + body, canonical=prefix_path(f"/courses/{target_code}/"), noindex="noindex, follow")
 
 
 def render_course_page(page: CoursePage, result: BuildResult) -> str:
@@ -617,6 +883,7 @@ details { margin:8px 0; } summary { cursor:pointer; padding:8px 12px; border-lef
 
 def build(out_dir: Path) -> BuildResult:
     result = BuildResult()
+    result.content_revision = git_head_commit(ROOT)
     if out_dir.exists():
         shutil.rmtree(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -651,13 +918,16 @@ def build(out_dir: Path) -> BuildResult:
     result.pages += 1
 
     report = ["# Course frontend build report", "", f"Pages generated: {result.pages}", ""]
+    if result.content_revision:
+        report.append(f"Build revision: `{result.content_revision}`")
+        report.append("")
     if result.warnings:
         report.append("## Warnings")
         report.extend(f"- {w}" for w in result.warnings)
     else:
         report.append("No warnings.")
     if result.errors:
-        report.append("## Errors")
+        report.append("## Errors (blocking)")
         report.extend(f"- {e}" for e in result.errors)
     (out_dir.parent / "course-build-report.md").write_text("\n".join(report) + "\n", encoding="utf-8")
     return result
