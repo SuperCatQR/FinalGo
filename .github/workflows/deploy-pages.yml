@@ -1,0 +1,92 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+# Grant the GITHUB_TOKEN permissions for Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build site
+        run: |
+          python scripts/build-course-pages.py --base /FinalGo/
+          echo "=== Build report ==="
+          cat site/course-build-report.md
+
+      - name: Ensure site directory not empty
+        run: |
+          if [ ! -d "site" ] || [ -z "$(ls -A site 2>/dev/null)" ]; then
+            echo "ERROR: site/ directory is empty or missing"
+            exit 1
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  lighthouse-audit:
+    needs: build-and-deploy
+    runs-on: ubuntu-latest
+    env:
+      SITE_URL: https://supercatqr.github.io/FinalGo/
+    steps:
+      - name: Wait for Pages deployment to settle
+        run: sleep 30
+
+      - name: Run Lighthouse CI
+        continue-on-error: true
+        run: |
+          npx -y @lhci/cli@latest collect \
+            --url="$SITE_URL" \
+            --url="$SITE_URL"courses/ \
+            --numberOfRuns=1 2>&1 || true
+          npx -y @lhci/cli@latest upload \
+            --target=temporary-public-storage 2>&1 || true
+          echo "::notice::Lighthouse audit complete — failures are non-blocking"
+
+      - name: Run axe-core accessibility audit
+        continue-on-error: true
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install @axe-core/cli playwright >/dev/null 2>&1
+          npx playwright install chromium >/dev/null 2>&1
+          npx @axe-core/cli \
+            "$SITE_URL" \
+            --format summary 2>&1 || true
+          echo "::notice::axe-core audit complete — failures are non-blocking"
+
+      - name: Audit summary
+        if: always()
+        run: |
+          echo "## Lighthouse & axe Audit" >> $GITHUB_STEP_SUMMARY
+          echo ":white_check_mark: Audit steps completed." >> $GITHUB_STEP_SUMMARY
+          echo "_Note: lighthouse-audit job failure does not block deployment._" >> $GITHUB_STEP_SUMMARY
