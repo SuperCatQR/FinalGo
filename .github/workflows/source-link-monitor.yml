@@ -6,6 +6,11 @@ name: source-link-monitor
 # 自动开一个 GitHub 跟踪 issue（仅作技术告警），由维护者按 PRD §4.2 应用降级。
 #
 # 注意：本 workflow 只做「检测 + 告警」，不修改任何课程 Markdown，不部署。
+#
+# Jobs are split by permission scope:
+#   check-links         — read-only detection + issue alert  (contents: read,  issues: write)
+#   refresh-baseline    — write baseline + open PR           (contents: write, pull-requests: write)
+#                          ONLY runs on workflow_dispatch with update_baseline=true
 
 on:
   schedule:
@@ -18,17 +23,17 @@ on:
         type: boolean
         default: false
 
-permissions:
-  contents: read
-  issues: write
-
 concurrency:
   group: source-link-monitor
   cancel-in-progress: false
 
 jobs:
+  # ── primary detection + alert ──────────────────────────────────────────
   check-links:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -91,10 +96,23 @@ jobs:
             gh issue create --title "$title" --body-file "$body_file" --label "source-link-rot"
           fi
 
-      - name: Refresh baseline (manual dispatch only)
-        if: github.event_name == 'workflow_dispatch' && inputs.update_baseline
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  # ── manual baseline refresh (dispatch-only) ────────────────────────────
+  refresh-baseline:
+    if: github.event_name == 'workflow_dispatch' && inputs.update_baseline
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh baseline
         run: |
           python scripts/check-source-links.py --timeout 20 --retries 2 --update-baseline \
             --report site/source-link-report.md --summary site/source-link-report.json

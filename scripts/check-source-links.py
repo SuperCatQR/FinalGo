@@ -162,17 +162,36 @@ def iter_source_files() -> Iterable[Path]:
 
 
 def extract_refs(path: Path) -> list[UrlRef]:
-    """Pull every in-scope external URL out of one markdown file, tagged by section."""
+    """Pull every in-scope external URL out of one markdown file, tagged by section.
+
+    Section scope uses depth-aware tracking: once we enter a heading whose text
+    contains an in-scope keyword, sub-headings underneath it are still in scope
+    (e.g. ``### 其他参考`` under ``## 来源与引用`` keeps its links monitored).
+    We only exit when we encounter a peer or higher-level heading whose text is
+    NOT in scope.
+    """
     refs: list[UrlRef] = []
     code = course_code_for(path)
     rel = path.relative_to(ROOT).as_posix()
+    scope_stack: list[tuple[int, str]] = []  # (level, heading_text) of scopes opened
     current_section = ""
+    active = False
     for line in path.read_text(encoding="utf-8").splitlines():
         heading = HEADING_RE.match(line)
         if heading:
-            current_section = heading.group(2).strip()
+            level = len(heading.group(1))
+            heading_text = heading.group(2).strip()
+            current_section = heading_text
+            # Pop any scope whose level is >= this new heading (peer or deeper), then
+            # re-evaluate whether we're still in an in-scope region.
+            while scope_stack and scope_stack[-1][0] >= level:
+                scope_stack.pop()
+            active = bool(scope_stack)
+            if section_in_scope(heading_text):
+                scope_stack.append((level, heading_text))
+                active = True
             continue
-        if not section_in_scope(current_section):
+        if not active:
             continue
         seen_on_line: set[str] = set()
         for match in MD_LINK_RE.finditer(line):
@@ -205,14 +224,26 @@ def collect_findings() -> dict[str, UrlFinding]:
     return findings
 
 
+_MAX_DECOMPRESSED = 8_000_000  # ~8 MB, plenty for a content-fingerprint
+
+
 def _decode_body(raw: bytes, encoding_header: str | None) -> bytes:
+    """Decompress gzip/deflate transport encoding, capped to _MAX_DECOMPRESSED.
+
+    A truncated or corrupt compressed stream after the fetch cap (2 MB compressed)
+    produces ``EOFError`` on decompress — we catch that and return the raw bytes for
+    fingerprinting, safe against both decompression bombs and cut-off streams.
+    This function never raises.
+    """
     enc = (encoding_header or "").lower()
     try:
         if "gzip" in enc:
-            return gzip.decompress(raw)
+            obj = zlib.decompressobj(zlib.MAX_WBITS | 16)
+            return obj.decompress(raw, _MAX_DECOMPRESSED)
         if "deflate" in enc:
-            return zlib.decompress(raw)
-    except (OSError, zlib.error):
+            obj = zlib.decompressobj()
+            return obj.decompress(raw, _MAX_DECOMPRESSED)
+    except (OSError, zlib.error, EOFError):
         return raw
     return raw
 
@@ -345,23 +376,44 @@ def bulk_rot_hosts(findings: dict[str, UrlFinding]) -> dict[str, dict]:
     return alerts
 
 
-def serialize_baseline(findings: dict[str, UrlFinding]) -> dict:
+def serialize_baseline(findings: dict[str, UrlFinding], prior: dict | None = None) -> dict:
+    """Write a clean baseline.
+
+    **Crucial invariant** (CHO-14, qv backend review): an ``inconclusive`` probe MUST
+    NOT overwrite a known-definitive prior status in the baseline, or the next diff
+    cycle will silently miss real degradation.  When the current probe is
+    ``inconclusive`` we carry forward the prior baseline's last determined status and
+    content_hash so detection stays sharp across transient network faults.
+    """
+    prior_urls: dict = (prior or {}).get("urls", {})
     urls = {}
     for url, f in sorted(findings.items()):
         probe = f.probe
         assert probe is not None
-        urls[url] = {
-            "status": probe.status,
-            "http_code": probe.http_code,
-            "authoritative": f.authoritative,
-            "content_hash": probe.content_hash,
-            "course_codes": f.course_codes,
-            "sections": f.sections,
-        }
+        prior_entry = prior_urls.get(url)
+        if probe.status == STATUS_INCONCLUSIVE and prior_entry:
+            # Don't let a transient network fault erase a known baseline.
+            urls[url] = {
+                "status": prior_entry.get("status", probe.status),
+                "http_code": prior_entry.get("http_code"),
+                "authoritative": f.authoritative,
+                "content_hash": prior_entry.get("content_hash"),
+                "course_codes": f.course_codes,
+                "sections": f.sections,
+            }
+        else:
+            urls[url] = {
+                "status": probe.status,
+                "http_code": probe.http_code,
+                "authoritative": f.authoritative,
+                "content_hash": probe.content_hash,
+                "course_codes": f.course_codes,
+                "sections": f.sections,
+            }
     return {
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "note": "Baseline for scripts/check-source-links.py (CHO-14). "
-                "inconclusive probes are NOT persisted as status changes.",
+                "inconclusive probes are never persisted when a prior definitive status exists.",
         "urls": urls,
     }
 
@@ -517,8 +569,9 @@ def main() -> int:
 
     if args.update_baseline or args.init_baseline:
         baseline_path.parent.mkdir(parents=True, exist_ok=True)
+        prior = None if args.init_baseline else load_baseline(baseline_path)
         baseline_path.write_text(
-            json.dumps(serialize_baseline(findings), ensure_ascii=False, indent=2) + "\n",
+            json.dumps(serialize_baseline(findings, prior), ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8")
         print(f"Baseline written: {baseline_path}")
 
