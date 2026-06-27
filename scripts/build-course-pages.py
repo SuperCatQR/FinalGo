@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import html
+import json
 import re
 import shutil
 import subprocess
@@ -660,7 +661,10 @@ def decorate_cell(rendered: str, raw: str) -> str:
         return f'<span class="status-dot status-dot--yellow"></span>{rendered}'
     if raw.startswith("🟢"):
         return f'<span class="status-dot status-dot--green"></span>{rendered}'
-    if raw in {"待补充", "待统计", "待收集", "待校对"} or "待补充" in raw:
+    # Pending states must read as "not yet final", never as a confirmed
+    # conclusion (contract: pending_confirmation/collection/validation ->
+    # 待确认/待收集/待校验). Cover the in-content variants 待校对/待核验/待统计 too.
+    if raw in {"待补充", "待统计", "待收集", "待校对", "待确认", "待校验", "待核验"} or "待补充" in raw:
         return f'<span class="placeholder">{rendered}</span>'
     return rendered
 
@@ -807,9 +811,27 @@ def render_course_page(page: CoursePage, result: BuildResult) -> str:
         count_html = f'<p class="auto-gen-count">适用专业统计：正常开考 {count["normal"]} 个，停考过渡 {count["transition"]} 个，合计 {count["total"]} 个。</p>'
     if page.code == "00023" and "AUTO_GEN_START" not in page.body:
         count_html = '<p class="contract-note">本课程无 AUTO_GEN 区域为正常契约，按人工维护/普通静态区块渲染。</p>'
+
+    # Structured exam-index data island (B-2): emit parsed frontmatter as
+    # machine-readable JSON so a dynamic frontend can partition "现行主流程 /
+    # 历史题型对比" containers without parsing the flat markdown table.
+    current_exam, legacy_exam = parse_exam_index_from_frontmatter(page.frontmatter)
+    exam_index_json = ""
+    if current_exam or legacy_exam:
+        exam_data = {
+            "course_code": page.code,
+            "current_exam_periods": current_exam,
+            "legacy_comparison_periods": legacy_exam,
+        }
+        exam_index_json = (
+            f'<script type="application/json" class="exam-index-data">'
+            f'{html.escape(json.dumps(exam_data, ensure_ascii=False, separators=(",",":")))}'
+            f'</script>'
+        )
+
     majors_href = prefix_path("/majors/")
     cross_jump = f'<nav class="cross-jump" aria-label="站内跳转"><a href="{escape_attr(majors_href)}">浏览全部专业</a></nav>'
-    content = status_banner(page) + count_html + body + cross_jump
+    content = status_banner(page) + count_html + exam_index_json + body + cross_jump
     return html_shell(page.title, content, canonical=page.route)
 
 
@@ -1177,6 +1199,7 @@ h1 { font-size:2rem; margin:0 0 16px; } h2 { margin-top:32px; padding-bottom:6px
 .status-banner--red { background:#fff3cd; border-left:4px solid #ffc107; }
 .status-banner--yellow { background:#fff8e1; border-left:4px solid #ff9800; }
 .jump-banner { background:#e3f2fd; border:1px solid #2196f3; font-size:1.05rem; }
+.jump-banner--archive { background:#fff3e0; border:1px solid #ff9800; border-left:4px solid #e65100; color:#7a3b00; font-weight:600; }
 .migration-note { background:#eceff1; border-left:4px solid #607d8b; }
 .contract-note { background:#e8f5e9; border-left:4px solid var(--green); }
 .manual-note { background:#e8eaf6; border-left:4px solid #3f51b5; }

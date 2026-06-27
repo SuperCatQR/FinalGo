@@ -516,6 +516,8 @@ data_status:
 
 *自动生成于 2026-06-22，源数据版本：江苏省高等教育自学考试专业考试计划简编（2026 年 5 月）*
 
+> ⚠️ 当前仅覆盖 1 个专业（源数据限制），习近平新时代中国特色社会主义思想概论为全省公共必修思政课，实际适用面为全量开考专业。待全量专业计划简编补齐后更新。
+
 <!-- AUTO_GEN_END:public-course-coverage -->
 
 > 📌 手工标注：15040 为全国高等教育自学考试各专业**必考公共课**，实际适用专业远多于上方 AUTO_GEN 区当前占位的 1 个。该区为脚本维护区域，待运行覆盖脚本（`scripts/gen-public-course-coverage.sh`）从全量专业计划重算后回填，本次内容补全不手改 AUTO_GEN 区。对应 frontmatter `data_status.publish.blockers` 的 `major_coverage_stale` 项。
