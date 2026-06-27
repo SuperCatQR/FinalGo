@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import html
+import json
 import re
 import shutil
 import subprocess
@@ -731,11 +732,30 @@ def render_course_page(page: CoursePage, result: BuildResult) -> str:
     body = render_markdown(page.body, page)
     count = parse_auto_gen_count(read_text(page.source))
     count_html = ""
+
+    # Structured exam-index data island (B-2): emit parsed frontmatter as
+    # machine-readable JSON so a dynamic frontend can partition "现行主流程 /
+    # 历史题型对比" containers without parsing the flat markdown table.
+    current_exam, legacy_exam = parse_exam_index_from_frontmatter(page.frontmatter)
+    exam_index_json = ""
+    if current_exam or legacy_exam:
+        import json as _json
+        exam_data = {
+            "course_code": page.code,
+            "current_exam_periods": current_exam,
+            "legacy_comparison_periods": legacy_exam,
+        }
+        exam_index_json = (
+            f'<script type="application/json" class="exam-index-data">'
+            f'{html.escape(json.dumps(exam_data, ensure_ascii=False, separators=(",",":")))}'
+            f'</script>'
+        )
+
     if page.code in PUBLIC_AUTO_GEN_CODES:
         count_html = f'<p class="auto-gen-count">适用专业统计：正常开考 {count["normal"]} 个，停考过渡 {count["transition"]} 个，合计 {count["total"]} 个。</p>'
     if page.code == "00023" and "AUTO_GEN_START" not in page.body:
         count_html = '<p class="contract-note">本课程无 AUTO_GEN 区域为正常契约，按人工维护/普通静态区块渲染。</p>'
-    content = status_banner(page) + count_html + body
+    content = status_banner(page) + count_html + exam_index_json + body
     return html_shell(page.title, content, canonical=page.route)
 
 
