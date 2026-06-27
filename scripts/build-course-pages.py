@@ -505,12 +505,19 @@ def html_shell(title: str, content: str, canonical: str, noindex: str | None = N
 
 
 def render_index(pages: Iterable[CoursePage]) -> str:
-    items = []
+    current_items = []
+    archive_items = []
     for page in sorted(pages, key=lambda p: p.code):
         label = f"{page.code} {page.meta.get('课程名称') or page.title}"
-        tag = '<span class="tag-deprecated">已停用</span>' if page.code in OLD_CODE_TARGETS else ""
-        items.append(f'<li><code>{page.code}</code> <a href="{escape_attr(prefix_path(page.route))}">{html.escape(label)}</a> {tag}</li>')
-    return html_shell("江苏自考课程页索引", "<h1>江苏自考课程页索引</h1><ul class=\"course-index\">" + "\n".join(items) + "</ul>", canonical="/courses/")
+        if page.code in OLD_CODE_TARGETS:
+            archive_items.append(f'<li><code>{page.code}</code> <a href="{escape_attr(prefix_path(page.route))}">{html.escape(label)}</a> <span class="tag-deprecated">已停用</span></li>')
+        else:
+            current_items.append(f'<li><code>{page.code}</code> <a href="{escape_attr(prefix_path(page.route))}">{html.escape(label)}</a></li>')
+    body = "<h1>江苏自考课程页索引</h1>"
+    body += "<h2>现行课程</h2><ul class=\"course-index\">" + "\n".join(current_items) + "</ul>"
+    if archive_items:
+        body += "<h2>历史存档</h2><ul class=\"course-index course-index--archive\">" + "\n".join(archive_items) + "</ul>"
+    return html_shell("江苏自考课程页索引", body, canonical="/courses/")
 
 
 def render_site_index() -> str:
