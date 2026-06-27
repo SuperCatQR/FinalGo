@@ -671,7 +671,7 @@ def is_auto_gen_meta(text: str) -> bool:
     return any(marker in normalized for marker in markers)
 
 
-def render_markdown(body: str, page: CoursePage | None = None) -> str:
+def render_markdown(body: str, page: CoursePage | MajorPage | None = None) -> str:
     lines = body.splitlines()
     parts: list[str] = []
     in_list = False
@@ -884,6 +884,10 @@ def html_shell(title: str, content: str, canonical: str, noindex: str | None = N
       {content}
     </main>
   </div>
+  <footer class="site-footer">
+    <p class="footer-priority">数据源优先级：江苏省教育考试院官方公告与附件 &gt; 主考学校转发公告 &gt; 后续人工校对资料。</p>
+    <p class="footer-note">本站为江苏自考资料参考，口径以江苏省教育考试院官方公告为准。</p>
+  </footer>
 </body>
 </html>
 """
@@ -1062,13 +1066,8 @@ def render_site_index() -> str:
 """
 
 
-def render_majors_index(result: BuildResult) -> str:
-    """Render site/majors/index.html from docs/jiangsu/majors/index.md."""
-    source = MAJORS_DIR / "index.md"
-    if not source.exists():
-        return html_shell_majors_index("江苏自考专业索引", "<h1>江苏自考专业索引</h1><p>暂无专业数据</p>")
-    raw = read_text(source)
-    rows = parse_major_index_rows(raw)
+def render_majors_index(rows: list[MajorIndexRow], result: BuildResult) -> str:
+    """Render site/majors/index.html from pre-parsed major index rows."""
     if not rows:
         return html_shell_majors_index("江苏自考专业索引", "<h1>江苏自考专业索引</h1><p>暂无专业数据</p>")
 
@@ -1105,7 +1104,6 @@ def render_majors_index(result: BuildResult) -> str:
   var tbody = document.querySelector('#major-table tbody');
   if (!input || !tbody) return;
   var rows = Array.from(tbody.querySelectorAll('tr'));
-  function esc(s){ return s.replace(/[.*+?^${}()|[\\]\\\\]/g,'\\\\$&'); }
   function filter(){
     var q = input.value.trim().toLowerCase();
     var n = 0;
@@ -1260,14 +1258,16 @@ def build(out_dir: Path) -> BuildResult:
     result.pages += 1
 
     # --- Majors ---
+    # Parse majors index once; pass rows to both index render and major page loop.
+    major_rows = parse_major_index_rows(read_text(MAJORS_DIR / "index.md")) if (MAJORS_DIR / "index.md").exists() else []
+
     # Render majors index page
     majors_index_target = out_dir.parent / "majors" / "index.html"
     majors_index_target.parent.mkdir(parents=True, exist_ok=True)
-    majors_index_target.write_text(render_majors_index(result), encoding="utf-8")
+    majors_index_target.write_text(render_majors_index(major_rows, result), encoding="utf-8")
     result.pages += 1
 
     # Render individual major pages
-    major_rows = parse_major_index_rows(read_text(MAJORS_DIR / "index.md")) if (MAJORS_DIR / "index.md").exists() else []
     for row in major_rows:
         if not row.exists:
             continue
