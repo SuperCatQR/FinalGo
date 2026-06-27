@@ -3,6 +3,9 @@
 
 This is intentionally dependency-free so the Phase 1 frontend contract can be
 validated in the current repository without introducing a site generator yet.
+
+Phase 2 (CHO-10 B-1/B-2/B-3): publish-gate with blocking errors, exam-index
+structured separation, and content_revision snapshot binding.
 """
 
 from __future__ import annotations
@@ -11,12 +14,14 @@ import argparse
 import html
 import re
 import shutil
-from dataclasses import dataclass
+import subprocess
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Iterable
 
 ROOT = Path(__file__).resolve().parents[1]
 COURSES_DIR = ROOT / "docs" / "jiangsu" / "courses"
+MAJORS_DIR = ROOT / "docs" / "jiangsu" / "majors"
 DEFAULT_OUT_DIR = ROOT / "site" / "courses"
 DEFAULT_BASE = "/"
 V2_CODES = {"15040", "15043", "15044", "13000", "00023"}
@@ -55,6 +60,68 @@ PUBLIC_AUTO_GEN_CODES = {"15040", "15043", "15044", "13000"}
 AUTO_GEN_START_MARKERS = ("<!-- AUTO-GEN-COVERAGE-START", "<!-- AUTO_GEN_START:public-course-coverage")
 AUTO_GEN_END_MARKERS = ("<!-- AUTO-GEN-COVERAGE-END", "<!-- AUTO_GEN_END:public-course-coverage")
 
+# ── content_revision snapshot (B-3) ──────────────────────────────────────────
+
+
+def git_head_commit(repo_root: Path) -> str:
+    """Return the HEAD commit hash, or empty string if unavailable."""
+    try:
+        result = subprocess.run(
+            ["git", "-C", str(repo_root), "rev-parse", "HEAD"],
+            capture_output=True, text=True, check=True,
+        )
+        return result.stdout.strip()
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return ""
+
+
+# ── exam-index structured fields (B-2) ───────────────────────────────────────
+
+
+def parse_exam_index_from_frontmatter(fm: dict[str, str]) -> tuple[list[str], list[str]]:
+    """Parse current_exam_periods / legacy_comparison_periods from frontmatter.
+
+    Frontmatter format (whitespace-indented continuation lines):
+        exam_index:
+          current_exam_periods: [2024-10, 2025-04, 2025-10]
+          legacy_comparison_periods: []
+    """
+    current: list[str] = []
+    legacy: list[str] = []
+
+    # The nested frontmatter is collapsed into single-line strings by
+    # split_frontmatter; re-parse the YAML-like blocks.
+    # Strategy: look for the raw keys in the combined frontmatter text.
+    def _extract_list(raw: str, key: str) -> list[str]:
+        # Match a JSON array or multi-line indented list.
+        m = re.search(rf"{key}\s*:\s*\[([^\]]*)\]", raw)
+        if m:
+            items = [s.strip().strip("'\"") for s in m.group(1).split(",") if s.strip()]
+            return [item for item in items if item]
+        # Try multi-line with indented list items.
+        m = re.search(rf"{key}\s*:\s*\n((?:\s+-\s+[^\n]+\n?)*)", raw)
+        if m:
+            items = re.findall(r"-\s+([^\n]+)", m.group(1))
+            return [item.strip().strip("'\"") for item in items if item.strip()]
+        return []
+
+    current = _extract_list(raw_text_for_frontmatter(fm), "current_exam_periods")
+    legacy = _extract_list(raw_text_for_frontmatter(fm), "legacy_comparison_periods")
+    return current, legacy
+
+
+def raw_text_for_frontmatter(fm: dict[str, str]) -> str:
+    """Reconstruct a rough key-value text from the frontmatter dict for regex scanning."""
+    return "\n".join(f"{k}: {v}" for k, v in fm.items())
+
+
+# ── publish-gate target (B-1/B-3) ────────────────────────────────────────────
+
+# Pages that are actively published (🟢 human_review_publishable) and must
+# pass blocking validation.  During Phase 2 build, pages still at 🔴/🟡 only
+# emit warnings; the gate blocks ONLY when a page claims publishable status.
+PUBLISHABLE_STATUS_MARKER = "🟢"
+
 
 @dataclass
 class CoursePage:
@@ -69,16 +136,34 @@ class CoursePage:
 
 
 @dataclass
+class MajorPage:
+    code: str
+    name: str
+    level: str
+    slug: str
+    source: Path
+    route: str
+    title: str
+    meta: dict[str, str]
+    body: str
+
+
+@dataclass
+class MajorIndexRow:
+    num: str
+    code: str
+    name: str
+    level: str
+    slug: str
+    exists: bool
+
+
+@dataclass
 class BuildResult:
     pages: int = 0
-    warnings: list[str] | None = None
-    errors: list[str] | None = None
-
-    def __post_init__(self) -> None:
-        if self.warnings is None:
-            self.warnings = []
-        if self.errors is None:
-            self.errors = []
+    warnings: list[str] = field(default_factory=list)
+    errors: list[str] = field(default_factory=list)
+    content_revision: str = ""  # HEAD commit hash at build time (B-3)
 
 
 def read_text(path: Path) -> str:
@@ -180,6 +265,55 @@ def load_course(path: Path) -> CoursePage:
     )
 
 
+def parse_major_index_rows(text: str) -> list[MajorIndexRow]:
+    """Parse the majors/index.md table into structured rows."""
+    lines = text.splitlines()
+    rows: list[MajorIndexRow] = []
+    in_table = False
+    for line in lines:
+        stripped = line.strip()
+        if not stripped.startswith("|"):
+            continue
+        if stripped.startswith("| ---") or stripped.startswith("| :--"):
+            in_table = True
+            continue
+        if not in_table:
+            continue
+        cells = [c.strip() for c in stripped.strip("|").split("|")]
+        if len(cells) < 5:
+            continue
+        # Skip header row
+        if cells[0] == "序号":
+            continue
+        num, code, name, level = cells[0], cells[1], cells[2], cells[3]
+        link_cell = cells[4]
+        slug_match = re.search(r"\]\(\./([^/)]+)/", link_cell)
+        slug = slug_match.group(1) if slug_match else ""
+        exists = (MAJORS_DIR / slug / "index.md").exists() if slug else False
+        rows.append(MajorIndexRow(num=num, code=code, name=name, level=level, slug=slug, exists=exists))
+    return rows
+
+
+def load_major(path: Path, slug: str) -> MajorPage:
+    raw = read_text(path)
+    meta = parse_meta_table(raw)
+    title = parse_heading_title(raw)
+    code = meta.get("专业代码", "")
+    name = meta.get("专业名称", title)
+    level = meta.get("层次", "")
+    return MajorPage(
+        code=code,
+        name=name,
+        level=level,
+        slug=slug,
+        source=path,
+        route=f"/majors/{slug}/",
+        title=title,
+        meta=meta,
+        body=raw,
+    )
+
+
 def slug_for_route(route: str) -> Path:
     route = route.strip("/")
     return Path(route) / "index.html" if route else Path("index.html")
@@ -235,7 +369,29 @@ def parse_auto_gen_count(text: str) -> dict[str, int]:
 
 
 def validate_page(page: CoursePage, result: BuildResult) -> None:
+    """Validate a course page against the publish-gate contract (B-1).
+
+    Advisory warnings (always emitted):
+      - E-R01: missing meta fields
+      - E-R02: MIGRATION_STATUS != v2
+      - E-R08: unparseable status
+      - E-R16: missing AUTO_GEN markers on public courses
+
+    Blocking errors (emitted when page claims 🟢 publishable status):
+      - REPLACEMENT_FREE_TEXT_BYPASS: free-text replacement in body bypasses
+        the structured 4-field table
+      - PUBLISH_PENDING_REQUIRED_DATA: required fields still in pending state
+      - HUMAN_REVIEW_REQUIRED: publishable but no human review signature
+      - EXAM_INDEX_SCOPE_MIXED: old/new code exam periods mixed in one row
+      - EXAM_INDEX_DUPLICATED_SCOPE: same exam_period+course_code in both
+        current and legacy lists
+      - CONTENT_REVISION_MISMATCH: page content_revision differs from build
+        HEAD commit
+    """
     required = ["省份", "课程代码", "课程名称", "学分", "状态", "版本号", "发布日期", "数据状态", "MIGRATION_STATUS"]
+    publishable = page.meta.get("状态", "").startswith(PUBLISHABLE_STATUS_MARKER)
+
+    # ── advisory warnings (always checked) ───────────────────────────────
     if page.code in V2_CODES:
         for field in required:
             if not page.meta.get(field):
@@ -250,6 +406,184 @@ def validate_page(page: CoursePage, result: BuildResult) -> None:
     if page.code == "00023" and not any(marker in page.body for marker in AUTO_GEN_START_MARKERS):
         # Contract: 00023 has no AUTO_GEN and must not warn/error.
         pass
+
+    # ── blocking errors (only when page claims publishable) ──────────────
+    if not publishable:
+        return
+
+    # B-1: REPLACEMENT_FREE_TEXT_BYPASS — blockquote replacement text
+    # bypassing the structured 4-field table.
+    if page.code in V2_CODES:
+        _check_replacement_free_text_bypass(page, result)
+
+    # B-1: PUBLISH_PENDING_REQUIRED_DATA — any required field still pending.
+    _check_publish_pending(page, result)
+
+    # B-1: HUMAN_REVIEW_REQUIRED — publishable without review signature.
+    _check_human_review(page, result)
+
+    # B-2: EXAM_INDEX_SCOPE_MIXED / EXAM_INDEX_DUPLICATED_SCOPE
+    _check_exam_index_scope(page, result)
+
+    # B-3: CONTENT_REVISION_MISMATCH
+    _check_content_revision(page, result)
+
+
+# ── B-1 sub-checks ───────────────────────────────────────────────────────────
+
+
+def _check_replacement_free_text_bypass(page: CoursePage, result: BuildResult) -> None:
+    """Block if replacement-relation section has free-text blockquote alongside the 4-field table."""
+    in_replacement_section = False
+    has_4field_table = False
+    has_free_text = False
+    lines = page.body.splitlines()
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        if stripped.startswith("## 新旧课程顶替"):
+            in_replacement_section = True
+            continue
+        if in_replacement_section and stripped.startswith("## ") and "新旧课程顶替" not in stripped:
+            break
+        if not in_replacement_section:
+            continue
+        # Detect the 4-field structured table (header row "| 字段 | 内容 |")
+        if stripped == "| 字段 | 内容 |":
+            has_4field_table = True
+            continue
+        # Detect free-text blockquote in replacement section
+        if stripped.startswith("> ") and "替代" in stripped:
+            has_free_text = True
+            continue
+    if has_free_text and has_4field_table:
+        result.errors.append(
+            f"REPLACEMENT_FREE_TEXT_BYPASS: {page.source}: "
+            "新旧课程顶替区块同时存在 4 字段结构化表和自由文本 blockquote，"
+            "自由文本可能形成与结构化字段不一致的旁路。"
+            "请移除 blockquote 中的顶替关系自由文本，仅保留 4 字段表。"
+        )
+
+
+def _check_publish_pending(page: CoursePage, result: BuildResult) -> None:
+    """Block if required data is still in pending state."""
+    pending_values = {"待补充", "待统计", "待收集", "待校对", "待确认", "待核验"}
+    # Check meta table fields
+    for key in ("数据状态", "发布日期"):
+        val = page.meta.get(key, "")
+        if any(pv in val for pv in pending_values):
+            result.errors.append(
+                f"PUBLISH_PENDING_REQUIRED_DATA: {page.source}: "
+                f"元信息字段「{key}」仍处于待定状态（值：{val}），"
+                f"不得标记为 🟢 可发布。"
+            )
+    # Check replacement relation confirmation status via frontmatter
+    replacement_confirmed = page.frontmatter.get("replacement_confirmed", "")
+    if replacement_confirmed and replacement_confirmed.lower() not in ("true", "yes", "confirmed"):
+        result.errors.append(
+            f"PUBLISH_PENDING_REQUIRED_DATA: {page.source}: "
+            "顶替关系确认状态仍为 pending，不得标记为 🟢 可发布。"
+        )
+    # Check exam-index source_status / analysis_status in frontmatter
+    for key in ("exam_source_status", "exam_analysis_status"):
+        val = page.frontmatter.get(key, "")
+        if any(pv in val for pv in pending_values):
+            result.errors.append(
+                f"PUBLISH_PENDING_REQUIRED_DATA: {page.source}: "
+                f"真题数据字段「{key}」仍处于待定状态（值：{val}），"
+                f"不得标记为 🟢 可发布。"
+            )
+
+
+def _check_human_review(page: CoursePage, result: BuildResult) -> None:
+    """Block if page claims publishable but lacks human review signature."""
+    reviewed = page.frontmatter.get("reviewed", "")
+    reviewer = page.frontmatter.get("reviewer", "")
+    if reviewed.lower() not in ("true", "yes"):
+        result.errors.append(
+            f"HUMAN_REVIEW_REQUIRED: {page.source}: "
+            "页面标记为 🟢 可发布但缺少人工校对签名。"
+            "请在 frontmatter 中设置 reviewed: true 和 reviewer: <姓名>。"
+        )
+    elif not reviewer:
+        result.errors.append(
+            f"HUMAN_REVIEW_REQUIRED: {page.source}: "
+            "reviewed=true 但 reviewer 字段为空，"
+            "人工校对签名不可追溯。请填写 reviewer。"
+        )
+
+
+# ── B-2 sub-checks ───────────────────────────────────────────────────────────
+
+
+def _check_exam_index_scope(page: CoursePage, result: BuildResult) -> None:
+    """Validate exam-index structured separation (B-2).
+
+    Checks:
+      - EXAM_INDEX_SCOPE_MIXED: a single exam-period table row references both
+        15043 and 03708 (old/new mixed).
+      - EXAM_INDEX_DUPLICATED_SCOPE: same exam_period appears in both
+        current_exam_periods and legacy_comparison_periods frontmatter lists.
+    """
+    # 1. Scan the markdown exam-period table for mixed rows.
+    in_exam_index = False
+    lines = page.body.splitlines()
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        if stripped.startswith("## 考期索引"):
+            in_exam_index = True
+            continue
+        if in_exam_index and stripped.startswith("## ") and "考期索引" not in stripped:
+            break
+        if not in_exam_index:
+            continue
+        if stripped.startswith("|") and not stripped.startswith("|---") and not stripped.startswith("| 考期"):
+            cells = [c.strip() for c in stripped.strip("|").split("|")]
+            row_text = " ".join(cells)
+            # Check if row mentions both old and new codes
+            has_new = any(code in row_text for code in ("15043", "15044"))
+            has_old = any(code in row_text for code in ("03708", "03709"))
+            if has_new and has_old:
+                result.errors.append(
+                    f"EXAM_INDEX_SCOPE_MIXED: {page.source}: "
+                    f"考期索引行混排新旧代码（{row_text[:60]}...），"
+                    f"请拆分为 current_exam_periods 和 legacy_comparison_periods。"
+                )
+
+    # 2. Check frontmatter structured lists for dedup.
+    current, legacy = parse_exam_index_from_frontmatter(page.frontmatter)
+    if current and legacy:
+        overlap = set(current) & set(legacy)
+        if overlap:
+            result.errors.append(
+                f"EXAM_INDEX_DUPLICATED_SCOPE: {page.source}: "
+                f"考期 {sorted(overlap)} 同时出现在 current_exam_periods 和 "
+                f"legacy_comparison_periods 中，请移除重复项。"
+            )
+
+
+# ── B-3 sub-checks ───────────────────────────────────────────────────────────
+
+
+def _check_content_revision(page: CoursePage, result: BuildResult) -> None:
+    """Validate content_revision snapshot consistency (B-3).
+
+    When the page frontmatter carries a content_revision field, it must match
+    the build-time HEAD commit.  Mismatch means the page was validated against
+    a different snapshot than what is being built.
+    """
+    page_rev = page.frontmatter.get("content_revision", "")
+    if not page_rev:
+        # No revision pinned yet — advisory only (not blocking).
+        return
+    build_rev = result.content_revision
+    if not build_rev:
+        return  # Can't compare without a build revision.
+    if page_rev != build_rev:
+        result.errors.append(
+            f"CONTENT_REVISION_MISMATCH: {page.source}: "
+            f"页面 content_revision={page_rev[:8]} 与构建 HEAD={build_rev[:8]} 不一致，"
+            f"请重新校验后发布。"
+        )
 
 
 def render_inline(text: str) -> str:
@@ -266,11 +600,11 @@ def normalize_href(href: str) -> str:
         return href
     if href.startswith("/"):
         return prefix_path(href)
-    major_match = re.fullmatch(r"(?:\./)?\.\./majors/([^/#?]+)(/)?([#?].*)?", href)
+    major_match = re.fullmatch(r"(?:\./|\.\./)+majors/([^/#?]+)(/)?([#?].*)?", href)
     if major_match:
         suffix = major_match.group(3) or ""
         return prefix_path(f"/majors/{major_match.group(1)}/{suffix}")
-    match = re.fullmatch(r"(?:\./|\.\./)?(\d{5})(?:/|\.md)?", href)
+    match = re.fullmatch(r"(?:\./|\.\./)*(?:courses/)?(\d{5})(?:/|\.md)?", href)
     if match:
         return prefix_path(f"/courses/{match.group(1)}/")
     if href.endswith(".md"):
@@ -337,7 +671,7 @@ def is_auto_gen_meta(text: str) -> bool:
     return any(marker in normalized for marker in markers)
 
 
-def render_markdown(body: str, page: CoursePage | None = None) -> str:
+def render_markdown(body: str, page: CoursePage | MajorPage | None = None) -> str:
     lines = body.splitlines()
     parts: list[str] = []
     in_list = False
@@ -448,13 +782,20 @@ def render_markdown(body: str, page: CoursePage | None = None) -> str:
 def render_old_code_page(page: CoursePage) -> str:
     target_code, target_name = OLD_CODE_TARGETS[page.code]
     if page.code == "03708":
-        message = "📢 本课程已被替代：自 2024 年 10 月考期起，『中国近现代史纲要』使用新代码 15043。"
+        message = "📢 此页面为历史参考：自 2024 年 10 月考期起，『中国近现代史纲要』使用新代码 15043。现行有效页面为 15043。"
     else:
-        message = "📢 本课程已被替代：自 2024 年 10 月考期起，『马克思主义基本原理』使用新代码 15044。"
+        message = "📢 此页面为历史参考：自 2024 年 10 月考期起，『马克思主义基本原理』使用新代码 15044。现行有效页面为 15044。"
     body = render_markdown(page.body, page)
     target_href = prefix_path(f"/courses/{target_code}/")
-    banner = f'<div class="jump-banner">{html.escape(message)}<a class="button-link" href="{escape_attr(target_href)}">查看 {target_code} {html.escape(target_name)}</a></div>'
-    return html_shell(page.title, banner + body, canonical=f"/courses/{target_code}/", noindex="noindex, follow")
+    majors_href = prefix_path("/majors/")
+    banner = (
+        f'<div class="jump-banner jump-banner--archive" role="alert">'
+        f'{html.escape(message)}'
+        f'<a class="button-link" href="{escape_attr(target_href)}">查看 {target_code} {html.escape(target_name)}</a>'
+        f'</div>'
+    )
+    cross_jump = f'<nav class="cross-jump" aria-label="站内跳转"><a href="{escape_attr(majors_href)}">浏览全部专业</a></nav>'
+    return html_shell(page.title, banner + body + cross_jump, canonical=prefix_path(f"/courses/{target_code}/"), noindex="noindex, follow")
 
 
 def render_course_page(page: CoursePage, result: BuildResult) -> str:
@@ -466,7 +807,9 @@ def render_course_page(page: CoursePage, result: BuildResult) -> str:
         count_html = f'<p class="auto-gen-count">适用专业统计：正常开考 {count["normal"]} 个，停考过渡 {count["transition"]} 个，合计 {count["total"]} 个。</p>'
     if page.code == "00023" and "AUTO_GEN_START" not in page.body:
         count_html = '<p class="contract-note">本课程无 AUTO_GEN 区域为正常契约，按人工维护/普通静态区块渲染。</p>'
-    content = status_banner(page) + count_html + body
+    majors_href = prefix_path("/majors/")
+    cross_jump = f'<nav class="cross-jump" aria-label="站内跳转"><a href="{escape_attr(majors_href)}">浏览全部专业</a></nav>'
+    content = status_banner(page) + count_html + body + cross_jump
     return html_shell(page.title, content, canonical=page.route)
 
 
@@ -476,6 +819,37 @@ def render_migration_note(page: CoursePage) -> str:
     return html_shell(page.title, content, canonical="/courses/15040/", noindex="noindex, follow")
 
 
+def sidebar_html(active: str = "") -> str:
+    """Render the global sidebar navigation.
+
+    active: 'home' | 'majors' | 'courses'
+    """
+    home_href = prefix_path("/")
+    majors_href = prefix_path("/majors/")
+    courses_href = prefix_path("/courses/")
+
+    def link(href: str, label: str, key: str) -> str:
+        cls = ' class="sidebar-active"' if active == key else ""
+        return f'<a href="{escape_attr(href)}"{cls}>{html.escape(label)}</a>'
+
+    return f"""<aside class="sidebar">
+  <details class="sidebar-toggle">
+    <summary>导航菜单</summary>
+    <ul class="sidebar-nav">
+      <li>{link(home_href, "首页", "home")}</li>
+      <li>{link(majors_href, "专业索引", "majors")}</li>
+      <li>{link(courses_href, "课程索引", "courses")}</li>
+    </ul>
+  </details>
+  <div class="sidebar-title">江苏自考资料库</div>
+  <ul class="sidebar-nav">
+    <li>{link(home_href, "首页", "home")}</li>
+    <li>{link(majors_href, "专业索引", "majors")}</li>
+    <li>{link(courses_href, "课程索引", "courses")}</li>
+  </ul>
+</aside>"""
+
+
 def html_shell(title: str, content: str, canonical: str, noindex: str | None = None) -> str:
     robots = f'<meta name="robots" content="{escape_attr(noindex)}">' if noindex else ""
     css_href = prefix_path("/assets/course.css")
@@ -483,6 +857,7 @@ def html_shell(title: str, content: str, canonical: str, noindex: str | None = N
     home_href = prefix_path("/")
     majors_href = prefix_path("/majors/")
     canonical_href = prefix_path(canonical)
+    sidebar = sidebar_html(active="courses")
     return f"""<!doctype html>
 <html lang="zh-CN">
 <head>
@@ -494,23 +869,140 @@ def html_shell(title: str, content: str, canonical: str, noindex: str | None = N
   <link rel="stylesheet" href="{escape_attr(css_href)}">
 </head>
 <body>
-  <header class="site-header"><a href="{escape_attr(courses_href)}">江苏自考课程</a></header>
-  <main class="course-page">
-    <nav class="breadcrumb" aria-label="面包屑"><a href="{escape_attr(home_href)}">首页</a> &gt; <a href="{escape_attr(courses_href)}">课程</a> &gt; {html.escape(title)}</nav>
-    {content}
-  </main>
+  <header class="site-header">
+    <a class="site-brand" href="{escape_attr(home_href)}">江苏自考资料库</a>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="{escape_attr(home_href)}">首页</a>
+      <a href="{escape_attr(majors_href)}">专业</a>
+      <a href="{escape_attr(courses_href)}">课程</a>
+    </nav>
+  </header>
+  <div class="site-layout">
+    {sidebar}
+    <main class="course-page">
+      <nav class="breadcrumb" aria-label="面包屑"><a href="{escape_attr(home_href)}">首页</a> &gt; <a href="{escape_attr(courses_href)}">课程</a> &gt; {html.escape(title)}</nav>
+      {content}
+    </main>
+  </div>
+  <footer class="site-footer">
+    <p class="footer-priority">数据源优先级：江苏省教育考试院官方公告与附件 &gt; 主考学校转发公告 &gt; 后续人工校对资料。</p>
+    <p class="footer-note">本站为江苏自考资料参考，口径以江苏省教育考试院官方公告为准。</p>
+  </footer>
+</body>
+</html>
+"""
+
+
+def html_shell_major(title: str, content: str, canonical: str, name: str, level: str) -> str:
+    """HTML shell for major pages — distinct breadcrumb and header from course pages."""
+    css_href = prefix_path("/assets/course.css")
+    home_href = prefix_path("/")
+    majors_href = prefix_path("/majors/")
+    courses_href = prefix_path("/courses/")
+    canonical_href = prefix_path(canonical)
+    level_label = level if level else ""
+    title_full = f"{name}（{level}）" if level_label else name
+    page_title = f"{title_full} · 江苏自考专业"
+    sidebar = sidebar_html(active="majors")
+    return f"""<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="{escape_attr(canonical_href)}">
+  <title>{html.escape(page_title)}</title>
+  <link rel="stylesheet" href="{escape_attr(css_href)}">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-brand" href="{escape_attr(home_href)}">江苏自考资料库</a>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="{escape_attr(home_href)}">首页</a>
+      <a href="{escape_attr(majors_href)}" aria-current="page">专业</a>
+      <a href="{escape_attr(courses_href)}">课程</a>
+    </nav>
+  </header>
+  <div class="site-layout">
+    {sidebar}
+    <main class="course-page">
+      <nav class="breadcrumb" aria-label="面包屑">
+        <a href="{escape_attr(home_href)}">首页</a> &gt;
+        <a href="{escape_attr(majors_href)}">专业</a> &gt;
+        {html.escape(name)}
+      </nav>
+      {content}
+    </main>
+  </div>
+  <footer class="site-footer">
+    <p class="footer-priority">数据源优先级：江苏省教育考试院官方公告与附件 &gt; 主考学校转发公告 &gt; 后续人工校对资料。</p>
+    <p class="footer-note">本站为江苏自考资料参考，口径以江苏省教育考试院官方公告为准。</p>
+  </footer>
+</body>
+</html>
+"""
+
+
+def html_shell_majors_index(title: str, content: str) -> str:
+    """HTML shell for the majors index page."""
+    css_href = prefix_path("/assets/course.css")
+    home_href = prefix_path("/")
+    majors_href = prefix_path("/majors/")
+    courses_href = prefix_path("/courses/")
+    canonical_href = prefix_path("/majors/")
+    sidebar = sidebar_html(active="majors")
+    return f"""<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="{escape_attr(canonical_href)}">
+  <title>江苏自考专业索引 · 江苏自考专业</title>
+  <link rel="stylesheet" href="{escape_attr(css_href)}">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-brand" href="{escape_attr(home_href)}">江苏自考资料库</a>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="{escape_attr(home_href)}">首页</a>
+      <a href="{escape_attr(majors_href)}" aria-current="page">专业</a>
+      <a href="{escape_attr(courses_href)}">课程</a>
+    </nav>
+  </header>
+  <div class="site-layout">
+    {sidebar}
+    <main class="course-page">
+      <nav class="breadcrumb" aria-label="面包屑">
+        <a href="{escape_attr(home_href)}">首页</a> &gt;
+        专业
+      </nav>
+      {content}
+    </main>
+  </div>
+  <footer class="site-footer">
+    <p class="footer-priority">数据源优先级：江苏省教育考试院官方公告与附件 &gt; 主考学校转发公告 &gt; 后续人工校对资料。</p>
+    <p class="footer-note">本站为江苏自考资料参考，口径以江苏省教育考试院官方公告为准。</p>
+  </footer>
 </body>
 </html>
 """
 
 
 def render_index(pages: Iterable[CoursePage]) -> str:
-    items = []
+    current_items = []
+    archive_items = []
     for page in sorted(pages, key=lambda p: p.code):
         label = f"{page.code} {page.meta.get('课程名称') or page.title}"
-        tag = '<span class="tag-deprecated">已停用</span>' if page.code in OLD_CODE_TARGETS else ""
-        items.append(f'<li><code>{page.code}</code> <a href="{escape_attr(prefix_path(page.route))}">{html.escape(label)}</a> {tag}</li>')
-    return html_shell("江苏自考课程页索引", "<h1>江苏自考课程页索引</h1><ul class=\"course-index\">" + "\n".join(items) + "</ul>", canonical="/courses/")
+        if page.code in OLD_CODE_TARGETS:
+            archive_items.append(f'<li><code>{page.code}</code> <a href="{escape_attr(prefix_path(page.route))}">{html.escape(label)}</a> <span class="tag-deprecated">已停用</span></li>')
+        else:
+            current_items.append(f'<li><code>{page.code}</code> <a href="{escape_attr(prefix_path(page.route))}">{html.escape(label)}</a></li>')
+    body = "<h1>江苏自考课程页索引</h1>"
+    body += "<h2>现行课程</h2><ul class=\"course-index\">" + "\n".join(current_items) + "</ul>"
+    if archive_items:
+        body += "<h2>历史存档</h2><ul class=\"course-index course-index--archive\">" + "\n".join(archive_items) + "</ul>"
+    majors_href = prefix_path("/majors/")
+    body += f'<nav class="cross-jump" aria-label="站内跳转"><a href="{escape_attr(majors_href)}">浏览全部专业</a></nav>'
+    return html_shell("江苏自考课程页索引", body, canonical="/courses/")
 
 
 def render_site_index() -> str:
@@ -519,6 +1011,7 @@ def render_site_index() -> str:
     majors = prefix_path("/majors/")
     courses = prefix_path("/courses/")
     css = prefix_path("/assets/course.css")
+    sidebar = sidebar_html(active="home")
     return f"""<!doctype html>
 <html lang="zh-CN">
 <head>
@@ -530,7 +1023,9 @@ def render_site_index() -> str:
 </head>
 <body>
   <header class="site-header"><a class="site-brand" href="{escape_attr(home)}">江苏自考资料库</a><nav class="site-nav" aria-label="主导航"><a href="{escape_attr(home)}" aria-current="page">首页</a><a href="{escape_attr(majors)}">专业</a><a href="{escape_attr(courses)}">课程</a></nav></header>
-  <main class="course-page">
+  <div class="site-layout">
+    {sidebar}
+    <main class="course-page">
     <h1>江苏自考资料库</h1>
 <blockquote>数据源优先级：江苏省教育考试院官方公告与附件 &gt; 主考学校转发公告 &gt; 后续人工校对资料。</blockquote>
 <h2>当前口径</h2>
@@ -564,10 +1059,89 @@ def render_site_index() -> str:
 <li>附件 4：《江苏省高等教育自学考试专业考试计划简编（2024年版）》</li>
 </ul>
   </main>
+  </div>
   <footer class="site-footer"><p class="footer-priority">数据源优先级：江苏省教育考试院官方公告与附件 &gt; 主考学校转发公告 &gt; 后续人工校对资料。</p><p class="footer-note">本站为江苏自考资料参考，口径以江苏省教育考试院官方公告为准。</p></footer>
 </body>
 </html>
 """
+
+
+def render_majors_index(rows: list[MajorIndexRow], result: BuildResult) -> str:
+    """Render site/majors/index.html from pre-parsed major index rows."""
+    if not rows:
+        return html_shell_majors_index("江苏自考专业索引", "<h1>江苏自考专业索引</h1><p>暂无专业数据</p>")
+
+    # Build table rows with base-aware links
+    table_rows: list[str] = []
+    for row in rows:
+        if row.exists:
+            href = prefix_path(f"/majors/{row.slug}/")
+            link = f'<a href="{escape_attr(href)}">{html.escape(row.name)}</a>'
+        else:
+            link = f'<span class="dead-link" title="专业页缺失，待内容团队补建">{html.escape(row.name)}</span>'
+            result.warnings.append(f"majors/index.md: 专业 {row.code} {row.name} 目录缺失 ({row.slug}/)，已渲染为纯文本")
+        table_rows.append(
+            f"<tr>"
+            f"<td>{html.escape(row.num)}</td>"
+            f"<td><code>{html.escape(row.code)}</code></td>"
+            f"<td>{link}</td>"
+            f"<td>{html.escape(row.level)}</td>"
+            f"</tr>"
+        )
+
+    search_html = """<noscript>
+<style>.major-search{display:none}</style>
+</noscript>
+<div class="major-search">
+  <label for="major-search-input" class="major-search-label">搜索专业：</label>
+  <input type="search" id="major-search-input" class="major-search-input" placeholder="输入专业代码、名称或层次…" autocomplete="off">
+  <span id="major-search-count" class="major-search-count"></span>
+</div>
+<script>
+(function(){
+  var input = document.getElementById('major-search-input');
+  var count = document.getElementById('major-search-count');
+  var tbody = document.querySelector('#major-table tbody');
+  if (!input || !tbody) return;
+  var rows = Array.from(tbody.querySelectorAll('tr'));
+  function filter(){
+    var q = input.value.trim().toLowerCase();
+    var n = 0;
+    rows.forEach(function(tr){
+      var text = (tr.textContent || '').toLowerCase();
+      var match = !q || text.indexOf(q) !== -1;
+      tr.style.display = match ? '' : 'none';
+      if (match) n++;
+    });
+    if (q) {
+      count.textContent = n ? '找到 ' + n + ' 个专业' : '未找到匹配专业，请尝试其他关键词';
+    } else {
+      count.textContent = '';
+    }
+  }
+  input.addEventListener('input', filter);
+})();
+</script>"""
+
+    table_html = f"""<h1>江苏自考专业索引</h1>
+{search_html}
+<div class="table-scroll"><table id="major-table" class="responsive-table">
+<thead><tr><th>序号</th><th>专业代码</th><th>专业名称</th><th>层次</th></tr></thead>
+<tbody>
+{"".join(table_rows)}
+</tbody></table></div>"""
+
+    return html_shell_majors_index("江苏自考专业索引", table_html)
+
+
+def render_major_page(page: MajorPage, result: BuildResult) -> str:
+    """Render a single major page HTML."""
+    body = render_markdown(page.body, None)
+    # Add cross-jump footer: browse all courses
+    courses_href = prefix_path("/courses/")
+    cross_jump = f'<nav class="cross-jump" aria-label="站内跳转"><a href="{escape_attr(courses_href)}">浏览全部课程</a></nav>'
+    content = body + cross_jump
+    return html_shell_major(page.title, content, page.route, page.name, page.level)
 
 
 def write_css(out_root: Path) -> None:
@@ -577,11 +1151,26 @@ def write_css(out_root: Path) -> None:
 
 
 CSS = """
-:root { color-scheme: light; --blue:#1976d2; --red:#e74c3c; --yellow:#f39c12; --green:#27ae60; }
+:root { color-scheme: light; --blue:#1976d2; --red:#e74c3c; --yellow:#f39c12; --green:#27ae60; --sidebar-w:220px; }
 body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK SC", Arial, sans-serif; line-height:1.65; color:#263238; background:#f8fafc; }
 a { color:var(--blue); text-decoration:none; } a:hover { text-decoration:underline; } a:focus, summary:focus { outline:2px solid var(--blue); outline-offset:2px; }
-.site-header { background:#fff; border-bottom:1px solid #e0e0e0; padding:12px 24px; font-weight:700; }
-.course-page { max-width:960px; margin:0 auto; padding:24px; background:#fff; min-height:100vh; }
+.site-header { background:#fff; border-bottom:1px solid #e0e0e0; padding:12px 24px; font-weight:700; display:flex; align-items:center; gap:16px; }
+.site-header .site-brand { flex-shrink:0; } .site-header .site-nav { display:flex; gap:16px; }
+.site-header .site-nav a[aria-current="page"] { color:#263238; text-decoration:underline; }
+
+/* Sidebar */
+.site-layout { display:flex; min-height:100vh; }
+.sidebar { width:var(--sidebar-w); flex-shrink:0; background:#fff; border-right:1px solid #e0e0e0; padding:16px 0; position:sticky; top:0; height:100vh; overflow-y:auto; box-sizing:border-box; }
+.sidebar-title { font-weight:700; font-size:1.05rem; padding:0 16px 12px; border-bottom:1px solid #eceff1; margin-bottom:8px; }
+.sidebar-nav { list-style:none; margin:0; padding:0; }
+.sidebar-nav li { margin:0; }
+.sidebar-nav a { display:block; padding:8px 16px; color:#455a64; border-left:3px solid transparent; transition:background .15s; }
+.sidebar-nav a:hover { background:#f5f8ff; text-decoration:none; }
+.sidebar-nav a.sidebar-active { color:var(--blue); background:#e3f2fd; border-left-color:var(--blue); font-weight:600; }
+.sidebar-toggle { display:none; }
+.sidebar-section-label { padding:8px 16px 4px; font-size:.75em; color:#90a4ae; text-transform:uppercase; letter-spacing:.05em; }
+
+.course-page { flex:1; max-width:960px; margin:0 auto; padding:24px; background:#fff; min-height:100vh; }
 .breadcrumb { color:#607d8b; font-size:.9rem; margin-bottom:16px; }
 h1 { font-size:2rem; margin:0 0 16px; } h2 { margin-top:32px; padding-bottom:6px; border-bottom:1px solid #eceff1; } h3 { margin-top:24px; }
 .status-banner, .jump-banner, .migration-note, .contract-note, .manual-note { border-radius:8px; padding:12px 16px; margin:16px 0; }
@@ -603,13 +1192,38 @@ table { border-collapse:collapse; width:100%; min-width:560px; } th, td { border
 .auto-gen { border:1px dashed #90caf9; padding:12px; border-radius:8px; background:#fbfdff; } .auto-gen-meta { display:none; } .auto-gen-count { color:#455a64; background:#f5f8ff; padding:8px 12px; border-radius:6px; }
 details { margin:8px 0; } summary { cursor:pointer; padding:8px 12px; border-left:3px solid transparent; } details[open] > summary { background:#f5f8ff; border-left-color:#2196f3; }
 .course-index li { margin:8px 0; } .tag-deprecated { color:#777; background:#eee; border-radius:3px; padding:1px 5px; font-size:.8em; }
-@media (max-width: 767px) { .course-page{padding:16px;} h1{font-size:1.5rem;} table{font-size:.9rem;} .button-link{display:block;margin:10px 0 0;} }
-@media print { body{background:#fff;} .site-header,.status-banner,.badge,.jump-banner,.auto-gen-meta{display:none!important;} .course-page{max-width:none;padding:0;} a{color:#000;text-decoration:none;} tr, table { page-break-inside: avoid; } .breadcrumb{color:#000;} }
+.dead-link { color:#8a8a8a; border-bottom:1px dashed #bbb; cursor:help; }
+.major-search { margin:0 0 16px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.major-search-label { font-weight:600; white-space:nowrap; }
+.major-search-input { flex:1; min-width:200px; padding:8px 12px; border:1px solid #e0e0e0; border-radius:6px; font-size:1rem; }
+.major-search-input:focus { outline:2px solid var(--blue); outline-offset:-1px; border-color:var(--blue); }
+.major-search-count { font-size:.85rem; color:#607d8b; white-space:nowrap; }
+.cross-jump { margin-top:32px; padding-top:16px; border-top:1px solid #eceff1; }
+.cross-jump a { display:inline-block; padding:8px 16px; background:#f5f8ff; border:1px solid #e0e0e0; border-radius:6px; font-weight:600; }
+.cross-jump a:hover { background:#e3f2fd; text-decoration:none; }
+
+/* Mobile sidebar — collapsed via <details>, CSS-only */
+@media (max-width: 767px) {
+  .site-layout { display:block; }
+  .sidebar { position:static; width:100%; height:auto; border-right:none; border-bottom:1px solid #e0e0e0; padding:0; }
+  .sidebar-title { display:none; }
+  .sidebar-toggle { display:block; }
+  .sidebar-toggle summary { padding:12px 16px; font-weight:600; background:#f5f7fa; border-bottom:1px solid #e0e0e0; cursor:pointer; list-style:none; }
+  .sidebar-toggle summary::-webkit-details-marker { display:none; }
+  .sidebar-toggle summary::before { content:"☰ "; }
+  .sidebar-toggle[open] summary::before { content:"✕ "; }
+  .sidebar-nav { padding:0; }
+  .sidebar-nav a { padding:10px 24px; }
+  .course-page { padding:16px; }
+  h1{font-size:1.5rem;} table{font-size:.9rem;} .button-link{display:block;margin:10px 0 0;}
+}
+@media print { body{background:#fff;} .site-header,.sidebar,.sidebar-toggle,.status-banner,.badge,.jump-banner,.auto-gen-meta{display:none!important;} .course-page{max-width:none;padding:0;margin:0;} a{color:#000;text-decoration:none;} tr, table { page-break-inside: avoid; } .breadcrumb{color:#000;} .site-layout{display:block;} }
 """.strip() + "\n"
 
 
 def build(out_dir: Path) -> BuildResult:
     result = BuildResult()
+    result.content_revision = git_head_commit(ROOT)
     if out_dir.exists():
         shutil.rmtree(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -643,14 +1257,47 @@ def build(out_dir: Path) -> BuildResult:
     site_index_target.write_text(render_site_index(), encoding="utf-8")
     result.pages += 1
 
+    # --- Majors ---
+    # Parse majors index once; pass rows to both index render and major page loop.
+    major_rows = parse_major_index_rows(read_text(MAJORS_DIR / "index.md")) if (MAJORS_DIR / "index.md").exists() else []
+
+    # Render majors index page
+    majors_index_target = out_dir.parent / "majors" / "index.html"
+    majors_index_target.parent.mkdir(parents=True, exist_ok=True)
+    majors_index_target.write_text(render_majors_index(major_rows, result), encoding="utf-8")
+    result.pages += 1
+
+    # Render individual major pages
+    for row in major_rows:
+        if not row.exists:
+            continue
+        source = MAJORS_DIR / row.slug / "index.md"
+        try:
+            page = load_major(source, row.slug)
+        except Exception as e:
+            result.errors.append(f"majors/{row.slug}/: 解析失败：{e}，该专业页跳过")
+            continue
+        try:
+            html_text = render_major_page(page, result)
+        except Exception as e:
+            result.errors.append(f"majors/{row.slug}/: 渲染失败：{e}，该专业页跳过")
+            continue
+        target = out_dir.parent / "majors" / row.slug / "index.html"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(html_text, encoding="utf-8")
+        result.pages += 1
+
     report = ["# Course frontend build report", "", f"Pages generated: {result.pages}", ""]
+    if result.content_revision:
+        report.append(f"Build revision: `{result.content_revision}`")
+        report.append("")
     if result.warnings:
         report.append("## Warnings")
         report.extend(f"- {w}" for w in result.warnings)
     else:
         report.append("No warnings.")
     if result.errors:
-        report.append("## Errors")
+        report.append("## Errors (blocking)")
         report.extend(f"- {e}" for e in result.errors)
     (out_dir.parent / "course-build-report.md").write_text("\n".join(report) + "\n", encoding="utf-8")
     return result
