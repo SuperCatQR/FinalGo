@@ -1,0 +1,54 @@
+/* ============================================================
+   风格 B · 学习路径 (Study Path)
+   定位：陪伴 / 规划。把"选专业 → 修课程 → 报考期 → 毕业"画成一条路。
+   —— 青绿 + 暖沙 + 圆润人文无衬线。
+   Signature：纵向旅程轨 (journey rail) 带状态节点。
+   ============================================================ */
+:root {
+  --bg: #fbf8f3;
+  --surface: #ffffff;
+  --surface-2: #f4efe6;
+  --ink: #243230;
+  --ink-soft: #6b7a74;
+  --line: #e4ddd0;
+  --brand: #0f7e6b;          /* 青绿 */
+  --brand-ink: #0a5a4c;
+  --accent: #e08a3c;         /* 暖沙橙 */
+  --ok: #0f7e6b;
+  --warn: #c47a1a;
+  --stop: #c0573a;
+  --font-display: "Nunito", "Quicksand", "Noto Sans SC", system-ui, sans-serif;
+  --font-body: "Nunito", -apple-system, "Noto Sans SC", system-ui, sans-serif;
+  --radius: 16px;
+  --shadow: 0 2px 6px rgba(15,126,107,.05), 0 14px 34px rgba(36,50,48,.07);
+}
+
+h1, h2, h3, .brand { font-weight: 800; letter-spacing: -.015em; }
+.site-header { border-bottom: 1px solid var(--line); backdrop-filter: blur(6px); background: color-mix(in srgb, var(--surface) 86%, transparent); }
+.brand { color: var(--brand); }
+.brand::before { content: "🧭"; margin-right: 8px; }
+.nav a[aria-current="page"] { background: color-mix(in srgb, var(--brand) 12%, transparent); color: var(--brand-ink); }
+.card { box-shadow: var(--shadow); border-color: transparent; }
+.eyebrow { color: var(--brand); }
+.chip { border-radius: 999px; }
+
+/* Signature：纵向旅程轨 */
+.journey { list-style: none; margin: 0; padding: 0; position: relative; }
+.journey::before { content: ""; position: absolute; left: 19px; top: 12px; bottom: 12px; width: 3px; background: linear-gradient(var(--brand), var(--accent)); border-radius: 3px; }
+.journey li { position: relative; padding: 0 0 26px 56px; }
+.journey li:last-child { padding-bottom: 0; }
+.journey .node {
+  position: absolute; left: 6px; top: 0; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--surface); border: 3px solid var(--brand); display: grid; place-items: center;
+  font-size: .9rem; color: var(--brand); font-weight: 800;
+}
+.journey li.done .node { background: var(--brand); color: #fff; }
+.journey li.todo .node { border-color: var(--ink-soft); color: var(--ink-soft); }
+.journey .step-title { font-weight: 800; margin: 2px 0 4px; font-size: 1.05rem; }
+.journey .step-meta { color: var(--ink-soft); font-size: .9rem; }
+
+.hero-path { background: radial-gradient(120% 120% at 100% 0%, color-mix(in srgb, var(--brand) 12%, transparent), transparent 60%); border-radius: 28px; padding: 48px; }
+.pill-cta { display: inline-flex; gap: 10px; align-items: center; background: var(--brand); color: #fff; padding: 13px 24px; border-radius: 999px; font-weight: 800; }
+.pill-cta:hover { background: var(--brand-ink); text-decoration: none; }
+.pill-cta.ghost { background: transparent; color: var(--brand-ink); border: 2px solid var(--brand); }
+@media (max-width: 860px) { .hero-path { padding: 32px 22px; } }

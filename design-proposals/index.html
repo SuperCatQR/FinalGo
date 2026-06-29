@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinalGo 站点风格选型 · 4 套原型</title>
+<link rel="stylesheet" href="assets/base.css">
+<style>
+  body { background: #0f141c; color: #e6ecf3; }
+  .hero { max-width: 1080px; margin: 0 auto; padding: 64px 24px 24px; }
+  .hero h1 { font-family: "Noto Serif SC", Georgia, serif; font-size: clamp(2rem,4vw,3rem); }
+  .hero p { color: #8a99ab; max-width: 60ch; }
+  .gallery { max-width: 1080px; margin: 0 auto; padding: 12px 24px 80px; display: grid; grid-template-columns: repeat(2,1fr); gap: 22px; }
+  .style-card { border: 1px solid #2a3543; border-radius: 14px; overflow: hidden; background: #161d28; }
+  .swatch { height: 86px; display: flex; }
+  .swatch span { flex: 1; }
+  .style-card .body { padding: 20px 22px; }
+  .style-card h2 { font-family: "Noto Serif SC", Georgia, serif; margin: 0 0 4px; font-size: 1.3rem; }
+  .style-card .tag { font-size: .8rem; color: #3da9fc; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; }
+  .style-card p { color: #8a99ab; font-size: .92rem; }
+  .links { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+  .links a { padding: 8px 14px; border: 1px solid #2a3543; border-radius: 8px; color: #e6ecf3; font-weight: 600; font-size: .9rem; text-decoration: none; }
+  .links a:hover { border-color: #3da9fc; color: #6dc1ff; text-decoration: none; }
+  .meta { max-width: 1080px; margin: 0 auto; padding: 0 24px 64px; color: #8a99ab; font-size: .9rem; }
+  .meta a { color: #6dc1ff; }
+  @media (max-width: 760px){ .gallery{ grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div class="hero">
+    <p style="color:#3da9fc;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem">CHO-94 · 设计先行 · 多风格选型</p>
+    <h1>江苏自考资料库 · 4 套风格原型</h1>
+    <p>同一批真实内容（首页 / 专业页 / 课程页），四种视觉方向。每套都演示了空态与移动端断点。请横向对比后选定一套，作为后续"顶模板 + 全站迁移"的基线。</p>
+  </div>
+
+  <div class="gallery">
+    <div class="style-card">
+      <div class="swatch"><span style="background:#1c3d5a"></span><span style="background:#a32b27"></span><span style="background:#eef1f4"></span><span style="background:#1f6e4a"></span></div>
+      <div class="body">
+        <p class="tag">风格 A</p>
+        <h2>考务档案</h2>
+        <p>权威 / 可信。墨蓝 + 印章红，宋体标题。Signature：效力状态印戳 + 数据源效力链。适合强调"官方口径、逐条溯源"。</p>
+        <div class="links"><a href="style-a-dossier/index.html">首页</a><a href="style-a-dossier/major.html">专业页</a><a href="style-a-dossier/course.html">课程页</a></div>
+      </div>
+    </div>
+
+    <div class="style-card">
+      <div class="swatch"><span style="background:#0f7e6b"></span><span style="background:#e08a3c"></span><span style="background:#fbf8f3"></span><span style="background:#243230"></span></div>
+      <div class="body">
+        <p class="tag">风格 B</p>
+        <h2>学习路径</h2>
+        <p>陪伴 / 规划。青绿 + 暖沙，圆润无衬线。Signature：纵向旅程轨（选专业→修课→报考→毕业）。适合面向新手考生、降低焦虑。</p>
+        <div class="links"><a href="style-b-path/index.html">首页</a><a href="style-b-path/major.html">专业页</a><a href="style-b-path/course.html">课程页</a></div>
+      </div>
+    </div>
+
+    <div class="style-card">
+      <div class="swatch"><span style="background:#c4452f"></span><span style="background:#ffe89c"></span><span style="background:#f7f4ec"></span><span style="background:#2f7d8c"></span></div>
+      <div class="body">
+        <p class="tag">风格 C</p>
+        <h2>知识卡片</h2>
+        <p>备考 / 做笔记。暖纸 + 荧光笔 + 手写体标题。Signature：概念卡 + 荧光笔标重点。适合主打"刷概念、记考点"的复习场景。</p>
+        <div class="links"><a href="style-c-cards/index.html">首页</a><a href="style-c-cards/major.html">专业页</a><a href="style-c-cards/course.html">课程页</a></div>
+      </div>
+    </div>
+
+    <div class="style-card">
+      <div class="swatch"><span style="background:#0f141c"></span><span style="background:#3da9fc"></span><span style="background:#f4c542"></span><span style="background:#3ddc97"></span></div>
+      <div class="body">
+        <p class="tag">风格 D</p>
+        <h2>考期年历</h2>
+        <p>结构化 / 数据。深色石板 + 电光蓝，等宽字优先。Signature：考期时间轴 + 场次日历 + 变更日志。适合把课程号/考期当数据查询。</p>
+        <div class="links"><a href="style-d-almanac/index.html">首页</a><a href="style-d-almanac/major.html">专业页</a><a href="style-d-almanac/course.html">课程页</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="meta">
+    <p>📐 站点信息架构（IA）与四套风格的取舍说明见 <a href="IA.md">IA.md</a>。</p>
+    <p>所有原型基于真实站点内容：62/54/3/5 政策数字、030101K 法学、15044 马原。四套共用 <code style="background:#1d2632;padding:2px 6px;border-radius:5px">assets/base.css</code> 的 token 契约，差异仅在各自 <code style="background:#1d2632;padding:2px 6px;border-radius:5px">theme.css</code> —— 这正是选型后"顶模板"的骨架雏形。</p>
+  </div>
+</body>
+</html>

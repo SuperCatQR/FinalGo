@@ -1,0 +1,57 @@
+/* ============================================================
+   风格 C · 知识卡片 (Study Cards)
+   定位：备考 / 做笔记。整站像一叠手做的复习卡，重点用荧光笔划。
+   —— 暖桌面纸 + 荧光笔三色 + 马克笔下划线 + 索引卡区块。
+   Signature：概念卡 + highlighter <mark>。
+   ============================================================ */
+:root {
+  --bg: #f7f4ec;
+  --surface: #fffef9;
+  --surface-2: #f1ece0;
+  --ink: #2c2a25;
+  --ink-soft: #76705f;
+  --line: #e6dfcf;
+  --brand: #c4452f;          /* 红笔 */
+  --brand-ink: #9c3322;
+  --accent: #2f7d8c;         /* 蓝笔批注 */
+  --ok: #4f8a3a;
+  --warn: #c98a16;
+  --stop: #c4452f;
+  --hl-yellow: #ffe89c;
+  --hl-green: #c8f0c0;
+  --hl-pink: #ffd4d8;
+  --font-display: "Patrick Hand", "Gochi Hand", "Noto Sans SC", "Segoe Print", cursive;
+  --font-body: "LXGW WenKai", "Noto Sans SC", -apple-system, system-ui, sans-serif;
+  --radius: 6px;
+  --shadow: 2px 3px 0 rgba(44,42,37,.12);
+}
+
+body { background-image: linear-gradient(var(--surface-2) 1px, transparent 1px); background-size: 100% 30px; }
+h1, h2, .brand { font-family: var(--font-display); font-weight: 400; }
+h2 { display: inline-block; }
+h2::after { content: ""; display: block; height: 8px; margin-top: -8px; background: var(--hl-yellow); }
+.brand::before { content: "✎"; margin-right: 8px; color: var(--brand); }
+.eyebrow { color: var(--brand); font-family: var(--font-display); letter-spacing: .05em; text-transform: none; }
+
+/* 卡片像便签：轻微旋转 + 实心投影 */
+.card { box-shadow: var(--shadow); }
+.card:nth-child(2n) { transform: rotate(-.5deg); }
+.card:nth-child(3n) { transform: rotate(.6deg); }
+
+/* Signature：荧光笔 mark + 概念卡 */
+mark, .hl { background: linear-gradient(transparent 55%, var(--hl-yellow) 55%); padding: 0 .1em; }
+.hl-green { background: linear-gradient(transparent 55%, var(--hl-green) 55%); }
+.hl-pink { background: linear-gradient(transparent 55%, var(--hl-pink) 55%); }
+.underline-marker { background: linear-gradient(transparent 88%, var(--brand) 88% 96%, transparent 96%); }
+
+.concept-card {
+  background: var(--surface); border: 1px solid var(--line); border-left: 6px solid var(--accent);
+  border-radius: var(--radius); padding: 16px 18px; box-shadow: var(--shadow);
+  position: relative;
+}
+.concept-card .term { font-family: var(--font-display); font-size: 1.25rem; color: var(--brand-ink); }
+.concept-card .freq { position: absolute; top: 12px; right: 14px; font-size: .75rem; color: var(--accent); border: 1px dashed var(--accent); border-radius: 4px; padding: 1px 7px; }
+.tape { position: absolute; top: -10px; left: 50%; transform: translateX(-50%) rotate(-2deg); width: 60px; height: 18px; background: color-mix(in srgb, var(--hl-yellow) 80%, #fff); opacity: .8; }
+
+.pill-cta { display: inline-block; background: var(--brand); color: #fff; padding: 11px 22px; border-radius: var(--radius); font-weight: 700; box-shadow: var(--shadow); font-family: var(--font-body); }
+.pill-cta:hover { text-decoration: none; transform: translate(-1px,-1px); box-shadow: 3px 4px 0 rgba(44,42,37,.18); }
