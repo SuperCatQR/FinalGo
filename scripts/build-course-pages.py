@@ -1007,17 +1007,17 @@ def render_site_index() -> str:
 <li><span class="dead-link" title="该入口本期未产出独立页面">专业页批量生产工作流</span></li>
 <li><span class="dead-link" title="该入口本期未产出独立页面">PDF 到 Markdown 四段式流水线</span></li>
 <li><span class="dead-link" title="该入口本期未产出独立页面">PDF 批处理报告</span></li>
-<li><a href="{{escape_attr(majors)}}">全量专业索引</a></li>
+<li><a href="{escape_attr(majors)}">全量专业索引</a></li>
 <li><span class="dead-link" title="该入口本期未产出独立页面">项目目录结构蓝图</span></li>
-<li><a href="{{escape_attr(prefix_path('/majors/030101K-law/'))}}">法学（专升本）</a></li>
-<li><a href="{{escape_attr(prefix_path('/majors/050101-chinese-language-literature/'))}}">汉语言文学（专升本）</a></li>
-<li><a href="{{escape_attr(prefix_path('/majors/120203K-accounting/'))}}">会计学（专升本）</a></li>
-<li><a href="{{escape_attr(prefix_path('/majors/080901-computer-science-and-technology/'))}}">计算机科学与技术（专升本）</a></li>
+<li><a href="{escape_attr(prefix_path('/majors/030101K-law/'))}">法学（专升本）</a></li>
+<li><a href="{escape_attr(prefix_path('/majors/050101-chinese-language-literature/'))}">汉语言文学（专升本）</a></li>
+<li><a href="{escape_attr(prefix_path('/majors/120203K-accounting/'))}">会计学（专升本）</a></li>
+<li><a href="{escape_attr(prefix_path('/majors/080901-computer-science-and-technology/'))}">计算机科学与技术（专升本）</a></li>
 <li><span class="dead-link" title="该入口本期未产出独立页面">计算机科学与技术资料源清单</span></li>
 <li><span class="dead-link" title="该入口本期未产出独立页面">计算机科学与技术课程资料采集矩阵</span></li>
-<li><a href="{{escape_attr(prefix_path('/courses/03708/'))}}">中国近现代史纲要</a></li>
-<li><a href="{{escape_attr(prefix_path('/courses/03709/'))}}">马克思主义基本原理概论</a></li>
-<li><a href="{{escape_attr(prefix_path('/courses/13000/'))}}">英语（专升本）</a></li>
+<li><a href="{escape_attr(prefix_path('/courses/03708/'))}">中国近现代史纲要</a></li>
+<li><a href="{escape_attr(prefix_path('/courses/03709/'))}">马克思主义基本原理概论</a></li>
+<li><a href="{escape_attr(prefix_path('/courses/13000/'))}">英语（专升本）</a></li>
 </ul>
 <h2>官方来源</h2>
 <ul>
