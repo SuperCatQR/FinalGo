@@ -33,7 +33,7 @@ jobs:
 
       - name: Build site
         run: |
-          python scripts/build-course-pages.py --base /FinalGo/
+          python scripts/build-course-pages.py --base /jiangsu-zikao-aio/
           echo "=== Build report ==="
           cat site/course-build-report.md
 
@@ -57,7 +57,7 @@ jobs:
     needs: build-and-deploy
     runs-on: ubuntu-latest
     env:
-      SITE_URL: https://supercatqr.github.io/FinalGo/
+      SITE_URL: https://supercatqr.github.io/jiangsu-zikao-aio/
     steps:
       - name: Wait for Pages deployment to settle
         run: sleep 30
