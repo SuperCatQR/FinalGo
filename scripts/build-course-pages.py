@@ -338,7 +338,7 @@ def status_kind(status: str) -> str:
 def status_banner(page: CoursePage) -> str:
     kind = status_kind(page.meta.get("状态", ""))
     if kind == "yellow":
-        return '<div class="status-banner status-banner--yellow">🤖 AI 辅助生成，未经人工校对 — 本页面内容由 AI 辅助生成，可能存在错误。已校对区块见 AI 生成声明表。</div>'
+        return '<div class="status-banner status-banner--yellow">🤖 AI 辅助生成 — 本页面内容由 AI 依据官方考纲自动整理，可能存在错误。如与最新官方公告冲突，以官方为准。</div>'
     if kind == "red":
         return '<div class="status-banner status-banner--red">⚠️ 内容建设中 — 本页面为骨架级占位，部分区块内容尚未填充。如需最新信息，请参阅江苏省教育考试院官方公告。</div>'
     return ""
@@ -675,6 +675,40 @@ def is_auto_gen_meta(text: str) -> bool:
     return any(marker in normalized for marker in markers)
 
 
+# Signature blocks dropped from course pages per the CHO-94 product decision
+# (AI 自动维护边界 = 不保留人工审核门槛): content goes in via pure AI
+# auto-generation, so the manual sign-off region is not rendered. We strip
+# only the heading + its body at render time — source markdown is untouched,
+# and the reviewed正文 (everything before these H2s) is preserved.
+REVIEW_SECTION_TITLES = ("人工审核清单", "AI 生成声明")
+
+
+def strip_review_sections(body: str) -> str:
+    """Drop the 人工审核清单 / AI 生成声明 H2 sections from a course body.
+
+    A section runs from its `## <title>` line up to the next `## ` heading (or
+    end of file). Everything outside these sections — including正文 already
+    人工校对过 — is kept verbatim.
+    """
+    lines = body.splitlines(keepends=True)
+    out: list[str] = []
+    skipping = False
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith("## "):
+            title = stripped[3:].strip()
+            skipping = any(title == t or title.startswith(t) for t in REVIEW_SECTION_TITLES)
+            if skipping:
+                continue
+        elif skipping and stripped.startswith("# ") and not stripped.startswith("## "):
+            # An H1 ends the skipped region too (defensive; course bodies use H2).
+            skipping = False
+        if skipping:
+            continue
+        out.append(line)
+    return "".join(out)
+
+
 def render_markdown(body: str, page: CoursePage | MajorPage | None = None) -> str:
     lines = body.splitlines()
     parts: list[str] = []
@@ -789,7 +823,7 @@ def render_old_code_page(page: CoursePage) -> str:
         message = "📢 此页面为历史参考：自 2024 年 10 月考期起，『中国近现代史纲要』使用新代码 15043。现行有效页面为 15043。"
     else:
         message = "📢 此页面为历史参考：自 2024 年 10 月考期起，『马克思主义基本原理』使用新代码 15044。现行有效页面为 15044。"
-    body = render_markdown(page.body, page)
+    body = render_markdown(strip_review_sections(page.body), page)
     target_href = prefix_path(f"/courses/{target_code}/")
     majors_href = prefix_path("/majors/")
     banner = (
@@ -804,7 +838,7 @@ def render_old_code_page(page: CoursePage) -> str:
 
 def render_course_page(page: CoursePage, result: BuildResult) -> str:
     validate_page(page, result)
-    body = render_markdown(page.body, page)
+    body = render_markdown(strip_review_sections(page.body), page)
     count = parse_auto_gen_count(read_text(page.source))
     count_html = ""
     if page.code in PUBLIC_AUTO_GEN_CODES:
@@ -837,176 +871,107 @@ def render_course_page(page: CoursePage, result: BuildResult) -> str:
 
 def render_migration_note(page: CoursePage) -> str:
     target_href = prefix_path("/courses/15040/")
-    content = f'<div class="migration-note">该文件是迁移说明页，不作为 15040 课程正文渲染。课程正文请访问 <a href="{escape_attr(target_href)}">/courses/15040/</a>。</div>' + render_markdown(page.body, page)
+    content = f'<div class="migration-note">该文件是迁移说明页，不作为 15040 课程正文渲染。课程正文请访问 <a href="{escape_attr(target_href)}">/courses/15040/</a>。</div>' + render_markdown(strip_review_sections(page.body), page)
     return html_shell(page.title, content, canonical="/courses/15040/", noindex="noindex, follow")
 
 
-def sidebar_html(active: str = "") -> str:
-    """Render the global sidebar navigation.
+def _head(title: str, canonical_href: str, noindex: str | None = None) -> str:
+    """Shared <head>: two-layer stylesheet (base.css token contract + style-C
+    theme.css signature), canonical, optional robots."""
+    robots = f'<meta name="robots" content="{escape_attr(noindex)}">\n  ' if noindex else ""
+    base_href = prefix_path("/assets/base.css")
+    theme_href = prefix_path("/assets/theme.css")
+    return f"""<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {robots}<link rel="canonical" href="{escape_attr(canonical_href)}">
+  <title>{html.escape(title)}</title>
+  <link rel="stylesheet" href="{escape_attr(base_href)}">
+  <link rel="stylesheet" href="{escape_attr(theme_href)}">
+</head>"""
 
-    active: 'home' | 'majors' | 'courses'
-    """
+
+def _header(active: str) -> str:
+    """Shared top navigation header. active: 'home' | 'majors' | 'courses'."""
     home_href = prefix_path("/")
     majors_href = prefix_path("/majors/")
     courses_href = prefix_path("/courses/")
 
     def link(href: str, label: str, key: str) -> str:
-        cls = ' class="sidebar-active"' if active == key else ""
-        return f'<a href="{escape_attr(href)}"{cls}>{html.escape(label)}</a>'
+        cur = ' aria-current="page"' if active == key else ""
+        return f'<a href="{escape_attr(href)}"{cur}>{html.escape(label)}</a>'
 
-    return f"""<aside class="sidebar">
-  <details class="sidebar-toggle">
-    <summary>导航菜单</summary>
-    <ul class="sidebar-nav">
-      <li>{link(home_href, "首页", "home")}</li>
-      <li>{link(majors_href, "专业索引", "majors")}</li>
-      <li>{link(courses_href, "课程索引", "courses")}</li>
-    </ul>
-  </details>
-  <div class="sidebar-title">江苏自考资料库</div>
-  <ul class="sidebar-nav">
-    <li>{link(home_href, "首页", "home")}</li>
-    <li>{link(majors_href, "专业索引", "majors")}</li>
-    <li>{link(courses_href, "课程索引", "courses")}</li>
-  </ul>
-</aside>"""
+    return f"""<header class="site-header"><div class="wrap">
+    <a class="site-brand" href="{escape_attr(home_href)}">江苏自考资料库</a>
+    <nav class="site-nav" aria-label="主导航">{link(home_href, "首页", "home")}{link(majors_href, "专业", "majors")}{link(courses_href, "课程", "courses")}</nav>
+  </div></header>"""
+
+
+_FOOTER = """<footer class="site-footer"><div class="wrap">
+    <p class="footer-priority">数据源优先级：江苏省教育考试院官方公告与附件 &gt; 主考学校转发公告 &gt; 后续人工校对资料。</p>
+    <p class="footer-note">本站为江苏自考资料参考，口径以江苏省教育考试院官方公告为准。</p>
+  </div></footer>"""
+
+
+def page_shell(title: str, breadcrumb: str, content: str, *, active: str,
+               canonical_href: str, noindex: str | None = None) -> str:
+    """Unified style-C page shell for all five page types: top nav + .wrap
+    breadcrumb + centered .course-page main + footer. No sidebar — the
+    style-C layout uses a sticky top nav (see CHO-94 prototype)."""
+    bc = f'<nav class="breadcrumb" aria-label="面包屑"><div class="wrap">{breadcrumb}</div></nav>\n  ' if breadcrumb else ""
+    return f"""<!doctype html>
+<html lang="zh-CN">
+{_head(title, canonical_href, noindex)}
+<body>
+  {_header(active)}
+  {bc}<main>
+    <div class="course-page">
+      {content}
+    </div>
+  </main>
+  {_FOOTER}
+</body>
+</html>
+"""
 
 
 def html_shell(title: str, content: str, canonical: str, noindex: str | None = None) -> str:
-    robots = f'<meta name="robots" content="{escape_attr(noindex)}">' if noindex else ""
-    css_href = prefix_path("/assets/course.css")
-    courses_href = prefix_path("/courses/")
     home_href = prefix_path("/")
-    majors_href = prefix_path("/majors/")
-    canonical_href = prefix_path(canonical)
-    sidebar = sidebar_html(active="courses")
-    return f"""<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {robots}
-  <link rel="canonical" href="{escape_attr(canonical_href)}">
-  <title>{html.escape(title)} · 江苏自考课程</title>
-  <link rel="stylesheet" href="{escape_attr(css_href)}">
-</head>
-<body>
-  <header class="site-header">
-    <a class="site-brand" href="{escape_attr(home_href)}">江苏自考资料库</a>
-    <nav class="site-nav" aria-label="主导航">
-      <a href="{escape_attr(home_href)}">首页</a>
-      <a href="{escape_attr(majors_href)}">专业</a>
-      <a href="{escape_attr(courses_href)}">课程</a>
-    </nav>
-  </header>
-  <div class="site-layout">
-    {sidebar}
-    <main class="course-page">
-      <nav class="breadcrumb" aria-label="面包屑"><a href="{escape_attr(home_href)}">首页</a> &gt; <a href="{escape_attr(courses_href)}">课程</a> &gt; {html.escape(title)}</nav>
-      {content}
-    </main>
-  </div>
-  <footer class="site-footer">
-    <p class="footer-priority">数据源优先级：江苏省教育考试院官方公告与附件 &gt; 主考学校转发公告 &gt; 后续人工校对资料。</p>
-    <p class="footer-note">本站为江苏自考资料参考，口径以江苏省教育考试院官方公告为准。</p>
-  </footer>
-</body>
-</html>
-"""
+    courses_href = prefix_path("/courses/")
+    breadcrumb = (
+        f'<a href="{escape_attr(home_href)}">首页</a> &gt; '
+        f'<a href="{escape_attr(courses_href)}">课程</a> &gt; {html.escape(title)}'
+    )
+    return page_shell(
+        f"{title} · 江苏自考课程", breadcrumb, content,
+        active="courses", canonical_href=prefix_path(canonical), noindex=noindex,
+    )
 
 
 def html_shell_major(title: str, content: str, canonical: str, name: str, level: str) -> str:
-    """HTML shell for major pages — distinct breadcrumb and header from course pages."""
-    css_href = prefix_path("/assets/course.css")
+    """Shell for major detail pages — distinct breadcrumb from course pages."""
     home_href = prefix_path("/")
     majors_href = prefix_path("/majors/")
-    courses_href = prefix_path("/courses/")
-    canonical_href = prefix_path(canonical)
-    level_label = level if level else ""
-    title_full = f"{name}（{level}）" if level_label else name
-    page_title = f"{title_full} · 江苏自考专业"
-    sidebar = sidebar_html(active="majors")
-    return f"""<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="canonical" href="{escape_attr(canonical_href)}">
-  <title>{html.escape(page_title)}</title>
-  <link rel="stylesheet" href="{escape_attr(css_href)}">
-</head>
-<body>
-  <header class="site-header">
-    <a class="site-brand" href="{escape_attr(home_href)}">江苏自考资料库</a>
-    <nav class="site-nav" aria-label="主导航">
-      <a href="{escape_attr(home_href)}">首页</a>
-      <a href="{escape_attr(majors_href)}" aria-current="page">专业</a>
-      <a href="{escape_attr(courses_href)}">课程</a>
-    </nav>
-  </header>
-  <div class="site-layout">
-    {sidebar}
-    <main class="course-page">
-      <nav class="breadcrumb" aria-label="面包屑">
-        <a href="{escape_attr(home_href)}">首页</a> &gt;
-        <a href="{escape_attr(majors_href)}">专业</a> &gt;
-        {html.escape(name)}
-      </nav>
-      {content}
-    </main>
-  </div>
-  <footer class="site-footer">
-    <p class="footer-priority">数据源优先级：江苏省教育考试院官方公告与附件 &gt; 主考学校转发公告 &gt; 后续人工校对资料。</p>
-    <p class="footer-note">本站为江苏自考资料参考，口径以江苏省教育考试院官方公告为准。</p>
-  </footer>
-</body>
-</html>
-"""
+    title_full = f"{name}（{level}）" if level else name
+    breadcrumb = (
+        f'<a href="{escape_attr(home_href)}">首页</a> &gt; '
+        f'<a href="{escape_attr(majors_href)}">专业</a> &gt; {html.escape(name)}'
+    )
+    return page_shell(
+        f"{title_full} · 江苏自考专业", breadcrumb, content,
+        active="majors", canonical_href=prefix_path(canonical),
+    )
 
 
 def html_shell_majors_index(title: str, content: str) -> str:
-    """HTML shell for the majors index page."""
-    css_href = prefix_path("/assets/course.css")
+    """Shell for the majors index page."""
     home_href = prefix_path("/")
-    majors_href = prefix_path("/majors/")
-    courses_href = prefix_path("/courses/")
-    canonical_href = prefix_path("/majors/")
-    sidebar = sidebar_html(active="majors")
-    return f"""<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="canonical" href="{escape_attr(canonical_href)}">
-  <title>江苏自考专业索引 · 江苏自考专业</title>
-  <link rel="stylesheet" href="{escape_attr(css_href)}">
-</head>
-<body>
-  <header class="site-header">
-    <a class="site-brand" href="{escape_attr(home_href)}">江苏自考资料库</a>
-    <nav class="site-nav" aria-label="主导航">
-      <a href="{escape_attr(home_href)}">首页</a>
-      <a href="{escape_attr(majors_href)}" aria-current="page">专业</a>
-      <a href="{escape_attr(courses_href)}">课程</a>
-    </nav>
-  </header>
-  <div class="site-layout">
-    {sidebar}
-    <main class="course-page">
-      <nav class="breadcrumb" aria-label="面包屑">
-        <a href="{escape_attr(home_href)}">首页</a> &gt;
-        专业
-      </nav>
-      {content}
-    </main>
-  </div>
-  <footer class="site-footer">
-    <p class="footer-priority">数据源优先级：江苏省教育考试院官方公告与附件 &gt; 主考学校转发公告 &gt; 后续人工校对资料。</p>
-    <p class="footer-note">本站为江苏自考资料参考，口径以江苏省教育考试院官方公告为准。</p>
-  </footer>
-</body>
-</html>
-"""
+    breadcrumb = f'<a href="{escape_attr(home_href)}">首页</a> &gt; 专业'
+    return page_shell(
+        "江苏自考专业索引 · 江苏自考专业", breadcrumb, content,
+        active="majors", canonical_href=prefix_path("/majors/"),
+    )
+
 
 
 def render_index(pages: Iterable[CoursePage]) -> str:
@@ -1028,27 +993,9 @@ def render_index(pages: Iterable[CoursePage]) -> str:
 
 
 def render_site_index() -> str:
-    """Render site/index.html with base-aware paths, replacing the hand-written version."""
-    home = prefix_path("/")
+    """Render site/index.html with base-aware paths, style-C shell."""
     majors = prefix_path("/majors/")
-    courses = prefix_path("/courses/")
-    css = prefix_path("/assets/course.css")
-    sidebar = sidebar_html(active="home")
-    return f"""<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="canonical" href="{escape_attr(home)}">
-  <title>江苏自考资料库 · 江苏自考资料库</title>
-  <link rel="stylesheet" href="{escape_attr(css)}">
-</head>
-<body>
-  <header class="site-header"><a class="site-brand" href="{escape_attr(home)}">江苏自考资料库</a><nav class="site-nav" aria-label="主导航"><a href="{escape_attr(home)}" aria-current="page">首页</a><a href="{escape_attr(majors)}">专业</a><a href="{escape_attr(courses)}">课程</a></nav></header>
-  <div class="site-layout">
-    {sidebar}
-    <main class="course-page">
-    <h1>江苏自考资料库</h1>
+    body = f"""<h1>江苏自考资料库</h1>
 <blockquote>数据源优先级：江苏省教育考试院官方公告与附件 &gt; 主考学校转发公告 &gt; 后续人工校对资料。</blockquote>
 <h2>当前口径</h2>
 <p>江苏省 2024 年发布《江苏省高等教育自学考试开考专业目录（2024年版）》和《江苏省高等教育自学考试专业考试计划（2024年版）》。本省样板页以"面向社会开考专业"为主，不覆盖全部助学/委托/高校内部口径。</p>
@@ -1060,17 +1007,17 @@ def render_site_index() -> str:
 <li><span class="dead-link" title="该入口本期未产出独立页面">专业页批量生产工作流</span></li>
 <li><span class="dead-link" title="该入口本期未产出独立页面">PDF 到 Markdown 四段式流水线</span></li>
 <li><span class="dead-link" title="该入口本期未产出独立页面">PDF 批处理报告</span></li>
-<li><a href="{escape_attr(majors)}">全量专业索引</a></li>
+<li><a href="{{escape_attr(majors)}}">全量专业索引</a></li>
 <li><span class="dead-link" title="该入口本期未产出独立页面">项目目录结构蓝图</span></li>
-<li><a href="{escape_attr(prefix_path('/majors/030101K-law/'))}">法学（专升本）</a></li>
-<li><a href="{escape_attr(prefix_path('/majors/050101-chinese-language-literature/'))}">汉语言文学（专升本）</a></li>
-<li><a href="{escape_attr(prefix_path('/majors/120203K-accounting/'))}">会计学（专升本）</a></li>
-<li><a href="{escape_attr(prefix_path('/majors/080901-computer-science-and-technology/'))}">计算机科学与技术（专升本）</a></li>
+<li><a href="{{escape_attr(prefix_path('/majors/030101K-law/'))}}">法学（专升本）</a></li>
+<li><a href="{{escape_attr(prefix_path('/majors/050101-chinese-language-literature/'))}}">汉语言文学（专升本）</a></li>
+<li><a href="{{escape_attr(prefix_path('/majors/120203K-accounting/'))}}">会计学（专升本）</a></li>
+<li><a href="{{escape_attr(prefix_path('/majors/080901-computer-science-and-technology/'))}}">计算机科学与技术（专升本）</a></li>
 <li><span class="dead-link" title="该入口本期未产出独立页面">计算机科学与技术资料源清单</span></li>
 <li><span class="dead-link" title="该入口本期未产出独立页面">计算机科学与技术课程资料采集矩阵</span></li>
-<li><a href="{escape_attr(prefix_path('/courses/03708/'))}">中国近现代史纲要</a></li>
-<li><a href="{escape_attr(prefix_path('/courses/03709/'))}">马克思主义基本原理概论</a></li>
-<li><a href="{escape_attr(prefix_path('/courses/13000/'))}">英语（专升本）</a></li>
+<li><a href="{{escape_attr(prefix_path('/courses/03708/'))}}">中国近现代史纲要</a></li>
+<li><a href="{{escape_attr(prefix_path('/courses/03709/'))}}">马克思主义基本原理概论</a></li>
+<li><a href="{{escape_attr(prefix_path('/courses/13000/'))}}">英语（专升本）</a></li>
 </ul>
 <h2>官方来源</h2>
 <ul>
@@ -1079,13 +1026,8 @@ def render_site_index() -> str:
 <li>附件 2：《江苏省高等教育自学考试面向社会开考专业考试计划（2024年版）》</li>
 <li>附件 3：《江苏省高等教育自学考试面向社会开考专科专业新旧代码和名称对照表》</li>
 <li>附件 4：《江苏省高等教育自学考试专业考试计划简编（2024年版）》</li>
-</ul>
-  </main>
-  </div>
-  <footer class="site-footer"><p class="footer-priority">数据源优先级：江苏省教育考试院官方公告与附件 &gt; 主考学校转发公告 &gt; 后续人工校对资料。</p><p class="footer-note">本站为江苏自考资料参考，口径以江苏省教育考试院官方公告为准。</p></footer>
-</body>
-</html>
-"""
+</ul>"""
+    return page_shell("江苏自考资料库", "", body, active="home", canonical_href=prefix_path("/"))
 
 
 def render_majors_index(rows: list[MajorIndexRow], result: BuildResult) -> str:
@@ -1166,82 +1108,19 @@ def render_major_page(page: MajorPage, result: BuildResult) -> str:
     return html_shell_major(page.title, content, page.route, page.name, page.level)
 
 
+TEMPLATES_DIR = Path(__file__).resolve().parent / "templates"
+
 def write_css(out_root: Path) -> None:
+    """Emit the two-layer stylesheet: base.css (token contract + structural
+    primitives) + theme.css (style-C signature). Sedimented from the CHO-94
+    prototype under scripts/templates/; the generator copies them verbatim so
+    designers edit CSS as CSS, not as a Python string."""
     css_dir = out_root / "assets"
     css_dir.mkdir(parents=True, exist_ok=True)
-    (css_dir / "course.css").write_text(CSS, encoding="utf-8")
+    for name in ("base.css", "theme.css"):
+        shutil.copyfile(TEMPLATES_DIR / name, css_dir / name)
 
 
-CSS = """
-:root { color-scheme: light; --blue:#1976d2; --red:#e74c3c; --yellow:#f39c12; --green:#27ae60; --sidebar-w:220px; }
-body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK SC", Arial, sans-serif; line-height:1.65; color:#263238; background:#f8fafc; }
-a { color:var(--blue); text-decoration:none; } a:hover { text-decoration:underline; } a:focus, summary:focus { outline:2px solid var(--blue); outline-offset:2px; }
-.site-header { background:#fff; border-bottom:1px solid #e0e0e0; padding:12px 24px; font-weight:700; display:flex; align-items:center; gap:16px; }
-.site-header .site-brand { flex-shrink:0; } .site-header .site-nav { display:flex; gap:16px; }
-.site-header .site-nav a[aria-current="page"] { color:#263238; text-decoration:underline; }
-
-/* Sidebar */
-.site-layout { display:flex; min-height:100vh; }
-.sidebar { width:var(--sidebar-w); flex-shrink:0; background:#fff; border-right:1px solid #e0e0e0; padding:16px 0; position:sticky; top:0; height:100vh; overflow-y:auto; box-sizing:border-box; }
-.sidebar-title { font-weight:700; font-size:1.05rem; padding:0 16px 12px; border-bottom:1px solid #eceff1; margin-bottom:8px; }
-.sidebar-nav { list-style:none; margin:0; padding:0; }
-.sidebar-nav li { margin:0; }
-.sidebar-nav a { display:block; padding:8px 16px; color:#455a64; border-left:3px solid transparent; transition:background .15s; }
-.sidebar-nav a:hover { background:#f5f8ff; text-decoration:none; }
-.sidebar-nav a.sidebar-active { color:var(--blue); background:#e3f2fd; border-left-color:var(--blue); font-weight:600; }
-.sidebar-toggle { display:none; }
-.sidebar-section-label { padding:8px 16px 4px; font-size:.75em; color:#90a4ae; text-transform:uppercase; letter-spacing:.05em; }
-
-.course-page { flex:1; max-width:960px; margin:0 auto; padding:24px; background:#fff; min-height:100vh; }
-.breadcrumb { color:#607d8b; font-size:.9rem; margin-bottom:16px; }
-h1 { font-size:2rem; margin:0 0 16px; } h2 { margin-top:32px; padding-bottom:6px; border-bottom:1px solid #eceff1; } h3 { margin-top:24px; }
-.status-banner, .jump-banner, .migration-note, .contract-note, .manual-note { border-radius:8px; padding:12px 16px; margin:16px 0; }
-.status-banner--red { background:#fff3cd; border-left:4px solid #ffc107; }
-.status-banner--yellow { background:#fff8e1; border-left:4px solid #ff9800; }
-.jump-banner { background:#e3f2fd; border:1px solid #2196f3; font-size:1.05rem; }
-.jump-banner--archive { background:#fff3e0; border:1px solid #ff9800; border-left:4px solid #e65100; color:#7a3b00; font-weight:600; }
-.migration-note { background:#eceff1; border-left:4px solid #607d8b; }
-.contract-note { background:#e8f5e9; border-left:4px solid var(--green); }
-.manual-note { background:#e8eaf6; border-left:4px solid #3f51b5; }
-.button-link { display:inline-block; margin-left:12px; background:var(--blue); color:#fff; padding:8px 14px; border-radius:6px; font-weight:600; }
-.button-link:hover { background:#0d47a1; text-decoration:none; }
-.table-scroll { overflow-x:auto; margin:16px 0; }
-table { border-collapse:collapse; width:100%; min-width:560px; } th, td { border:1px solid #e0e0e0; padding:8px 10px; vertical-align:top; } th { background:#f5f7fa; text-align:left; } .meta-table th:first-child, .meta-table td:first-child { width:160px; font-weight:600; }
-.status-dot { display:inline-block; width:.75em; height:.75em; border-radius:50%; margin-right:.4em; } .status-dot--red{background:var(--red);} .status-dot--yellow{background:var(--yellow);} .status-dot--green{background:var(--green);}
-.badge { font-size:.75em; border-radius:4px; padding:2px 6px; margin-left:8px; vertical-align:middle; } .badge-ai{background:#e3f2fd;color:#1565c0;} .badge-manual{background:#fce4ec;color:#c62828;}
-.source-grade, .state-chip { display:inline-block; border-radius:3px; padding:1px 6px; font-size:.85em; } .source-grade--a,.state-chip--normal{background:#e8f5e9;color:#1b5e20;} .source-grade--b,.state-chip--transition{background:#fff3e0;color:#e65100;} .source-grade--c{background:#ffebee;color:#b71c1c;}
-.placeholder { color:#8a8a8a; border-bottom:1px dashed #bbb; font-style:italic; }
-.external-link::after { content:" ↗"; font-size:.75em; }
-.auto-gen { border:1px dashed #90caf9; padding:12px; border-radius:8px; background:#fbfdff; } .auto-gen-meta { display:none; } .auto-gen-count { color:#455a64; background:#f5f8ff; padding:8px 12px; border-radius:6px; }
-details { margin:8px 0; } summary { cursor:pointer; padding:8px 12px; border-left:3px solid transparent; } details[open] > summary { background:#f5f8ff; border-left-color:#2196f3; }
-.course-index li { margin:8px 0; } .tag-deprecated { color:#777; background:#eee; border-radius:3px; padding:1px 5px; font-size:.8em; }
-.dead-link { color:#8a8a8a; border-bottom:1px dashed #bbb; cursor:help; }
-.major-search { margin:0 0 16px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
-.major-search-label { font-weight:600; white-space:nowrap; }
-.major-search-input { flex:1; min-width:200px; padding:8px 12px; border:1px solid #e0e0e0; border-radius:6px; font-size:1rem; }
-.major-search-input:focus { outline:2px solid var(--blue); outline-offset:-1px; border-color:var(--blue); }
-.major-search-count { font-size:.85rem; color:#607d8b; white-space:nowrap; }
-.cross-jump { margin-top:32px; padding-top:16px; border-top:1px solid #eceff1; }
-.cross-jump a { display:inline-block; padding:8px 16px; background:#f5f8ff; border:1px solid #e0e0e0; border-radius:6px; font-weight:600; }
-.cross-jump a:hover { background:#e3f2fd; text-decoration:none; }
-
-/* Mobile sidebar — collapsed via <details>, CSS-only */
-@media (max-width: 767px) {
-  .site-layout { display:block; }
-  .sidebar { position:static; width:100%; height:auto; border-right:none; border-bottom:1px solid #e0e0e0; padding:0; }
-  .sidebar-title { display:none; }
-  .sidebar-toggle { display:block; }
-  .sidebar-toggle summary { padding:12px 16px; font-weight:600; background:#f5f7fa; border-bottom:1px solid #e0e0e0; cursor:pointer; list-style:none; }
-  .sidebar-toggle summary::-webkit-details-marker { display:none; }
-  .sidebar-toggle summary::before { content:"☰ "; }
-  .sidebar-toggle[open] summary::before { content:"✕ "; }
-  .sidebar-nav { padding:0; }
-  .sidebar-nav a { padding:10px 24px; }
-  .course-page { padding:16px; }
-  h1{font-size:1.5rem;} table{font-size:.9rem;} .button-link{display:block;margin:10px 0 0;}
-}
-@media print { body{background:#fff;} .site-header,.sidebar,.sidebar-toggle,.status-banner,.badge,.jump-banner,.auto-gen-meta{display:none!important;} .course-page{max-width:none;padding:0;margin:0;} a{color:#000;text-decoration:none;} tr, table { page-break-inside: avoid; } .breadcrumb{color:#000;} .site-layout{display:block;} }
-""".strip() + "\n"
 
 
 def build(out_dir: Path) -> BuildResult:
