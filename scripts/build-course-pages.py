@@ -22,6 +22,7 @@ from typing import Iterable
 
 ROOT = Path(__file__).resolve().parents[1]
 COURSES_DIR = ROOT / "docs" / "jiangsu" / "courses"
+MAJORS_DIR = ROOT / "docs" / "jiangsu" / "majors"
 DEFAULT_OUT_DIR = ROOT / "site" / "courses"
 DEFAULT_BASE = "/"
 V2_CODES = {"15040", "15043", "15044", "13000", "00023"}
@@ -133,6 +134,29 @@ class CoursePage:
     frontmatter: dict[str, str]
     body: str
     migration_note: bool = False
+
+
+@dataclass
+class MajorPage:
+    code: str
+    name: str
+    level: str
+    slug: str
+    source: Path
+    route: str
+    title: str
+    meta: dict[str, str]
+    body: str
+
+
+@dataclass
+class MajorIndexRow:
+    num: str
+    code: str
+    name: str
+    level: str
+    slug: str
+    exists: bool
 
 
 @dataclass
@@ -577,11 +601,11 @@ def normalize_href(href: str) -> str:
         return href
     if href.startswith("/"):
         return prefix_path(href)
-    major_match = re.fullmatch(r"(?:\./)?\.\./majors/([^/#?]+)(/)?([#?].*)?", href)
+    major_match = re.fullmatch(r"(?:\./|\.\./)+majors/([^/#?]+)(/)?([#?].*)?", href)
     if major_match:
         suffix = major_match.group(3) or ""
         return prefix_path(f"/majors/{major_match.group(1)}/{suffix}")
-    match = re.fullmatch(r"(?:\./|\.\./)?(\d{5})(?:/|\.md)?", href)
+    match = re.fullmatch(r"(?:\./|\.\./)*(?:courses/)?(\d{5})(?:/|\.md)?", href)
     if match:
         return prefix_path(f"/courses/{match.group(1)}/")
     if href.endswith(".md"):
@@ -767,13 +791,15 @@ def render_old_code_page(page: CoursePage) -> str:
         message = "📢 此页面为历史参考：自 2024 年 10 月考期起，『马克思主义基本原理』使用新代码 15044。现行有效页面为 15044。"
     body = render_markdown(page.body, page)
     target_href = prefix_path(f"/courses/{target_code}/")
+    majors_href = prefix_path("/majors/")
     banner = (
         f'<div class="jump-banner jump-banner--archive" role="alert">'
         f'{html.escape(message)}'
         f'<a class="button-link" href="{escape_attr(target_href)}">查看 {target_code} {html.escape(target_name)}</a>'
         f'</div>'
     )
-    return html_shell(page.title, banner + body, canonical=prefix_path(f"/courses/{target_code}/"), noindex="noindex, follow")
+    cross_jump = f'<nav class="cross-jump" aria-label="站内跳转"><a href="{escape_attr(majors_href)}">浏览全部专业</a></nav>'
+    return html_shell(page.title, banner + body + cross_jump, canonical=prefix_path(f"/courses/{target_code}/"), noindex="noindex, follow")
 
 
 def render_course_page(page: CoursePage, result: BuildResult) -> str:
@@ -781,6 +807,10 @@ def render_course_page(page: CoursePage, result: BuildResult) -> str:
     body = render_markdown(page.body, page)
     count = parse_auto_gen_count(read_text(page.source))
     count_html = ""
+    if page.code in PUBLIC_AUTO_GEN_CODES:
+        count_html = f'<p class="auto-gen-count">适用专业统计：正常开考 {count["normal"]} 个，停考过渡 {count["transition"]} 个，合计 {count["total"]} 个。</p>'
+    if page.code == "00023" and "AUTO_GEN_START" not in page.body:
+        count_html = '<p class="contract-note">本课程无 AUTO_GEN 区域为正常契约，按人工维护/普通静态区块渲染。</p>'
 
     # Structured exam-index data island (B-2): emit parsed frontmatter as
     # machine-readable JSON so a dynamic frontend can partition "现行主流程 /
@@ -788,7 +818,6 @@ def render_course_page(page: CoursePage, result: BuildResult) -> str:
     current_exam, legacy_exam = parse_exam_index_from_frontmatter(page.frontmatter)
     exam_index_json = ""
     if current_exam or legacy_exam:
-        import json as _json
         exam_data = {
             "course_code": page.code,
             "current_exam_periods": current_exam,
@@ -800,11 +829,9 @@ def render_course_page(page: CoursePage, result: BuildResult) -> str:
             f'</script>'
         )
 
-    if page.code in PUBLIC_AUTO_GEN_CODES:
-        count_html = f'<p class="auto-gen-count">适用专业统计：正常开考 {count["normal"]} 个，停考过渡 {count["transition"]} 个，合计 {count["total"]} 个。</p>'
-    if page.code == "00023" and "AUTO_GEN_START" not in page.body:
-        count_html = '<p class="contract-note">本课程无 AUTO_GEN 区域为正常契约，按人工维护/普通静态区块渲染。</p>'
-    content = status_banner(page) + count_html + exam_index_json + body
+    majors_href = prefix_path("/majors/")
+    cross_jump = f'<nav class="cross-jump" aria-label="站内跳转"><a href="{escape_attr(majors_href)}">浏览全部专业</a></nav>'
+    content = status_banner(page) + count_html + exam_index_json + body + cross_jump
     return html_shell(page.title, content, canonical=page.route)
 
 
@@ -814,6 +841,37 @@ def render_migration_note(page: CoursePage) -> str:
     return html_shell(page.title, content, canonical="/courses/15040/", noindex="noindex, follow")
 
 
+def sidebar_html(active: str = "") -> str:
+    """Render the global sidebar navigation.
+
+    active: 'home' | 'majors' | 'courses'
+    """
+    home_href = prefix_path("/")
+    majors_href = prefix_path("/majors/")
+    courses_href = prefix_path("/courses/")
+
+    def link(href: str, label: str, key: str) -> str:
+        cls = ' class="sidebar-active"' if active == key else ""
+        return f'<a href="{escape_attr(href)}"{cls}>{html.escape(label)}</a>'
+
+    return f"""<aside class="sidebar">
+  <details class="sidebar-toggle">
+    <summary>导航菜单</summary>
+    <ul class="sidebar-nav">
+      <li>{link(home_href, "首页", "home")}</li>
+      <li>{link(majors_href, "专业索引", "majors")}</li>
+      <li>{link(courses_href, "课程索引", "courses")}</li>
+    </ul>
+  </details>
+  <div class="sidebar-title">江苏自考资料库</div>
+  <ul class="sidebar-nav">
+    <li>{link(home_href, "首页", "home")}</li>
+    <li>{link(majors_href, "专业索引", "majors")}</li>
+    <li>{link(courses_href, "课程索引", "courses")}</li>
+  </ul>
+</aside>"""
+
+
 def html_shell(title: str, content: str, canonical: str, noindex: str | None = None) -> str:
     robots = f'<meta name="robots" content="{escape_attr(noindex)}">' if noindex else ""
     css_href = prefix_path("/assets/course.css")
@@ -821,6 +879,7 @@ def html_shell(title: str, content: str, canonical: str, noindex: str | None = N
     home_href = prefix_path("/")
     majors_href = prefix_path("/majors/")
     canonical_href = prefix_path(canonical)
+    sidebar = sidebar_html(active="courses")
     return f"""<!doctype html>
 <html lang="zh-CN">
 <head>
@@ -832,11 +891,119 @@ def html_shell(title: str, content: str, canonical: str, noindex: str | None = N
   <link rel="stylesheet" href="{escape_attr(css_href)}">
 </head>
 <body>
-  <header class="site-header"><a href="{escape_attr(courses_href)}">江苏自考课程</a></header>
-  <main class="course-page">
-    <nav class="breadcrumb" aria-label="面包屑"><a href="{escape_attr(home_href)}">首页</a> &gt; <a href="{escape_attr(courses_href)}">课程</a> &gt; {html.escape(title)}</nav>
-    {content}
-  </main>
+  <header class="site-header">
+    <a class="site-brand" href="{escape_attr(home_href)}">江苏自考资料库</a>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="{escape_attr(home_href)}">首页</a>
+      <a href="{escape_attr(majors_href)}">专业</a>
+      <a href="{escape_attr(courses_href)}">课程</a>
+    </nav>
+  </header>
+  <div class="site-layout">
+    {sidebar}
+    <main class="course-page">
+      <nav class="breadcrumb" aria-label="面包屑"><a href="{escape_attr(home_href)}">首页</a> &gt; <a href="{escape_attr(courses_href)}">课程</a> &gt; {html.escape(title)}</nav>
+      {content}
+    </main>
+  </div>
+  <footer class="site-footer">
+    <p class="footer-priority">数据源优先级：江苏省教育考试院官方公告与附件 &gt; 主考学校转发公告 &gt; 后续人工校对资料。</p>
+    <p class="footer-note">本站为江苏自考资料参考，口径以江苏省教育考试院官方公告为准。</p>
+  </footer>
+</body>
+</html>
+"""
+
+
+def html_shell_major(title: str, content: str, canonical: str, name: str, level: str) -> str:
+    """HTML shell for major pages — distinct breadcrumb and header from course pages."""
+    css_href = prefix_path("/assets/course.css")
+    home_href = prefix_path("/")
+    majors_href = prefix_path("/majors/")
+    courses_href = prefix_path("/courses/")
+    canonical_href = prefix_path(canonical)
+    level_label = level if level else ""
+    title_full = f"{name}（{level}）" if level_label else name
+    page_title = f"{title_full} · 江苏自考专业"
+    sidebar = sidebar_html(active="majors")
+    return f"""<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="{escape_attr(canonical_href)}">
+  <title>{html.escape(page_title)}</title>
+  <link rel="stylesheet" href="{escape_attr(css_href)}">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-brand" href="{escape_attr(home_href)}">江苏自考资料库</a>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="{escape_attr(home_href)}">首页</a>
+      <a href="{escape_attr(majors_href)}" aria-current="page">专业</a>
+      <a href="{escape_attr(courses_href)}">课程</a>
+    </nav>
+  </header>
+  <div class="site-layout">
+    {sidebar}
+    <main class="course-page">
+      <nav class="breadcrumb" aria-label="面包屑">
+        <a href="{escape_attr(home_href)}">首页</a> &gt;
+        <a href="{escape_attr(majors_href)}">专业</a> &gt;
+        {html.escape(name)}
+      </nav>
+      {content}
+    </main>
+  </div>
+  <footer class="site-footer">
+    <p class="footer-priority">数据源优先级：江苏省教育考试院官方公告与附件 &gt; 主考学校转发公告 &gt; 后续人工校对资料。</p>
+    <p class="footer-note">本站为江苏自考资料参考，口径以江苏省教育考试院官方公告为准。</p>
+  </footer>
+</body>
+</html>
+"""
+
+
+def html_shell_majors_index(title: str, content: str) -> str:
+    """HTML shell for the majors index page."""
+    css_href = prefix_path("/assets/course.css")
+    home_href = prefix_path("/")
+    majors_href = prefix_path("/majors/")
+    courses_href = prefix_path("/courses/")
+    canonical_href = prefix_path("/majors/")
+    sidebar = sidebar_html(active="majors")
+    return f"""<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="{escape_attr(canonical_href)}">
+  <title>江苏自考专业索引 · 江苏自考专业</title>
+  <link rel="stylesheet" href="{escape_attr(css_href)}">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-brand" href="{escape_attr(home_href)}">江苏自考资料库</a>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="{escape_attr(home_href)}">首页</a>
+      <a href="{escape_attr(majors_href)}" aria-current="page">专业</a>
+      <a href="{escape_attr(courses_href)}">课程</a>
+    </nav>
+  </header>
+  <div class="site-layout">
+    {sidebar}
+    <main class="course-page">
+      <nav class="breadcrumb" aria-label="面包屑">
+        <a href="{escape_attr(home_href)}">首页</a> &gt;
+        专业
+      </nav>
+      {content}
+    </main>
+  </div>
+  <footer class="site-footer">
+    <p class="footer-priority">数据源优先级：江苏省教育考试院官方公告与附件 &gt; 主考学校转发公告 &gt; 后续人工校对资料。</p>
+    <p class="footer-note">本站为江苏自考资料参考，口径以江苏省教育考试院官方公告为准。</p>
+  </footer>
 </body>
 </html>
 """
@@ -855,6 +1022,8 @@ def render_index(pages: Iterable[CoursePage]) -> str:
     body += "<h2>现行课程</h2><ul class=\"course-index\">" + "\n".join(current_items) + "</ul>"
     if archive_items:
         body += "<h2>历史存档</h2><ul class=\"course-index course-index--archive\">" + "\n".join(archive_items) + "</ul>"
+    majors_href = prefix_path("/majors/")
+    body += f'<nav class="cross-jump" aria-label="站内跳转"><a href="{escape_attr(majors_href)}">浏览全部专业</a></nav>'
     return html_shell("江苏自考课程页索引", body, canonical="/courses/")
 
 
@@ -864,6 +1033,7 @@ def render_site_index() -> str:
     majors = prefix_path("/majors/")
     courses = prefix_path("/courses/")
     css = prefix_path("/assets/course.css")
+    sidebar = sidebar_html(active="home")
     return f"""<!doctype html>
 <html lang="zh-CN">
 <head>
@@ -875,7 +1045,9 @@ def render_site_index() -> str:
 </head>
 <body>
   <header class="site-header"><a class="site-brand" href="{escape_attr(home)}">江苏自考资料库</a><nav class="site-nav" aria-label="主导航"><a href="{escape_attr(home)}" aria-current="page">首页</a><a href="{escape_attr(majors)}">专业</a><a href="{escape_attr(courses)}">课程</a></nav></header>
-  <main class="course-page">
+  <div class="site-layout">
+    {sidebar}
+    <main class="course-page">
     <h1>江苏自考资料库</h1>
 <blockquote>数据源优先级：江苏省教育考试院官方公告与附件 &gt; 主考学校转发公告 &gt; 后续人工校对资料。</blockquote>
 <h2>当前口径</h2>
@@ -909,10 +1081,89 @@ def render_site_index() -> str:
 <li>附件 4：《江苏省高等教育自学考试专业考试计划简编（2024年版）》</li>
 </ul>
   </main>
+  </div>
   <footer class="site-footer"><p class="footer-priority">数据源优先级：江苏省教育考试院官方公告与附件 &gt; 主考学校转发公告 &gt; 后续人工校对资料。</p><p class="footer-note">本站为江苏自考资料参考，口径以江苏省教育考试院官方公告为准。</p></footer>
 </body>
 </html>
 """
+
+
+def render_majors_index(rows: list[MajorIndexRow], result: BuildResult) -> str:
+    """Render site/majors/index.html from pre-parsed major index rows."""
+    if not rows:
+        return html_shell_majors_index("江苏自考专业索引", "<h1>江苏自考专业索引</h1><p>暂无专业数据</p>")
+
+    # Build table rows with base-aware links
+    table_rows: list[str] = []
+    for row in rows:
+        if row.exists:
+            href = prefix_path(f"/majors/{row.slug}/")
+            link = f'<a href="{escape_attr(href)}">{html.escape(row.name)}</a>'
+        else:
+            link = f'<span class="dead-link" title="专业页缺失，待内容团队补建">{html.escape(row.name)}</span>'
+            result.warnings.append(f"majors/index.md: 专业 {row.code} {row.name} 目录缺失 ({row.slug}/)，已渲染为纯文本")
+        table_rows.append(
+            f"<tr>"
+            f"<td>{html.escape(row.num)}</td>"
+            f"<td><code>{html.escape(row.code)}</code></td>"
+            f"<td>{link}</td>"
+            f"<td>{html.escape(row.level)}</td>"
+            f"</tr>"
+        )
+
+    search_html = """<noscript>
+<style>.major-search{display:none}</style>
+</noscript>
+<div class="major-search">
+  <label for="major-search-input" class="major-search-label">搜索专业：</label>
+  <input type="search" id="major-search-input" class="major-search-input" placeholder="输入专业代码、名称或层次…" autocomplete="off">
+  <span id="major-search-count" class="major-search-count"></span>
+</div>
+<script>
+(function(){
+  var input = document.getElementById('major-search-input');
+  var count = document.getElementById('major-search-count');
+  var tbody = document.querySelector('#major-table tbody');
+  if (!input || !tbody) return;
+  var rows = Array.from(tbody.querySelectorAll('tr'));
+  function filter(){
+    var q = input.value.trim().toLowerCase();
+    var n = 0;
+    rows.forEach(function(tr){
+      var text = (tr.textContent || '').toLowerCase();
+      var match = !q || text.indexOf(q) !== -1;
+      tr.style.display = match ? '' : 'none';
+      if (match) n++;
+    });
+    if (q) {
+      count.textContent = n ? '找到 ' + n + ' 个专业' : '未找到匹配专业，请尝试其他关键词';
+    } else {
+      count.textContent = '';
+    }
+  }
+  input.addEventListener('input', filter);
+})();
+</script>"""
+
+    table_html = f"""<h1>江苏自考专业索引</h1>
+{search_html}
+<div class="table-scroll"><table id="major-table" class="responsive-table">
+<thead><tr><th>序号</th><th>专业代码</th><th>专业名称</th><th>层次</th></tr></thead>
+<tbody>
+{"".join(table_rows)}
+</tbody></table></div>"""
+
+    return html_shell_majors_index("江苏自考专业索引", table_html)
+
+
+def render_major_page(page: MajorPage, result: BuildResult) -> str:
+    """Render a single major page HTML."""
+    body = render_markdown(page.body, None)
+    # Add cross-jump footer: browse all courses
+    courses_href = prefix_path("/courses/")
+    cross_jump = f'<nav class="cross-jump" aria-label="站内跳转"><a href="{escape_attr(courses_href)}">浏览全部课程</a></nav>'
+    content = body + cross_jump
+    return html_shell_major(page.title, content, page.route, page.name, page.level)
 
 
 def write_css(out_root: Path) -> None:
@@ -922,11 +1173,26 @@ def write_css(out_root: Path) -> None:
 
 
 CSS = """
-:root { color-scheme: light; --blue:#1976d2; --red:#e74c3c; --yellow:#f39c12; --green:#27ae60; }
+:root { color-scheme: light; --blue:#1976d2; --red:#e74c3c; --yellow:#f39c12; --green:#27ae60; --sidebar-w:220px; }
 body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK SC", Arial, sans-serif; line-height:1.65; color:#263238; background:#f8fafc; }
 a { color:var(--blue); text-decoration:none; } a:hover { text-decoration:underline; } a:focus, summary:focus { outline:2px solid var(--blue); outline-offset:2px; }
-.site-header { background:#fff; border-bottom:1px solid #e0e0e0; padding:12px 24px; font-weight:700; }
-.course-page { max-width:960px; margin:0 auto; padding:24px; background:#fff; min-height:100vh; }
+.site-header { background:#fff; border-bottom:1px solid #e0e0e0; padding:12px 24px; font-weight:700; display:flex; align-items:center; gap:16px; }
+.site-header .site-brand { flex-shrink:0; } .site-header .site-nav { display:flex; gap:16px; }
+.site-header .site-nav a[aria-current="page"] { color:#263238; text-decoration:underline; }
+
+/* Sidebar */
+.site-layout { display:flex; min-height:100vh; }
+.sidebar { width:var(--sidebar-w); flex-shrink:0; background:#fff; border-right:1px solid #e0e0e0; padding:16px 0; position:sticky; top:0; height:100vh; overflow-y:auto; box-sizing:border-box; }
+.sidebar-title { font-weight:700; font-size:1.05rem; padding:0 16px 12px; border-bottom:1px solid #eceff1; margin-bottom:8px; }
+.sidebar-nav { list-style:none; margin:0; padding:0; }
+.sidebar-nav li { margin:0; }
+.sidebar-nav a { display:block; padding:8px 16px; color:#455a64; border-left:3px solid transparent; transition:background .15s; }
+.sidebar-nav a:hover { background:#f5f8ff; text-decoration:none; }
+.sidebar-nav a.sidebar-active { color:var(--blue); background:#e3f2fd; border-left-color:var(--blue); font-weight:600; }
+.sidebar-toggle { display:none; }
+.sidebar-section-label { padding:8px 16px 4px; font-size:.75em; color:#90a4ae; text-transform:uppercase; letter-spacing:.05em; }
+
+.course-page { flex:1; max-width:960px; margin:0 auto; padding:24px; background:#fff; min-height:100vh; }
 .breadcrumb { color:#607d8b; font-size:.9rem; margin-bottom:16px; }
 h1 { font-size:2rem; margin:0 0 16px; } h2 { margin-top:32px; padding-bottom:6px; border-bottom:1px solid #eceff1; } h3 { margin-top:24px; }
 .status-banner, .jump-banner, .migration-note, .contract-note, .manual-note { border-radius:8px; padding:12px 16px; margin:16px 0; }
@@ -949,8 +1215,32 @@ table { border-collapse:collapse; width:100%; min-width:560px; } th, td { border
 .auto-gen { border:1px dashed #90caf9; padding:12px; border-radius:8px; background:#fbfdff; } .auto-gen-meta { display:none; } .auto-gen-count { color:#455a64; background:#f5f8ff; padding:8px 12px; border-radius:6px; }
 details { margin:8px 0; } summary { cursor:pointer; padding:8px 12px; border-left:3px solid transparent; } details[open] > summary { background:#f5f8ff; border-left-color:#2196f3; }
 .course-index li { margin:8px 0; } .tag-deprecated { color:#777; background:#eee; border-radius:3px; padding:1px 5px; font-size:.8em; }
-@media (max-width: 767px) { .course-page{padding:16px;} h1{font-size:1.5rem;} table{font-size:.9rem;} .button-link{display:block;margin:10px 0 0;} }
-@media print { body{background:#fff;} .site-header,.status-banner,.badge,.jump-banner,.auto-gen-meta{display:none!important;} .course-page{max-width:none;padding:0;} a{color:#000;text-decoration:none;} tr, table { page-break-inside: avoid; } .breadcrumb{color:#000;} }
+.dead-link { color:#8a8a8a; border-bottom:1px dashed #bbb; cursor:help; }
+.major-search { margin:0 0 16px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.major-search-label { font-weight:600; white-space:nowrap; }
+.major-search-input { flex:1; min-width:200px; padding:8px 12px; border:1px solid #e0e0e0; border-radius:6px; font-size:1rem; }
+.major-search-input:focus { outline:2px solid var(--blue); outline-offset:-1px; border-color:var(--blue); }
+.major-search-count { font-size:.85rem; color:#607d8b; white-space:nowrap; }
+.cross-jump { margin-top:32px; padding-top:16px; border-top:1px solid #eceff1; }
+.cross-jump a { display:inline-block; padding:8px 16px; background:#f5f8ff; border:1px solid #e0e0e0; border-radius:6px; font-weight:600; }
+.cross-jump a:hover { background:#e3f2fd; text-decoration:none; }
+
+/* Mobile sidebar — collapsed via <details>, CSS-only */
+@media (max-width: 767px) {
+  .site-layout { display:block; }
+  .sidebar { position:static; width:100%; height:auto; border-right:none; border-bottom:1px solid #e0e0e0; padding:0; }
+  .sidebar-title { display:none; }
+  .sidebar-toggle { display:block; }
+  .sidebar-toggle summary { padding:12px 16px; font-weight:600; background:#f5f7fa; border-bottom:1px solid #e0e0e0; cursor:pointer; list-style:none; }
+  .sidebar-toggle summary::-webkit-details-marker { display:none; }
+  .sidebar-toggle summary::before { content:"☰ "; }
+  .sidebar-toggle[open] summary::before { content:"✕ "; }
+  .sidebar-nav { padding:0; }
+  .sidebar-nav a { padding:10px 24px; }
+  .course-page { padding:16px; }
+  h1{font-size:1.5rem;} table{font-size:.9rem;} .button-link{display:block;margin:10px 0 0;}
+}
+@media print { body{background:#fff;} .site-header,.sidebar,.sidebar-toggle,.status-banner,.badge,.jump-banner,.auto-gen-meta{display:none!important;} .course-page{max-width:none;padding:0;margin:0;} a{color:#000;text-decoration:none;} tr, table { page-break-inside: avoid; } .breadcrumb{color:#000;} .site-layout{display:block;} }
 """.strip() + "\n"
 
 
@@ -989,6 +1279,36 @@ def build(out_dir: Path) -> BuildResult:
     site_index_target = out_dir.parent / "index.html"
     site_index_target.write_text(render_site_index(), encoding="utf-8")
     result.pages += 1
+
+    # --- Majors ---
+    # Parse majors index once; pass rows to both index render and major page loop.
+    major_rows = parse_major_index_rows(read_text(MAJORS_DIR / "index.md")) if (MAJORS_DIR / "index.md").exists() else []
+
+    # Render majors index page
+    majors_index_target = out_dir.parent / "majors" / "index.html"
+    majors_index_target.parent.mkdir(parents=True, exist_ok=True)
+    majors_index_target.write_text(render_majors_index(major_rows, result), encoding="utf-8")
+    result.pages += 1
+
+    # Render individual major pages
+    for row in major_rows:
+        if not row.exists:
+            continue
+        source = MAJORS_DIR / row.slug / "index.md"
+        try:
+            page = load_major(source, row.slug)
+        except Exception as e:
+            result.errors.append(f"majors/{row.slug}/: 解析失败：{e}，该专业页跳过")
+            continue
+        try:
+            html_text = render_major_page(page, result)
+        except Exception as e:
+            result.errors.append(f"majors/{row.slug}/: 渲染失败：{e}，该专业页跳过")
+            continue
+        target = out_dir.parent / "majors" / row.slug / "index.html"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(html_text, encoding="utf-8")
+        result.pages += 1
 
     report = ["# Course frontend build report", "", f"Pages generated: {result.pages}", ""]
     if result.content_revision:
