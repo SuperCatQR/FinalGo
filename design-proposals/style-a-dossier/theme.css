@@ -1,0 +1,68 @@
+/* ============================================================
+   风格 A · 考务档案 (Official Dossier)
+   定位：权威 / 可信。像一份盖了章的考务文件。
+   —— 冷调公文纸 + 墨蓝 + 印章红，宋体标题，文档式边框。
+   Signature：效力状态印戳 + 数据源效力链梯子。
+   ============================================================ */
+:root {
+  --bg: #eef1f4;
+  --surface: #ffffff;
+  --surface-2: #f3f5f8;
+  --ink: #1a2b3c;
+  --ink-soft: #5a6b7c;
+  --line: #d4dde6;
+  --brand: #1c3d5a;
+  --brand-ink: #122a40;
+  --accent: #a32b27;          /* 印章红 */
+  --ok: #1f6e4a;
+  --warn: #9a6312;
+  --stop: #a32b27;
+  --font-display: "Noto Serif SC", "Songti SC", STSong, Georgia, serif;
+  --radius: 4px;              /* 公文感：直角偏多 */
+  --shadow: 0 1px 0 rgba(26,43,60,.04), 0 10px 30px rgba(26,43,60,.07);
+}
+
+body { background:
+  linear-gradient(var(--bg), var(--bg)); }
+
+.site-header { border-bottom: 2px solid var(--brand); }
+.brand { color: var(--brand); }
+.brand::before { content: "档"; display: inline-block; width: 1.5em; height: 1.5em; line-height: 1.5em; text-align: center; margin-right: 8px; background: var(--accent); color: #fff; border-radius: 3px; font-size: .8em; vertical-align: middle; }
+
+.card { border-top: 3px solid var(--brand); }
+h2 { padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.eyebrow { color: var(--accent); }
+
+/* Signature 1：效力状态印戳 —— 盖在 hero 右侧 */
+.seal {
+  --c: var(--accent);
+  display: inline-grid; place-items: center; text-align: center;
+  width: 132px; height: 132px; border-radius: 50%;
+  border: 3px double var(--c); color: var(--c);
+  font-family: var(--font-display); font-weight: 700;
+  transform: rotate(-8deg);
+  background: repeating-radial-gradient(circle, transparent 0 6px, color-mix(in srgb, var(--c) 5%, transparent) 6px 7px);
+}
+.seal small { display: block; font-size: .62rem; letter-spacing: .18em; font-weight: 600; }
+.seal b { font-size: 1.35rem; line-height: 1.1; }
+.seal.is-stop { --c: var(--stop); }
+.seal.is-warn { --c: var(--warn); }
+
+/* Signature 2：数据源效力链梯子 */
+.source-ladder { list-style: none; margin: 0; padding: 0; counter-reset: rung; }
+.source-ladder li {
+  position: relative; counter-increment: rung;
+  padding: 14px 16px 14px 56px; border: 1px solid var(--line);
+  border-left: 4px solid var(--brand); border-radius: var(--radius);
+  margin: 0 0 -1px; background: var(--surface);
+}
+.source-ladder li::before {
+  content: counter(rung); position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+  width: 26px; height: 26px; border-radius: 50%; background: var(--brand); color: #fff;
+  display: grid; place-items: center; font-weight: 700; font-size: .85rem;
+}
+.source-ladder li.rung-soft { border-left-color: var(--ink-soft); }
+.source-ladder li.rung-soft::before { background: var(--ink-soft); }
+
+.hero-dossier { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
+@media (max-width: 860px) { .hero-dossier { grid-template-columns: 1fr; } .seal { justify-self: start; } }

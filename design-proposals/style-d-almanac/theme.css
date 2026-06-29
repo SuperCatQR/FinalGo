@@ -1,0 +1,64 @@
+/* ============================================================
+   风格 D · 考期年历 (Exam Almanac)
+   定位：结构化 / 数据。把考期、计划版本、课程号当作可查询数据呈现。
+   —— 冷石板 + 电光蓝 + 等宽字优先（课程号/代码是一等公民）。
+   Signature：考期时间轴 + 场次日历网格 + 变更日志。
+   ============================================================ */
+:root {
+  --bg: #0f141c;
+  --surface: #161d28;
+  --surface-2: #1d2632;
+  --ink: #e6ecf3;
+  --ink-soft: #8a99ab;
+  --line: #2a3543;
+  --brand: #3da9fc;          /* 电光蓝 */
+  --brand-ink: #6dc1ff;
+  --accent: #f4c542;
+  --ok: #3ddc97;
+  --warn: #f4c542;
+  --stop: #ff6b6b;
+  --font-display: "Space Grotesk", "IBM Plex Sans", "Noto Sans SC", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", -apple-system, "Noto Sans SC", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  --radius: 8px;
+  --shadow: 0 0 0 1px rgba(61,169,252,.06), 0 18px 40px rgba(0,0,0,.5);
+  color-scheme: dark;
+}
+
+.site-header { background: color-mix(in srgb, var(--surface) 80%, transparent); backdrop-filter: blur(10px); }
+.brand { letter-spacing: .02em; }
+.brand::before { content: "▦"; margin-right: 8px; color: var(--brand); }
+.eyebrow { color: var(--brand); font-family: var(--font-mono); }
+.nav a[aria-current="page"] { background: color-mix(in srgb, var(--brand) 18%, transparent); color: var(--brand-ink); }
+code { background: #0c1118; color: var(--brand-ink); border: 1px solid var(--line); }
+thead th { background: var(--surface-2); }
+.card { background: linear-gradient(180deg, var(--surface), color-mix(in srgb, var(--surface) 88%, #000)); }
+
+/* 代码徽标：课程号当一等公民 */
+.code-badge { font-family: var(--font-mono); font-size: .8rem; background: #0c1118; border: 1px solid var(--brand); color: var(--brand-ink); padding: 2px 8px; border-radius: 5px; }
+
+/* Signature 1：考期时间轴 */
+.timeline { display: flex; gap: 0; overflow-x: auto; padding: 8px 0 16px; }
+.timeline .tick { flex: 0 0 150px; position: relative; padding: 28px 14px 0; border-left: 1px solid var(--line); }
+.timeline .tick::before { content: ""; position: absolute; left: -6px; top: 8px; width: 11px; height: 11px; border-radius: 50%; background: var(--surface); border: 2px solid var(--brand); }
+.timeline .tick.now::before { background: var(--brand); box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand) 25%, transparent); }
+.timeline .tick .when { font-family: var(--font-mono); color: var(--brand-ink); font-size: .85rem; }
+.timeline .tick .what { font-size: .9rem; margin-top: 4px; }
+
+/* Signature 2：场次日历网格 */
+.cal-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+.cal-cell { aspect-ratio: 1; border: 1px solid var(--line); border-radius: 6px; padding: 8px; font-family: var(--font-mono); font-size: .78rem; background: var(--surface); position: relative; }
+.cal-cell.exam { border-color: var(--brand); background: color-mix(in srgb, var(--brand) 12%, var(--surface)); color: var(--brand-ink); }
+.cal-cell.exam::after { content: "●"; position: absolute; bottom: 6px; right: 8px; color: var(--brand); font-size: .6rem; }
+.cal-cell.muted { opacity: .4; }
+
+/* 变更日志 */
+.changelog { border-left: 2px solid var(--line); padding-left: 18px; }
+.changelog li { list-style: none; margin: 0 0 14px; position: relative; }
+.changelog li::before { content: ""; position: absolute; left: -23px; top: 7px; width: 8px; height: 8px; border-radius: 50%; background: var(--brand); }
+.changelog .ver { font-family: var(--font-mono); color: var(--accent); font-size: .82rem; }
+
+.pill-cta { display: inline-block; background: var(--brand); color: #07121d; padding: 12px 24px; border-radius: var(--radius); font-weight: 700; }
+.pill-cta:hover { background: var(--brand-ink); text-decoration: none; }
+.pill-cta.ghost { background: transparent; color: var(--brand-ink); border: 1px solid var(--brand); }
+.hero-glow { background: radial-gradient(80% 120% at 0% 0%, color-mix(in srgb, var(--brand) 18%, transparent), transparent 55%); }
