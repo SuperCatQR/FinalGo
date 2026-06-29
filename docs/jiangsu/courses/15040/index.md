@@ -469,9 +469,9 @@ data_status:
 | 类别 | 来源 | 状态 |
 | --- | --- | --- |
 | 考纲（在线） | [江苏省教育考试院课程自学考试大纲](https://www.jseea.cn/webfile/selflearning_jcdg/2025-01-15/7285134977044320256.html) | 官方，待链接校验 |
-| 考纲（本地） | `docs/jiangsu/source/syllabus/15040-xi-thought-gaogang-2024.pdf` | 已归档 |
-| 考纲（处理后） | `docs/jiangsu/source/processed/syllabus/15040-xi-thought-gaogang-2024/document.extracted.md` | 已处理 |
-| 教材计划 | `docs/jiangsu/source/processed/textbooks/jiangsu-2026-10-2027-01-schedule-textbooks/document.extracted.md` 中 `150400/150401` | 已处理 |
+| 考纲（本地） | 本地仓库源数据目录（具体路径不公开发布） | 已归档 |
+| 考纲（处理后） | 本地仓库源数据目录（具体路径不公开发布） | 已处理 |
+| 教材计划 | 本地仓库源数据目录（具体路径不公开发布） | 已处理 |
 | 教材（本地） | 本地电子教材库（仓库外归档，路径不公开） | 已归档 |
 | 真题（在线） | [攀知自考 15040](https://www.zikaosw.cn/lnzt/subject-60719.html) | 等级 B，待核验 |
 | 真题（在线） | [自考365 2024-10 试题页](https://www.zikao365.com/ggk/zh20241210142335.shtml) | 等级 B，待核验 |
