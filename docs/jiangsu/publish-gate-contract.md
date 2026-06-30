@@ -9,9 +9,9 @@
 
 | 闸门码 | 条件 | 当前 15044 状态 |
 | --- | --- | --- |
-| `HUMAN_REVIEW_REQUIRED` | frontmatter 须有 `reviewed: true` 且 `reviewer: <姓名>` 非空 | ❌ `reviewed: null`、`reviewer: null` |
+| `HUMAN_REVIEW_REQUIRED` | frontmatter 须有 `reviewed: true` 且 `reviewer: <姓名>` 非空 | ❌ `reviewed: false`、`reviewer: null` |
 | `PUBLISH_PENDING_REQUIRED_DATA` | 元信息 `数据状态`/`发布日期` 不得含 `待校对`/`待统计`/`待收集`/`待核验`/`待确认`;frontmatter `exam_source_status`/`exam_analysis_status` 同理;`replacement_confirmed` 须为 true/yes/confirmed | ❌ 全页遍布 `待校对`/`待统计`/`待收集`,真题三考期待核验 |
-| `REPLACEMENT_FREE_TEXT_BYPASS` | 「新旧课程顶替」区块不得同时存在 4 字段表与自由文本 blockquote(含「替代」字样) | ⚠️ 当前 15044 区块顶部 blockquote 含「替代」自由文本,与 4 字段表并存 → 🟢 前须移除自由文本(把「2024 年 7 月后注册考生仅参加 15044」等增量信息并入 4 字段表「名称差异说明」或区块外注记) |
+| `REPLACEMENT_FREE_TEXT_BYPASS` | 「新旧课程顶替」区块不得同时存在 4 字段表与自由文本 blockquote(含「替代」字样) | ✅ 本 PR 已消除 15044 原自由文本 bypass,增量信息已并入 4 字段表/区块说明;当前无该项阻塞 |
 | `EXAM_INDEX_SCOPE_MIXED` / `EXAM_INDEX_DUPLICATED_SCOPE` | 考期索引现行/历史不得混排、不得重复;须用 frontmatter `current_exam_periods` / `legacy_comparison_periods` 结构化列表分离 | ⚠️ 当前 2024-10 行混排 15044/03709 → 🟢 前须拆为结构化列表(此项与真题数据补齐一并由 SME 处理,因现行/历史归属取决于实测真题考期) |
 | `CONTENT_REVISION_MISMATCH` | frontmatter `content_revision`(若有)须匹配构建 HEAD commit | ✅ 当前未设该字段 |
 
@@ -19,7 +19,7 @@
 
 ## 二、人工前置(机器无法自证,🟢 前必须由对应角色完成)
 
-按 issue 验收三态 + 仓库 `templates/course-review-checklist.md`(20 项)/ issue 引用的 17 项高风险区块清单:
+按 issue 验收三态 + 仓库 `templates/course-review-checklist.md`(20 项模板,本批课程按其中 17 项高风险/适用项逐项签名):
 
 1. **高风险区块逐项人工签名**(SME):政策与时效、考纲概览(范围/分值比例)、教材信息(版本/ISBN)、章节知识树(覆盖率 ≥ 90%)、高频概念表(考频须有真题依据)、真题解析(不含第三方原题全文)、来源与引用(链接可访问)、新旧顶替关系(标准 4 字段)。
    - 15044 知识树覆盖率已机器达 100%(78/78),可作机器侧证据;考频字段(`待统计`)须等真题入库后由 SME 据实填写,**不得机器编造**。
