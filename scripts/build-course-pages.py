@@ -25,7 +25,7 @@ COURSES_DIR = ROOT / "docs" / "jiangsu" / "courses"
 MAJORS_DIR = ROOT / "docs" / "jiangsu" / "majors"
 DEFAULT_OUT_DIR = ROOT / "site" / "courses"
 DEFAULT_BASE = "/"
-V2_CODES = {"15040", "15043", "15044", "13000", "00023"}
+V2_CODES = {"15040", "15043", "15044", "13000", "00023", "04735"}
 
 # Module-level base path, set by main() via --base argument.
 _base = DEFAULT_BASE
