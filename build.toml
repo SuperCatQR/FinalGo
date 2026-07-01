@@ -1,0 +1,15 @@
+# 站点构建配置。路径相对仓库根。
+# 用于 scripts/build-course-pages.py 和 scripts/check-source-links.py。
+# 修改路径后无需改脚本；未指定的字段回退到脚本内默认值。
+
+[paths]
+courses_dir     = "content/jiangsu/courses"
+majors_dir      = "content/jiangsu/majors"
+templates_dir   = "scripts/templates"
+out_dir         = "site/courses"
+site_dir        = "site"
+
+[source_link_monitor]
+baseline        = "ops/jiangsu/source-links.baseline.json"
+report          = "site/source-link-report.md"
+summary         = "site/source-link-report.json"

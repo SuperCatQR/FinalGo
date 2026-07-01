@@ -6,12 +6,13 @@ $ErrorActionPreference = "Stop"
 
 $Utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 $Root = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
-$DocsRoot = Join-Path $Root "docs\jiangsu"
-$MajorPdfDir = Join-Path $DocsRoot "source\2.江苏省高等教育自学考试面向社会开考专业考试计划（2024年版）"
-$ProcessedDir = Join-Path $DocsRoot "source\processed"
-$TextbookPdfDir = Join-Path $DocsRoot "source\textbooks"
-$SyllabusPdfDir = Join-Path $DocsRoot "source\syllabus"
-$PastPaperPdfDir = Join-Path $DocsRoot "source\past-papers"
+$ContentRoot = Join-Path $Root "content\jiangsu"
+$SourcesRoot = Join-Path $Root "sources\jiangsu"
+$MajorPdfDir = Join-Path $SourcesRoot "major-plans-2024"
+$ProcessedDir = Join-Path $SourcesRoot "processed"
+$TextbookPdfDir = Join-Path $SourcesRoot "textbooks"
+$SyllabusPdfDir = Join-Path $SourcesRoot "syllabus"
+$PastPaperPdfDir = Join-Path $SourcesRoot "past-papers"
 
 $NameSlugMap = @{
   "机械制造及自动化" = "mechanical-manufacturing-and-automation"
@@ -410,7 +411,7 @@ foreach ($pdf in $majorPdfs) {
   $code = if ($codeMatch.Success) { $codeMatch.Groups[1].Value } else { "unknown-$sequence" }
   $slug = if ($NameSlugMap.ContainsKey($majorName)) { $NameSlugMap[$majorName] } else { "major-$sequence" }
   $majorDirName = "$code-$slug"
-  $majorDir = Join-Path $DocsRoot "majors\$majorDirName"
+  $majorDir = Join-Path $ContentRoot "majors\$majorDirName"
   $outDir = Join-Path $majorDir "sources"
   $sourcePdfRel = Get-RelativePath $pdf.FullName
   $title = "$majorName（$level）"
@@ -453,7 +454,7 @@ foreach ($pdf in $majorPdfs) {
   })
 }
 
-$sharedPdfs = Get-ChildItem -LiteralPath (Join-Path $DocsRoot "source") -Filter "*.pdf" -File |
+$sharedPdfs = Get-ChildItem -LiteralPath $SourcesRoot -Filter "*.pdf" -File |
   Where-Object { $_.FullName -notlike "$MajorPdfDir*" }
 $textbookPdfDir = $TextbookPdfDir
 if (Test-Path -LiteralPath $textbookPdfDir) {
@@ -517,10 +518,10 @@ foreach ($pdf in ($sharedPdfs | Sort-Object FullName)) {
   })
 }
 
-$manifestCsv = Join-Path $DocsRoot "source\pdf-processing-manifest.csv"
+$manifestCsv = Join-Path $SourcesRoot "pdf-processing-manifest.csv"
 $Manifest | Export-Csv -NoTypeInformation -Encoding UTF8 -Path $manifestCsv
 
-$majorIndex = Join-Path $DocsRoot "majors\index.md"
+$majorIndex = Join-Path $ContentRoot "majors\index.md"
 $majorLines = New-Object System.Text.StringBuilder
 [void]$majorLines.AppendLine("# 江苏自考专业索引")
 [void]$majorLines.AppendLine("")
@@ -532,7 +533,7 @@ foreach ($row in ($MajorRows | Sort-Object sequence)) {
 }
 Write-Utf8File $majorIndex $majorLines.ToString()
 
-$report = Join-Path $DocsRoot "source\pdf-processing-report.md"
+$report = Join-Path $SourcesRoot "pdf-processing-report.md"
 $majorCount = ($Manifest | Where-Object { $_.type -eq "major-plan" }).Count
 $sharedCount = $Manifest.Count - $majorCount
 $reportContent = @"
@@ -543,12 +544,12 @@ $reportContent = @"
 | 处理时间 | $GeneratedAt |
 | 专业计划 PDF | $majorCount |
 | 共享 PDF | $sharedCount |
-| Manifest | docs/jiangsu/source/pdf-processing-manifest.csv |
+| Manifest | sources/jiangsu/pdf-processing-manifest.csv |
 
 ## 输出规则
 
-- 专业计划 PDF：docs/jiangsu/majors/<major>/sources/
-- 共享 PDF：docs/jiangsu/source/processed/<category>/<document>/
+- 专业计划 PDF：content/jiangsu/majors/<major>/sources/
+- 共享 PDF：sources/jiangsu/processed/<category>/<document>/
 
 ## 数据状态
 

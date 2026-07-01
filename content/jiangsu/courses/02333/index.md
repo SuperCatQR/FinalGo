@@ -1,0 +1,29 @@
+# 02333 软件工程
+
+| 字段 | 内容 |
+| --- | --- |
+| 省份 | 江苏 |
+| 课程代码 | 02333 |
+| 课程名称 | 软件工程 |
+| 080901 状态 | 现行必修专业课 |
+| 数据状态 | 已定位官方考纲、教材计划和真题线索入口 |
+
+## 考纲与教材
+
+| 类型 | 来源 | 状态 |
+| --- | --- | --- |
+| 考纲 | [江苏省教育考试院 02333 软件工程（高纲4068）](https://www.jseea.cn/webfile/selflearning_jcdg/2025-01-15/7285132780508286976.html) | 官方 |
+| 本地考纲 | `sources/jiangsu/syllabus/02333-software-engineering-gaogang-4068.pdf`；`sources/jiangsu/processed/syllabus/02333-software-engineering-gaogang-4068/document.extracted.md` | 已处理 |
+| 教材 | `023331 软件工程`，瞿中、宋琦等，人民邮电出版社，2016 年 | 江苏 2026-04/07 教材计划 |
+| 本地教材 | `C:\WorkSpace\project\FinalGo_local_archive\e-books\jiangsu\02333 软件工程.pdf` | 已归档 |
+
+## 真题索引
+
+| 来源 | 等级 | 用法 |
+| --- | --- | --- |
+| [自考生网 02333 资料页](https://www.zikaosw.cn/zkkm/787.html) | B | 历年真题线索 |
+| [自考365 软件工程](https://www.zikao365.com/shiti/downlist-7-1619.html) | B | 历年试题入口 |
+
+## 待做
+
+- 建立需求、设计、测试、维护、项目管理专题索引。

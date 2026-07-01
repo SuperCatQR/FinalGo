@@ -3,7 +3,7 @@
    定位：备考 / 做笔记。整站像一叠手做复习卡，重点用荧光笔划。
    暖纸 + 荧光笔三色 + 马克笔下划线 + 概念卡。
    Signature：概念卡 + highlighter <mark> + 手写体标题。
-   沉淀自 CHO-94 选型原型 design-proposals/style-c-cards/theme.css。
+   沉淀自 CHO-94 选型原型 archive/design-proposals/style-c-cards/theme.css。
    只覆盖 base.css 的 token 与 signature，不重复结构原语。
    ============================================================ */
 :root {

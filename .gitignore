@@ -4,6 +4,8 @@
 .claude/
 .opencode/
 .reasonix/
+CLAUDE.md
+AGENTS.md
 
 # ---- Build output (regenerable via scripts/build-course-pages.py) ----
 site/

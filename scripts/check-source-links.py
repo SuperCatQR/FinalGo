@@ -38,12 +38,39 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
 
+import tomllib
+
 ROOT = Path(__file__).resolve().parents[1]
-COURSES_DIR = ROOT / "docs" / "jiangsu" / "courses"
-MAJORS_DIR = ROOT / "docs" / "jiangsu" / "majors"
-DEFAULT_BASELINE = ROOT / "docs" / "jiangsu" / "source-links.baseline.json"
-DEFAULT_REPORT = ROOT / "site" / "source-link-report.md"
-DEFAULT_SUMMARY = ROOT / "site" / "source-link-report.json"
+
+
+def _load_cfg() -> dict[str, Path]:
+    """Read paths + source-link-monitor from build.toml."""
+    defaults = {
+        "courses_dir": "content/jiangsu/courses",
+        "majors_dir":  "content/jiangsu/majors",
+        "baseline":    "ops/jiangsu/source-links.baseline.json",
+        "report":      "site/source-link-report.md",
+        "summary":     "site/source-link-report.json",
+    }
+    cfg_path = ROOT / "build.toml"
+    if cfg_path.exists():
+        with cfg_path.open("rb") as fh:
+            data = tomllib.load(fh)
+        for k, v in data.get("paths", {}).items():
+            if isinstance(v, str) and k in defaults:
+                defaults[k] = v
+        for k, v in data.get("source_link_monitor", {}).items():
+            if isinstance(v, str) and k in defaults:
+                defaults[k] = v
+    return {k: (ROOT / v) for k, v in defaults.items()}
+
+
+_CFG = _load_cfg()
+COURSES_DIR = _CFG["courses_dir"]
+MAJORS_DIR = _CFG["majors_dir"]
+DEFAULT_BASELINE = _CFG["baseline"]
+DEFAULT_REPORT = _CFG["report"]
+DEFAULT_SUMMARY = _CFG["summary"]
 
 # Hosts whose pages are authoritative 考纲/教材/计划 sources. Content drift on
 # these matters (it can mean the 考纲 was revised), so we hash and diff them.
@@ -149,12 +176,12 @@ def course_code_for(path: Path) -> str | None:
 
 def iter_source_files() -> Iterable[Path]:
     """All markdown files that may carry in-scope source links."""
-    for path in sorted(COURSES_DIR.glob("*.md")):
-        yield path
-    # 15040 canonical body lives in a subdir.
-    nested = COURSES_DIR / "15040" / "index.md"
-    if nested.exists():
-        yield nested
+    index = COURSES_DIR / "index.md"
+    if index.exists():
+        yield index
+    for path in sorted(COURSES_DIR.glob("*/index.md")):
+        if re.fullmatch(r"\d{5}", path.parent.name):
+            yield path
     for path in sorted(MAJORS_DIR.glob("*/index.md")):
         yield path
     for path in sorted(MAJORS_DIR.glob("*/sources.md")):

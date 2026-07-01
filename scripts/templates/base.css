@@ -2,7 +2,7 @@
    江苏自考资料库 · 顶模板基座 (base.css)
    —— 设计 token 契约 + 结构原语。主题层 (theme.css) 只覆盖
       :root token 与各自 signature；沉淀自 CHO-94 选型原型
-      design-proposals/assets/base.css。
+      archive/design-proposals/assets/base.css。
    生成器只引用语义 class，不写散落内联样式。
    ============================================================ */
 

@@ -4,7 +4,7 @@
 
 ## 仓库
 
-- 远程:`https://github.com/SuperCatQR/FinalGo.git`
+- 远程:`https://github.com/SuperCatQR/jiangsu-zikao-aio.git`
 - 主分支:`main`(受保护,不直接 push 大改动,走分支 + PR)
 
 ## 分支

@@ -16,14 +16,34 @@ import json
 import re
 import shutil
 import subprocess
+import tomllib
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Iterable
 
 ROOT = Path(__file__).resolve().parents[1]
-COURSES_DIR = ROOT / "docs" / "jiangsu" / "courses"
-MAJORS_DIR = ROOT / "docs" / "jiangsu" / "majors"
-DEFAULT_OUT_DIR = ROOT / "site" / "courses"
+
+
+def _load_paths() -> dict[str, Path]:
+    """Read [paths] from build.toml; fall back to defaults for missing keys."""
+    defaults = {
+        "courses_dir":   "content/jiangsu/courses",
+        "majors_dir":    "content/jiangsu/majors",
+        "templates_dir": "scripts/templates",
+        "out_dir":       "site/courses",
+    }
+    cfg_path = ROOT / "build.toml"
+    if cfg_path.exists():
+        with cfg_path.open("rb") as fh:
+            data = tomllib.load(fh).get("paths", {})
+        defaults.update({k: v for k, v in data.items() if isinstance(v, str)})
+    return {k: (ROOT / v) for k, v in defaults.items()}
+
+
+_PATHS = _load_paths()
+COURSES_DIR = _PATHS["courses_dir"]
+MAJORS_DIR = _PATHS["majors_dir"]
+DEFAULT_OUT_DIR = _PATHS["out_dir"]
 DEFAULT_BASE = "/"
 V2_CODES = {"15040", "15043", "15044", "13000", "00023", "04735"}
 
@@ -219,32 +239,27 @@ def parse_heading_title(body: str) -> str:
 
 
 def canonical_course_sources() -> list[Path]:
-    """Return renderable course sources with the 15040 canonical exception."""
+    """Return renderable course body files.
+
+    Canonical shape is content/jiangsu/courses/<code>/index.md.
+    """
     sources: list[Path] = []
     for path in sorted(COURSES_DIR.glob("*.md")):
-        code = path.stem
-        if code == "index":
-            # docs/jiangsu/courses/index.md is the course index source. It is
-            # rendered only by render_index(pages), not as /courses/index/.
-            continue
-        if code == "15040":
-            # docs/jiangsu/courses/15040.md is a migration note; the canonical
-            # v2 course body is docs/jiangsu/courses/15040/index.md.
-            continue
-        sources.append(path)
-    sources.append(COURSES_DIR / "15040" / "index.md")
-    return sorted(sources, key=lambda p: route_for_source(p))
+        if path.stem != "index":
+            sources.append(path)
+    for path in sorted(COURSES_DIR.glob("*/index.md")):
+        if re.fullmatch(r"\d{5}", path.parent.name):
+            sources.append(path)
+    return sorted(sources, key=route_for_source)
 
 
 def route_for_source(path: Path) -> str:
-    if path.name == "index.md" and path.parent.name == "15040":
-        return "/courses/15040/"
-    return f"/courses/{path.stem}/"
+    return f"/courses/{code_for_source(path)}/"
 
 
 def code_for_source(path: Path) -> str:
-    if path.name == "index.md" and path.parent.name == "15040":
-        return "15040"
+    if path.name == "index.md" and re.fullmatch(r"\d{5}", path.parent.name):
+        return path.parent.name
     return path.stem
 
 
@@ -262,7 +277,7 @@ def load_course(path: Path) -> CoursePage:
         meta=meta,
         frontmatter=frontmatter,
         body=body,
-        migration_note=(path.name == "15040.md"),
+        migration_note=False,
     )
 
 
@@ -1108,7 +1123,7 @@ def render_major_page(page: MajorPage, result: BuildResult) -> str:
     return html_shell_major(page.title, content, page.route, page.name, page.level)
 
 
-TEMPLATES_DIR = Path(__file__).resolve().parent / "templates"
+TEMPLATES_DIR = _PATHS["templates_dir"]
 
 def write_css(out_root: Path) -> None:
     """Emit the two-layer stylesheet: base.css (token contract + structural
@@ -1141,13 +1156,6 @@ def build(out_dir: Path) -> BuildResult:
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(html_text, encoding="utf-8")
         result.pages += 1
-
-    # Emit 15040.md as a noindex migration note to avoid treating it as body.
-    migration_page = load_course(COURSES_DIR / "15040.md")
-    migration_target = out_dir.parent / "courses" / "15040-migration" / "index.html"
-    migration_target.parent.mkdir(parents=True, exist_ok=True)
-    migration_target.write_text(render_migration_note(migration_page), encoding="utf-8")
-    result.pages += 1
 
     index_target = out_dir.parent / "courses" / "index.html"
     index_target.parent.mkdir(parents=True, exist_ok=True)
